@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "115 Sets.md",
+            "file": "116 Propositional Logic.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "115 Sets.md",
+                "file": "116 Propositional Logic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +89,15 @@
   },
   "active": "2d2b4163c2fb4f4a",
   "lastOpenFiles": [
+    "116 Propositional Logic.md",
     "115 Sets.md",
-    "111 Planes.md",
-    "110 Vectors.md",
-    "000 Index.md",
+    "Class monday 360.md",
     "253 Types of machine learning.md",
-    "252 Supervised Learning.md",
-    "251 Markov Decision Process.md",
+    "assets/Pasted image 20220118100355.png",
     "250 Reinforcement Learning.md",
     "lists/Math Cheatsheet.md",
-    "lists/Definitions.md"
+    "lists/Discrete Math Cheatsheet.md",
+    "Neural Networks/Neural Network Overview.md",
+    "Neural Networks/Activation Functions.md"
   ]
 }

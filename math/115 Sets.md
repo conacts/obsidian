@@ -23,7 +23,7 @@ $\mathbb{N} = \text{set of all natural numbers = \{1, 2, 3, ....\}}$ $\mathbb{N}
  $U = \text{a set containing every item}$  
  $\emptyset = \text{an empty set, otherwise referred to as nullset \{\}}$
 
-#### Flashcards:
+#### 1.1 Flashcards:
 
  
 $\mathbb{N}$ #flashcard
