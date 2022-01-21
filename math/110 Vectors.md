@@ -1,3 +1,5 @@
+TARGET DECK: Calculus
+
 ## 12.1: Vectors in a Plane
 ##### Vectors:
 **Definition:** A vector determined by two points, the tail (start) P and head (end) Q. These two points form the vectors compontents, based on which planes it traverses giving it dimensions
@@ -138,6 +140,11 @@ $$x(t)=x_0 + at, \quad y(t)=y_0 + bt, \quad z(t)=z_0 + ct$$
 > 2. Plug in $t_2$ to solve for $t_1$, $t_1=2-\frac{2}{3}t_2=\frac{14}{9}$
 > 3. Plug values into equation Z to check if it intersects at Z. $1+5(\frac{14}{9}) \ne 1+7(\frac{2}{3})$ therefore the equations do not intersect on the Z-plane, therefore they do not intersect
 
+##### 12.2 Flashcards:
+
+What is the equation of a sphere? #flashcard 
+$(x-a)^2+(y-b)^2+(z-c)^2=R^2$
+
 
 
 
@@ -181,7 +188,7 @@ $$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
 > $$v \cdot u=2 \cdot 1 + 6 \cdot 1 + 1 \cdot 1 = 9 > 0 =\text{acute}$$
 > $$v \cdot z=2 \cdot 4 + 6 \cdot -3 + 1 \cdot 1 = -9 < 0 =\text{obtuse}$$
 
-**Example :: Fnid the angles of a triangle using 3 points:**
+**Example :: Find the angles of a triangle using 3 points:**
 > A triangle is defined by the three points $A=(1,8)$, $B=(4,9)$, and $C=(5,1)$. Determine all angles 𝜃𝐴, 𝜃𝐵, and 𝜃𝐶 in the triangle. Give your answer in radians.
 > 1. Find the compontents of the vectors
 >  $$\overrightarrow{AB}=(4-1, 9-8)=(3, 1),\quad \overrightarrow{AC}=(5-1, 1-8)=(4, -7)$$
@@ -194,13 +201,77 @@ $$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
 ![[Pasted image 20220117000038.png | 200]]
 **Equation :: Projection of u along v:**
 Assume $v \ne 0$ and the projection of u along v is the vector $u_{||v}$
-$$u_{||v}=(\frac{u \cdot v}{v \cdot v})v=(\frac{u \cdot v}{||v||^2})v=\frac{u \cdot v}{||v||})e_v$$
+$$u_{||v}=(\frac{u \cdot v}{v \cdot v})v=(\frac{u \cdot v}{||v||^2})v=(\frac{u \cdot v}{||v||})e_v$$
 Sometimes $\frac{u \cdot v}{||v||}$ is referred to as the **component** of u along v.
 
 **Equation :: Finding the orthogonal vector from the projection vector $u_{||v}$ :**
 $$u_{\bot v}=u - u_{||v}$$
 also...
 $$u=u_{||v} + u_{\bot v}$$
+
+##### 12.3 flashcards:
+
+Dot product of $(2, 9, 2) \cdot (7, 1, 6)$ #flashcard 
+$(2, 9, 2) \cdot (7, 1, 6) = 2 \cdot 7 + 9 \cdot 1 + 2 \cdot 6=35$
+<!--ID: 1642802560157-->
+
+
+5 properties of dot product #flashcard 
+D-CRIP
+1. Identity: $0 \cdot v = v \cdot 0 = 0$
+2. Communitive: $v \cdot w = w \cdot v$
+3. Pulling out scalars: $(\lambda v) \cdot w = v \cdot (\lambda w) = \lambda (v \cdot w)$
+4. Distributive Property: $u \cdot (v + w) = u \cdot v + u \cdot w$
+5. Relation with length: $\sqrt{v \cdot v} = ||v||$
+<!--ID: 1642802560163-->
+
+
+Compute the dot product of $(9j+2k)\cdot (i-4j)$ #flashcard 
+$(9j+2k)\cdot (i-4j)=9j \cdot -4j + 2k \cdot 0k + i \cdot 0i=-36$
+<!--ID: 1642802560166-->
+
+
+Dot product angle formula #flashcard 
+$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$
+<!--ID: 1642802560169-->
+
+
+How can you tell whether an angle is acute, right or obtuse between two vectors using a dot product? #flashcard 
+1. **Orthogonal:** if $v \cdot w = 0$, then it is orthogonal
+2. **Obtuse:** if $v \cdot w < 0$ and $\frac{\pi}{2} < \theta \le \pi$ then it is obtuse
+3. **Acute:** if $v \cdot w > 0$ and $0 < \theta < \frac{\pi}{2}$, then it is acute
+<!--ID: 1642802560172-->
+
+
+How can you determine if two angles are orthogonal using the dot product? #flashcard 
+$||v|| \cdot ||w|| =0$ means they are orthogonal (perpendicular / right angle), otherwise they aren't orthogonal
+<!--ID: 1642802560176-->
+
+
+Definition of projection. #flashcard 
+Mapping points from one plane onto another, can be imagined in terms of a shadow
+<!--ID: 1642802560179-->
+
+
+Projection formula #flashcard 
+$u_{||v}=(\frac{u \cdot v}{v \cdot v})v=(\frac{u \cdot v}{||v||^2})v=(\frac{u \cdot v}{||v||})e_v$
+<!--ID: 1642802560182-->
+
+
+What is this symbol mean? $u_{||v}$ #flashcard 
+Projection 
+<!--ID: 1642802560185-->
+
+
+What does this mean?  $u_{\bot v}$ #flashcard 
+orthogonal
+<!--ID: 1642802560189-->
+
+
+What is the relationship between $v$ , $v_{||w}$ , and $v_{\bot w}$ #flashcard 
+$v=v_{||w} + v_{\bot w}$
+<!--ID: 1642802577980-->
+
 
 ## 12.4: The Cross Product
 Cross Product is a vector operation used typically to compute torque. Operating on an n x n matrix, using the determinant you can find the cross product. The cross product is often used in conjunction with the term determinant.
@@ -216,7 +287,7 @@ c & d
 > $$\begin{bmatrix}  
 3 & 2\\  
 1/2 & 4   
-\end{bmatrix}... = 3 \cdot 4 - 2 \cdot 1/2 = 11$$
+\end{bmatrix} = 3 \cdot 4 - 2 \cdot 1/2 = 11$$
 >
 
 ##### Cross product of a 3 x 3 matrix:
@@ -271,9 +342,103 @@ $$(u + v) \times w = u \times w + v \times w$$
 ##### Cross product of basis vectors:
 $$i \times j = k, \quad j \times k = i, \quad k \times i = j$$
 $$j \times i = -k, \quad k \times j = -i, \quad i \times k = -j$$
-$$(2i+k) \times (3j + 5k) = (2i) \times (3j) + (2i) \times (5k) + k \times (3j) + k \times (5k)$$
-$$= 6(i \times j) + 10(i \times k) + 3 (k \times j) + 5(k \times k)$$
-$$=6k-10j-3i+5(0)=-3i-10j+6k$$
+Example :: finding the cross product of two vectors
+> Find the cross product of vectors $v=(2i + k)$ and $w=(3j+5k)$
+> $$(2i+k) \times (3j + 5k) = (2i) \times (3j) + (2i) \times (5k) + k \times (3j) + k \times (5k)$$
+> $$= 6(i \times j) + 10(i \times k) + 3 (k \times j) + 5(k \times k)$$
+> $$=6k-10j-3i+5(0)=-3i-10j+6k$$
+
+Right-handed system:
+A method of approximating cross product directions
+![[Pasted image 20220121171042.png | 400]]
+
+
+Best way to remember i, j and k formulas
+![[Pasted image 20220121171425.png]]
+
+
+Area of parallelogram:
+$area(P)=||v \times w||$
+
+Area of triangle:
+$area(T)=\frac{||v \times w||}{2}$
+
+Note: If you think, a parallelogram is essentially two triangles together, relating to why they are the same equation with the triangle just being half that of the parallelogram.
+
+Volume of parallelpiped:
+$Volume(D)=|u \cdot (v \times w)|$
+
+Theorem 3: 
+Volume via scalar triple product and determinants
+
+$V=|u \cdot (v \times w)| = det(\begin{bmatrix} a &\end{bmatrix}$
+
+
+##### 12.4 flashcards:
+
+What is essentially the output of a cross product of a matrix? #flashcard 
+A determinant value
+<!--ID: 1642802560192-->
+
+
+
+How do you find the cross product / determinant of a 2 x 2 matrix? #flashcard 
+$$\begin{bmatrix}  
+a & b\\  
+c & d   
+\end{bmatrix} = ad - bc$$
+<!--ID: 1642802560195-->
+
+
+How do you find the cross product / determinant of a 3 x 3 matrix? #flashcard 
+$$\begin{bmatrix}  
+a_1 & b_1 & c_1\\  
+a_2 & b_2 & c_2\\
+a_3 & b_3 & c_3
+\end{bmatrix} = a_1\begin{bmatrix}\
+b_2 & c_2\\ b_3 & c_3
+\end{bmatrix}
+-a_2\begin{bmatrix}\
+a_2 & c_2\\ a_3 & c_3
+\end{bmatrix}
++a_3\begin{bmatrix}\
+a_2 & b_2\\ a_3 & b_3
+\end{bmatrix}$$
+<!--ID: 1642802560198-->
+
+
+What are the 3 properties of a cross product? #flashcard 
+1. $v \times w$ is orthogonal to $v$ and $w$ 
+2. $v \times w$ has a length $||v|| \cdot ||w||\sin\theta$ (w/ $\theta$ being the angle between $v$ and $w$)
+3. $\{v, w, v \times w\}$ is a right-handed system
+<!--ID: 1642802560202-->
+
+
+
+(1/5) Anti-communitive property of cross product: $v \times w = ...$ #flashcard 
+$-w \times v$
+<!--ID: 1642802560205-->
+
+
+(2/5) Identity Property of cross product #flashcard 
+$v \times v = 0$
+<!--ID: 1642802560208-->
+
+
+(3/5) Parallel identity of cross product #flashcard 
+$v \times w = 0$ if v and w are parallel
+<!--ID: 1642802560211-->
+
+
+(4/5) Scalar property of cross product #flashcard 
+$\lambda (v \times w) = (\lambda v) \times w = v \times (\lambda w)$
+<!--ID: 1642802560214-->
+
+
+(5/5) Distributive property of cross product #flashcard 
+$(u + v) \times w = u \times w + v \times w$
+<!--ID: 1642802560217-->
+
 
 ## 12.5: Planes in 3D Space
 
