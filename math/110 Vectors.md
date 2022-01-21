@@ -96,7 +96,7 @@ $$(x-a)^2+(y-b)^2+(z-c)^2=R^2$$
 > 3. Find the radius of the sphere
 > $$r=\frac{1}{2}\sqrt{(Q_1-P_1)^2+(Q_2-P_2)^2+(Q_3-P_3)^2}$$
 > $$r=\frac{1}{2}\sqrt{(1-1)^2+(5-1)^2+(1-(-7))^2}=\sqrt{80}/2=\sqrt{20}$$
-> 5. Plug values into the equation
+> 4. Plug values into the equation
 > $$(x-a)^2+(y-b)^2+(z-c)^2=R^2$$
 > $$(x-1)^2+(y-3)^2+(z+3)^2=20$$
 
@@ -136,7 +136,7 @@ $$x(t)=x_0 + at, \quad y(t)=y_0 + bt, \quad z(t)=z_0 + ct$$
 > $$x=1+3t_1=3+4t_2, \quad y=3t_1=6-2t_2, \quad z=1+5t_1=1+7t_2$$
 > 1. Solve for $t_2$ subtract equation 2 from equation 1 to get $1=\frac{2}{3}t_2-3;t_2=\frac{2}{3}$
 > 2. Plug in $t_2$ to solve for $t_1$, $t_1=2-\frac{2}{3}t_2=\frac{14}{9}$
-l> 3. Plug values into equation Z to check if it intersects at Z. $1+5(\frac{14}{9}) \ne 1+7(\frac{2}{3})$ therefore the equations do not intersect on the Z-plane, therefore they do not intersect
+> 3. Plug values into equation Z to check if it intersects at Z. $1+5(\frac{14}{9}) \ne 1+7(\frac{2}{3})$ therefore the equations do not intersect on the Z-plane, therefore they do not intersect
 
 
 
@@ -203,6 +203,77 @@ also...
 $$u=u_{||v} + u_{\bot v}$$
 
 ## 12.4: The Cross Product
+Cross Product is a vector operation used typically to compute torque. Operating on an n x n matrix, using the determinant you can find the cross product. The cross product is often used in conjunction with the term determinant.
+![[Pasted image 20220121064303.png]]
+##### Cross Product of a 2 x 2 matrix:
+$$\begin{bmatrix}  
+a & b\\  
+c & d   
+\end{bmatrix} = ad - bc$$
+
+**Example :: finding the determinant of a 2x2 matrix**
+> Find the determinant of a 2x2 matrix.
+> $$\begin{bmatrix}  
+3 & 2\\  
+1/2 & 4   
+\end{bmatrix}... = 3 \cdot 4 - 2 \cdot 1/2 = 11$$
+>
+
+##### Cross product of a 3 x 3 matrix:
+$$\begin{bmatrix}  
+a_1 & b_1 & c_1\\  
+a_2 & b_2 & c_2\\
+a_3 & b_3 & c_3
+\end{bmatrix} = a_1\begin{bmatrix}\
+b_2 & c_2\\ b_3 & c_3
+\end{bmatrix}
+-a_2\begin{bmatrix}\
+a_2 & c_2\\ a_3 & c_3
+\end{bmatrix}
++a_3\begin{bmatrix}\
+a_2 & b_2\\ a_3 & b_3
+\end{bmatrix}$$
+**Minors:** A sub answer of the determinant acquired from breaking the matrix into smaller compontents.
+![](https://jigsaw.macmillanlearning.com/books/9781319224929/epub/OEBPS/images/ROG_05074_1204_PG701a1.png)
+
+##### Cross Product of 2 vectors: 
+The cross product of vector $v=(v_1, v_2, v_3)$ and $w=(w_1, w_2, w_3)$ is the determinant of $v \times w$
+$$v \times w =\begin{bmatrix}  
+i & j & k\\  
+v_1 & v_2 & v_3\\
+w_1 & w_2 & w_3
+\end{bmatrix} = i\begin{bmatrix}\
+v_2 & v_3\\ w_2 & c_3
+\end{bmatrix}
+-j\begin{bmatrix}\
+v_1 & v_3\\ w_1 & w_3
+\end{bmatrix}
++k\begin{bmatrix}\
+v_1 & v_2\\ w_1 & w_3
+\end{bmatrix}$$
+The cross product is also unique with 3 properties:
+1. $v \times w$ is orthogonal to $v$ and $w$ 
+2. $v \times w$ has a length $||v|| \cdot ||w||\sin\theta$ (w/ $\theta$ being the angle between $v$ and $w$)
+3. $\{v, w, v \times w\}$ is a right-handed system
+
+##### Properties of the cross product:
+
+1. Anti-communative: $$w \times v = -v \times w$$
+2. Identity:
+$$v \times v = 0$$
+3. Parallel Identity:
+$$v \times w = 0 \text{ if and only if } w = \lambda v \text{ for some scalar or } v=0$$
+
+4. Scalar multiplication: 
+$$(\lambda v) \times w = v \times (\lambda w) = \lambda (v \times w)$$
+5. Distributive Property:
+$$(u + v) \times w = u \times w + v \times w$$
+##### Cross product of basis vectors:
+$$i \times j = k, \quad j \times k = i, \quad k \times i = j$$
+$$j \times i = -k, \quad k \times j = -i, \quad i \times k = -j$$
+$$(2i+k) \times (3j + 5k) = (2i) \times (3j) + (2i) \times (5k) + k \times (3j) + k \times (5k)$$
+$$= 6(i \times j) + 10(i \times k) + 3 (k \times j) + 5(k \times k)$$
+$$=6k-10j-3i+5(0)=-3i-10j+6k$$
 
 ## 12.5: Planes in 3D Space
 

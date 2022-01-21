@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "116 Propositional Logic.md",
+            "file": "110 Vectors.md",
             "mode": "source",
             "source": false
           }
@@ -53,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 174
+    "width": 174,
+    "collapsed": true
   },
   "right": {
     "id": "f6ecba14853696b5",
@@ -69,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "116 Propositional Logic.md",
+                "file": "110 Vectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -89,15 +90,15 @@
   },
   "active": "2d2b4163c2fb4f4a",
   "lastOpenFiles": [
-    "116 Propositional Logic.md",
+    "110 Vectors.md",
+    "100 Math.md",
     "115 Sets.md",
-    "Class monday 360.md",
-    "253 Types of machine learning.md",
-    "assets/Pasted image 20220118100355.png",
-    "250 Reinforcement Learning.md",
-    "lists/Math Cheatsheet.md",
-    "lists/Discrete Math Cheatsheet.md",
-    "Neural Networks/Neural Network Overview.md",
-    "Neural Networks/Activation Functions.md"
+    "116 Propositional Logic.md",
+    "200 Statistics and Machine Learning.md",
+    "351 Digital and Analog.md",
+    "111 Planes.md",
+    "000 Index.md",
+    "1 Me.md",
+    "400 Computer Science.md"
   ]
 }

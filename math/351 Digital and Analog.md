@@ -18,13 +18,68 @@
 
 
 ##### Difference Between Analog Computers and Digital Computers
-| Analog Computer | Digital Computer | 
-| --------------- | ---------------- |
-Uses continuous values | Discrete values (0, 1)| 
-Slower	| Faster
-Can store less data | More data
-Less reliable | More reliable
-Less accurate | More accurate
+| Analog Computer        | Digital Computer       |
+| ---------------------- | ---------------------- |
+| Uses continuous values | Discrete values (0, 1) |
+| Slower                 | Faster                 |
+| Can store less data    | More data              |
+| Less reliable          | More reliable          |
+| Less accurate          | More accurate          | 
 
+##### Bases:
+| Name        | Radix | Digits                                         |
+| ----------- | ----- | ---------------------------------------------- |
+| Binary      | 2     | 0, 1                                           |
+| Octal       | 8     | 0, 1, 2, 3, 4, 5, 6, 7                         |
+| Decimal     | 10    | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                   |
+| Hexadecimal | 16    | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F |
 
+##### Convert decimal to binary:
+2 ways to tackle this problem, counting down and counting up. Both use a similar concept to tackle $2^n$, but one division and other addition.
+1. Counting Down: $857_{10}$ to binary
+```
+857/2 = 428 ~ Remainder 1
+428/2 = 214 ~ Remainder 0
+214/2 = 107 ~ Remainder 0
+107/2 = 53  ~ Remainder 1
+53/2  = 26  ~ Remainder 1
+26/2  = 13  ~ Remainder 0
+13/2  = 6   ~ Remainder 1
+6/2   = 3   ~ Remainder 0
+3/2   = 1   ~ Remainder 1
+2/1   = 0   ~ Remainder 1
 
+Answer: 1101011001
+(counting up)
+```
+2. Counting Up: $857_{10}$ to binary
+```
+1 x 2 x 4 x 8 x 16 x 32 x 64 x 128 x 256 x 512 
+1 x 0 x 0 x 1 x 1  x  0 x  1 x   0 x   1 x   1
+Answer: 1101011001
+```
+
+##### Convert decimal to base 2:
+Converting usually for numbers with decimals through multiplication and whole numbers through division.
+1. Convert $46.6875_{10}$ to $N_2$
+```
+1st half: 46
+46 / 2 = 23 ~ REM: 0
+23 / 2 = 13 ~ REM: 1
+11 / 2 = 5  ~ REM: 1
+5  / 2 = 2  ~ REM: 1
+2  / 2 = 1  ~ REM: 0
+1  / 2 = 0  ~ REM: 1
+ANS: 101110
+
+2nd half: .6875
+0.6875 x 2 = 1.375 ~ INT: 1
+0.375  x 2 = .750  ~ INT: 0
+0.75   x 2 = 1.5   ~ INT: 1
+0.5    x 2 = 1.0   ~ INT: 1
+ANS: 1011
+
+BASE 2 ANS: 101110.1011
+```
+
+**Octal vs. Hexadecimal:** Octal only uses 3 bits with a radix of (0-7) while hex uses 4 digits and has (0-F) possible combinations.
