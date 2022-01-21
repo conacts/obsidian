@@ -1,9 +1,44 @@
 TARGET DECK: Discrete Math
 # Propositional Logic
+A sentence that is either true or false but not both is called a proposition. A proposition is typically expressed as a declarative sentence.
 
+Example of proposition:
+> True statement :: "The earth is round"
+> False statement :: "4 is a prime number"
+
+Propositional variables: "p, q and r" are the propositional variables since "x, y and z" are typically used for real numbers.
+
+Truth value: The outcome of the statement where the value is either true or false.
+
+Proposition Table:
+| Connectives                       | Notation              | English                               |
+| --------------------------------- | --------------------- | ------------------------------------- |
+| Negation ($\lnot$)                | $\lnot$p              | "not p" / "it is not the case that p" |
+| Disjunction ($\lor$)              | p $\lor$ q            | "disjunction of p and q" / "p or q"   |
+| Conjunction ($\land$)             | p $\land$ q           | "conjunction of p and q" / "p and q"  |
+| Exclusive Or ($\oplus$)           | p $\oplus$ q          | "either p or q but not both"          |
+| Conditional ($\rightarrow$)       | p $\rightarrow$ q     | "if p then q"                         |
+| Biconditional ($\leftrightarrow$) | p $\leftrightarrow$ q | "p if and only if q"                  |
+
+Disjunction (OR) Table:
+| p   | q   | p $\lor$ q |
+| --- | --- | ---------- |
+| T   | T   | T          |
+| T   | F   | T          |
+| F   | T   | T          |
+| F   | F   | F           |
+
+Prescedence in propositional logic:
+| Operators                           | prescedence |
+| ----------------------------------- | ----------- |
+| $\lnot$                             | 1           |
+| $\lor \quad \land$                  | 2           |
+| $\rightarrow \quad \leftrightarrow$ | 3           |
 
 ##### 2.1 Flashcards:
 
+What is the definition of proposition? #flashcard 
+A statement that is either true or false but not both
 
 Determine whether the following statement is a proposition.
 x+y=11 #flashcard 
