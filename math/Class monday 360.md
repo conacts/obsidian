@@ -5,11 +5,11 @@ Definiton: A logical expression made up of propositional variables and logical c
 
 Prescedence: Similar to PEMDAS, the way in which you operate on a logical statement
 
-| Operators / connectives             | prescedence |
+| Operators                           | prescedence |
 | ----------------------------------- | ----------- |
-| $\lnot$                   | 1           |
-| $\vee \quad \wedge$                 | 2           |
-| $\rightarrow \quad \leftrightarrow$                 |   3           |                   
+| $\lnot$                             | 1           |
+| $\lor \quad \land$                  | 2           |
+| $\rightarrow \quad \leftrightarrow$ | 3           |
 
 
 Tautology: a proposition which is always true:
