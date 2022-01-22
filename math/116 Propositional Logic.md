@@ -178,3 +178,33 @@ F	T	c
 F	F	d #flashcard 
 T, F, T, F
 <!--ID: 1642538012364-->
+
+
+##### 2.5 flashcards: 
+
+Name the property for:  $p \land \lnot q \approx \lnot (\lnot p \lor q)$ #flashcard 
+Conditional Equivalent Rule
+
+Name the property for:  $p \land \lnot q \approx \lnot \lnot p \land \lnot q)$ #flashcard 
+De Morgan's Rule
+
+##### 2.8 flashcards:
+
+Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $p \lor (\lnot\lnot p \land \lnot q)$ #flashcard 
+De Morgan
+
+Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $p \lor (p \lor \lnot p)$ #flashcard 
+By Double Negation
+
+Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $(p \lor p) \lor \lnot q$ #flashcard 
+Associative
+
+Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $p \lor \lnot q$ #flashcard 
+Idempotent
+
+Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $\lnot q \lor p$ #flashcard 
+Commutative
+
+Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $q \rightarrow p$ #flashcard 
+Conditional Equivalent
+
