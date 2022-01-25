@@ -60,14 +60,18 @@ $$i=\{1, 0\} \quad j=\{0, 1\}$$
 $$\overrightarrow{0}=\{0, 0, ...\}$$
 
 ##### Parallel Vectors:
-- Vectors can be be parallel in either the same or opposite direction. They can also be parallel if they are scaled unevenly.
+**Definition:** Vectors can be be parallel in either the same or opposite direction. They can also be parallel if they are scaled unevenly.
 $$w=\lambda v$$
 ![[Pasted image 20220113200945.png | 200]]
+##### Orthogonal Vectors:
+**AKA:** perpendicular
+**Definition:** Vectors that meet to form a right angle
+
 ##### Equivalent Vectors:
-- Vectors are equivalent if they share the same compontents. Vectors are equivalent based on their magnitude and direction, not their location.
+**Definition:** Vectors that share the same compontents. Vectors are equivalent based on their magnitude and direction, not their location.
 
 ##### -V Vector:
-- Flipping a vectors orientation through mulitplying by scalar -1.
+**Definiton:** Flipping a vectors orientation through mulitplying by scalar -1.
 $$V=(12, 4)$$
 $$-V=(-12, -4)$$
 
@@ -80,6 +84,46 @@ Distributive Law for Scalars: $\lambda (v+w)=\lambda v + \lambda w$
 For any two vectors v and w, 
 $$||v+w||\le||v||+||w||$$
 unless: $v=0$ or $w=0$ or $w=\lambda v$
+
+##### 12.1 flashcards:
+
+What are the components of a vector? #flashcard 
+The individual magnitudes in the proper direction of their plane
+<!--ID: 1642969856602-->
+
+
+
+3 Properties of vector algebra #flashcard 
+Communitive Law: $v+w=w+v$
+Associative Law: $u+(v+w)=(u+v)+w$
+Distributive Law for Scalars: $\lambda (v+w)=\lambda v + \lambda w$
+<!--ID: 1642969856611-->
+
+
+
+The triangle inequality theorem: #flashcard 
+$||v+w||\le||v||+||w||$ unless: $v=0$ or $w=0$ or $w=\lambda v$
+<!--ID: 1642969856616-->
+
+
+
+What are basis vectors? #flashcard 
+Linearly independent vectors that span the whole vector space 
+$i=\{1, 0\} \quad j=\{0, 1\}$
+<!--ID: 1642969856620-->
+
+
+
+Equation to find the length of a vector #flashcard 
+$||v||=||\overrightarrow{PQ}||=\sqrt{a^2+b^2}$
+<!--ID: 1642969856622-->
+
+
+
+What is normalizing a vector and what is the formula to do so? #flashcard 
+When you find a parallel vector of length 1 using $v_n=\frac{v}{||v||}=\frac{v}{\sqrt{v^2}}$
+<!--ID: 1642969856624-->
+
 
 ---
 
@@ -144,6 +188,18 @@ $$x(t)=x_0 + at, \quad y(t)=y_0 + bt, \quad z(t)=z_0 + ct$$
 
 What is the equation of a sphere? #flashcard 
 $(x-a)^2+(y-b)^2+(z-c)^2=R^2$
+<!--ID: 1642969856625-->
+
+What makes parametric equations different than y-intercept equations #flashcard 
+Parametric equations can work in multiple dimensions making them very effective
+<!--ID: 1642970415128-->
+
+
+
+Formula of parametric equation? #flashcard 
+$r(t)=r_0 +tv=\{x_0, y_0, z_0\}+t\{a, b, c\}$ 
+<!--ID: 1642970415137-->
+
 
 
 
@@ -288,7 +344,8 @@ c & d
 3 & 2\\  
 1/2 & 4   
 \end{bmatrix} = 3 \cdot 4 - 2 \cdot 1/2 = 11$$
->
+> Find the determinant of a 2x2 matrix
+> $$\begin{bmatrix}   8 & 17\\  9 & 12   \end{bmatrix} = 8 \cdot 12 - 9 \cdot 17 = -57$$
 
 ##### Cross product of a 3 x 3 matrix:
 $$\begin{bmatrix}  
@@ -307,6 +364,30 @@ a_2 & b_2\\ a_3 & b_3
 **Minors:** A sub answer of the determinant acquired from breaking the matrix into smaller compontents.
 ![](https://jigsaw.macmillanlearning.com/books/9781319224929/epub/OEBPS/images/ROG_05074_1204_PG701a1.png)
 
+**Example :: finding the determinant of a 3x3 matrix**
+> $$\begin{bmatrix}  
+4 & 0 & 7\\  
+-3 & 0 & 4\\
+8 & 7 & -5
+\end{bmatrix} = 4\begin{bmatrix}\
+0 & 4\\ 7 & -5
+\end{bmatrix}
+-0\begin{bmatrix}\
+-3 & 4\\ 8 & -5
+\end{bmatrix}
++7\begin{bmatrix}\
+-3 & 0\\ 8 & 7
+\end{bmatrix}$$
+>$$4\begin{bmatrix}\
+0 & 4\\ 7 & -5
+\end{bmatrix}
+-0\begin{bmatrix}\
+-3 & 4\\ 8 & -5
+\end{bmatrix}
++7\begin{bmatrix}\
+-3 & 0\\ 8 & 7
+\end{bmatrix}=4(0 - 4 \cdot 7) - (0) + 7(-21-0)=-259$$
+
 ##### Cross Product of 2 vectors: 
 The cross product of vector $v=(v_1, v_2, v_3)$ and $w=(w_1, w_2, w_3)$ is the determinant of $v \times w$
 $$v \times w =\begin{bmatrix}  
@@ -322,6 +403,25 @@ v_1 & v_3\\ w_1 & w_3
 +k\begin{bmatrix}\
 v_1 & v_2\\ w_1 & w_3
 \end{bmatrix}$$
+**Example :: v x w**
+> Calculate $v \times w = (u_1, u_2, u_3)$; $v=(3, 7, 4)$ and $w=(-2, 2, -5)$
+> $$v \times w =\begin{bmatrix}  
+i & j & k\\  
+3 & 7 & 4\\
+-2 & 2 & -5
+\end{bmatrix} = i\begin{bmatrix}\
+7 & 4\\ 2 & -5
+\end{bmatrix}
+-j\begin{bmatrix}\
+3 & 4\\ -2 & -5
+\end{bmatrix}
++k\begin{bmatrix}\
+3 & 7\\ -2 & 2
+\end{bmatrix}$$
+> $$=(-35i-8i, -(-15j+8j), 6k-(-14k))=(-43i, 7j, 20k) $$
+
+
+
 The cross product is also unique with 3 properties:
 1. $v \times w$ is orthogonal to $v$ and $w$ 
 2. $v \times w$ has a length $||v|| \cdot ||w||\sin\theta$ (w/ $\theta$ being the angle between $v$ and $w$)
@@ -347,6 +447,22 @@ Example :: finding the cross product of two vectors
 > $$(2i+k) \times (3j + 5k) = (2i) \times (3j) + (2i) \times (5k) + k \times (3j) + k \times (5k)$$
 > $$= 6(i \times j) + 10(i \times k) + 3 (k \times j) + 5(k \times k)$$
 > $$=6k-10j-3i+5(0)=-3i-10j+6k$$
+> Calculate the cross product of $(8𝐢−4𝐣+7𝐤)×(𝐢+𝐣−5𝐤)=a𝐢+k𝐣+c𝐤$
+> Note: do not do cross multiplication for this problem
+> $$v \times w =\begin{bmatrix}  
+i & j & k\\  
+8 & -4 & 7\\
+1 & 1 & -5
+\end{bmatrix} = i\begin{bmatrix}\
+-4 & 7\\ 1 & -5
+\end{bmatrix}
+-j\begin{bmatrix}\
+8 & 7\\ 1 & -5
+\end{bmatrix}
++k\begin{bmatrix}\
+8 & -4\\ 1 & 1
+\end{bmatrix}$$
+> $$=i(20-7)-j(-40-7)+k(8-(-4))=(13i, 47j, 12k)$$
 
 Right-handed system:
 A method of approximating cross product directions
@@ -357,21 +473,57 @@ Best way to remember i, j and k formulas
 ![[Pasted image 20220121171425.png]]
 
 
-Area of parallelogram:
+##### Area of parallelogram:
 $area(P)=||v \times w||$
 
-Area of triangle:
+**Example :: Area of parallelogram:**
+> Find the area of the parallelogram determined by 𝐯=⟨5,0,0⟩ and 𝐰=⟨0,−5,9⟩.
+> $$area(P)=||v \times w||$$
+> $$v \times w =\begin{bmatrix}  
+i & j & k\\  
+5 & 0 & 0\\
+0 & -5 & 9
+\end{bmatrix} = i\begin{bmatrix}\
+0 & 0 \\ -5 & 9
+\end{bmatrix}
+-j\begin{bmatrix}\
+5 & 0\\ 0 & 9
+\end{bmatrix}
++k\begin{bmatrix}\
+5 & 0\\ 0 & -5
+\end{bmatrix}=...$$
+> $$||v \times w||=||(0, -45,-25)|| =\sqrt{(-25)^2+(-45)^2}=\sqrt{2650} \approx 51$$
+
+##### Area of triangle:
 $area(T)=\frac{||v \times w||}{2}$
 
 Note: If you think, a parallelogram is essentially two triangles together, relating to why they are the same equation with the triangle just being half that of the parallelogram.
 
-Volume of parallelpiped:
-$Volume(D)=|u \cdot (v \times w)|$
+##### Volume of parallelpiped:
+$Volume(D)=|u \cdot (v \times w)|=det\begin{pmatrix}u \\v \\ w &\end{pmatrix}$
+![[Pasted image 20220122154310.png]]
 
-Theorem 3: 
-Volume via scalar triple product and determinants
 
-$V=|u \cdot (v \times w)| = det(\begin{bmatrix} a &\end{bmatrix}$
+Example :: Volume of Parallelpiped
+> Calculate the volume of the parallelepiped spanned by 𝐮=⟨2,0,3⟩, 𝐯=⟨2,4,2⟩, and 𝐰=⟨−4,3,7⟩
+> $$|u \cdot (v \times w)|=...$$
+> $$v \times w =\begin{bmatrix}  
+i & j & k\\  
+2 & 4 & 2\\
+-4 & 3 & 7
+\end{bmatrix} = i\begin{bmatrix}\
+4 & 2\\ 3 & 7
+\end{bmatrix}
+-j\begin{bmatrix}\
+2 & 2\\ -4 & 7
+\end{bmatrix}
++k\begin{bmatrix}\
+2 & 4\\ -4 & 3
+\end{bmatrix}=...$$
+> $$=i(28-6)-j(14+8)+k(6+16)=(22i, -22j, 22k)$$
+> $$|u \cdot (v \times w)|=(2i, 0j, 3k) \cdot (22i, -22j, 22k)=(44 + 0+ 66)=110$$
+
+
 
 
 ##### 12.4 flashcards:
@@ -442,6 +594,75 @@ $(u + v) \times w = u \times w + v \times w$
 
 ## 12.5: Planes in 3D Space
 
-## 12.6: A Survey of Quadratic Surfaces
+##### Normal Vector:
+**Definition:** A vector that is [[110 Vectors#Orthogonal Vectors |orthogonal]] to a plane. Typically used to determine how a plane is oriented in space.
+![[Pasted image 20220122172954.png | 200]]
 
-## 12.7: Cylindrical and Spherical Coordinates
+
+##### Geometric Description of a Plane:
+$P_0=(x_0, y_0, z_0)$, is the origin of the plane
+![[Pasted image 20220122173708.png |200]]
+##### Equations of a Plane:
+**Vector form:** $n \cdot (x, y, z) = d$
+**Scalarform 1:** $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$
+**Scalarform 2:** $ax+by+cz=d$
+- where $d=ax_0+by_0+cz_0$
+
+**Example :: Find the plane's equation using a normal vector and $P_0$** 
+> Find the equation of the plane with normal vector 𝐧 passing through point $P_0$ in the scalar form  $ax+by+cz=d$, where $n=\langle −10,9,5 \rangle,P_0=(9,11,2)$ 
+> Using scalarform 1: $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$ 
+> $$-10(x-9)+9(y-11)+5(z-2)=0$$
+> Then we solve for the actual equation...
+> $$-10x+90+9y-99+5z-10=0$$
+> $$-10x+9y+5z=19$$
+
+**Example :: Find the equation of a plane parallel to another**
+> Let $P$ have equation $7x-4y+2z=-10$.  Find an equation of the plane parallel to $P$ passing through point $P_0=(2, -1, 3)$:
+> $$7(x+2)-4(y-1)+2(z+3)=0$$
+> $$7x-4y+2z=24$$
+
+##### Collinear:
+**Definition:** Points that lie on a similar line. If 3 points aren't collinear, then there is only a plane that can pass through all, which looks like...
+![[Pasted image 20220122202324.png | 200]]
+
+**Example :: Find an equation using 3 points:**
+> Find an equation of the plane passing through the three points given $P=(4,5,7), 𝑄=(5,10,15), 𝑅=(11,11,8)$
+> 1. Find a normal vector using $\overrightarrow{PQ}$ and $\overrightarrow{PR}$
+> $$\overrightarrow{PQ}=Q-P=(5-4, 10-5, 15-7)=\langle 1, 5, 8 \rangle$$
+> $$\overrightarrow{PR}=Q-R=(11-4, 11-5, 8-7)=\langle 7, 6, 1 \rangle$$
+> $$n = \overrightarrow{PQ} \times \overrightarrow{PR} =\begin{bmatrix}  
+i & j & k\\  
+1 & 5 & 8\\
+7 & 6 & 1
+\end{bmatrix} = i\begin{bmatrix}\
+5 & 8\\ 6 & 1
+\end{bmatrix}
+-j\begin{bmatrix}\
+1 & 8\\ 7 & 1
+\end{bmatrix}
++k\begin{bmatrix}\
+1 & 5\\ 7 & 6
+\end{bmatrix}=...$$
+> $$=i(5-48)-j(1-56)+k(6-35)= \langle -43i, 55j, -29k \rangle$$
+> 2. Choose a point on the plane and compute d (using P)
+> $$d=n\cdot \overrightarrow{OP}= \langle -43, 55, -29 \rangle \cdot (4, 5, 7)=-100$$
+
+
+
+##### 12.5 flashcards:
+
+What is a normal vector? #flashcard 
+A vector perpendicular to a plane
+<!--ID: 1642970415143-->
+
+
+What are the 3 forms of the equation to describe a plane? #flashcard 
+1. **Vector form:** $n \cdot (x, y, z) = d$
+2. **Scalarform 1:** $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$
+3. **Scalarform 2:** $ax+by+cz=d$
+<!--ID: 1642970415148-->
+
+
+What is the definition of collinear? #flashcard 
+3 points that are on a similar line. If points are not collinear, then together they can form a plane
+<!--ID: 1642970415153-->

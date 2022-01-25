@@ -1,16 +1,19 @@
 TARGET DECK: Discrete Math
 # Propositional Logic
-A sentence that is either true or false but not both is called a proposition. A proposition is typically expressed as a declarative sentence.
+**Definition:** A sentence that is either true or false but not both is called a proposition. A proposition is typically expressed as a declarative sentence.
 
-Example of proposition:
+**Example of proposition:**
 > True statement :: "The earth is round"
 > False statement :: "4 is a prime number"
 
-Propositional variables: "p, q and r" are the propositional variables since "x, y and z" are typically used for real numbers.
+**Propositional variables:** "p, q and r" are the propositional variables since "x, y and z" are typically used for real numbers.
 
-Truth value: The outcome of the statement where the value is either true or false.
+**Truth value:** The outcome of the statement where the value is either true or false.
 
-Proposition Table:
+#### Connectives and Logical Operators
+
+**Proposition Table:**
+
 | Connectives                       | Notation              | English                               |
 | --------------------------------- | --------------------- | ------------------------------------- |
 | Negation ($\lnot$)                | $\lnot$p              | "not p" / "it is not the case that p" |
@@ -20,15 +23,36 @@ Proposition Table:
 | Conditional ($\rightarrow$)       | p $\rightarrow$ q     | "if p then q"                         |
 | Biconditional ($\leftrightarrow$) | p $\leftrightarrow$ q | "p if and only if q"                  |
 
-Disjunction (OR) Table:
+**Disjunction (OR) Table:**
+
 | p   | q   | p $\lor$ q |
 | --- | --- | ---------- |
 | T   | T   | T          |
 | T   | F   | T          |
 | F   | T   | T          |
-| F   | F   | F           |
+| F   | F   | F          |
 
-Prescedence in propositional logic:
+Conjunction (AND) Table:
+
+| p   | q   | p $\land$ q |
+| --- | --- | ----------- |
+| T   | T   | T           |
+| T   | F   | F           |
+| F   | T   | F           |
+| F   | F   | F           | 
+
+**Exclusive OR (XOR) Table:**
+
+| p   | q   | p $\oplus$ q |
+| --- | --- | ------------ |
+| T   | T   | F            |
+| T   | F   | T            |
+| F   | T   | T            |
+| F   | F   | F             |
+
+
+**Prescedence in propositional logic:**
+
 | Operators                           | prescedence |
 | ----------------------------------- | ----------- |
 | $\lnot$                             | 1           |
@@ -39,6 +63,8 @@ Prescedence in propositional logic:
 
 What is the definition of proposition? #flashcard 
 A statement that is either true or false but not both
+<!--ID: 1642869513646-->
+
 
 Determine whether the following statement is a proposition.
 x+y=11 #flashcard 
@@ -66,13 +92,6 @@ No
 ##### 2.2 Flashcards:
 
 
-Let r be “x=2+y" where x is a real number and y is any odd number. What is ¬r?
-a) $x \ne 2 + y$
-b) it is not the case that $x=2+y$
-c) neither
-d) both #flashcard 
-d) both
-
 Let s be “There are infinite prime numbers." What is ¬s?
 a) There are finite prime numbers
 b) It is not the case that there are infinite prime numbers
@@ -81,26 +100,21 @@ d) both #flashcard
 <!--ID: 1642538012348-->
 
 
-
 ##### 2.3 Flashcards:
-The expression (x+5)≥x≥0(x+5)≥x≥0 can be written as conjunction #flashcard 
+The expression (x+5)≥x≥0 can be written as conjunction  
 a) x≤(x+5)∧x≥0
 b) (x+5)≥x∧x≥0
 c) none
-d) x≥(x+5)∧x≥0
-<!--ID: 1642538012350-->
-
-
+d) x≥(x+5)∧x≥0 #flashcard 
+a and b
+<!--ID: 1642972267075-->
 
 
 What is the truth value of the expression “9 is a prime or not” #flashcard 
 True
 <!--ID: 1642538012352-->
 
-
-
-
-Find a proposition vv with the following truth table:
+Find a proposition v with the following truth table:
 p	q	v
 T	T	F
 T	F	F
@@ -108,9 +122,6 @@ F	T	T
 F	F	F #flashcard 
  ¬p∧q
 <!--ID: 1642538012353-->
-
-
-
 
 Determine which statement(s) is/are "Exclusive Or".
 a) Today is Monday or it is not.
@@ -120,11 +131,18 @@ d) all the above #flashcard
 d) all the above
 <!--ID: 1642538012354-->
 
-
+Let r be “x=2+y" where x is a real number and y is any odd number. What is ¬r?
+a) $x \ne 2 + y$
+b) it is not the case that $x=2+y$
+c) neither
+d) both #flashcard 
+d)  both
 
 
 ##### 2.4 Flashcards:
-Let t : x is an odd integer and ss: x+1 is even. Translate the following sentences:
+
+
+Let t : x is an odd integer and s: x+1 is even. Translate the following sentences:
 For x+1 is even, it is suﬃcient that x is an odd integer.
 s->t or t->s? #flashcard 
 t->s
@@ -142,13 +160,13 @@ s->t
 
 Determine the truth value of the statement:
 "If 2+1= 4, then the earth is flat." #flashcard 
-True
+True, since the truth table for conditional statement says "F + F = T"
 <!--ID: 1642538012360-->
 
 
 
 Determine the truth value of the statement:
-"If 3 is a prime then 3n+23n+2 is prime." Suppose n=11 #flashcard 
+"If 3 is a prime then 3n+2 is prime." Suppose n=11 #flashcard 
 False
 <!--ID: 1642538012361-->
 
@@ -180,31 +198,123 @@ T, F, T, F
 <!--ID: 1642538012364-->
 
 
+
+#### 2.2 Conditional Statement:
+
+**Conditional Statement:**
+
+| p   | q   | p $\rightarrow$ q |
+| --- | --- | ----------------- |
+| T   | T   | T                 |
+| T   | F   | F                 |
+| F   | T   | T                 |
+| F   | F   | T                 |
+
+Examples: 
+> **Translate the following statement:**
+> "If an integer $a$  is a multiple of 6 then $a$ is divisible by 2." 
+> r = an integer $a$  a multiple of 6
+> s = an integer $a$ divisible by 2
+> ANS: $r \rightarrow s$
+> 
+> **What is the truth value of the statement:**
+> "If 39 is a multiple of 3, then there are twenty-six letters in English alphabet."
+> p = "39 is a multiple of 3" = True
+> q = "there are twenty-six letters in English alphabet" = True
+> p $\rightarrow$ q = True $\rightarrow$ True = True
+
+Types of a Conditional Statement:
+
+| Statement      | Latex                         | Example                                                    |
+| -------------- | ----------------------------- | ---------------------------------------------------------- |
+| Conditional    | $p \rightarrow q$             | IF it is raining today, the game will be cancelled         |
+| Converse       | $q \rightarrow p$             | IF the game is cancelled, it is raining today              |
+| Contrapositive | $\lnot q \rightarrow \lnot p$ | IF the game is not cancelled, then it is not raining today |
+| Inverse        | $\lnot p \rightarrow \lnot q$ | IF it is not raining today, the game will not be cancelled |
+
+
+Biconditional Statement :: $p\leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$:
+- A biconditional statement can also be written as 
+
+| p   | q   | $p \leftrightarrow q$ |
+| --- | --- | --------------------- |
+| T   | T   | T                     |
+| T   | F   | F                     |
+| F   | T   | F                     |
+| F   | F   | T                     |
+
+Example:
+
+> "An integer $a$ is even if and only if $a$ is divisible by 2"
+> p = An integer $a$ is even
+> q = $a$ is divisible by 2
+> $(p \rightarrow q) \land (q \rightarrow p)$ = if $a$ is even then it is divisible by 2... if $a$ is divisible by 2, then it is even
+> $p \leftrightarrow q =$ True
+
+
+##### Tautology:
+A proposition that is true for all possible combinations of the question
+
+##### Contradiction:
+A compound proposition that is false for all possible combinations of the question
+
+##### Contingency:
+A compound proposition that can be either true or false, therefore neither a tautology or contingency
+
+
 ##### 2.5 flashcards: 
 
 Name the property for:  $p \land \lnot q \approx \lnot (\lnot p \lor q)$ #flashcard 
 Conditional Equivalent Rule
+<!--ID: 1642869513652-->
+
 
 Name the property for:  $p \land \lnot q \approx \lnot \lnot p \land \lnot q)$ #flashcard 
 De Morgan's Rule
+<!--ID: 1642869513653-->
+
+
+What is the difference between a conditional statement and biconditional statement? #flashcard 
+Biconditional statement must be true both ways where as conditional statement must be true only one way
+<!--ID: 1642869513655-->
+
+
+
+### 2.4 Logical Equivalence
+##### Logical Equivalence:
+AKA: $\approx$ or $\equiv$ 
+When two propositional statements have an equivalent truth table, leading them to be essentially equal. Ex. $p\leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$ 
+
 
 ##### 2.8 flashcards:
 
 Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $p \lor (\lnot\lnot p \land \lnot q)$ #flashcard 
 De Morgan
+<!--ID: 1642869513656-->
+
 
 Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $p \lor (p \lor \lnot p)$ #flashcard 
 By Double Negation
+<!--ID: 1642869513657-->
+
 
 Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $(p \lor p) \lor \lnot q$ #flashcard 
 Associative
+<!--ID: 1642869513658-->
+
 
 Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $p \lor \lnot q$ #flashcard 
 Idempotent
+<!--ID: 1642869513659-->
+
 
 Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $\lnot q \lor p$ #flashcard 
 Commutative
+<!--ID: 1642869513660-->
+
 
 Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $q \rightarrow p$ #flashcard 
 Conditional Equivalent
+<!--ID: 1642869513661-->
+
 

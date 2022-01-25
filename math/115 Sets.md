@@ -1,7 +1,8 @@
 TARGET DECK: Discrete Math
 # Sets:
 ## 1.1 Set Theory
-**Set:** A set is an unordered collection of distinct objects, otherwise known as members or elements.
+##### Set: 
+**Definition:** A set is an unordered collection of distinct objects, otherwise known as members or elements.
  - Order of the elements doesn't matter in a set, meaning two sets with the same elements are the same.
  - ...  == "and so forth"
 
@@ -109,7 +110,8 @@ a set with only one element
 ---
 
 ### 1.2 Set Builder Notation
-**Set Builder Notation:** A mathematical way to describe a set
+##### Set Builder Notation:
+A mathematical way to describe a set
 
 
 $$\text{set = \{expression | rule\}}$$
@@ -138,6 +140,8 @@ How to prove or prove/disprove that A is a subset of set B? ($A \subset B$)
 - Disprove: Show that one element x in A doesn't belong to B
 
 ##### 1.2 Problems:
+
+
 T / F : $0 \in \emptyset$ #flashcard 
 False
 <!--ID: 1642450254629-->
@@ -183,7 +187,7 @@ True
 
 T / F : Suppose $A=\{a,e,0\}$ and $B=\{0,1\}$ are two sets. Then...
 A×(B×B)=\{(a,0,0),(a,0,1),(a,1,0),(a,1,1),(e,0,0),(e,0,1),(e,1,0),(e,1,1),(0,0,0),(0,0,1),(0,1,0),(0,1,1)\} #flashcard 
-False
+False, because it is inside of a set
 <!--ID: 1642453763984-->
 
 
@@ -240,7 +244,8 @@ True
 
 
 ### 1.3 Set Cardinality:
-**Set Cardinality:** Number of distinct elements in the set A, denoted by $|A|$
+##### Set Cardinality:
+**Definition:** Number of distinct elements in the set A, denoted by $|A|$
 
 **Theorem 2:**
 > nullset within a set counts as a distinct element
@@ -300,8 +305,8 @@ False
 
 
 ### 1.4 Power Set:
-**Power Set:** The set of all possible subsets of set A is denoted by $\mathcal{P}(A)$, or known as power set of A
-
+##### Power Set:
+**Definition:** The set of all possible subsets of set A is denoted by $\mathcal{P}(A)$, or known as power set of A
 - Cardinality of power set = $2^n$
 
 
@@ -319,7 +324,8 @@ Cardinality of power set = $2^n$
 
 
 ### 1.5 Cartesian Products: 
-**Cartesian Products:** The multiplication of two sets where the output is ordered pairs of a tuple; notation: $A \times B$ 
+##### Cartesian Products:
+**Definition:** The multiplication of two sets where the output is ordered pairs of a tuple; notation: $A \times B$ 
 - Number of Power set of cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
 - Number of Cartesian Products: Multiply the number of all elements
 

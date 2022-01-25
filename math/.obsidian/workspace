@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "116 Propositional Logic.md",
+            "file": "10 Best blogs.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "116 Propositional Logic.md",
+                "file": "10 Best blogs.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,15 +98,15 @@
   },
   "active": "2d2b4163c2fb4f4a",
   "lastOpenFiles": [
+    "10 Best blogs.md",
+    "254 What is Deep Learning.md",
+    "lists/Definitions.md",
+    "100 Math.md",
+    "252 Supervised Learning.md",
     "116 Propositional Logic.md",
     "115 Sets.md",
-    "Class monday 360.md",
-    "400 Computer Science.md",
-    "451 Digital and Analog.md",
-    "000 Index.md",
-    "110 Vectors.md",
-    "Pasted image 20220121064303.png",
-    "100 Math.md",
-    "200 Statistics and Machine Learning.md"
+    "111 Planes.md",
+    "assets/Pasted image 20220122172954.png",
+    "assets/Pasted image 20220122173708.png"
   ]
 }
