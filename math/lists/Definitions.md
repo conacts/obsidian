@@ -38,6 +38,15 @@ Rather than explicitly programming a machine learning system, they must be train
 The first neural network proposed with one layer,  and an activation function.
 ![[Pasted image 20220104001949.png | 400]]
 
+## Weights
+The value used to scale the input as it passes from one neuron to another. The purpose of this is to add more variables to tune and create a more specific function.
+![[Pasted image 20220125140922.png]]
+
+
+## Biases
+The offset value added to a neuron within a neural network once the operations of the specific node have been completed.
+![[Pasted image 20220125140822.png |300]]
+
 # Math
 ## Truth value:
 The outcome of the statement where the value is either true or false.

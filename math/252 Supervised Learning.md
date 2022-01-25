@@ -2,6 +2,8 @@
 ### Defintion:
 Using labeled data to improve the model by comparing the model's output to the actual answer. So far, this is the most successful machine learning technique, but at the cost of requiring lots of human labeling.
 
+![[Pasted image 20220125140152.png |300]]
+
 ---
 
 ### Algorithms:
@@ -10,13 +12,27 @@ Using labeled data to improve the model by comparing the model's output to the a
 **Definition:**
 Attempting to predict the label of the input, giving a discrete answer as your output rather than a continuous one
 
+![[Pasted image 20220125140138.png |300]]
+
 ##### Neural Network:
+See Neural Networks Page
 
 ##### Decision Tree: 
+See Decision Tree Page
+
 
 ##### SVM (Support Vector Machines): 
 **Definition:**
 Classification technique that organizes data through a 3D separator known as a hyperplane
+- Soft Margins in SVMs:
+	- Allowing some data to be misclassified to prevent overfitting the model
+	![[Pasted image 20220125135848.png]]
+
+- Kernel Trick in SVMs:
+	- Used to separate the data better by adding another dimension to it
+
+![[Pasted image 20220125135909.png |300]]
+
 
 ##### Naive Bayes: 
 **Definition:**
@@ -43,6 +59,8 @@ As shown above, you can see the algorithm classifies objects based on those in i
 **Definition:**
 Attempting to predict the quantity of the output by finding finding line of best fit, which gives a continuous answer
 
+![[Pasted image 20220125140234.png | 400]]
+
 ##### Linear Regression:
 **Algorithms:** Neural Network, Decision Tree
 **Definiton:** Finds the line of best fit of a dataset and gives an output of expected value at an input (in terms of labels)
@@ -62,8 +80,10 @@ Attempting to predict the quantity of the output by finding finding line of best
 
 ##### K-Nearest Neighbor Regression:
 **Algorithms:** K-NN algorithm
+**Definition:** Finding the "property value" (objects value in space) and dictating the average of the K-Nearest Neighbors
 
 
+![[Pasted image 20220125140253.png |300]]
 
 ### Resources:
 [KNN-Algorithm](https://towardsdatascience.com/machine-learning-basics-with-the-k-nearest-neighbors-algorithm-6a6e71d01761)

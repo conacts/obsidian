@@ -14,29 +14,9 @@ The Markov Decision Process is broken down into 4 parts
 3.  **Probability —** (Policy) The probability that the next state will be what the agent predicts it to be
 4. **Action —** The action the agent takes to change it's position in the enviornment, measured in a timeframe known as a step
 
-
+![[Pasted image 20220125135125.png |400]]
 
 These 4 components enable an agent to act, predict and improve within it's current enviornment. For example, if you were playing someone in chess and they could accurately predict all your moves before you went, they would have a huge advantage over you
-
----
-
-## Environment
-**Definition:** World in which the agent operates. The environment can be either perfect or imperfect. This refers to whether the agent can percieve the entire enviornment (perfect) or only partially view the enviornment (imperfect). For example, chess is a perfect enviornment, while a game like Call of Duty is imperfect.
-
-### Types of Enviornments
-
-#### Enviornment Observation
-##### Perfect Enviornment (fully observable)
-**Definition:** A perfect enviornment is one where all parts of the enviornment are fully observable. This leads to easier state prediction causing an easier enviornment to act in. The problem is, the real world is not a perfect enviornment as it would be way too comptationally intensive to predict everything and the world is incredibly unpredictable.
-
-##### Imperfect Enviornment (not fully observable)
-**Definition:** An imperfect enviornment is one that is not fully observable. The agent is provided with only partial information, making it much harder to predict the enviornment but leads to a much more robust agent. The real world isn't fully observable, so this type of enviornment is the type humans experience.
-
-#### Enviornment Probability
-##### Deterministic Enviornment
-**Definition:** An enviornment where the next state can always be determined by the current action in the present state. For example, when you steer a car left, the car should turn left and not right. This enviornment abstracts probability from the set of actions.
-##### Schocastic Enviornment
-**Definition:** An enivornment where probability is factored into the action you choose. For example, if you shoot a gun in fortnite (because of bloom), you will not always hit each shot no matter how perfect your aim is due to the bullet spread, causing you to not always be able to determine the next step of the enviornment.
 
 ---
 
@@ -45,12 +25,28 @@ These 4 components enable an agent to act, predict and improve within it's curre
 
 #### Experience Replay
 **Definiton:** The storing of previous actions, states and rewards to have the agent play in those states again, essentially creating a supervised learning problem
+![[Pasted image 20220125135438.png |300]]
 
 ---
+
+### Action
+**Definiton:** Action refers to the action taken by the agent at each state, otherwise known as a step. Actions can be chosen from a set of actions, or a range over a set of actions. 
+
+#### Types of Actions
+
+##### Discrete Action Space
+**Definition:** A discrete action space is one where there is a finite set of actions to choose from. For example, playing pokemon you have a few choices while walking around. Move up, down, left or right.
+![[Pasted image 20220125135514.png|300]]
+
+
+##### Continuous Action Space
+**Definition:** A continuous action space is one where a range of actions are present. While you may be limited in the choices you can take, you are able to chose the scalar in which you apply to the action. For example, driving a car only has a set of choices of gas, break, left and right, but the range in which you can take these actions is vast. I can stomp on the breaks or ease into them depending on the situation.
+![[Pasted image 20220125135502.png |400]]
 
 ### Reward 
 **Definition:** The feedback from the enviornment used to encourage and discourage decisions. The goal of the policy is to predict the reward, so the agent can make the optimal decision at each step. 
 
+![[Pasted image 20220125135415.png |300]]
 
 #### Types of Rewards
 Although rewards are objective, the time it takes to achieved these rewards is a huge influence on the value of the reward leading to two types of rewards 1. 
@@ -75,11 +71,15 @@ This method is very useful for planning as it can prioritize the future if the r
 #### Types of Policies
 **Note:** If the agent attempts to predict the future, it is model-based, otherwise it is model-free
 
-##### Model-Based Algorithms
+#### Model-Based Algorithms
 **Definiton:** When the policy uses a representation of the enviornment of the environment to predict future quantities like state and reward to plan and make informed decisions.
+![[Pasted image 20220125135245.png |400]]
 
 ##### Deterministic Search (Non-explore)
+
 **Definition:** Always choosing the largest reward, giving the same output regardless of how many times run into the same situation (especially since it is model-based).
+
+![[Pasted image 20220125135232.png]]
 
 ##### Non-Deterministic Search (Explore)
 **Definition:** There is a chance for each action being chosen based on a chance of picking a random action in the situation rather than the optimal action as stated by the policy. This means that if you run the program enough times you should see all options acted on eventually.
@@ -87,6 +87,7 @@ This method is very useful for planning as it can prioritize the future if the r
 ##### Temporal Difference Learning 
 AKA: TD Learning
 **Definition:** a set of algorithms where an agent learns from an environment through episodes with no prior knowledge of the environment.
+![[Pasted image 20220125135330.png |300]]
 
 ##### Bellman Equation
 **Definition:** An equation that simplifies the computation of breaking the value function down into immediate reward and the discounted future values through dynamic programming. 
@@ -95,23 +96,63 @@ AKA: TD Learning
 >  - γ = discount rate
 >  - V(s') = Value function of next state, causing a recursive function and repeat the above function again
 
-##### Model-Free Algorithms
+#### Model-Free Algorithms
 **Definiton:** Continually updates a Policy in which it acts from, recieving rewards based on it's actions leading to an updated policy. Perfect for imperfect environments as it does not attempt to predict the future rewards, just models the rewards at each step through trial and error.
+![[Pasted image 20220125134839.png |400]]
 
 ##### Actor-Critic
+**Definiton:** Simultaneously learning a policy function and a value function
+- **SAC** (Soft Actor Critic)
+	- **Definition:** Not limiting itself to seeking only the maximum of lifetime rewards, this algorithm embraces exploration, incentivizing entropy in its pursuit of optimal policy.
+![[Pasted image 20220125134909.png |400 ]]
+- **PPO** (Proximal Policy Optimization)
+	- **Definition:** A state-of-the-art policy gradient algorithm which uses two neural networks during training – a policy network and a value network.
+	![[Pasted image 20220125135010.png |400]]
+
+##### (MCTS) Monte Carlo Tree Search
+**Definiton:** Randomly samples actions and uses experience replay to master a multitude of actions. It is not model-based (planning) since it doesn't utilize MDP planning, it just randomly samples each state for which it can guess it's reward
+**Note:** This was the technique used by Google's Deepmind on the Alpha Go and MuZero projects.
+![[Pasted image 20220125135105.png |400]]
+
+
+##### SARSA
+**Definiton:** The process of reaching a state, then based on your state you choose an action, get your reward and get your new state again and continue the process
+1. State
+2. Action
+3. Reward
+4. State
+5. Action
+- Associative SARSA:
+	- Definition: The values the algorithm learns are associated with the particular states in the environment, otherwise known as a full reinforcement learning problem.
+	- Note: MDP is a form of associative SARSA
+- Non-associative SARSA:
+	- Definition: Learns the value of actions, but does not associate them with the state they are taken in
+
+
+##### Q-Learning
+**Definiton:** Learning the value of an action in that particular state. It is a model free learning algorithm used to find the optimal policy
 
 
 %% I replaced probability with policy as policy is what is used to predict the probablity of states and choose the optimal action %%
 
 --- 
 
-### Action
-**Definiton:** Action refers to the action taken by the agent at each state, otherwise known as a step. Actions can be chosen from a set of actions, or a range over a set of actions. 
+### Environment
+**Definition:** World in which the agent operates. The environment can be either perfect or imperfect. This refers to whether the agent can percieve the entire enviornment (perfect) or only partially view the enviornment (imperfect). For example, chess is a perfect enviornment, while a game like Call of Duty is imperfect.
 
-### Types of Actions
+**Note:** There is a lot of overlap between enviornment and state and action. Choosing the way the enviornment is set up has a lot of effect on the action type and information given to the agent. Therefore they are effectively the same item, just represented in both the enivornment and their respective category.
 
-##### Discrete Action Space
-**Definition:** A discrete action space is one where there is a finite set of actions to choose from. For example, playing pokemon you have a few choices while walking around. Move up, down, left or right.
+#### Enviornment Observation
+##### Perfect Enviornment (fully observable)
+**Definition:** A perfect enviornment is one where all parts of the enviornment are fully observable. This leads to easier state prediction causing an easier enviornment to act in. The problem is, the real world is not a perfect enviornment as it would be way too comptationally intensive to predict everything and the world is incredibly unpredictable.
 
-##### Continuous Action Space
-**Definition:** A continuous action space is one where a range of actions are present. While you may be limited in the choices you can take, you are able to chose the scalar in which you apply to the action. For example, driving a car only has a set of choices of gas, break, left and right, but the range in which you can take these actions is vast. I can stomp on the breaks or ease into them depending on the situation.
+##### Imperfect Enviornment (not fully observable)
+**Definition:** An imperfect enviornment is one that is not fully observable. The agent is provided with only partial information, making it much harder to predict the enviornment but leads to a much more robust agent. The real world isn't fully observable, so this type of enviornment is the type humans experience.
+
+#### Enviornment Probability
+##### Deterministic Enviornment
+**Definition:** An enviornment where the next state can always be determined by the current action in the present state. For example, when you steer a car left, the car should turn left and not right. This enviornment abstracts probability from the set of actions.
+##### Schocastic Enviornment
+**Definition:** An enivornment where probability is factored into the action you choose. For example, if you shoot a gun in fortnite (because of bloom), you will not always hit each shot no matter how perfect your aim is due to the bullet spread, causing you to not always be able to determine the next step of the enviornment.
+
+---

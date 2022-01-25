@@ -1,4 +1,4 @@
-# Neural Networks (nn)
+# Neural Networks History (nn)
 The science of deep learning is one stemmed from multi-layered (deep) neural networks. 
 
 ## History
