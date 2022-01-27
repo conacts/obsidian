@@ -7,11 +7,9 @@
         "id": "2d2b4163c2fb4f4a",
         "type": "leaf",
         "state": {
-          "type": "markdown",
+          "type": "image",
           "state": {
-            "file": "Electric Charges and Forces.md",
-            "mode": "source",
-            "source": false
+            "file": "999 assets/Pasted image 20220126132120.png"
           }
         }
       }
@@ -69,7 +67,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Electric Charges and Forces.md",
+                "file": "999 assets/Pasted image 20220126132120.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -98,15 +96,15 @@
   },
   "active": "2d2b4163c2fb4f4a",
   "lastOpenFiles": [
-    "Electric Charges and Forces.md",
-    "451 Digital and Analog.md",
-    "300 Physics.md",
-    "263 Hyper Parameters.md",
-    "999 assets/Pasted image 20220125143707.png",
-    "260 Neural Networks.md",
-    "261 Backpropagation.md",
-    "262 Optimizers.md",
-    "lists/Definitions.md",
-    "1 Me.md"
+    "999 assets/Pasted image 20220126132120.png",
+    "110 Vectors.md",
+    "999 assets/Pasted image 20220126132428.png",
+    "999 assets/Pasted image 20220126132353.png",
+    "999 assets/Pasted image 20220126132936.png",
+    "999 assets/Pasted image 20220126132746.png",
+    "999 assets/Pasted image 20220126132512.png",
+    "1 Me.md",
+    "000 Index.md",
+    "lists/Discrete Math Cheatsheet.md"
   ]
 }

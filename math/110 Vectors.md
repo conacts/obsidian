@@ -666,3 +666,131 @@ What are the 3 forms of the equation to describe a plane? #flashcard
 What is the definition of collinear? #flashcard 
 3 points that are on a similar line. If points are not collinear, then together they can form a plane
 <!--ID: 1642970415153-->
+
+
+## 12.6 Quadratic Surfaces
+**Quadratic Surface:** A multi-dimensional surface.
+Aka: Quadric Surface
+
+**Quadric Surface Equation:**
+> $$Ax^2+By^2 +Cz^2 +Dxy +Eyz + Fzx + ax + by + cz + d = 0$$
+
+**Quadric Surface Standard Position Equation:**
+> $$Ax^2+By^2 +Cz^2 + ax + by + cz + d = 0$$
+> Note: If D, E, and F are all equal to 0
+
+**Traces:** The geographic representation of a shape by holding one variable constant for proper representation. 
+Ex. The xz-trace of $x^2 + y^2 + z^2 = 1$ would be $x^2 + z^2 =1$ by setting $y=0$
+![[Pasted image 20220126132120.png ]]
+![[Pasted image 20220126133238.png]]
+![[Pasted image 20220126133251.png]]
+
+##### Ellipsoids:
+$$(\frac{x}{a})^2+(\frac{y}{b})^2+(\frac{z}{c})^2=1$$
+![[Pasted image 20220126132512.png]]
+
+##### Hyperboloids:
+**One Sheet Hyperboloids:**
+$$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2+1$$
+![[Pasted image 20220126132428.png]]
+**Two Sheet Hyperboloids:**
+$$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2-1$$
+![[Pasted image 20220126132353.png]]
+
+
+**Elliptic Cone:**
+$$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2$$
+![[Pasted image 20220126132746.png]]
+
+##### Paraboloids:
+**Elliptic Paraboloid:**
+$$z=(\frac{x}{a})^2+(\frac{y}{b})^2$$
+![[Pasted image 20220126133023.png |300]]
+**Hyperbolic Paraboloid (saddle point):**
+$$z=(\frac{x}{a})^2-(\frac{y}{b})^2$$
+![[Pasted image 20220126133102.png]]
+
+
+##### Cylinders:
+![[Pasted image 20220126133341.png]]
+**Elliptic Cylinder:**
+$$(\frac{x}{a})^2+(\frac{y}{b})^2=1$$
+![[Pasted image 20220126133559.png |300]]
+
+
+**Hyperbolic Cylinder:**
+$$(\frac{y}{b})^2-(\frac{x}{a})^2=1$$
+![[Pasted image 20220126133539.png]]
+**Parabolic Cylinder:**
+$$y=ax^2$$
+![[Pasted image 20220126133518.png]]
+
+##### 12.6 Flashcards:
+
+What is this quadric equation? 
+$y=ax^2$ #flashcard 
+Parabolic Cylinder
+![[Pasted image 20220126133518.png]]
+<!--ID: 1643224452738-->
+
+
+What is this quadric equation?
+$(\frac{y}{b})^2-(\frac{x}{a})^2=1$ #flashcard 
+Hyperbolic Cylinder
+![[Pasted image 20220126133539.png]]
+<!--ID: 1643224452742-->
+
+
+What is this quadric equation?
+$(\frac{x}{a})^2+(\frac{y}{b})^2=1$ #flashcard 
+Elliptic Cylinder
+![[Pasted image 20220126133559.png |300]]
+<!--ID: 1643224452743-->
+
+
+What is this quadric equation?
+$z=(\frac{x}{a})^2-(\frac{y}{b})^2$ #flashcard 
+Hyperbolic Paraboloid (saddle point)
+![[Pasted image 20220126133102.png]]
+<!--ID: 1643224452744-->
+
+
+What is this quadric equation?
+$z=(\frac{x}{a})^2+(\frac{y}{b})^2$ #flashcard 
+Elliptic Paraboloid
+![[Pasted image 20220126133023.png |300]]
+<!--ID: 1643224452745-->
+
+
+What is this quadric equation?
+$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2$ #flashcard 
+Elliptic Cone
+![[Pasted image 20220126132746.png]]
+<!--ID: 1643224452746-->
+
+
+What is this quadric equation?
+$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2-1$ #flashcard 
+Two Sheet Hyperboloids
+![[Pasted image 20220126132353.png]]
+<!--ID: 1643224452747-->
+
+
+What is this quadric equation?
+$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2+1$ #flashcard 
+One Sheet Hyperboloids
+![[Pasted image 20220126132428.png]]
+<!--ID: 1643224452749-->
+
+
+What is this quadric equation?
+$(\frac{x}{a})^2+(\frac{y}{b})^2+(\frac{z}{c})^2=1$ #flashcard 
+Ellipsoids
+![[Pasted image 20220126132512.png]]
+<!--ID: 1643224452750-->
+
+
+Find the equation of an ellipsoid passing through the points (±4,0,0), (0,±6,0) and (0,0,±14). #flashcard 
+ellipsoid = $(\frac{x}{a})^2+(\frac{y}{b})^2+(\frac{z}{c})^2=1$ 
+ANS: $(\frac{x}{4})^2+(\frac{y}{6})^2+(\frac{z}{14})^2=1$
+<!--ID: 1643227721592-->
