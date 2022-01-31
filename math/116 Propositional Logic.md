@@ -318,3 +318,28 @@ Conditional Equivalent
 <!--ID: 1642869513661-->
 
 
+## Quantifiers
+Quantifiers are words that can turn any statement into a propositional statement
+- All, every, no, some,...
+
+### Universal Quantifiers 
+( $\forall$ ) = For all, for every 
+
+### Existential Quantifiers
+( $\exists$ ) = exists / for some
+
+### Sufficient and Necassry Conditions
+##### Sufficient
+$\forall x P(x)$ is a sufficent condition for $Q(x)$ 
+$$\forall x (P(x)\rightarrow Q(x))$$
+
+
+##### Necessary
+$\forall x P(x)$ is a necessary condition for $Q(x)$ 
+$$\forall x \lnot (P(x)\rightarrow \lnot Q(x))$$
+$$(\text{or equiv. }\forall x (Q(x)\rightarrow P(x))$$
+
+##### Only If
+$\forall x P(x)$ only if condition for $Q(x)$ 
+$$\forall x (Q(x)\rightarrow P(x))$$
+$$(\text{or equiv. }\forall x (P(x)\rightarrow Q(x))$$

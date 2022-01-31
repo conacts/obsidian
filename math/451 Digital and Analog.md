@@ -83,3 +83,17 @@ BASE 2 ANS: 101110.1011
 ```
 
 **Octal vs. Hexadecimal:** Octal only uses 3 bits with a radix of (0-7) while hex uses 4 digits and has (0-F) possible combinations.
+
+
+----
+## Lecture 3
+### Unsigned arithmetic example
+#### Sign bit schemas
+1. Sign and magnitude
+	1. Sign bit is considered separately from magnitude bit
+	2. Negative N has same bits for magnitude as N and inverted sign
+	3. Range: -(2N-1-1) to (2N-1 -1) two zeros
+1st Complement and 2nd complement
+
+<center><img src="file:///Users/connorsheehan/icloud/obsidianNotebooks/math/Pasted image 20220127091704.png" width="400" height="auto"></center>
+- 1st complement uses -0 and +0 while 2nd complement only has +0, enabling it to access -8

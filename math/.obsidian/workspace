@@ -7,9 +7,11 @@
         "id": "2d2b4163c2fb4f4a",
         "type": "leaf",
         "state": {
-          "type": "image",
+          "type": "markdown",
           "state": {
-            "file": "999 assets/Pasted image 20220126132120.png"
+            "file": "116 Propositional Logic.md",
+            "mode": "source",
+            "source": false
           }
         }
       }
@@ -51,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 174
+    "width": 223,
+    "collapsed": true
   },
   "right": {
     "id": "f6ecba14853696b5",
@@ -67,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "999 assets/Pasted image 20220126132120.png",
+                "file": "116 Propositional Logic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,15 +99,15 @@
   },
   "active": "2d2b4163c2fb4f4a",
   "lastOpenFiles": [
-    "999 assets/Pasted image 20220126132120.png",
+    "116 Propositional Logic.md",
+    "452 Computer Compontents.md",
+    "451 Digital and Analog.md",
+    "400 Computer Science.md",
     "110 Vectors.md",
-    "999 assets/Pasted image 20220126132428.png",
-    "999 assets/Pasted image 20220126132353.png",
-    "999 assets/Pasted image 20220126132936.png",
-    "999 assets/Pasted image 20220126132746.png",
-    "999 assets/Pasted image 20220126132512.png",
-    "1 Me.md",
-    "000 Index.md",
-    "lists/Discrete Math Cheatsheet.md"
+    "assets/Pasted image 20220126132120.png",
+    "assets/Pasted image 20220126132428.png",
+    "assets/Pasted image 20220126132353.png",
+    "assets/Pasted image 20220126132936.png",
+    "assets/Pasted image 20220126132746.png"
   ]
 }
