@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "2d2b4163c2fb4f4a",
+        "id": "dd8576bd49148999",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "112 Vector Functions.md",
+            "file": "116 Propositional Logic.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "112 Vector Functions.md",
+                "file": "116 Propositional Logic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,14 +96,14 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "2d2b4163c2fb4f4a",
+  "active": "dd8576bd49148999",
   "lastOpenFiles": [
+    "116 Propositional Logic.md",
     "112 Vector Functions.md",
-    "111 Planes.md",
     "110 Vectors.md",
+    "111 Planes.md",
     "402 Tree Notes.md",
     "401 Leetcode Tree Problems.md",
-    "116 Propositional Logic.md",
     "452 Computer Compontents.md",
     "451 Digital and Analog.md",
     "400 Computer Science.md",

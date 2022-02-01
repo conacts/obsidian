@@ -317,6 +317,43 @@ Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $q \rightarrow p$ #flashca
 Conditional Equivalent
 <!--ID: 1642869513661-->
 
+### 2.5 Equivalence using Logical Equivalence Rules
+- Two famuous logical equivalence rules called **De Morgan's Laws**...
+1. Negation of **and**
+$$\lnot(p \land q) \approx \lnot p \lor \lnot q$$
+2. Negation of **or**
+$$\lnot(p \land q) \approx \lnot p \land \lnot q$$
+##### Logical Equivalence etc.
+
+
+| Laws            | AND                                                      | OR                                                      |
+| --------------- | -------------------------------------------------------- | ------------------------------------------------------- |
+| Communitive     | $p \land q \approx q \land p$                            | $p \lor q \approx q \lor p$                             |
+| Associative     | $(p \land q) \land r \approx p \land (q \land r)$        | $(p \lor q) \lor r \approx p \lor (q \lor r)$           |
+| Distributive    | $p \land (q \lor r) \approx (p \land q) \lor(p \land r)$ | $p \lor (q \land r) \approx (p \lor q) \land(p \lor r)$ |
+| Identity        | $p \land T \approx p; p \land F \approx F$               | $p \lor F \approx p; p \lor T \approx T$                |
+| Negation        | $p \land \lnot p \approx F$                              | $p \lor \lnot p \approx T$                              |
+| Double Negation | $\lnot(\lnot p) \approx p$                               | NA                                                        |
+| Idempotent      | $p \land p \approx p$                                    | $p \lor p \approx p$                                    |
+| Universal Bound | $p \land F \approx F$                                    | $p \lor T \approx T$                                    |
+| De Morgan       | $\lnot (p \land q) \approx \lnot p \lor \lnot q$         | $\lnot (p \lor q) \approx \lnot p \land \lnot q$        |
+| Negation of T   | $\lnot T \approx F$                                      | $\lnot F \approx T$                                     |
+| Absorption      | $p \land (p \lor q) \approx p$                           | $p \lor (p \land q) \approx p$                          |
+| Inverse Law     | $p \land \lnot p \approx F$                              | $p \lor \lnot p \approx T$                              |
+
+##### Conditional Logical Equivalence
+![[Pasted image 20220201053418.png]]
+
+| Conditional Ex    | Ans                           |
+| ----------------- | ----------------------------- |
+| $p \rightarrow q$ | $\lnot p \lor q$              |
+| $p \rightarrow q$ | $\lnot q \rightarrow \lnot p$ |
+| $p \lor q$          | $\lnot p \rightarrow q$         |
+|                   |                               |
+
+##### Biconditional Logical Equivalence
+![[Pasted image 20220201053427.png]]
+
 
 ## Quantifiers
 Quantifiers are words that can turn any statement into a propositional statement
