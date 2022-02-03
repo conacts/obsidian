@@ -464,7 +464,7 @@ i & j & k\\
 \end{bmatrix}$$
 > $$=i(20-7)-j(-40-7)+k(8-(-4))=(13i, 47j, 12k)$$
 
-Right-handed system:
+**Right-handed system:**
 A method of approximating cross product directions
 ![[Pasted image 20220121171042.png | 400]]
 
@@ -504,7 +504,7 @@ $Volume(D)=|u \cdot (v \times w)|=det\begin{pmatrix}u \\v \\ w &\end{pmatrix}$
 ![[Pasted image 20220122154310.png]]
 
 
-Example :: Volume of Parallelpiped
+**Example :: Volume of Parallelpiped**
 > Calculate the volume of the parallelepiped spanned by 𝐮=⟨2,0,3⟩, 𝐯=⟨2,4,2⟩, and 𝐰=⟨−4,3,7⟩
 > $$|u \cdot (v \times w)|=...$$
 > $$v \times w =\begin{bmatrix}  
@@ -625,7 +625,7 @@ $P_0=(x_0, y_0, z_0)$, is the origin of the plane
 **Definition:** Points that lie on a similar line. If 3 points aren't collinear, then there is only a plane that can pass through all, which looks like...
 ![[Pasted image 20220122202324.png | 200]]
 
-**Example :: Find an equation using 3 points:**
+**Example :: Find a plane's equation using 3 points:**
 > Find an equation of the plane passing through the three points given $P=(4,5,7), 𝑄=(5,10,15), 𝑅=(11,11,8)$
 > 1. Find a normal vector using $\overrightarrow{PQ}$ and $\overrightarrow{PR}$
 > $$\overrightarrow{PQ}=Q-P=(5-4, 10-5, 15-7)=\langle 1, 5, 8 \rangle$$

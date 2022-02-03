@@ -95,7 +95,7 @@
     "lists/Math Cheatsheet.md": "071d8e5792cfe54c643a9faad7a42f01",
     "lists/Discrete Math Cheatsheet.md": "ec10dd5801659ce276af3fec22e03924",
     "lists/Definitions.md": "5ef5e2418f0980b19742363f65fd9ed2",
-    "116 Propositional Logic.md": "d5cb54841eb00928381aebc7ee2c677d",
+    "116 Propositional Logic.md": "2541b1b82fb211cc6812a5e7530ca656",
     "Class monday 360.md": "b78c4120e22c8a2719619d9baf591f92",
     "351 Digital and Analog.md": "900e6f382216857a09413e9b027aab51",
     "400 Computer Science.md": "ee0011d5a614d4de39c533166eb058b5",
@@ -104,7 +104,7 @@
     "100 Math.md": "937bc85555e007eb5bd6fff24d189048",
     "1 Me.md": "d41d8cd98f00b204e9800998ecf8427e",
     "451 Digital and Analog.md": "a8a01ad567aa2aa001d91522786a4d1d",
-    "310 Electric Charges and Forces.md": "d1a600aa5f41374939593fe3e789862d",
+    "310 Electric Charges and Forces.md": "cea5e15bb9782d94eaa043d97bad3034",
     "11 Color Blind README.md": "ecc7fc45da38ee2494e8bb0598068655",
     "263 Hyper Parameters.md": "8f7479302f13605781d663f92b7c6e89",
     "262 Optimizers.md": "f5f243ca55b483922a5a8a077c76774f",
@@ -113,7 +113,10 @@
     "254 What is Deep Learning.md": "e493c75cc63a0fbd4a90e385edcd3424",
     "10 Best blogs.md": "81414ff70701cb865ec3a63230f5bef9",
     "Vector Functions.md": "70eafbe7d022606f9f096c298b6cb43d",
-    "452 Computer Compontents.md": "cdf35e4da4b503d149ccd03aeffbf936"
+    "452 Computer Compontents.md": "cdf35e4da4b503d149ccd03aeffbf936",
+    "402 Tree Notes.md": "68e9e3a501c713d326f786f949955fb3",
+    "401 Leetcode Tree Problems.md": "69b1633b74da8364dcde8e96a66acc73",
+    "112 Vector Functions.md": "08fc112f0285d8c6a67e43d1d45a420c"
   },
   "fields_dict": {
     "Basic": [

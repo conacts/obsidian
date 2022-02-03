@@ -253,7 +253,7 @@ Example:
 
 
 ##### Tautology:
-A proposition that is true for all possible combinations of the question
+A proposition that is true for all possible combinations of the question. This means that both statements on either side of the equation are logically equivalent
 
 ##### Contradiction:
 A compound proposition that is false for all possible combinations of the question
@@ -344,26 +344,41 @@ $$\lnot(p \land q) \approx \lnot p \land \lnot q$$
 ##### Conditional Logical Equivalence
 ![[Pasted image 20220201053418.png]]
 
-| Conditional Ex    | Ans                           |
-| ----------------- | ----------------------------- |
-| $p \rightarrow q$ | $\lnot p \lor q$              |
-| $p \rightarrow q$ | $\lnot q \rightarrow \lnot p$ |
-| $p \lor q$          | $\lnot p \rightarrow q$         |
-|                   |                               |
-
 ##### Biconditional Logical Equivalence
 ![[Pasted image 20220201053427.png]]
 
+**Example :: Using Logical Equivalence:** 
+> Simplify the following compound proposition $\lnot ((p \land \lnot q) \land r)$ using logical equivalence rules
+> 1. Given Statement: $\lnot ((p \land \lnot q) \land r)$ 
+> 2. De Morgan: $(\lnot (p \lor \lnot \lnot q) \lor \not r)$
+> 3. De Morgan: $\lnot ((p \lor \lnot \lnot q) \lor \lnot r)$
+> 4. Double Negation Rule: $\lnot ((p \lor q) \lor \lnot r)$
 
-## Quantifiers
+### 2.6 Predicate Logic
+**Definition:** The property of a statement is called a predicate, essentially being the object of the sentence
+Ex. "x is a prime number"
+
+##### Domain of a predicate
+Typical domain of a predicate is $U$ 
+
+Example :: Using predicate logic:
+> 1.  “y is greater than 5"
+    Let Q be a predicate where Q stands for “_is greater than 5". The predicate Q(y) is read as “y is greater than 5". Suppose y=3 and Q(3) translates as “3 is greater than 5". The truth value of Q(3) is False.
+	>
+>2. “The subtraction of x and y is equal to z
+    Let R be a predicate where R stands for “The subtraction of _ and _ is equal to _." The predicate R(x,y,z) is read as “The subtraction of x and y is equal to z". Suppose, x=5, y=3, and z=7. The truth value of R(5,3,7) is False.
+
+### 2.7 Quantifiers
 Quantifiers are words that can turn any statement into a propositional statement
 - All, every, no, some,...
 
 ### Universal Quantifiers 
-( $\forall$ ) = For all, for every 
+( $\forall$ ) = "For all, for every"
+$$\forall x \in U, P(x) \equiv P(x_1) \land P(x_2) \land P(x_3)$$
 
 ### Existential Quantifiers
-( $\exists$ ) = exists / for some
+( $\exists$ ) = "exists, for some"
+$$\exists x \in U, P(x) \equiv P(x_1) \lor P(x_2) \lor P(x_3)$$
 
 ### Sufficient and Necassry Conditions
 ##### Sufficient
@@ -373,10 +388,107 @@ $$\forall x (P(x)\rightarrow Q(x))$$
 
 ##### Necessary
 $\forall x P(x)$ is a necessary condition for $Q(x)$ 
-$$\forall x \lnot (P(x)\rightarrow \lnot Q(x))$$
+$$\forall x \lnot P(x)\rightarrow \lnot Q(x)$$
 $$(\text{or equiv. }\forall x (Q(x)\rightarrow P(x))$$
 
 ##### Only If
 $\forall x P(x)$ only if condition for $Q(x)$ 
-$$\forall x (Q(x)\rightarrow P(x))$$
+$$\forall x \lnot Q(x)\rightarrow \lnot P(x))$$
 $$(\text{or equiv. }\forall x (P(x)\rightarrow Q(x))$$
+
+##### Bound variable
+**Definition:** A variable bound by a quantifier
+
+##### Free variable
+**Definition:** A variable not bound by a quantifier
+
+
+| Negation               | Equiv. Statement         | When True?                              | When False?                |
+| ---------------------- | ------------------------ | --------------------------------------- | -------------------------- |
+| $\lnot \exists x P(x)$ | $\forall x \lnot P(x)$   | For every x, $P(x)$ is false            | There is an x for which $P(x)$ is true       |
+| $\lnot \forall x P(x)$ | $\exists x \lnot P(x)$ | There is an x for which $P(x)$ is false | $P(x)$ is true for every x |
+
+**Example :: English to Quantifiers:**
+> 1. "No primes are divisible by 4".
+> ANS: $\forall x P(x) \rightarrow \lnot D(x)$ 
+> 2. "All men are mortal"
+> $\forall x (Man(x) \rightarrow Mortal(x)$ 
+> 3. "For all x,y if x is a rational and y is an irrational, then x⋅y is an irrational."
+> $\forall x, y((\text{ x is a rational} \land y \text{ is an irrational}) \rightarrow (x \cdot y \text{ is an irrational})$ \
+
+
+##### Valid Statement
+Where $P(x)$ is **true** for all **values** from the domain $U$
+
+##### Unsatisfiable Statement
+Where $P(x)$ is **false** for all **values** of the domain $U$
+
+##### Satisfiable Statement
+Where $P(x)$ is **true** for **some** values of the domain $U$
+
+### 2.8 Inference Rules
+
+##### Argument
+A sequence of statements that end with a final statement known as the **conclusion**
+
+![[Pasted image 20220203054656.png]]
+$P_1=$ the hypothesis or the premise of this logical argument
+$\therefore =$  therefore
+- If the argument is a [[116 Propositional Logic#Tautology |tautology]], it is **valid**,
+- otherwise it is a **fallacy**
+
+
+ ### Rules of deduction
+
+
+##### Additive
+$$\frac{p}{\therefore p \lor q}$$
+**Example**
+> “It is raining now. Therefore, it is either cloudy or raining now."
+> Let p: “It is raining now" and q: “It is cloudy ".
+> $$\frac{p}{\therefore p \lor q}$$
+
+##### Conjunction
+$$\frac{p \land q}{\therefore q}$$
+**Example**
+> “It is cloudy and raining now. Therefore, it is raining now."
+> Let p: “It is raining now" and q: “It is cloudy ".
+> $$\frac{p \land q}{\therefore q}$$
+
+##### Modus Ponens
+$$p \rightarrow q$$
+$$\frac {p \rightarrow q\atop p}{\therefore q}$$
+**Example:**
+> “If you have a key then you can enter the house." “You have the key." “Therefore, you can enter the house."
+> Let p: “You have the key" and q: “You can enter the house."
+> $$\frac {p \rightarrow q\atop p}{\therefore q }$$
+##### Modus Tollens
+$$\frac {(p \rightarrow q) \atop \lnot q}{\therefore \lnot p}$$
+
+> "If 25 is divisible by 5, then 252 is divisible by 25.
+> $25^2$ is not divisible by 25."
+> Therefore, 25 is not divisible by 5."
+> Let p: “25 is divisible by 5" and
+> q: “$25^2$ is divisible by 25. "
+
+##### Hypothetical Syllogism
+$$\frac{(p \rightarrow q) \atop (q \rightarrow r)}{\therefore p \rightarrow r}$$
+
+##### Disjunctive Syllogism
+$$\frac{(p \lor q) \atop \lnot p}{\therefore q}$$
+
+
+##### Resolution
+$$\frac{(p \lor q) \atop (\lnot p \lor r)}{\therefore q \lor r}$$
+
+| Name                   | Rule of inference | Tautology                                                                   |
+| ---------------------- | ----------------- | --------------------------------------------------------------------------- |
+| Additive               |                   | $p \rightarrow (p \lor q)$                                                  |
+| Simplification         |                   | $(p \land q) \rightarrow p$                                                 |
+| Conjection             |                   | $((p) \land (q) \rightarrow (p \land q))$                                   |
+| Modus ponens           |                   | $((p \rightarrow q) \land \lnot q) \rightarrow \lnot p$                     |
+| Modus tollens          |                   | $((p \rightarrow q) \land \lnot q \rightarrow \lnot p$                      |
+| Hypothetical syllogism |                   | $((p \rightarrow q) \land (q \rightarrow r)) \rightarrow (p \rightarrow r)$ |
+| Disjunctive syllogism  |                   | $((p \lor q) \land \lnot p) \rightarrow q$                                  |
+| Resolution             |                   | $((p \lor q) \land (\lnot p \lor r)) \rightarrow (q \lor r)$                |
+

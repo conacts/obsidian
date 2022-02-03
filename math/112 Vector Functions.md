@@ -27,8 +27,7 @@ Note: **Plane Curve** is a line in $\mathbb{R}^2$
 > 3. Onto yz-plane: set $x=0$; $r(t)= \langle 0, sin(t), t \rangle, \quad t \le 0$ = Swirl
 	> ![[Pasted image 20220131151223.png]]
 
-Examples:
-> Does the point $P=(5,18,256)$ lie on the path $r= \langle 1+t,2+t^2,𝑡^4 \rangle$?
+**Examples:**
 > 1. $r(4)$ will get us the proper x, therefore I will plug 4 into all values of t
 > 2. $r(4)=(1+4, 2+4^2,4^4)=(5, 18, 256)$, therefore point P does lie on the line
 
@@ -86,8 +85,6 @@ $$\lim_{t\rightarrow t_0} r(t)=u$$
 ##### Theorem 1: Vector-valued Limits are Computed Componentwise
 A vector-valued function $r(t)= \langle x(t), y(t), z(t) \rangle$ approaches a limit as $t \rightarrow t_0$ if and only if each compontent approaches a limit
 $$\lim_{t \rightarrow t_0} r(t)= \langle \lim_{t \rightarrow t_0}x(t), \lim_{t \rightarrow t_0}y(t), \lim_{t \rightarrow t_0}z(t) \rangle$$
-
-
 
 Example :: Taking the limit of a vector-value function
 > Calculate $\lim _{t \rightarrow 3} r(t)$, where $r(t)= \langle t^2, 1-t, t^{-1} \rangle$ 
@@ -214,9 +211,14 @@ $$a_T T=(\frac{a \cdot v}{v \cdot v})v, \quad a_N N=a-a_T T= a - (\frac{a \cdot 
 > 1. Solve for a using double derivative to get to $a(t)$ 
 > $$v(t)=⟨5,6t,9t^2⟩; \quad a(t)=⟨0,6,18t⟩$$
 > 2. Solve for T at $t=2$
-> $$v(2)=v(t)=⟨5,12,36⟩$$
-> $$T=\frac{v}{||v||}=\frac{\langle 5,12,36 \rangle}{\sqrt{1^2+2^2+2^2}}=\langle 5/3,4,12 \rangle$$
+> $$v(2)=⟨5,12,36⟩,\quad a(2)=⟨0,6,36⟩$$
+> $$T=\frac{v}{||v||}=\frac{\langle 5,12,36 \rangle}{\sqrt{5^2+12^2+36^2}}= \frac{\langle 5,12,36 \rangle}{\sqrt{1465}}$$
 > 3. Solve for $a_T$ 
-> $$a_T=a \cdot T=⟨0,6,36⟩ \cdot \langle 5/3,4,12 \rangle=456$$
+> $$a_T=a \cdot T=⟨0,6,36⟩ \cdot \langle \frac{5}{\sqrt{1465}}, \frac{12} {\sqrt{1465}}, \frac{36}{\sqrt{1465}}\rangle=\frac{\langle 72,36^2 \rangle}{\sqrt{1465}}=\frac{93,312 }{\sqrt{1465}}$$
 > 4. Solve for $a_TT$ 
-> $$a_TT=a_T \cdot T=⟨0,1,18⟩ \cdot \langle 5/3,4,12 \rangle=\langle 0,4,216 \rangle$$
+> $$a_TT=a_T \cdot T= \frac{93,312 }{\sqrt{1465}} \cdot \frac{\langle 5,12,36 \rangle}{\sqrt{1465}} =\langle 63.694, 764.33,2, 292.991 \rangle$$
+> 5. Solve for $a_NN$:
+> $$a_NN=a-a_TT=\langle 0,6,36 \rangle-\langle 63.694, 764.33,2, 292.991 \rangle = \langle 63.694, 758.33,2, 256.991 \rangle$$
+> 6. Solve for $a_NN$ 
+> $$||\langle 63.694, 758.33,2, 256.991 \rangle||=2,381.833$$
+> 
