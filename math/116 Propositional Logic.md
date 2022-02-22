@@ -414,7 +414,7 @@ $$(\text{or equiv. }\forall x (P(x)\rightarrow Q(x))$$
 > 2. "All men are mortal"
 > $\forall x (Man(x) \rightarrow Mortal(x)$ 
 > 3. "For all x,y if x is a rational and y is an irrational, then x⋅y is an irrational."
-> $\forall x, y((\text{ x is a rational} \land y \text{ is an irrational}) \rightarrow (x \cdot y \text{ is an irrational})$ \
+> $\forall x, y((\text{ x is a rational} \land y \text{ is an irrational}) \rightarrow (x \cdot y \text{ is an irrational})$
 
 
 ##### Valid Statement

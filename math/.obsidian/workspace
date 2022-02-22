@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "dd8576bd49148999",
+        "id": "db6174d5ee766fe6",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "116 Propositional Logic.md",
-            "mode": "preview",
+            "file": "118 Relations and Functions.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -53,7 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 264,
+    "width": 219,
     "collapsed": true
   },
   "right": {
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "116 Propositional Logic.md",
+                "file": "118 Relations and Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "dd8576bd49148999",
+  "active": "db6174d5ee766fe6",
   "lastOpenFiles": [
+    "118 Relations and Functions.md",
+    "115 Sets.md",
     "116 Propositional Logic.md",
-    "Untitled.md",
     "112 Vector Functions.md",
-    "lists/Math Cheatsheet.md",
+    "113 Multivariable Functions.md",
     "110 Vectors.md",
-    "111 Planes.md",
-    "310 Electric Charges and Forces.md",
-    "300 Physics.md",
-    "402 Tree Notes.md",
-    "401 Leetcode Tree Problems.md"
+    "117 Proofs.md",
+    "Untitled.md",
+    "Math230 Midterm 1 Practice Test.md",
+    "111 Planes.md"
   ]
 }
