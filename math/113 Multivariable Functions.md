@@ -262,3 +262,114 @@ $$\frac{d}{dt}f(r(t))=\lim_{h \rightarrow 0} \frac{f(x(t + h), y (t + h)) - f(x(
 > 1. Plug $r_1$ and $r_2$ into $T(x,y,z)$
 > $$T(r_1)=\sin^2(t)(t)(9-t^2), \quad T(r_2)=\cos^2(t)(1-t)(9-t^3)$$
 > $$D=\frac{d}{dt}(T(r_1)-T(r_2))=-11.196$$
+
+# FINDISH 14.6
+
+## 14.7 Optimization in Several Variables
+![[Pasted image 20220223165429.png | 300]]
+
+##### Local Extreme Values
+A function $f(x,y)$ has a **local extremum** at $P=(a,b)$ if there exists an open disk $D(P,r)$ such that
+- Local Maximum: $f(x,y) \le f(a,b)$ for all $(x,y) \in D(P,r)$ 
+- Local Minimum: $f(x,y) \ge f(a,b)$ for all $(x,y) \in D(P,r)$ 
+
+##### About Fermat's Theorem
+- For functions with one variable, if $f(a)$ is a local extreme value, then $a$ is a critical point and thus the tangent line (if it exists) is horizontal at $x=a$. 
+- With two variables, it is the same concept but with a tangent plane rather than a line. The tangent plane $z=f(x,y)$ at $P=(a,b)$ has the equation...
+$$z=f(a,b) + f_x(a,b)(x-a)+f_y(a,b)(y-b)$$
+![[Pasted image 20220223170411.png]]
+
+##### Critical Point
+A point $P=(a,b)$ in the domain of $f(x,y)$ is called a critical point if:
+- $f_x(a,b)=0$ or $f_x(a,b)$ does not exist, and
+- $f_y(a,b)=0$ or $f_y(a,b)$ does not exist
+
+##### Formula for Descriminant D
+$$D=D(a,b)=f_{xx}(a,b)f_{yy}(a,b)-f^2_{xy}(a,b)$$
+##### Theorem 1: Fermat's Theorem
+if $f(x,y)$ has a local minimum or maximum at $P=(a,b)$, then $(a,b)$ is a critical point of $f(x,y)$
+
+##### Theorem 2: Second Derivative Test for f(x,y)
+Let $P=(a,b)$ be a critical point of $f(x,y)$. Assume that $f_{xx}, f_{yy}, f_{xy}$ are continuous near $P$. Then 
+- If $D > 0$ and $f_{xx}(a,b) >0$, then $f(a,b)$ is a local minimum
+- If $D > 0$ and $f_{xx}(a,b) < 0$, then $f(a,b)$ is a local maximum
+- If $D < 0$ then $f$ has a saddle point at $(a,b)$
+- If $D=0$, the test is inconclusive
+
+##### Theorem 3: Existence and Location of Global Extrema
+Let $f(x,y)$ be a continuous function on a closed, bounded domain $D$ in $R^2$. Then 
+1. $f(x,y)$ takes on both a minimum and a maximum value on $D$
+2. The extreme values occur either at critical points in the interior of $D$ or at points on the boundary of $D$
+
+
+##### Theorem 4
+With $Q(h,k)$ and $D$ as above:
+1. If $D>0$ and $a > 0$, then $Q(h,k) > 0$ for $(h,k) \ne (0,0)$.
+2. If $D>0$ and $a < 0$, then $Q(h,k) < 0$ for $(h,k) \ne (0,0)$.
+3. If $D < 0$, then $Q(h,k)$ takes on both positive and negative values
+
+
+## 14.8 Lagrange Multipliers: Optimizing with a Constraint
+
+##### Theorem 1: Lagrange Multipliers
+Assume that $f(x,y)$ and $g(x,y)$ are differentiable functions. If $f(x,y)$ has a local minimum or a local maximum on the constraint curve $g(x,y)=0$ at $P=(a,b)$ and if $\nabla g_p \ne 0$, then there is a scalar $\lambda$ such that...
+$$\nabla f_p = \lambda \nabla g_p$$
+##### Critical Value
+The critical point that satisifes the values of the Lagrange Equations:
+$$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
+
+**Example :: Lagrange Multiplier in 3 Variables:**
+> Find the dimensions of the rectangular box of maximum volume if the sum of the length, width, and height equals 270.
+> $$\text{max: } f(x,y,z)=l \cdot w \cdot h, \quad \text{constraint: } g(x,y,z)=l + w + h = 270 $$
+> 1. Find the values of $\nabla f$ and $\nabla g$ 
+> $$$$
+> ----
+> Find the minimum and maximum values of the function with values
+> $$\text{max: } f(x,y,z)=x^2 + y^2 + z^2 \quad \text{constraint: } g(x,y,z)=x+4y+5z=10 $$
+> 1. Find the values of $\nabla f$ and $\nabla g$ 
+> $$\nabla f = 2x,2y,2z, \quad \nabla g=\langle 1,4,5 \rangle, \quad  (\nabla f = \nabla g) = (\langle 2x, 2y, 2z \rangle = \lambda \langle 1,4,5 \rangle)$$
+> 2. Solve for values of x, y, z, and $\lambda$ 
+> $$\lambda = 2x = \frac {y}{2} = \frac{2z}{5}, \quad x=\frac{y}{4}=\frac{z}{5}$$
+> 3. Solve for value of x by plugging it into the constraint
+> $$x + 4y + 5z = 10= x + 4(4x) + 5(5x) = 10, \quad x = \frac{10}{42}$$
+> 4. Plug in x to find values of y and z
+> $$y=4x=\frac{40}{42}, \quad z = 5x = \frac{50}{42}$$
+> $$\text{Solve for MIN: }x^2+y^2+z^2 = (\frac{10}{42})^2 + (\frac{40}{42})^2 + (\frac{50}{42})^2 = \frac{50}{21}$$
+> Note: We know that $\frac{50}{21}$ is a min because since $f(10,0,0)=100 > \frac{50}{21}$  
+> 5. Max is DNE because we can go into the negatives for basically infnitely large values
+> ----
+> Find the minimum and maximum values of the function $f(x,y)=x^2 + y^2$ subject ot the constraint $2x+5y=2$
+> $$\text{MIN: } x^2 + y^2 \quad \text{CONSTRAINT: } 2x+5y=2$$
+> 1. Find the values of $\nabla f$ and $\nabla g$ 
+> $$\nabla f= \langle 2x, 2y \rangle , \quad \nabla g = \langle 2, 5 \rangle$$
+> 2. Solve for values of x, y, z, and $\lambda$ 
+> $$\nabla f = \lambda \nabla g, \quad \lambda = x = \frac{2y}{5}$$
+> 3. Solve for value of x by plugging it into the constraint
+> $$(2x + 5y = 2), 2x + 5(\frac{5x}{2})=2, \quad \frac{4x+25x}{2}=2$$
+> $$29x = 4, x = \frac{4}{29}, \quad y = \frac{2 - 2(\frac{4}{29})}{5} = \frac{1\frac{21}{29}}{5}$$
+> 4. Plug in f(x,y)
+> $$f(x,y)=(\frac{4}{29})^2+(\frac{1\frac{21}{29}}{5})^2=\frac{4}{29}$$
+
+> Antonio has \$9.00 to spend on lunch consisting of hamburgers (\$3.50 each) and french fries (\$1.00 per order). Antonio's satisfaction from eating $x_1$ hamburgers and $x_2$ orders of french fries is measured by a function $U(x_1,x_2)=\sqrt{x_1 x_2}$ How much of each type of food $F$ should he purchase to maximize his satisfaction? (Assume that fractional amounts of each food can be purchased.)
+> 
+> 1. Equations:
+> $$f(x,y)=3.5x + y = 9, \quad x_1,x_2 > 0, \quad g(x,y)=x_1 x_2$$
+> 2. Find the values of $\nabla f$ and $\nabla g$ 
+> $$\nabla f = (3.5,1), \quad \nabla g = 1$$
+
+> Use Lagrange multipliers to find the maximum area 𝑆 of a rectangle inscribed in the ellipse $\frac{x^2}{9} + \frac{y^2}{64}=1$
+> 1. Use the values of...
+> $$\text{MAX: }f(x,y)=4xy,\quad \text{CONSTRAINT: }g(x,y)=\frac{x^2}{9} + \frac{y^2}{64}=1$$
+> 2. Write out the larange equations
+> $$\nabla f=\langle 4y,4x \rangle, \quad \nabla g = \lambda\langle \frac{8x}{9},\frac{8y}{64} \rangle$$
+> 3. Solve for $\lambda$ in terms of x and y
+> $$y=\lambda \frac{8x}{9}\quad \lambda = \frac{9y}{8x},\quad x=\lambda \frac{y}{8} \quad \lambda = \frac{8x}{y}$$
+> 4. Solve for x and y
+> $$\frac{9y}{8x}=\frac{8x}{y}=\quad 9y^2=64x^2, \quad x=\sqrt{\frac{9y^2}{64}}, \quad y = \sqrt{\frac{64x^2}{9}}$$
+> 5. Plug x and y into the constraint to solve for x and y values
+> $$\frac{(\sqrt{\frac{9y^2}{64}})^2}{9} + \frac{y^2}{64}=1, \quad y=\pm 4 \sqrt{2}$$
+> $$\frac{x^2}{9} + \frac{(\sqrt{\frac{64x^2}{9}})^2}{64}=1, \quad x= \pm \frac{3\sqrt{2}}{2}$$
+> 6. Solve for critical points
+> $$P = (\sqrt{\frac{9(4\sqrt{2})^2}{64}}),\sqrt{\frac{64(\frac{3\sqrt{2}}{2})^2}{9}})=(\frac{3}{\sqrt{2}},4\sqrt{2})$$
+> 7. Plug in values
+> $$4xy=\frac{3}{\sqrt{2}} * 4\sqrt{2}=48$$

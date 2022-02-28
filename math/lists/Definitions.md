@@ -74,3 +74,8 @@ Number of distinct elements in the set A, denoted by $|A|$
 
 ## Cartesian Products: 
 The multiplication of two sets where the output is ordered pairs of a tuple; notation: $A \times B$ 
+
+## Fundamental Theorem of Calculus
+The concept that the derivative is the inverse of the integral
+$$\frac{d}{dx}\int^x_af(t)dt = f(x)$$
+$$\int^b_af(x)dx=F(b)-F(a)$$

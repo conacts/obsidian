@@ -4,11 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "db6174d5ee766fe6",
+        "id": "1e0b9aebd070f983",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "114 Multiple Integration.md",
+            "mode": "preview",
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +53,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 219
+    "width": 219,
+    "collapsed": true
   },
   "right": {
     "id": "f6ecba14853696b5",
@@ -65,6 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "114 Multiple Integration.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,17 +97,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "db6174d5ee766fe6",
+  "active": "1e0b9aebd070f983",
   "lastOpenFiles": [
-    "Untitled 2.md",
-    "Untitled.md",
-    "113 Multivariable Functions.md",
-    "118 Relations and Functions.md",
-    "Untitled 1.md",
-    "312 Capacitor Problems.md",
+    "114 Multiple Integration.md",
     "115 Sets.md",
-    "116 Propositional Logic.md",
-    "112 Vector Functions.md",
-    "110 Vectors.md"
+    "lists/Definitions.md",
+    "113 Multivariable Functions.md",
+    "200 Statistics and Machine Learning.md",
+    "118 Relations and Functions.md",
+    "250 Reinforcement Learning.md",
+    "252 Supervised Learning.md",
+    "251 Markov Decision Process.md",
+    "116 Propositional Logic.md"
   ]
 }
