@@ -20,6 +20,8 @@ If $\forall a \in A$  we have $a R b \rightarrow b R a$ then **the relationship*
 ##### Transitive
 $x, y, z \in A, (xRy \land yRz) \rightarrow (x=y)$
 - This means that for all x and y in A if a relationship **R** exists 
+
+![[Pasted image 20220301202128.png]]
 ![[Pasted image 20220222130847.png]]
 
 ##### Anti-Symmetric
@@ -48,12 +50,12 @@ Essentially just flipping the order of the ordered pair, as (x,y) = (y, x)
 > Transitive: Not sure why but it is
 > Anti-Symmetric: $(a,b)$ but no $(b,a)$, $(a,c)$ but no $(c,a)$, and $(c,b)$ but no $(b,c)$
 
-| Relation  | Reflexive | Symmetric | Transitive | Anti-Symmetric |     |
-| --------- | --------- | --------- | ---------- | -------------- | --- |
-| $\le$     | X         | 0         | X          | X              |     |
-| (divides) | X         | 0         | X          | X              |     |
-| <         | 0         | 0         | X          | ?              |     |
-| =         | X         | X         | X          | 0               |     |
+| Relation  | Reflexive | Symmetric | Transitive | Anti-Symmetric |
+| --------- | --------- | --------- | ---------- | -------------- | 
+| $\le$     | X         | 0         | X          | X              |     
+| (divides) | X         | 0         | X          | X              |     
+| <         | 0         | 0         | X          | ?              |     
+| =         | X         | X         | X          | 0               |   
 
 
 #### Types of Relations
@@ -82,3 +84,7 @@ A relation satisfying...
 1. Reflexivity
 2. Anti-Symmetry
 3. Transivity
+
+
+##### Equivalence Classes
+

@@ -10,7 +10,7 @@
           "type": "markdown",
           "state": {
             "file": "114 Multiple Integration.md",
-            "mode": "preview",
+            "mode": "source",
             "source": false
           }
         }
@@ -100,14 +100,14 @@
   "active": "1e0b9aebd070f983",
   "lastOpenFiles": [
     "114 Multiple Integration.md",
-    "115 Sets.md",
-    "lists/Definitions.md",
-    "113 Multivariable Functions.md",
+    "117 Proofs.md",
+    "1.md",
+    "120 Sequences (Discrete Math).md",
     "200 Statistics and Machine Learning.md",
-    "118 Relations and Functions.md",
-    "250 Reinforcement Learning.md",
-    "252 Supervised Learning.md",
-    "251 Markov Decision Process.md",
-    "116 Propositional Logic.md"
+    "CMPEN270 Midterm 1 Practice.md",
+    "Math230 Midterm 1 Practice Test.md",
+    "453 Circuits.md",
+    "451 Digital and Analog.md",
+    "113 Multivariable Functions.md"
   ]
 }
