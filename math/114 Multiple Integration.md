@@ -271,10 +271,65 @@ $$V=\iiint_W 1dV$$
 > $$80-5x^2-4y^2 = y^2, \quad 16 - x^2 = y^2, \quad x^2 + y^2 = 16, \quad x = 4, y = \sqrt{16-x^2}$$
 > 3. Now we rewrite the integral
 > $$\int_0^4 \int_0^{\sqrt{16-x^2}} \int^{80-5x^2-4y^2}_{z=y^2}x$$
-
 > 4.  Calculate:
 > $$\int_0^4 \int_0^{\sqrt{16-x^2}} \int^{80-5x^2-4y^2}_{z=y^2}x = \frac{2048}{3}$$
 > ----
-> Find the triple integral of the function $F(x,y,z)=z$ over the region in the figure. Assume that $a=3, b=5, c=6$
-> 1. 
-> 
+> Find the volume of the solid V in the first octant bounded by $x + y + z = 2$ and $x + y + 3z = 2$ 
+> **NOTICE: REGION IS Z-SIMPLE**
+> 1. Set the equations to each other to find the bounds
+> $$z:\quad z=2-x-y, \frac{2-x-y}{3} \quad  \frac{2-x-y}{3}\le z \le 2-x-y$$
+> 2. Knowing that the integral is z-simple we can solve that as the first integral of our problem
+> $$V = \iiint_W dV=\iint_D \int^{2-x-y}_{z=\frac{2-x-y}{3}}dz \space dA $$
+> 3. Solve for the y-variable in this equation by setting the equations equal to one another
+> $$2 - x - y = \frac{2-x-y}{3}, \quad y=2-x$$
+> 4. Plug in the new constraints
+> $$\int^b_a \int^{2-x}_0 \int^{2-x-y}_{z=\frac{2-x-y}{3}}dz \space dy \space dx$$
+> 5. Find the final constraints for x
+> $$0 \le x \le b, \quad 0 \le y \le 2-x, \quad 2-x-y \le z \le \frac{2-x-y}{3} $$
+> setting $x=0$ in the y-variable constraint, we can confirm that the top constraint is $x=2$
+> $$0 \le x \le 2, \quad 0 \le y \le 2-x, \quad 2-x-y \le z \le \frac{2-x-y}{3} $$
+> 6. Plug in
+> $$\int^2_0 \int^{2-x}_0 \int^{2-x-y}_{z=\frac{2-x-y}{3}}dz \space dy \space dx$$
+> 7. Solve
+> $$\int^2_0 \int^{2-x}_0 \int^{2-x-y}_{z=\frac{2-x-y}{3}}dz \space dy \space dx=\frac{8}{9}$$
+> ---
+> Let $W$ be the region bounded by $z=4-y^2, y=2x^2$ and the plane $z=0$. Calculate the volume of $W$ as a triple integral
+> 1. Find out which dimension the equation is simple for: I think the volume would be z simple since we know z is constrained between $z=0$ and $z=4-y^2$.
+> $$\iiint_W dV = \iint_D \int_0^{4-y^2} dz \space dA$$
+> 2. Then we can solve for y by plugging into the equation with z and y
+> $$(0) = 4-y^2, \quad y = 2$$
+> $$\int^b_a \int_{2x^2}^{2} \int_0^{4-y^2} dz \space dy \space dx$$
+> 3. Find constraints for x: We can set y = 2 and say $x = 1, -1$ with the 2nd equation. 
+> $$\int^1_{-1} \int_{2x^2}^{2} \int_0^{4-y^2} dz \space dy \space dx = \frac{128}{21}$$
+
+
+## 15.4 Polar Coordinates
+![[Pasted image 20220318143937.png | 400]]
+
+##### Rectangular Coordinates
+The typical coordinate system relying on an absolute origin
+
+##### Polar Coordinates
+Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is the distance to the origin $O$ and $\theta$ is the angle between $\overline{OP}$. $\theta$ moves counterclockwise
+
+
+**Example :: Rectangular to Polar:**
+> Convert Rectangular to Polar Coordinates
+> 1. (0,-1)
+> $$r = \sqrt{0^2 + (-1)^2})=1 \quad \tan^{-1}(1)= \frac{\pi}{4}$$
+> 2. (3, $\sqrt{3}$)
+> $$r = \sqrt{3^2 + (\sqrt{3})^2}= \sqrt{12} \quad \tan^{-1}(\sqrt{12})=1.2898$$
+> 3. $(-1, \sqrt{3})$
+> $$r=\sqrt{(-1)^2+(\sqrt{3})^2}=\sqrt{10} \quad \tan^{-1}(\sqrt{10}) = 1.26451$$
+
+**Example :: Integrating a circle:**
+> Assume that $a=1$. Integrate $f(x,y)=y(x^2 + y^2)^3$ over $D$ using polar coordinates.
+> $$\iint_D y(x^2 + y^2)^3 dA$$
+> $$y=a \sin \theta, \quad x = a \cos \theta $$
+> $$\iint_D (a \sin \theta )((a \cos \theta )^2 + (a \sin \theta )^2) dA= \int^\pi_{\theta = 0} \int^a_0 (a \sin \theta )(a^2)^3 dA$$ $$\int^\pi_{\theta = 0} \int^1_0 ( \sin \theta )(a^8) da \space d\theta = \frac{2}{9}$$
+> ---
+> Evaluate by changing to polar coordinates
+> $$\int^{\pi/2}_0 \int^{9}_0 \sqrt{r^2\cos^2\theta + r^2\sin^2\theta} \space da \space d \theta$$
+> ---
+> $$\int^{\pi/2}_0 \int^2_0 6 \cdot r^3\cos\theta \cdot  \sin\theta drd\theta$$
+> $$\int_0^{\pi/2} \int^{\sqrt{\sin2 \theta}}_0 r^3 \cos \theta \sqrt{17}drd\theta$$

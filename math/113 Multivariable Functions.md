@@ -287,11 +287,6 @@ The critical point that satisifes the values of the Lagrange Equations:
 $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 
 **Example :: Lagrange Multiplier in 3 Variables:**
-> Find the dimensions of the rectangular box of maximum volume if the sum of the length, width, and height equals 270.
-> $$\text{max: } f(x,y,z)=l \cdot w \cdot h, \quad \text{constraint: } g(x,y,z)=l + w + h = 270 $$
-> 1. Find the values of $\nabla f$ and $\nabla g$ 
-> $$$$
-> ----
 > Find the minimum and maximum values of the function with values
 > $$\text{max: } f(x,y,z)=x^2 + y^2 + z^2 \quad \text{constraint: } g(x,y,z)=x+4y+5z=10 $$
 > 1. Find the values of $\nabla f$ and $\nabla g$ 
@@ -317,14 +312,7 @@ $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 > $$29x = 4, x = \frac{4}{29}, \quad y = \frac{2 - 2(\frac{4}{29})}{5} = \frac{1\frac{21}{29}}{5}$$
 > 4. Plug in f(x,y)
 > $$f(x,y)=(\frac{4}{29})^2+(\frac{1\frac{21}{29}}{5})^2=\frac{4}{29}$$
-
-> Antonio has \$9.00 to spend on lunch consisting of hamburgers (\$3.50 each) and french fries (\$1.00 per order). Antonio's satisfaction from eating $x_1$ hamburgers and $x_2$ orders of french fries is measured by a function $U(x_1,x_2)=\sqrt{x_1 x_2}$ How much of each type of food $F$ should he purchase to maximize his satisfaction? (Assume that fractional amounts of each food can be purchased.)
-> 
-> 1. Equations:
-> $$f(x,y)=3.5x + y = 9, \quad x_1,x_2 > 0, \quad g(x,y)=x_1 x_2$$
-> 2. Find the values of $\nabla f$ and $\nabla g$ 
-> $$\nabla f = (3.5,1), \quad \nabla g = 1$$
-
+> ----
 > Use Lagrange multipliers to find the maximum area 𝑆 of a rectangle inscribed in the ellipse $\frac{x^2}{9} + \frac{y^2}{64}=1$
 > 1. Use the values of...
 > $$\text{MAX: }f(x,y)=4xy,\quad \text{CONSTRAINT: }g(x,y)=\frac{x^2}{9} + \frac{y^2}{64}=1$$

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "114 Multiple Integration.md",
-            "mode": "source",
+            "file": "113 Multivariable Functions.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "114 Multiple Integration.md",
+                "file": "113 Multivariable Functions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,15 +99,15 @@
   },
   "active": "1e0b9aebd070f983",
   "lastOpenFiles": [
+    "113 Multivariable Functions.md",
     "114 Multiple Integration.md",
+    "120 Sequences (Discrete Math).md",
+    "119 Functions (Discrete Math).md",
+    "HW 7 (Discrete Math).md",
     "117 Proofs.md",
     "1.md",
-    "120 Sequences (Discrete Math).md",
     "200 Statistics and Machine Learning.md",
     "CMPEN270 Midterm 1 Practice.md",
-    "Math230 Midterm 1 Practice Test.md",
-    "453 Circuits.md",
-    "451 Digital and Analog.md",
-    "113 Multivariable Functions.md"
+    "Math230 Midterm 1 Practice Test.md"
   ]
 }
