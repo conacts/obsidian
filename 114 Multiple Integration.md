@@ -333,3 +333,73 @@ Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is 
 > ---
 > $$\int^{\pi/2}_0 \int^2_0 6 \cdot r^3\cos\theta \cdot  \sin\theta drd\theta$$
 > $$\int_0^{\pi/2} \int^{\sqrt{\sin2 \theta}}_0 r^3 \cos \theta \sqrt{17}drd\theta$$
+
+
+## 15.4.2 Cylindrical and Spherical Coordinates
+
+| Cylindrical to Rectangular | Rectangular to Cylindrical |
+| -------------------------- | -------------------------- |
+| $x=r\cos\theta$            | $r=\sqrt{x^2+y^2}$         |
+| $y=r\sin\theta$            | $\tan\theta = \frac{y}{x}$   |
+| $z=z$                      | $z=z$                      |
+
+
+
+
+**Example :: Converting Cylindrical to Rectangular Coordinates:**
+> Find the rectangular coordinates of the point $P$ with the cylindrical coordinates $(r,\theta,z)=(2, \frac{3\pi}{4}, 5)$
+> $$x=r\cos\theta = 2\cos \frac{3\pi}{4}=2 \left(-\frac{\sqrt{2}}{2}\right)=-\sqrt{2}$$
+> $$y=r\sin\theta = 2\sin \frac{3\pi}{4}=2 \left(\frac{\sqrt{2}}{2}\right)=\sqrt{2}$$
+> $$z=z=5, \text{ANS: } (-\sqrt{2}, \sqrt{2}, 5)$$
+> ----
+> Convert from cylindrical to rectangular coordinates $(6, \frac{\pi}{3}, -8)$
+> $$x = r\cos \theta = 6 \cos \frac{\pi}{3} = 6(\frac{1}{2})=3$$
+> $$x = r\sin \theta = 6 \sin \frac{\pi}{3} = 6(\frac{\sqrt{3}}{2})=3\sqrt{3}$$
+> ---
+> Convert from rectangular to cylindrical coordinates $(12, 4\sqrt{3}, 10)$
+> $$r = \sqrt{x^2+y^2} = \sqrt{12^2+(4\sqrt{3})^2} = 8\sqrt{3}$$
+> $$\theta = \tan^{-1} \frac{y}{x} = \tan^{-1} \frac{4\sqrt{3}}{12}=\tan^{-1} \frac{\sqrt{3}}{3}=\frac{\pi}{6}$$
+
+**Example :: Use cylindrical coordinates to integrate:**
+> Use cylindrical coordinates to calculate the triple integral $\iiint_W f(x,y,z)dV$ for the function $f(x,y,z)=\frac{1}{2116}z\sqrt{x^2+y^2}$ and the region $x^2 + y^2 \le z \le 46 - (x^2 + y^2)$
+> 1. Transform rectangular into cylindrical coordinates
+> $$f(x,y,z)=\frac{1}{2116}z\sqrt{x^2+y^2}=\frac{1}{2116}z(r)$$
+> $$x^2 + y^2 \le z \le 46 - (x^2 + y^2) = (r^2)\le z \le 46 - (r^2)$$
+> 2. Solve for the values to integrate
+> $$r^2 = 46 - r^2, \quad 2r^2 = 46, \quad r = \sqrt{46/2}=\sqrt{23}$$
+> 3. Plug into the new coordinates
+> $$\int_0^{2\pi} \int_0^{\sqrt{23}} \int_{r^2}^{46-r^2} \frac{1}{2116}zr \cdot r \space dzdrd\theta = \frac{46 \pi \sqrt{23}}{15}$$
+> ----
+> Find the volume $V$ of the region appearing between the two surfaces $z=x^2 + y^2$ and $z=128 - x^2 - y^2$ 
+> 1. Transform items into spherical terms
+> $$z=x^2 + y^2 = r^2 \quad z = 128 - (x^2 + y^2) = 128- r^2$$
+> 2. Solve for radius
+> $$r^2 = 128 - r^2, \quad 2r^2 = 128, \quad r = 8$$
+> 3. Set up integral
+> $$\int^{2\pi}_0 \int^8_0 \int_{r^2}^{128-r^2} r \cdot dzdrd\theta = 4096\pi$$
+
+### Spherical Coordinates
+Spherical coordinates make use of the fact that a point $P$ on a sphere of radius $\rho$ is determined by two angular coordinates $\theta$ and $\phi$ 
+
+| Symbol   | Meaning                   |
+| -------- | ------------------------- |
+| $\theta$ | Polar angle onto xy-plane |
+| $\phi$   | angle of declination      |
+| $\rho$   | distance from origin      |
+
+| Spherical to rectangular         | Rectangular to spherical        |
+| -------------------------------- | ------------------------------- |
+| $x = \rho \sin \phi \cos \theta$ | $\phi = \sqrt{x^2 + y^2 + z^2}$ |
+| $y= \rho \sin \phi \sin \theta$  | $\tan \theta = \frac{y}{x}$     |
+| $z= \rho \cos \phi$              | $\cos \phi = \frac{z}{\rho}$    |
+
+![[Pasted image 20220322135757.png | 300]]
+![[Pasted image 20220322135900.png]]
+**Example :: Integrating using cylindrical coordinates:**
+> Use cylindrical coordinates to calculate $\iiint_W f(x,y,z)dV$ for $f(x,y,z)=x$ while $x^2 + y^2 \le 9$ and $x \ge 0$ and $y \ge 0$ and $-4 \le z \le 4$
+> 1. Solve for $\rho$ 
+> $$x^2 + y^2 = 9,\quad \rho^2 = 9, \quad \rho = 3$$
+> $$\int^{\theta_2}_{\theta_1} \int^{r_2(\theta)}_{r_1(\theta)} \int^{z_2(r,\theta)}_{z_1(r, \theta)} x \space dzdrd \theta = \int^{\theta_2}_{\theta_1} \int^{r_2(\theta)}_{r_1(\theta)} \int^{z_2(r,\theta)}_{z_1(r, \theta)} r\cos \theta \cdot r \space dzdrd \theta $$
+> $$\int^{2\pi}_{0} \int^{3}_{0} \int^{4}_{-4} r\cos \theta \cdot r \space dzdrd \theta $$
+
+
