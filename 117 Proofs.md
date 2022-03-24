@@ -213,3 +213,66 @@ Theorem: $\forall n P(n)$
 | 6    | Inductive Step              | With the proof of the strong inductive hypothesis, show that $P(k+1)$ is true                  |
 | 7    | Therefore                   | Therefore, it is true that for all $n \ge x, P(n) \quad \square$                               |
 
+
+## HW 8
+
+Prove the following by using the principle of mathematical induction for all $n \in \mathbb{N}$ 
+$2^{2n-1}$ is divisible by $3$
+
+| Step | Rule | Proof |
+| ---- | ---- | ----- |
+|      |      |       |
+
+
+
+Show that $n!>3^n$ for $n \ge 7$
+
+| Step | Rule                      | Proof                                                                    |
+| ---- | ------------------------- | ------------------------------------------------------------------------ |
+| 1    | State proof               | Proof.                                                                   |
+| 2    | Induction on variable     | We proceed by induction on the variable "n"                              |
+| 3    | Assume                    | Assume $n \ge 7, P(n)=3^n, Q(n)=3^n$                                     |
+| 4    | Base Case                 | $P(7)<Q(7) = 5040 < 2187$                                                |
+| 5    | Weak Inductive Hypothesis | For any arbitrary integer $n=k$ where $k \ge 7$, we assume that $k!>3^k$ |
+| 6    | Inductive Step            | $P(k+1)=(k+1)!$, <br> $Q(k+1) = 3^{k+1}$, <br> $P(k+1) \le Q(k+1)$       |
+| 7    | Therefore                 | Therefore it is true that    $\forall n, n! \le 3^n \quad \square$|
+
+---
+
+Use the Principle of Mathematical Induction to verify that, for $n$ any positive integer, $6^n - 1$ is divisible by $5$.
+
+| Step | Rule                  | Proof                                                                                                                                     |
+| ---- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | State proof           | Proof.                                                                                                                                    |
+| 2    | Induction on variable | We proceed with induction on the variable "n"                                                                                             |
+| 3    | Assume                | Assume $n \in Z^+, n \ge 1$                                                                                                               |
+| 4    | Base Case             | $6^1 -1 = 6 - 1 = 5$, $5/5$ is true                                                                                                       |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 1$, we assume that $(6^k - 1) / 5$                                                           |
+| 6    | Inductive Step        | $6^{k+1}-1 = (6^k - 1) \cdot 1^{1 + \frac{1}{k}}$ <br> ALGEBRA: $6^{k+1}-1 = (6^{k + \frac{k}{k}} - 1) \cdot 1$ <br> ALGEBRA: $6^{k+1}-1 = (6^{k + 1} - 1) \cdot 1$ |
+| 7    | Therefore             | Therefore, it is true that $\forall n, (6^n - 1)/5$                                                                                                                                          |
+
+---
+
+For any $n \in \mathbb{N}$ and any $a \in \mathbb{R}$, prove that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1}$
+
+| Step | Rule                        | Proof                                                                                                         |
+| ---- | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 1    | State proof                 | Proof.                                                                                                        |
+| 2    | Induction of variable       | We proceed with induction on variable "n"                                                                     |
+| 3    | Assume                      | Assume $n \in \mathbb{N}$ and $a \in \mathbb{R}$, $P(n) = \sum^{n}_{i=1} \frac{a^{n+1}-1}{a-1}$               |
+| 4    | Base case                   | $P(1)= \frac{a^{1 + 1}-1}{a-1} = \frac{a^2-1}{a-1} = 1 + a$                                                   |
+| 5    | Strong Inductive Hypothesis | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k) = \sum^{k}_{i=1} \frac{a^{k+1}-1}{a-1}$ |
+| 6    | Inductive Step              | We must show that $\sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$ <br> $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{(k+1)}-1}{a-1} + a^{k+1}$ <br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{a^{k+1}(a-1)}{a-1}$ <br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1 + (a^{k+1})(a-1)}{a-1} =\sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{(a^{k+1})(a-1)}{a-1}$<br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{(a^{k+1})(a-1)}{a-1} = \sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$                                               |
+| 7    | Therefore                   | Therefore, it is true that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1}$                                                                                                               |
+
+---
+
+Prove the following by using the principle of mathmatical induction $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2$
+
+| Step | Rule                        | Proof                                                                             |   
+| ---- | --------------------------- | --------------------------------------------------------------------------------- | 
+| 1    | State proof                 | Proof.                                                                            |   
+| 2    | Induction of variable       | We proceed with induction on variable "n"                                         |  
+| 3    | Assume                      | Assume $P(n) = 1^3 a= 2^3 + 3^3 + ... + n^3 = \sum_{i=1}^{n}(\frac{n(n+1)}{2})^2$ |   
+| 4    | Base case                   | $P(1) = 1, P(2) = 1 + 8 = 9$                                                      |   
+| 5    | Strong Inductive Hypothesis | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k)= \sum^k_{i=1}(\frac{n(n+1)}{2})^2$                                                                                   |     |
