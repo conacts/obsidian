@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Midterm 2 math230 practice.md",
-            "mode": "source",
+            "file": "117 Proofs.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -19,95 +19,82 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "fffe763d89faff61",
-    "type": "split",
+    "id": "7a45cc118537d270",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "59600a754676c3f2",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "9a82d858a947622b",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "ea7c114509a2da53",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
+        "id": "747c20fa4bc49f2a",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "92bef7b2dfd5e150",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
           }
-        ]
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 219,
-    "collapsed": true
+    "currentTab": 0
   },
   "right": {
-    "id": "f6ecba14853696b5",
-    "type": "split",
+    "id": "5988f714ccb479a1",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "b4a7b38f06c4f156",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "ac1e6a32d3f63767",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "Midterm 2 math230 practice.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": true,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "c2b0e84ea989ae1b",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
+        "id": "c7b248e09c5b8345",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "117 Proofs.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
           }
-        ],
-        "currentTab": 1
+        }
+      },
+      {
+        "id": "7f94f768bc65d804",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "117 Proofs.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "currentTab": 0
   },
   "active": "1e0b9aebd070f983",
   "lastOpenFiles": [
-    "Midterm 2 math230 practice.md",
-    "114 Multiple Integration.md",
-    "Math230 Midterm 1 Practice Test.md",
-    "100 Math.md",
-    "113 Multivariable Functions.md",
+    "117 Proofs.md",
     "120 Sequences (Discrete Math).md",
     "119 Functions (Discrete Math).md",
-    "HW 7 (Discrete Math).md",
-    "117 Proofs.md",
-    "1.md"
+    "118 Relations and Functions.md",
+    "116 Propositional Logic.md",
+    "100 Math.md",
+    "114 Multiple Integration.md",
+    "Midterm 2 math230 practice.md",
+    "Math230 Midterm 1 Practice Test.md",
+    "113 Multivariable Functions.md"
   ]
 }

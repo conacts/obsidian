@@ -1,5 +1,6 @@
 TARGET DECK: Discrete Math
 # Propositional Logic
+## 2.1 Propositional Logic
 **Definition:** A sentence that is either true or false but not both is called a proposition. A proposition is typically expressed as a declarative sentence.
 
 **Example of proposition:**
@@ -32,7 +33,7 @@ TARGET DECK: Discrete Math
 | F   | T   | T          |
 | F   | F   | F          |
 
-Conjunction (AND) Table:
+**Conjunction (AND) Table:**
 
 | p   | q   | p $\land$ q |
 | --- | --- | ----------- |
@@ -199,7 +200,7 @@ T, F, T, F
 
 
 
-#### 2.2 Conditional Statement:
+## 2.2 Conditional Statement:
 
 **Conditional Statement:**
 
@@ -280,7 +281,7 @@ Biconditional statement must be true both ways where as conditional statement mu
 
 
 
-### 2.4 Logical Equivalence
+## 2.4 Logical Equivalence
 ##### Logical Equivalence:
 AKA: $\approx$ or $\equiv$ 
 When two propositional statements have an equivalent truth table, leading them to be essentially equal. Ex. $p\leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$ 
@@ -317,7 +318,7 @@ Name the rule: $p \lor (\lnot (\lnot p \land q ))$ to $q \rightarrow p$ #flashca
 Conditional Equivalent
 <!--ID: 1642869513661-->
 
-### 2.5 Equivalence using Logical Equivalence Rules
+## 2.5 Equivalence using Logical Equivalence Rules
 - Two famuous logical equivalence rules called **De Morgan's Laws**...
 1. Negation of **and**
 $$\lnot(p \land q) \approx \lnot p \lor \lnot q$$
@@ -354,7 +355,7 @@ $$\lnot(p \land q) \approx \lnot p \land \lnot q$$
 > 3. De Morgan: $\lnot ((p \lor \lnot \lnot q) \lor \lnot r)$
 > 4. Double Negation Rule: $\lnot ((p \lor q) \lor \lnot r)$
 
-### 2.6 Predicate Logic
+## 2.6 Predicate Logic
 **Definition:** The property of a statement is called a predicate, essentially being the object of the sentence
 Ex. "x is a prime number"
 
@@ -368,11 +369,11 @@ Example :: Using predicate logic:
 >2. “The subtraction of x and y is equal to z
     Let R be a predicate where R stands for “The subtraction of _ and _ is equal to _." The predicate R(x,y,z) is read as “The subtraction of x and y is equal to z". Suppose, x=5, y=3, and z=7. The truth value of R(5,3,7) is False.
 
-### 2.7 Quantifiers
+## 2.7 Quantifiers
 Quantifiers are words that can turn any statement into a propositional statement
 - All, every, no, some,...
 
-### Universal Quantifiers 
+#### Universal Quantifiers 
 ( $\forall$ ) = "For all, for every"
 $$\forall x \in U, P(x) \equiv P(x_1) \land P(x_2) \land P(x_3)$$
 
@@ -426,7 +427,7 @@ Where $P(x)$ is **false** for all **values** of the domain $U$
 ##### Satisfiable Statement
 Where $P(x)$ is **true** for **some** values of the domain $U$
 
-### 2.8 Inference Rules
+## 2.8 Inference Rules
 
 ##### Argument
 A sequence of statements that end with a final statement known as the **conclusion**
