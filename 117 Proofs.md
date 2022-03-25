@@ -249,30 +249,62 @@ Use the Principle of Mathematical Induction to verify that, for $n$ any positive
 | 4    | Base Case             | $6^1 -1 = 6 - 1 = 5$, $5/5$ is true                                                                                                       |
 | 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 1$, we assume that $(6^k - 1) / 5$                                                           |
 | 6    | Inductive Step        | $6^{k+1}-1 = (6^k - 1) \cdot 1^{1 + \frac{1}{k}}$ <br> ALGEBRA: $6^{k+1}-1 = (6^{k + \frac{k}{k}} - 1) \cdot 1$ <br> ALGEBRA: $6^{k+1}-1 = (6^{k + 1} - 1) \cdot 1$ |
-| 7    | Therefore             | Therefore, it is true that $\forall n, (6^n - 1)/5$                                                                                                                                          |
+| 7    | Therefore             | Therefore, it is true that $\forall n, (6^n - 1)/5 \square$                                                                                                                                          |
 
 ---
 
 For any $n \in \mathbb{N}$ and any $a \in \mathbb{R}$, prove that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1}$
 
-| Step | Rule                        | Proof                                                                                                         |
-| ---- | --------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| 1    | State proof                 | Proof.                                                                                                        |
-| 2    | Induction of variable       | We proceed with induction on variable "n"                                                                     |
-| 3    | Assume                      | Assume $n \in \mathbb{N}$ and $a \in \mathbb{R}$, $P(n) = \sum^{n}_{i=1} \frac{a^{n+1}-1}{a-1}$               |
-| 4    | Base case                   | $P(1)= \frac{a^{1 + 1}-1}{a-1} = \frac{a^2-1}{a-1} = 1 + a$                                                   |
-| 5    | Strong Inductive Hypothesis | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k) = \sum^{k}_{i=1} \frac{a^{k+1}-1}{a-1}$ |
-| 6    | Inductive Step              | We must show that $\sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$ <br> $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{(k+1)}-1}{a-1} + a^{k+1}$ <br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{a^{k+1}(a-1)}{a-1}$ <br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1 + (a^{k+1})(a-1)}{a-1} =\sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{(a^{k+1})(a-1)}{a-1}$<br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{(a^{k+1})(a-1)}{a-1} = \sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$                                               |
-| 7    | Therefore                   | Therefore, it is true that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1}$                                                                                                               |
+| Step | Rule                  | Proof                                                                                                                                                                                                                                                                                                                                                                                            |
+| ---- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 1    | State proof           | Proof.                                                                                                                                                                                                                                                                                                                                                                                           |
+| 2    | Induction of variable | We proceed with induction on variable "n"                                                                                                                                                                                                                                                                                                                                                        |
+| 3    | Assume                | Assume $n \in \mathbb{N}$ and $a \in \mathbb{R}$, $P(n) = \sum^{n}_{i=1} \frac{a^{n+1}-1}{a-1}$                                                                                                                                                                                                                                                                                                  |
+| 4    | Base case             | $P(1)= \frac{a^{1 + 1}-1}{a-1} = \frac{a^2-1}{a-1} = 1 + a$                                                                                                                                                                                                                                                                                                                                      |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k) = \sum^{k}_{i=1} \frac{a^{k+1}-1}{a-1}$                                                                                                                                                                                                                                                                                    |
+| 6    | Inductive Step        | We must show that $\sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$ <br><br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{(k+1)}-1}{a-1} + a^{k+1}$ <br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{a^{k+1}(a-1)}{a-1}$ <br> ALGEBRA: $P(k+1) =\sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{(a^{k+1})(a-1)}{a-1}$<br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$ |
+| 7    | Therefore             | Therefore, it is true that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1} \square$                                                                                                                                                                                                                                                                                                               |
 
 ---
 
 Prove the following by using the principle of mathmatical induction $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2$
 
-| Step | Rule                        | Proof                                                                             |   
-| ---- | --------------------------- | --------------------------------------------------------------------------------- | 
-| 1    | State proof                 | Proof.                                                                            |   
-| 2    | Induction of variable       | We proceed with induction on variable "n"                                         |  
-| 3    | Assume                      | Assume $P(n) = 1^3 a= 2^3 + 3^3 + ... + n^3 = \sum_{i=1}^{n}(\frac{n(n+1)}{2})^2$ |   
-| 4    | Base case                   | $P(1) = 1, P(2) = 1 + 8 = 9$                                                      |   
-| 5    | Strong Inductive Hypothesis | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k)= \sum^k_{i=1}(\frac{n(n+1)}{2})^2$                                                                                   |     |
+| Step | Rule                  | Proof                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| ---- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | State proof           | Proof.                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| 2    | Induction of variable | We proceed with induction on variable "n"                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 3    | Assume                | Assume $P(n) = 1^3 a= 2^3 + 3^3 + ... + n^3 = \sum_{i=1}^{n}(\frac{n(n+1)}{2})^2$                                                                                                                                                                                                                                                                                                                                                                 |
+| 4    | Base case             | $P(1) = 1, P(2) = 1 + 8 = 9$                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k)= \sum^k_{i=1}(\frac{k(k+1)}{2})^2$                                                                                                                                                                                                                                                                                                                                          |
+| 6    | Inductive Step        | We must show that $\sum_{i=1}^{k+1}(\frac{k+1(k+2)}{2})^2 \square$ <br><br> ALGEBRA: $\sum^{k+1}_{i=1}(\frac{k(k+1)}{2})^2 + (k+1)$ <br> ALGEBRA: $\sum^{k+1}_{i=1}\frac{k^2(k+1)^2}{4} + \frac{4(k+1)}{4}$ <br> ALGEBRA: $\sum^{k+1}_{i=1}\frac{k^2(k+1)^2 + 4(k+1)}{4}$ <br> ALGEBRA: $\sum^{k+1}_{i=1}\frac{k^4+2k^3+k^2+4k+4}{4}$ <br> ALGEBRA: $\sum^{k+1}_{i=1}\frac{((k+1)(k+2))^2}{2^2}$ <br> ALGEBRA: $\sum^{k+1}_{i=1}(\frac{(k+1)(k+2)}{2})^2$ |
+| 7    | Therefore             | Therefore, it is true that $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2 \square$                                                                                                                                                                                                                                                                                                                                                                   |
+
+----
+
+Fibonacci numbers are defined as follows: We have $F_0=0, F_1=1$ and for $n>1$ we have $F_n = F_{n-1} + F_{n-2}$. Prove the following using induction
+1. $F_1 +F_2 + F_3 + ... + F_n = F_{n+2}-1$
+2. $F_2 + F_4 + F_6 + ... + F_{2n+1}-1$ 
+
+| Step | Rule                  | Proof                                                                                                                                        |
+| ---- | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | State proof           | Proof.                                                                                                                                       |
+| 2    | Induction of variable | We proceed with induction on variable "n"                                                                                                    |
+| 3    | Assume                | For $n > 1$ we have $F_n = F_{n-1} + F_{n-2}$                                                                                                |
+| 4    | Base case             | $F_0 = 0, F_1 = 1$                                                                                                                           |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k+1$ where $k \ge 0$, we assume that $\sum^{k}_{i=1} F_{n+2}-1$                                              |
+| 6    | Inductive step        | We must show that $\sum^{k+1}_{i=1} F_{k+3}-1$ <br> ALGEBRA: $\sum^{k+1}_{i=1} F_{k+2}-1 + F_{k + 1}$ <br> ALGEBRA: $\sum^{k+1}_{i=1} F_{k+3} - 1$ |
+| 7    | Therefore             | Therefore, $F_1 +F_2 + F_3 + ... + F_n = F_{n+2}-1 \square$                                                                                          |
+
+
+| Step | Rule                  | Proof                                                                                                                    |
+| ---- | --------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| 1    | State proof           | Proof.                                                                                                                   |
+| 2    | Induction of variable | We proceed with induction on variable "n"                                                                                |
+| 3    | Assume                | For $n > 1$ we have $F_n = F_{n-1} + F_{n-2}$                                                                            |
+| 4    | Base case             | $F_0 = 0, F_1 = 1$                                                                                                       |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k+1$ where $k \ge 0$, we assume that $\sum^{k}_{i=1} F_{n+2}-1$                             |
+| 6    | Inductive step        | We must show that $\sum^{k+1}_{i=1} F_{2k+2}-1$, <br> $\sum^{k+1}_{i=1} F_{2k+1}-1 + F_{2k+2}$ <br> $\sum^{k+1}_{i=1} F_{2k+2}-1$ |
+| 7    | Therefore             | Therefore, we know that $F_2 + F_4 + F_6 + ... + F_{2n+1}-1$                                                                                                                       |
+
+
+
