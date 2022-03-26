@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "1e0b9aebd070f983",
+        "id": "55e9cca7f49abd11",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "117 Proofs.md",
-            "mode": "preview",
+            "file": "452 Computer Compontents.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -19,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "acfd9eb302c3290d",
+    "id": "e932cc7e8f39609e",
     "type": "split",
     "children": [
       {
-        "id": "6d9e34e658d92bb7",
+        "id": "0134c0b0b7c5c326",
         "type": "tabs",
         "children": [
           {
-            "id": "074a9c58f2e051c6",
+            "id": "9f61ca0c53d96ab9",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +35,7 @@
             }
           },
           {
-            "id": "6fd8d9a8b342d636",
+            "id": "472fa5a1b4d7979b",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -57,20 +57,20 @@
     "collapsed": true
   },
   "right": {
-    "id": "9bf53631095b22d0",
+    "id": "3f8e6f1d9be514ab",
     "type": "split",
     "children": [
       {
-        "id": "ebbb9651ddac48cd",
+        "id": "1afa5783b7eadebf",
         "type": "tabs",
         "children": [
           {
-            "id": "a927f98909471fb8",
+            "id": "c08e1bf24553cf2d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "117 Proofs.md",
+                "file": "452 Computer Compontents.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,44 +82,35 @@
             }
           },
           {
-            "id": "e9816707699d15fb",
+            "id": "519795d41e87b4b5",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "117 Proofs.md",
+                "file": "452 Computer Compontents.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
-          },
-          {
-            "id": "e56e72b80b3bd723",
-            "type": "leaf",
-            "state": {
-              "type": "advanced-tables-toolbar",
-              "state": {}
-            }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "1e0b9aebd070f983",
+  "active": "55e9cca7f49abd11",
   "lastOpenFiles": [
-    "117 Proofs.md",
-    "120 Sequences (Discrete Math).md",
-    "119 Functions (Discrete Math).md",
-    "118 Relations and Functions.md",
-    "116 Propositional Logic.md",
-    "100 Math.md",
-    "114 Multiple Integration.md",
-    "Midterm 2 math230 practice.md",
+    "452 Computer Compontents.md",
+    "451 Digital and Analog.md",
+    "110 Vectors.md",
+    "112 Vector Functions.md",
+    "111 Planes.md",
+    "453 Circuits.md",
+    "assets/Pasted image 20220127091704.md",
+    "assets/Pasted image 20220127091704.png",
     "Math230 Midterm 1 Practice Test.md",
-    "113 Multivariable Functions.md"
+    "HW 7 (Discrete Math).md"
   ]
 }

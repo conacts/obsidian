@@ -1,4 +1,4 @@
-## 1.1 Digital Hardware
+## History
 ##### Digital Hardware
 Definition: Products created to build a computer.
 
@@ -16,3 +16,93 @@ Computer Hardware History:
 Defintion: The phenomenon that the number of transistors on a chip will double every 2 years
 ![[Pasted image 20220127130330.png]]
 Moore's Law estimaton of transistors in chips 
+
+## Gates
+![[Pasted image 20220326150807.png]]
+
+
+##### OR Gate
+Denoted by $A + B$ 
+![[Pasted image 20220326150843.png | 300]]
+
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 1   |
+
+
+
+##### AND Gate
+Denoted by $A \cdot B$ or $A.B$ 
+
+![[Pasted image 20220326150928.png | 300]]
+
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 1   |
+
+
+##### NOT Gate
+Denoted by $\overline{A}$ 
+![[Pasted image 20220326151858.png | 300]]
+
+| A   | Y   |
+| --- | --- |
+| 0   | 1   |
+| 1   | 0    |
+
+
+##### NOR Gate
+Denoted by $\overline{A+B} = Y$ 
+![[Pasted image 20220326151422.png | 300]]
+
+**Gate from scratch** 
+![[Pasted image 20220326151508.png]]
+
+
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 0   |
+| 1   | 0   | 0   |
+| 1   | 1   | 0   |
+
+
+##### NAND Gate
+Denoted by $\overline{A \cdot B} = Y$
+![[Pasted image 20220326151638.png | 300]]
+
+**Gate from scratch** 
+![[Pasted image 20220326151657.png]]
+
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 1   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   |
+
+
+##### XOR Gate
+Denoted by $A \oplus B = Y$ 
+![[Pasted image 20220326151942.png | 300]]
+
+**Gate from scratch** 
+![[Pasted image 20220326152017.png]]
+
+| A   | B   | Y   |
+| --- | --- | --- |
+| 0   | 0   | 0   |
+| 0   | 1   | 1   |
+| 1   | 0   | 1   |
+| 1   | 1   | 0   | 
+
+
+##### XNOR Gate
+Denoted by $\overline{A \oplus B} = Y$ 
+![[Pasted image 20220326152206.png | 300]]

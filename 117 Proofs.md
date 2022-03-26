@@ -216,16 +216,22 @@ Theorem: $\forall n P(n)$
 
 ## HW 8
 
-Prove the following by using the principle of mathematical induction for all $n \in \mathbb{N}$ 
+1) Prove the following by using the principle of mathematical induction for all $n \in \mathbb{N}$ 
 $2^{2n-1}$ is divisible by $3$
 
-| Step | Rule | Proof |
-| ---- | ---- | ----- |
-|      |      |       |
+| Step | Rule                  | Proof                                                                        |
+| ---- | --------------------- | ---------------------------------------------------------------------------- |
+| 1    | State proof           | Proof.                                                                       |
+| 2    | Induction on variable | We proceed by induction on the variable "n"                                  |
+| 3    | Assume                | $n \in \mathbb{N}, a_n = 2^{2n-1}$                                           |
+| 4    | Base case             | $a_1=2^{2(1)-1}=2^1=2$                                                       |
+| 5    | Inductive hypothesis  | For any arbitrary integer $n=k$ where $k \ge 1$, we assume that $2^{2n-1}/3$ |
+| 6    | Inductive step        | $2^{2(k + 1)-1} = 2^{2k +1}$ <br> Definition of divides: $2^{2k-1} = 3q^k$   |
+| 7    | Therefore             | Therefore, based on definition of divides we conclude that $2^{2n-1}$ is divisible by 3 $\square$                                                                             |
 
+-----
 
-
-Show that $n!>3^n$ for $n \ge 7$
+2) Show that $n!>3^n$ for $n \ge 7$
 
 | Step | Rule                      | Proof                                                                    |
 | ---- | ------------------------- | ------------------------------------------------------------------------ |
@@ -239,7 +245,7 @@ Show that $n!>3^n$ for $n \ge 7$
 
 ---
 
-Use the Principle of Mathematical Induction to verify that, for $n$ any positive integer, $6^n - 1$ is divisible by $5$.
+3) Use the Principle of Mathematical Induction to verify that, for $n$ any positive integer, $6^n - 1$ is divisible by $5$.
 
 | Step | Rule                  | Proof                                                                                                                                     |
 | ---- | --------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
@@ -248,12 +254,12 @@ Use the Principle of Mathematical Induction to verify that, for $n$ any positive
 | 3    | Assume                | Assume $n \in Z^+, n \ge 1$                                                                                                               |
 | 4    | Base Case             | $6^1 -1 = 6 - 1 = 5$, $5/5$ is true                                                                                                       |
 | 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 1$, we assume that $(6^k - 1) / 5$                                                           |
-| 6    | Inductive Step        | $6^{k+1}-1 = (6^k - 1) \cdot 1^{1 + \frac{1}{k}}$ <br> ALGEBRA: $6^{k+1}-1 = (6^{k + \frac{k}{k}} - 1) \cdot 1$ <br> ALGEBRA: $6^{k+1}-1 = (6^{k + 1} - 1) \cdot 1$ |
-| 7    | Therefore             | Therefore, it is true that $\forall n, (6^n - 1)/5 \square$                                                                                                                                          |
+| 6    | Inductive Step        | $6^{k+1}-1 = (6^{k+1} - 1)$ <br> By definition of divides: $6^{k+1} = 3q$ |
+| 7    | Therefore             | Therefore, it is true that for all $(6^n - 1)/5 \space \square$                                                                                                                                          |
 
 ---
 
-For any $n \in \mathbb{N}$ and any $a \in \mathbb{R}$, prove that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1}$
+4) For any $n \in \mathbb{N}$ and any $a \in \mathbb{R}$, prove that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1}$
 
 | Step | Rule                  | Proof                                                                                                                                                                                                                                                                                                                                                                                            |
 | ---- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -263,11 +269,11 @@ For any $n \in \mathbb{N}$ and any $a \in \mathbb{R}$, prove that $1 + a + a^2 +
 | 4    | Base case             | $P(1)= \frac{a^{1 + 1}-1}{a-1} = \frac{a^2-1}{a-1} = 1 + a$                                                                                                                                                                                                                                                                                                                                      |
 | 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $P(k) = \sum^{k}_{i=1} \frac{a^{k+1}-1}{a-1}$                                                                                                                                                                                                                                                                                    |
 | 6    | Inductive Step        | We must show that $\sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$ <br><br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{(k+1)}-1}{a-1} + a^{k+1}$ <br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{a^{k+1}(a-1)}{a-1}$ <br> ALGEBRA: $P(k+1) =\sum^{k+1}_{i=1} \frac{a^{k+1}-1}{a-1} + \frac{(a^{k+1})(a-1)}{a-1}$<br> ALGEBRA: $P(k+1) = \sum^{k+1}_{i=1} \frac{a^{k+2}-1}{a-1}$ |
-| 7    | Therefore             | Therefore, it is true that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1} \square$                                                                                                                                                                                                                                                                                                               |
+| 7    | Therefore             | Therefore, it is true that $1 + a + a^2 + a^3 + ... + a^n = \frac{a^{n+1}-1}{a-1} \space \square$                                                                                                                                                                                                                                                                                                               |
 
 ---
 
-Prove the following by using the principle of mathmatical induction $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2$
+5) Prove the following by using the principle of mathmatical induction $1^3 + 2^3 + 3^3 + ... + n^3 = (\frac{n(n+1)}{2})^2$
 
 | Step | Rule                  | Proof                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ---- | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -281,7 +287,7 @@ Prove the following by using the principle of mathmatical induction $1^3 + 2^3 +
 
 ----
 
-Fibonacci numbers are defined as follows: We have $F_0=0, F_1=1$ and for $n>1$ we have $F_n = F_{n-1} + F_{n-2}$. Prove the following using induction
+6) Fibonacci numbers are defined as follows: We have $F_0=0, F_1=1$ and for $n>1$ we have $F_n = F_{n-1} + F_{n-2}$. Prove the following using induction
 1. $F_1 +F_2 + F_3 + ... + F_n = F_{n+2}-1$
 2. $F_2 + F_4 + F_6 + ... + F_{2n+1}-1$ 
 
@@ -291,9 +297,9 @@ Fibonacci numbers are defined as follows: We have $F_0=0, F_1=1$ and for $n>1$ w
 | 2    | Induction of variable | We proceed with induction on variable "n"                                                                                                    |
 | 3    | Assume                | For $n > 1$ we have $F_n = F_{n-1} + F_{n-2}$                                                                                                |
 | 4    | Base case             | $F_0 = 0, F_1 = 1$                                                                                                                           |
-| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k+1$ where $k \ge 0$, we assume that $\sum^{k}_{i=1} F_{n+2}-1$                                              |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $\sum^{k}_{i=1} F_{n+2}-1$                                              |
 | 6    | Inductive step        | We must show that $\sum^{k+1}_{i=1} F_{k+3}-1$ <br> ALGEBRA: $\sum^{k+1}_{i=1} F_{k+2}-1 + F_{k + 1}$ <br> ALGEBRA: $\sum^{k+1}_{i=1} F_{k+3} - 1$ |
-| 7    | Therefore             | Therefore, $F_1 +F_2 + F_3 + ... + F_n = F_{n+2}-1 \square$                                                                                          |
+| 7    | Therefore             | Therefore, $F_1 +F_2 + F_3 + ... + F_n = F_{n+2}-1 \space \square$                                                                                          |
 
 
 | Step | Rule                  | Proof                                                                                                                    |
@@ -302,9 +308,51 @@ Fibonacci numbers are defined as follows: We have $F_0=0, F_1=1$ and for $n>1$ w
 | 2    | Induction of variable | We proceed with induction on variable "n"                                                                                |
 | 3    | Assume                | For $n > 1$ we have $F_n = F_{n-1} + F_{n-2}$                                                                            |
 | 4    | Base case             | $F_0 = 0, F_1 = 1$                                                                                                       |
-| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k+1$ where $k \ge 0$, we assume that $\sum^{k}_{i=1} F_{n+2}-1$                             |
-| 6    | Inductive step        | We must show that $\sum^{k+1}_{i=1} F_{2k+2}-1$, <br> $\sum^{k+1}_{i=1} F_{2k+1}-1 + F_{2k+2}$ <br> $\sum^{k+1}_{i=1} F_{2k+2}-1$ |
-| 7    | Therefore             | Therefore, we know that $F_2 + F_4 + F_6 + ... + F_{2n+1}-1$                                                                                                                       |
+| 5    | Inductive Hypothesis  | For any arbitrary integer $n=k$ where $k \ge 0$, we assume that $\sum^{k}_{i=1} F_{n+2}-1$                             |
+| 6    | Inductive step        | We must show that $\sum^{k+1}_{i=1} F_{2k+2}-1$, <br> $\sum^{k+1}_{i=1} F_{2k+1}-1 + F_{2k+2}$ <br> $\sum^{k+1}_{i=1} F_{2(k+1) + 1}-1$ <br> because $n=k+1$, sub it in $\sum^{k+1}_{i=1} F_{2n + 1)}-1$|
+| 7    | Therefore             | Therefore, we know that $F_2 + F_4 + F_6 + ... + F_{2n+1}-1 \space \square$                                                                                                                       |
 
 
+7) Let $a_n$ be the sequence defined by $a_1 = 1, a_2 = 8$, and $a_n = a_{n-1} + 2a_{n-2}$ for $n \ge 3$. Prove that $a_n = 3 \cdot 2^{n-1} + 2(-1)^n$ for all $n \in \mathbb{N}$
 
+| Step | Rule                    | Proof                                                                                                                                           |     |
+| ---- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| 1    | State proof             | Proof.                                                                                                                                          |     |
+| 2    | Induction of variable   | We proceed with induction on variable "n"                                                                                                       |     |
+| 3    | Assume                  | $a_{n-1} + 2a_{n-2}$ for $n \ge 3$ for all $n \in \mathbb{N}$                                                                                   |     |
+| 4    | Base case               | $a_1 = 1^3 = 1, a_2 = 2^3= 8, a_3^ = 8 + 2 = 10, a^4 = (8 + 2) + 2(8) = 26$                                                                     |     |
+| 5    | Strong Inductive hypothesis    | For any arbitrary integer $1 \le k \le n$ where $n \ge 3$                                                                                                 |     |
+| 6    | Inductive step          | We must show that $a_n = 3 \cdot 2^{n-1} + 2(-1)^n$,                                                                                            |     |
+| 7    | More...                 | $(2(-1)^n$:  Since $a_2$ is always $2^{3}$ and $2(1)^3$ at some point, we can guarentee that we will either add or subtract 1                   |     |
+| 8    | Power of two hypothesis | $(3\cdot 2^{n-1})$: Since you are able to write any number as a power of 2 and our smallest starting number is 8 we can show this as $3(2^{n-1})$ |     |
+| 9    | Algebra                 | Sum the first and last equation to obtain: $a_{n-1} + 2a_{n-2} = 3 \cdot 2^{n-1} + 2(-1)^n$                                                     |     |
+| 10   | Therefore               | Therefore, we know that $a_{n-1} + 2a_{n-2} = 3 \cdot 2^{n-1} + 2(-1)^n \space \square$                                                                                                                                                 |     |
+
+8) Use strong induction to show that every positive integer $n$ can be written as a sum of distinct powers of two, that is, as a sum of a subset of the integers $2^0 = 1, 2^1 = 2, 2^2 = 4$, and so on. (Hint: For the inductive step, separately consider the case where $k+1$ is even and where it is odd. When it is even, note that $(k+1)/2$ is an integer.)
+
+| Step | Rule                            | Proof                                                                                     |
+| ---- | ------------------------------- | ----------------------------------------------------------------------------------------- |
+| 1    | State proof                     | Proof.                                                                                    |
+| 2    | Induction on variable           | We proceed with induction on variable "n"                                                 |
+| 3    | Assume                          | consider case 1: $k + 1$ is even and case 2: $k + 1$ is odd                               |
+| 4    | Base case                       | $a_0 = 2^0 = 1,a_1 =  2^1 = 2,a_2 = 2^2 = 4$                                              |
+| 5    | Strong Inductive Hypothesis     | For any arbitrary number $n < k < n+1$ where $n \ge 0$                                    |
+| 6    | Inductive Step                  | We must show that $a_n + a_{n-1} = k$                                                     |
+| 7    | Euler's Theorem for powers of 2 | Based on eulers theorem for powers of two we can create any number from the powers of two |
+| 8    | More...                         | $a_{k-3} + a_{k-2} + a_{k-1} + ... + a_{k} = k$                                           |
+| 9    | Conclusion                      | By summation, we can show the equation $a_n + a_{n-1}$ as a series that gives us any real number $n \space \square$                                                                                          |
+
+9) Assume we know that for each natural number $n>1$, there is a prime number $p$ such that $n<p<2n$. We call such a prime number a Pseudo-prime number. Prove that every natural number $n>2$ can be written as the summation of distinct pseudo-prime numbers (The sum can consist of only one element).
+
+| Step | Rule                        | Proof                                                                               |
+| ---- | --------------------------- | ----------------------------------------------------------------------------------- |
+| 1    | State proof                 | Proof.                                                                              |
+| 2    | Induction on variable       | We proceed with induction on variable "n"                                           |
+| 3    | Assume                      | For each natural number $n > 1$, there is a prime number $p$ such that $n < p < 2n$ |
+| 4    | Base case                   | $n=2; 2 < p < 2(2) = 2 < p < 4; p = 3$                                              |
+| 5    | Strong Inductive Hypothesis | For any arbitrary number $1 < k \le n$                                              |
+| 6    | Even Case (1)               | Where $k + 1$ is even                                                               |
+| 7    | Inductive step              | $a_{k+1} < p < a_{2(k)+1}$, gives us a prime number $p$                                |
+| 8    | Odd Case (2)                | Where $k + 1$ is odd                                                                |
+| 9    | Inductive step              | $a_{k+1} < p < a_{2(k)+1}$, gives us a prime number $p$                                |
+| 10   | Conclusion                  | By use of strong induction, we know that both even and odd numbers can provide a range to give us a psudo-prime number $p$ as shown in $n < p < 2n$ $\space \square$                                                                                    |

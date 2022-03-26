@@ -93,7 +93,94 @@ BASE 2 ANS: 101110.1011
 	1. Sign bit is considered separately from magnitude bit
 	2. Negative N has same bits for magnitude as N and inverted sign
 	3. Range: -(2N-1-1) to (2N-1 -1) two zeros
-1st Complement and 2nd complement
+1's Complement and 2's complement
 
-<center><img src="file:///Users/connorsheehan/icloud/obsidianNotebooks/math/Pasted image 20220127091704.png" width="400" height="auto"></center>
-- 1st complement uses -0 and +0 while 2nd complement only has +0, enabling it to access -8
+![[Pasted image 20220326001453.png | 400]]
+
+##### 1's Complement
+Most common binary representation of a number with a sign
+
+**From Binary to 1's Complement**
+1. Positive Number
+	1. Do nothing
+2. Negative Number
+	1. Invert all bits
+
+| Decimal | Binary    | 1's Complement       | 2's Complement |
+| ------- | --------- | -------------------- | -------------- |
+| 25      | 0001 1001 | **0**001 1001        | 0001 1001      |
+| -25     | NA        | **1**110 0110        | **1**110 0111  |
+| 7       | 0111      | **0**111             | 0111           |
+| -7      | NA        | **1**000             | 1001           |
+| 0       | 0000      | **0**000 or **1**111 | 0000               |
+
+![[Pasted image 20220326003533.png | 500]]
+
+**Adding/Subtracting 1's Complement**
+
+| Decimal | Binary      | Work                               | Answer |
+| ------- | ----------- | ---------------------------------- | ------ |
+| 1 + 2   | 0001 + 0010 | $\space$ 0001 <br>+0010 <br> ----- <br> 0111 | 0111   |
+| -1 + 2  | 1110 + 0010 | $\space$ 1110 <br> +0010 <br> ------- <br> Carry bit <- **1**0000 <br> -------------- <br> $\space$ 0000 <br> +000**1** -> Carry bit <br> -------------- <br> 0001                                 |        |
+
+
+##### 2's Complement
+Another way of representing negative numbers in binary
+
+**From Binary to 2's Complement**
+1. Positive Number
+	1. Do nothing
+2. Negative Number
+	1. Invert all bits
+	2. Add 1 to least significant bit
+
+| Decimal | Binary    | 1's Complement       | 2's Complement |
+| ------- | --------- | -------------------- | -------------- |
+| 25      | 0001 1001 | **0**001 1001        | 0001 1001      |
+| -25     | NA        | **1**110 0110        | **1**110 0111  |
+| 7       | 0111      | **0**111             | 0111           |
+| -7      | NA        | **1**000             | 1001           |
+| 0       | 0000      | **0**000 or **1**111 | 0000               |
+
+
+**Adding/Subtracting 2's Complement**
+
+| Decimal    | Binary             | Work                                                                          | Answer  |
+| ---------- | ------------------ | ----------------------------------------------------------------------------- | ------- |
+| 15 + 18    | 001111 + 010010    | $\space$ 001111 <br> +010010 <br> -------- <br> 0100001                       | 0100001 = 33 |
+| 15 + (-18) | 001111 + -(010010) | 1) Invert 18 <br> $\space$ 001111 <br> +101110 <br> -------- <br> 111101 <br> | 111101 = -3        |
+
+![[Pasted image 20220326012358.png]]
+**2's Complement Overflow**
+You know you have overflow when
+1. If the sum of two positive number yield a negative result, the sum has overflowed
+2. If the sum of two negative numbers yields a positive result, the sum has overflowed
+3. If the last two carry bits are different numbers, the sum has overflowed
+4. Otherwise, the sum has not overflowed
+
+##### Number Representation Quiz
+
+Is there overflow adding 1001 and 1110 in 2's complement system? (Y/N) #flashcard 
+Yes
+1001 +1110 = (-7) + (-2) = (-9) > 7 = overflow
+
+Is there overflow adding 1001 and 0010 in 2's complement system? #flashcard 
+No
+1001 + 0010 = (-7) + (2) = -5 < 7 = no overflow
+
+How can you determine an overflow? (2) #flashcard 
+1. If the number exceeds the number achievable from given bits
+2. If $C_n$ and $C_{n-1}$ are different (two most significant bits)
+
+How do you get a complement of a number under 2's complement system? #flashcard 
+
+How do you get a complement of a number under 2's complement system? #flashcard 
+1. If the number is negative, flip all the bits
+2. Add 1 to the least significant bit
+
+Why do we use 2's complement system over other systems? #flashcard 
+It is an easy way to calculate while only using one zero, while 1's complement uses two zeros
+
+
+##### Homework Number Representation Examples
+![[HW2_SOLUTIONS_SPRING22.pdf]]
