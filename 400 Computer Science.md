@@ -1,1 +1,1 @@
-[[451 Digital and Analog]]
+[[451 Number and Binary Representation]]

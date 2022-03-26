@@ -7,7 +7,7 @@
         "id": "55e9cca7f49abd11",
         "type": "leaf",
         "state": {
-          "type": "empty",
+          "type": "graph",
           "state": {}
         }
       }
@@ -49,7 +49,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "3f8e6f1d9be514ab",
@@ -95,15 +96,15 @@
   },
   "active": "55e9cca7f49abd11",
   "lastOpenFiles": [
-    "Neural Networks/Neural Network Overview.md",
-    "Neural Networks/Activation Functions.md",
     "000 Index.md",
     "100 Math.md",
-    "110 Vectors.md",
-    "10 Best blogs.md",
-    "1.md",
-    "11 Color Blind README.md",
+    "119 Functions (Discrete Math).md",
+    "453 Boolean Logic.md",
+    "451 Number and Binary Representation.md",
+    "116 Propositional Logic.md",
+    "115 Sets.md",
     "452 Computer Compontents.md",
-    "451 Digital and Analog.md"
+    "400 Computer Science.md",
+    "Neural Networks/Neural Network Overview.md"
   ]
 }

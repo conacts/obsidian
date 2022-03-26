@@ -1,4 +1,4 @@
-## Number Representation
+## Digital and Analog
 
 **Radix:** A number system that represents a range starting at 0
 
@@ -25,6 +25,8 @@
 | Can store less data    | More data              |
 | Less reliable          | More reliable          |
 | Less accurate          | More accurate          | 
+
+## Number Representation
 
 ##### Bases:
 | Name        | Radix | Digits                                         |
@@ -85,9 +87,6 @@ BASE 2 ANS: 101110.1011
 **Octal vs. Hexadecimal:** Octal only uses 3 bits with a radix of (0-7) while hex uses 4 digits and has (0-F) possible combinations.
 
 
-----
-## Lecture 3
-### Unsigned arithmetic example
 #### Sign bit schemas
 1. Sign and magnitude
 	1. Sign bit is considered separately from magnitude bit
@@ -184,3 +183,69 @@ It is an easy way to calculate while only using one zero, while 1's complement u
 
 ##### Homework Number Representation Examples
 ![[HW2_SOLUTIONS_SPRING22.pdf]]
+
+### Minterm and Maxterm
+
+#### Cannonical Form
+##### Sum of Minterms (SoP)
+**Sum of Products**
+Adding (OR Gating) all the conditions where the function **IS 1** 
+
+##### Product of Maxterms (PoS)
+**Product of Sums**
+Anding all the conditions where the function **IS 1**
+
+#### Minterm
+Minterms are AND terms with every variable present to either in normal or complement form
+- This can be calculated using $2^n$ where $n$ = inputs
+
+Ex. $2^2=4$ minterms 
+
+| X   | Y   | AND  |
+| --- | --- | ---- |
+| X   | Y   | XY   |
+| X   | Y'  | XY'  |
+| X'  | Y   | X'Y  |
+| X'  | Y'  | X'Y' |
+
+![[Pasted image 20220326172910.png | 300]]
+**Example:**
+$$\sum$$
+
+![[Pasted image 20220326172512.png]]
+
+#### Maxterm
+Maxterms are OR terms with every variable in normal or complment form
+
+| X   | Y   | AND     |
+| --- | --- | ------- |
+| X   | Y   | X' + Y' |
+| X   | Y'  | X' + Y  |
+| X'  | Y   | X + Y'  |
+| X'  | Y'  | X + Y   |
+
+In subscript form
+![[Pasted image 20220326172857.png | 300]]
+
+![[Pasted image 20220326172517.png]]
+
+##### HW3
+![[HW3_SOLUTIONS_SPRING22-1.pdf]]
+
+### Optimization
+There are 3 main ways we optimize and create a circuit
+#### Algebraic Reduction
+The use of boolean algebra rules to systematically reduce your equation to a much simpler equation
+(-) Tedious and complicated
+(-) Hard to predict timing hazards
+
+
+#### Venn Diagram
+(-) Only practical for simple expressions
+
+![[Pasted image 20220326180954.png]]
+
+#### K-Maps
+(+) Good at predicting timing hazards
+(+) Simple to create
+(-) Only for small problems
