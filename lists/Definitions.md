@@ -79,3 +79,8 @@ The multiplication of two sets where the output is ordered pairs of a tuple; not
 The concept that the derivative is the inverse of the integral
 $$\frac{d}{dx}\int^x_af(t)dt = f(x)$$
 $$\int^b_af(x)dx=F(b)-F(a)$$
+## Physics
+
+##### Cyclontron Motion
+Centripetal Acceleration, or moving in a circle
+![[Pasted image 20220327005325.png | 300]]

@@ -1,4 +1,8 @@
 # Optimizers
+The chosen method of optimizing your network to reduce your loss function
+
+[Loss vs. Optimization](https://datascience.stackexchange.com/questions/85579/confused-between-optimizer-and-loss-function)
+
 **Defintion:** Ways to calculate the loss function of a network for backpropogation to use and update properly
 ![[Pasted image 20220125143707.png]]
 ## 1st Order Optimziation
@@ -28,15 +32,21 @@ Benefits: Implements adaptive learning rate
 Benefit: Deals with AdaDeltas problem of continuous decaying learning rate
 Best
 
-## Other
+# Loss Function
 ##### Huber Loss
 **Definition:** Acts like MSE when error is small, but is like MAE when error is large. And is good loss function for data with few outliers
 
 ##### Cross-Entropy
+AKA: Log-Loss
 $$MSE=-\frac{1}{m}\sum^m_{i=1}y_i \cdot log(\hat{y_i})$$
+Log loss is a loss function also used frequently in classification problems, and is one of the most popular measures for Kaggle. It’s just a straightforward modification of the likelihood function with logarithms.
+![](https://www.datarobot.com/wp-content/uploads/2022/02/word-image-7.png)
+
 ##### MSE (Mean Square Error)
 $$MSE=\frac{1}{N}\sum^N_{i=1}(y_i-\hat{y}_i)^2$$
+The workhorse of basic loss functions; it’s easy to understand and implement and generally works pretty well. To calculate MSE, you take the difference between your predictions and the ground truth, square it, and average it out across the whole dataset.
 ##### MAE (Mean Absolute Error)
 $$MAE=\frac{1}{N}\sum^N_{j=1}|y_j-\hat{y}_j|$$
+
 ##### RMSE (Root Mean Square Error)
 $$MSE=\sqrt{\sum^N_{i=1}\frac{(y_i-\hat{y}_i)^2}{N}}$$

@@ -403,3 +403,63 @@ Spherical coordinates make use of the fact that a point $P$ on a sphere of radiu
 > $$\int^{2\pi}_{0} \int^{3}_{0} \int^{4}_{-4} r\cos \theta \cdot r \space dzdrd \theta $$
 
 
+## 15.5 Applications of Multiple Integrals
+
+| Function              | In $R^2$                                                             | In $R^3$                                      |
+| --------------------- | -------------------------------------------------------------------- | --------------------------------------------- |
+| Total Mass            | $M = \iint_D \delta (x,y)dA$                                         | $M=\iiint_W \delta (x,y,z)dV$                 |
+| Moments X             | $M_x = \iint_D y\delta (x,y)dA$                                      | $M_{yz} = \iint_W x\delta (x,y)dA$            |
+| Moments Y             | $M_y = \iint_D x\delta (x,y)dA$                                      | $M_{xz} = \iint_W y\delta (x,y)dA$            |
+| Moments Z             | NA                                                                   | $M_{xy} = \iint_W z\delta (x,y)dA$            |
+| Moments of Intertia X | $I_x = \iint_D y^2 \delta (x,y)dA$                                   | $I_x = \iiint_W (y^2 + z^2) \delta (x,y,z)dV$ |
+| Moments of Intertia Y | $I_y = \iint_D x^2 \delta (x,y)dA$                                   | $I_x = \iiint_W (x^2 + z^2) \delta (x,y,z)dV$ |
+| Moments of Intertia Z | $I_0 = \iint_D (x^2  + y^2) \delta (x,y)dA, \quad (I_0 = I_x + I_y)$ | $I_x = \iiint_W (x^2 + y^2) \delta (x,y,z)dV$ |
+| Center of Mass        | $x_{cm} = \frac{M_y}{M}, \quad y_{cm} = \frac{M_x}{M}$               | $x_{cm} = \frac{M_{yz}}{M}, \quad y_{cm} = \frac{M_{xz}}{M}, \quad z_{cm} = \frac{M_{xy}}{M}$                                            |
+
+
+$$\text{Radius of gyration:   }r_g = \left(\frac{I}{M}\right)^{1/2}$$
+Random variables $X$ and $Y$ have joint probabliity density function $p(x,y)$ if...
+$$P(a \le X \le b; c \le Y \le d) = \int^b_{x=a} \int^d_{y=c} p(x,y) dydx$$
+A joint probability density function must satisfy $p(x,y) \ge 0$ and 
+$$\int^{\infty}_{x=-\infty}\int^{\infty}_{y=-\infty} p(x,y)dydx = 1$$
+**Examples :: Density:**
+> Find the total mass of the rectangle $0 \le x \le 4, 1 \le y \le 7$ assuming a mass density of $\delta (x,y) = 4x^2 + y^2$
+> 1. Use the total mass formula of $M = \iint_D \delta (x,y)dA$
+> $$M = \iint_D \delta (x,y)dA = \int^4_0 \int_1^7 4x^2 + y^2 dydx$$
+> 2. Calculate the inner integral
+> $$\int^7_1 4x^2 + y^2 dy = 4x^2y + \frac{y^3}{3} |^7_1 = 28x^2 + \frac{(7)^3}{3} - 4x^2(1) - \frac{(1)^3}{3} = 24x^2 + \frac{342}{3}$$
+> 3. Calculate the outer integral
+> $$\int^4_0 (24x^2 + 114) dx = 8x^3 + 114x |^4_0 = 8(4)^3 + 114(4) = 968 $$
+> ----
+> Find the total population within a 3-km radius of the city center assuming a population density of $\delta (x,y) = 2000(x^2 + y^2 )^{-0.3}$
+> 1. City is a circle so the outer integral would be $\int^{2\pi}_0$
+> 2. $r=3; \int^3_0$
+> 3. translate x and y into cylindrical
+> $$\int^{2\pi}_0 \int^3_0 2000r(r^2)^{-0.3}drd\theta  = 41788$$
+> ---
+> The total mass of the solid region $W$ defined by $x \ge 0, y \ge 0, x^2 + y^2 \le 4, x \le z \le 25-x$ assuming a mass density of $\delta (x,y,z) = 6y$
+> 1. Set up integrals in form of polar coordinates
+> $$0 \le r \le \sqrt{4}=2,\quad 0 \le \theta \le 2\pi, \quad x = r\cos\theta, \quad r\cos\theta \le z \le 25 - r\cos\theta$$
+> 2. Set up integrals
+> $$\int^{2\pi}_0 \int^2_0 \int^{25-r\cos\theta}_{r\cos\theta}6r dzdrd\theta$$
+> ---
+> Find the center of mass of the region bounded by the semicircle $x^2 + y^2 \le R^2 , y \ge 0$ with mass density $\delta(x,y) = y$
+> 1. Use the center of mass equation, or the centroid 
+> $$x_{cm} = \frac{M_y}{M}, \quad y_{cm} = \frac{M_x}{M}$$
+> 2. Solve for $M$
+> $$M = \iint_D \delta (x,y)dA = \int_0^{\pi} \int^R_0 r\sin\theta \cdot r\cdot drd\theta = \frac{2R^3}{3}$$
+> 3. Solve for $M_x$ and $M_y$
+> $$M_y = \int^{\pi}_0 \int^R_0 yx drd\theta  =  \int^{\pi}_0 \int^R_0 r\sin \theta \cdot r \cos \theta \cdot r \cdot drd\theta = 0$$
+> $$M_x = \int^{\pi}_0 \int^R_0 y^2 drd\theta = \int^{\pi}_0 \int^R_0 r^3 \sin^2 \theta drd\theta = \frac{\pi R^4}{8}$$
+> 4. Plug in for values of center of mass equation
+> $$y_{cm} = \frac{M_y}{M} = \frac{\frac{\pi R^4}{8}}{\frac{2R^3}{3}} = \frac{3\pi R}{16}$$
+> $$x_{cm} = \frac{M_x}{M} = \frac{0}{\frac{2R^3}{3}} = 0$$
+> ANS: $(0, \frac{3\pi R}{16})$
+> -----
+> Find the average square distance from the origin to a point in the domain $D$ in the figure. Assume $a=6, b=12$
+> ![[Pasted image 20220327140937.png |200]]
+> 
+
+
+
+

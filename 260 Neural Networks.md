@@ -19,7 +19,7 @@ There are multiple factors that go into how a neural network improves. These inc
 7. Regularization
 8. Network Architecture
 
-#### [[262 Optimizers | Optimizers:]]
+#### [[262 Loss Function and Optimizers | Optimizers:]]
 1. 1st Order Optimization
 2. 2nd Order Optimization
 

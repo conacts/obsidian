@@ -57,7 +57,9 @@ Disadvantages:
 **Definition:** Determines the subset of local optima that the algorithm can converge to by changing the magnitude of ocsillations (image above).
 
 ### Loss Function
-**Definition:** The optimizer chosen to minimize the loss between output of network and desired output
+**Definition:** The function chosen to measure the loss between output of network and desired output. 
+
+For example mean squared error, squares the difference between target and prediction. Cross entropy is a more complex loss formula related to information theory.
 
 ### Regularization
 **Definition:** Used to avoid overfitting the model by "minimizing the coefficient estimates to zero to reduce the capacity of a model
