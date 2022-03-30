@@ -441,7 +441,7 @@ $$\int^{\infty}_{x=-\infty}\int^{\infty}_{y=-\infty} p(x,y)dydx = 1$$
 > 1. Set up integrals in form of polar coordinates
 > $$0 \le r \le \sqrt{4}=2,\quad 0 \le \theta \le 2\pi, \quad x = r\cos\theta, \quad r\cos\theta \le z \le 25 - r\cos\theta$$
 > 2. Set up integrals
-> $$\int^{2\pi}_0 \int^2_0 \int^{25-r\cos\theta}_{r\cos\theta}6r dzdrd\theta$$
+> $$\int^{\pi/2}_0 \int^2_0 \int^{25-r\cos\theta}_{r\cos\theta}6r \sin \theta \cdot r dzdrd\theta$$
 > ---
 > Find the center of mass of the region bounded by the semicircle $x^2 + y^2 \le R^2 , y \ge 0$ with mass density $\delta(x,y) = y$
 > 1. Use the center of mass equation, or the centroid 
@@ -458,8 +458,20 @@ $$\int^{\infty}_{x=-\infty}\int^{\infty}_{y=-\infty} p(x,y)dydx = 1$$
 > -----
 > Find the average square distance from the origin to a point in the domain $D$ in the figure. Assume $a=6, b=12$
 > ![[Pasted image 20220327140937.png |200]]
-> 
+> 1. Use the formula for average $\overline{f}$ 
+> $$\overline{f}=\frac{\iint_D f(x,y)dA}{\iint_D 1dA}$$
+> 2. Find the bounds
+> $$\int^{12}_{x=6} \int^{\sqrt{x-6}}_{-\sqrt{x-6}} 1dxdy = 8\sqrt{6}$$
+> ----
+> Calculate the integral of $f(x,y,z) = z(x^2 + y^2 + z^2)^{-3/2}$ over the part of the ball $x^2 + y^2 + z^2 \le 49$ defined by $z \ge \frac{7}{2}$
+> $$\iiint_W f(x,y,z)dV = ?$$
+> 1. Set up integral
+> $$\int^7_0 \int \int z(x^2 + y^2 + z^2)^{-3/2} $$
 
 
+$$\int_0^{2\pi} \int^{\pi/4}_0 \int^5_0 p^2 \sin x dpdxd\theta$$
 
-
+> Use spherical coordinates to calculate the triple integral of 
+> $$f(x,y,z) = \frac{1}{x^2 + y^2 + z^2}$$
+> over the region $5 \le x^2 + y^2 + z^2 \le 25$
+> $$\int_0^{2\pi} \int_0^{\pi} \int_{\sqrt{5}}^5 \sin \phi d\rho d \phi d\theta$$

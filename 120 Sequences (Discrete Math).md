@@ -3,7 +3,7 @@
 ## Functions
 An equation that takes an input and provides an output
 
-##### One-to-one
+##### One-to-one / Injective
 AKA: Injective
 
 A function is one-to-one if...
@@ -17,7 +17,7 @@ $$\text{if } x \ne y, f(x)\ne f(y)$$
 >
 > The function is one-to-one correspondence because for each value of the domain, fnuction f maps to different values in codomain
 
-##### Onto
+##### Onto / Surjective
 The functions $f$ is onto (or surjection) B if
 $$\text{for every }y \in B \text{ there is an } x \in A \text{ such that } f(x)=y$$
 Symbolically,
@@ -30,7 +30,7 @@ Which function is an onto function?
 > _f_ = { _(1,7), (2,7), (3,8), (4,9), (5,9), (6,10)_ }
 > _g_ ={ _(1,7), (2,7), (3,7), (4,9), (5,9), (6,10)_ }
 > 
-> ANS: $f$ is an onto function but g is not because 8 is not mapped by any element from domain A.
+> ANS: $f$ is an onto function but $g$ is not because 8 is not mapped by any element from domain A.
 
 ##### Bijective
 Function f is a bijection (or bijective) when it is both one-to-one (injecitve) and onto (surjective) function

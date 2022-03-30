@@ -96,10 +96,10 @@ BASE 2 ANS: 101110.1011
 
 ![[Pasted image 20220326001453.png | 400]]
 
-##### 1's Complement
+#### 1's Complement
 Most common binary representation of a number with a sign
 
-**From Binary to 1's Complement**
+##### From Binary to 1's Complement
 1. Positive Number
 	1. Do nothing
 2. Negative Number
@@ -115,7 +115,7 @@ Most common binary representation of a number with a sign
 
 ![[Pasted image 20220326003533.png | 500]]
 
-**Adding/Subtracting 1's Complement**
+##### Adding/Subtracting 1's Complement
 
 | Decimal | Binary      | Work                               | Answer |
 | ------- | ----------- | ---------------------------------- | ------ |
@@ -123,10 +123,10 @@ Most common binary representation of a number with a sign
 | -1 + 2  | 1110 + 0010 | $\space$ 1110 <br> +0010 <br> ------- <br> Carry bit <- **1**0000 <br> -------------- <br> $\space$ 0000 <br> +000**1** -> Carry bit <br> -------------- <br> 0001                                 |        |
 
 
-##### 2's Complement
+#### 2's Complement
 Another way of representing negative numbers in binary
 
-**From Binary to 2's Complement**
+##### From Binary to 2's Complement
 1. Positive Number
 	1. Do nothing
 2. Negative Number
@@ -142,12 +142,22 @@ Another way of representing negative numbers in binary
 | 0       | 0000      | **0**000 or **1**111 | 0000               |
 
 
-**Adding/Subtracting 2's Complement**
+##### Adding/Subtracting 2's Complement
 
 | Decimal    | Binary             | Work                                                                          | Answer  |
 | ---------- | ------------------ | ----------------------------------------------------------------------------- | ------- |
 | 15 + 18    | 001111 + 010010    | $\space$ 001111 <br> +010010 <br> -------- <br> 0100001                       | 0100001 = 33 |
 | 15 + (-18) | 001111 + -(010010) | 1) Invert 18 <br> $\space$ 001111 <br> +101110 <br> -------- <br> 111101 <br> | 111101 = -3        |
+
+##### Binary Multiplication
+You multiply it and shift over one space everytime
+![[F3B6C1DF-AA60-4DB0-97C8-216900BD06A7_1_201_a.jpeg]]
+##### Binary Division
+Essentially binary long division
+![[Pasted image 20220330112327.png | 500]]
+
+
+
 
 ![[Pasted image 20220326012358.png]]
 **2's Complement Overflow**

@@ -4,13 +4,13 @@
     "type": "split",
     "children": [
       {
-        "id": "55e9cca7f49abd11",
+        "id": "c55f31b3061d40a4",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "114 Multiple Integration.md",
-            "mode": "source",
+            "file": "452 Computer Compontents.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -19,98 +19,82 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "e932cc7e8f39609e",
-    "type": "split",
+    "id": "75a96f79fc84a6fd",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "0134c0b0b7c5c326",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "9f61ca0c53d96ab9",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "472fa5a1b4d7979b",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
+        "id": "2cc81ce7e6462570",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "ce821b51de707c9e",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
           }
-        ]
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "currentTab": 0
   },
   "right": {
-    "id": "3f8e6f1d9be514ab",
-    "type": "split",
+    "id": "1aad9b3bc769da36",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "1afa5783b7eadebf",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "c08e1bf24553cf2d",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "114 Multiple Integration.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "519795d41e87b4b5",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "114 Multiple Integration.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
+        "id": "b1789bf76f1f6b4f",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "452 Computer Compontents.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
           }
-        ]
+        }
+      },
+      {
+        "id": "f763f54397c8e2bb",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "452 Computer Compontents.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 211.732666015625,
-    "collapsed": true
+    "currentTab": 0
   },
-  "active": "55e9cca7f49abd11",
+  "active": "c55f31b3061d40a4",
   "lastOpenFiles": [
-    "114 Multiple Integration.md",
-    "Magnetic Field.md",
-    "lists/Definitions.md",
-    "110 Vectors.md",
-    "100 Math.md",
-    "000 Index.md",
+    "452 Computer Compontents.md",
+    "451 Number and Binary Representation.md",
+    "CC491C3B-A1FA-4F68-A332-F6CE0285ADD7_1_201_a.jpeg",
+    "F3B6C1DF-AA60-4DB0-97C8-216900BD06A7_1_201_a.jpeg",
+    "CMPSC 360 Midterm 2.md",
     "120 Sequences (Discrete Math).md",
-    "Pasted image 20220326172910.png",
-    "Pasted image 20220326172517.png",
-    "119 Functions (Discrete Math).md"
+    "121 Number Theory and Cryptography.md",
+    "118 Relations and Functions.md",
+    "114 Multiple Integration.md",
+    "110 Vectors.md"
   ]
 }

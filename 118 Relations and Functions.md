@@ -1,5 +1,8 @@
-##### Binary Relation
+TARGET DECK: Discrete Math
+## Relations
+ ##### Binary Relation 
 A relation between the elements of two sets
+
 
 > Suppose there is a relation between set $A$ and set $B$. A binary relation $R$ from $A$ to $B$ is equal to $R \subseteq A \times B$  
 
@@ -9,12 +12,12 @@ A relation between the elements of two sets
 
 
 ##### Reflexive 
-If $\forall a \in A$  we have $a \quad R \quad a$ then **the relationship** is reflexive
+If $\forall a \in A$  we have $a R a$ then **the relationship** is reflexive
 - If set contains the pattern (1, 1), (2, 2), (3, 3)
 - Means x has a relation onto itself
 
 ##### Symmetric
-If $\forall a \in A$  we have $a R b \rightarrow b R a$ then **the relationship** is reflexive
+If $\forall a \in A$  we have $a R b \rightarrow b R a$ then **the relationship** is symmetric
 - This means that if you invert the a and b in the relationship it will still work
 
 ##### Transitive
@@ -25,8 +28,7 @@ $x, y, z \in A, (xRy \land yRz) \rightarrow (x=y)$
 ![[Pasted image 20220222130847.png]]
 
 ##### Anti-Symmetric
-$\forall x y \in A, \{(x,y) \in R \land (y, x) \in R \}$ 
-- Means there is only either a relation (x, y) or (y,x)
+Means there is only either a relation $xRy$ or $yRx$ but not both
 
 ##### Inverse Relation
 Noted as $R^{-1}$ 
@@ -79,7 +81,7 @@ A relation satisfying...
 
 
  
-##### Partial Ordering
+##### Partial Order Relation
 A relation satisfying...
 1. Reflexivity
 2. Anti-Symmetry
