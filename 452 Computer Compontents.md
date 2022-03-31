@@ -1,3 +1,5 @@
+TARGET DECK: CMPEN 270
+
 ## History
 ##### Digital Hardware
 Definition: Products created to build a computer.
@@ -228,7 +230,7 @@ $$\text{AND Gate = NAND} \rightarrow \text{NOT}$$
 
 
 ##### OR Gate in CMOS
-$$\text{OR Gate = OR} \rightarrow \text{NOT}$$
+$$\text{OR Gate = NOR} \rightarrow \text{NOT}$$
 
 ###### 3-input OR Gate in CMOS
 ![[Pasted image 20220330134540.png]]
@@ -289,6 +291,11 @@ Simplest Memory Element. It is a very effective, simple sequential circuit since
 #### Latches and Flip-Flops
 Two of the most popular varieties of storage cells
 
+| Latch                                               | Flip-Flop                                       |
+| --------------------------------------------------- | ----------------------------------------------- |
+| (Asynchronous) Storage without a clock signal input | (Synchronous) Storage with a clock signal input |
+| Level Sensitive                                     | Edge Sensitive                                                |
+
 ##### Latch
 **Level Sensitive** storage element
 
@@ -298,15 +305,16 @@ Types:
 3. [[452 Computer Compontents#D Latch|D Latch]]
 
 
-| Topic   | S-R Latch                                                            | S-R Latch | D Latch |                                                                     |
-| ------- | -------------------------------------------------------------------- | --------- | ------- | 
-| Variaton | Latches Q and $\overline{Q}$ without regard to the status of S and R | An S-R latch with an extra layer before to increase its ability to remember previous states          |         A gated S-R latch with an inverter added to make R the inverse of S |
+| S-R Latch                                                            | S-R Latch | D Latch |                                                                     |
+| -------------------------------------------------------------------- | --------- | ------- | 
+| Latches Q and $\overline{Q}$ without regard to the status of S and R | An S-R latch with an extra layer before to increase its ability to remember previous states          |         A gated S-R latch with an inverter added to make R the inverse of S |
 
 ##### S-R Latch
 
 Known as a **Set/Reset Latch**, this is a device is a **bistable multivibrator** with **two** stable states (set and reset). To create an S-R Latch we wire two NOR gates together.
 [Helpful Resource](https://www.allaboutcircuits.com/textbook/digital/chpt-10/s-r-latch/)
 ![[Pasted image 20220330145544.png |300]]
+$$Q* = S + RN \cdot  Q$$
 
 **S-R Latch Truth Table**
 
@@ -330,7 +338,7 @@ Gated S-R Latch is just **a S-R Latch with another layer before** to assist in p
 [Helpful Resource](https://www.allaboutcircuits.com/textbook/digital/chpt-10/the-gated-s-r-latch/)
 ![[Pasted image 20220330150637.png |300]]
 
-| E   | S   | R   | Q           | $\overline{Q}$ |
+| E (CLK)   | S   | R   | Q           | $\overline{Q}$ |
 | --- | --- | --- | ----------- | -------------- |
 | 0   | 0   | 0   | LAST Q | LAST $\overline{Q}$     |
 | 0   | 0   | 1   | LAST Q | LAST $\overline{Q}$     |
@@ -348,14 +356,18 @@ Gated S-R Latch is just **a S-R Latch with another layer before** to assist in p
 Essentially a gated S-R latch but the input S is inverted
 [Helpful Resource](https://www.allaboutcircuits.com/textbook/digital/chpt-10/d-latch/)
 
-![[Pasted image 20220330150742.png |300]]
+![[Pasted image 20220330172424.png |300]]
 
-| E   | D   | Q           | $\overline{Q}$ |
+$$Q* = D$$
+
+
+
+| CLK   | D   | Q           | $\overline{Q}$ |
 | --- | --- | ----------- | -------------- |
 | 0   | 0   | LAST Q | LAST $\overline{Q}$    |
 | 0   | 1   | LAST Q | LAST $\overline{Q}$    |
 | 1   | 0   | 0           | 1              |
-| 1   | 1   | 1           | 0              |
+| 1   | 1   | LAST Q           | LAST $\overline{Q}$              |
 
 **D Latch Symbol**
 ![[Pasted image 20220330151040.png |200]]
@@ -364,10 +376,48 @@ Essentially a gated S-R latch but the input S is inverted
 **Edge Triggered** storage element
 
 Types:
-1. D-FF
-2. D-FF with enable
+1. [[452 Computer Compontents#D Flip-Flop D-FF| D Flip-Flop (D-FF)]]
 3. JK_FF
 4. T-FF
+
+
+##### D Flip-Flop (D-FF)
+The D-type filp-flop is a modified Set-Reset flip-flop with the addition of an inverter to prevent the S and R inputs from being at the same logic level. 
+**Note:** This is the same as a [[452 Computer Compontents#D Latch |D Latch]], just with the use of a clock signal
+
+$$Q* = D$$
+![[Pasted image 20220330160134.png]]
+
+##### D Flip-Flop w/ Enable
+A [[452 Computer Compontents#D Latch |D Latch]] with an enable. The enable is a component that allows a flip-flop to hold it's value for more than a single clock cycle
+
+$$Q* = EN \cdot (D+EN(N)) \cdot Q$$
+
+| D   | EN  | CLK        | Q      | QN      |
+| --- | --- | ---------- | ------ | ------- |
+| 0   | 1   | $\uparrow$ | 0      | 1       |
+| 1   | 1   | $\uparrow$ | 1      | 0       |
+| X   | 0   | $\uparrow$ | LAST Q | LAST QN |
+| X   | X   | 0          | LAST Q | LAST QN |
+| X   | X   | 1          | X      | X       |
+
+##### JK Flip-Flop (rising edge triggered)
+$$Q* = J \cdot  (QN + KN) \cdot  Q$$
+![[Pasted image 20220330161006.png]]
+![[Pasted image 20220330161137.png |200]]
+
+##### T Flip Flop
+![[Pasted image 20220330161155.png |300]]
+$$Q* = (QN \cdot  T) + (TN \cdot  Q)$$
+
+- When $T=1$, $Q$ becomes $\overline{Q}$
+- When $T=0$, $Q$ remains $Q$
+
+
+##### Rising Edge Flip Flop
+![[Pasted image 20220330182310.png]]
+##### Falling Edge Flip Flop
+![[Pasted image 20220330182324.png]]
 
 
 ## State Machines
@@ -405,3 +455,114 @@ A vending machine with 2 inputs, representing 25c and 50c coin. When the machine
 **Moore Vending Machine Diagram**
 ![[Pasted image 20220328223632.png |300]]
 ![[Pasted image 20220328223704.png |300]]
+
+
+
+### Practice Exam Flashcards
+
+What 2 types of transistors are used in CMOS? What kind of input (0 or 1) activates each type of transistor? #flashcard 
+1. PMOS and NMOS are transistors used in CMOS
+2. PMOS: Activated at input 0
+3. NMOS: Activated at input 1
+
+  
+When designing the lower half portion of circuit that uses NMOS transistors of a CMOS circuit, how are those transistors aligned for a NOR gate (series or parallel)? NAND gate (series or parallel)? #flashcard 
+1. NOR: NMOS in parallel (Vdd) & PMOS in series (GND)
+2. NAND: PMOS in parallel (Vdd) & NMOS in series (GND)
+
+  
+How many NMOS and PMOS transistors (each) in CMOS technology are used to build? (1) 3 input NOR Gate? (2) 2 input XOR Gate? (3) 2 inverter feedback loop? #flashcard 
+1. NOR: NMOS = 3, PMOS = 3
+2. XOR: NMOS = 6, PMOS = 6
+3. INVERTER: NMOS = 2, PMOS = 2
+
+
+Why do we need sequential circuits? #flashcard 
+For our circuits to have some form of memory. It allows old inputs to affect current inputs
+
+
+What is the difference between flip flops and latches? #flashcard 
+1. Latches **aren't** affected by the clock signal 
+2. Flip flops **are** affected by the clock signal
+
+
+What does it mean for a storage element to be edge-triggered? #flashcard 
+This means the element is affected by the clock signal and synchronous. Based on which edge triggers it, it can be affected differently.
+1. POS EDGE: activated by clock signal **transitioning from 0 to 1**
+2. NEG EDGE: activated by clock signal **transitioning from 1 to 0**
+
+
+What is the function of clear and preset values? #flashcard 
+Preset - Sets stored value to constant 1
+Clear - Sets stored value to constant 0
+
+
+Which flip-flops (DFF, TFF, and/or JKFF) are dependent on the current input states? It may be helpful to write out the characteristic equation for each type. #flashcard 
+TFF and JKFF are input dependent
+
+
+What is the minimum number of flip-flops needed to design a counter having a sequence of 0-> 1-> 3-> 4-> 5-> 7 and repeat? #flashcard 
+3 flip flops
+
+Multiply $13_{10} \times 8_{10}$ in binary. #flashcard 
+![[Pasted image 20220330164443.png |300]]
+
+Derive the truth table for the logic circuit of a half adder
+![[Pasted image 20220330164609.png |300]]
+
+Draw the CMOS implementation of the XOR gate circuit. You may draw according to the circuit shown, in other words no need to modify the gates. #flashcard 
+![[Pasted image 20220330164841.png |400]]
+
+Using the result from part (c), implement the Half Adder using CMOS transistors #flashcard 
+HALF ADDER = XOR (sum) + AND (carry)
+![[Pasted image 20220330165307.png |400]]
+D Latch Truth Table #flashcard 
+![[Pasted image 20220330172101.png |300]]
+
+D Latch Circuit Diagram #flashcard 
+![[Pasted image 20220330172126.png |300]]
+
+
+S-R Latch Circuit Diagram
+![[Pasted image 20220330172226.png |300]]
+
+S-R Latch Truth Table #flashcard 
+![[Pasted image 20220330172254.png |300]]
+
+What is the difference between combinational and sequential circuits? #flashcard 
+1. Combinational - Output is only dependent on current inputs
+	1. Ex. AND GATE
+2. Sequntial - Output can be dependent on previous and current inputs
+	1. Ex. D Flip Flop
+
+What are synchronous and asynchronous inputs? give an example of both synchronous and asynchronous inputs an a flip flop. #flashcard 
+1. Synchronous - The input of a varying value based on clock 
+	1. Ex. CLK
+2. Asynchronous - The input not varying base on clock
+	1. Ex. Preset, Clear
+
+
+In sequential circuits, two types of machines, Mealy and Moore are used. What is the difference between them? Typicall, which machine uses fewer number of states but is implemented with more complex logic?
+1. Moore Machine - Easier, output only dependent on **present states**
+2. Mealy Machine - More complex & less states, output depends on **present state and inputs**
+
+What is the advantage of using floating point representation? #flashcard 
+You can represent extremely large and small numbers
+
+S-R Latch equation #flashcard 
+Q* = S + RN x Q
+
+D Latch #flashcard 
+Q* = D
+
+D Flip Flop #flashcard 
+Q* = D
+
+D Flip Flop with enable #flashcard 
+Q* = EN x (D+EN(N)) x Q
+
+J-K Flip Flop #flashcard 
+Q* = J QN + KN * Q
+
+T Flip Flop #flashcard 
+Q* = (QN x T) + (TN x Q)
