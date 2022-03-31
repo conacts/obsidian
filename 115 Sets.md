@@ -106,10 +106,10 @@ a set with only one element
 <!--ID: 1642483217944-->
 
 
-
 ---
+------
 
-### 1.2 Set Builder Notation
+## 1.2 Set Builder Notation
 ##### Set Builder Notation:
 A mathematical way to describe a set
 
@@ -243,7 +243,7 @@ True
 
 
 
-### 1.3 Set Cardinality:
+## 1.3 Set Cardinality:
 ##### Set Cardinality:
 **Definition:** Number of distinct elements in the set A, denoted by $|A|$
 
@@ -260,8 +260,6 @@ Suppose A={2,3,5},C={6,1,2},B={8,5,3} are sets. What is A∩(B∪C) ? #flashcard
 Definition: Cardinality #flashcard 
 Number of distinct elements in the set A, denoted by $|A|$
 <!--ID: 1642483217954-->
-
-
 
 Consider the set S that contains all prime numbers less than 10. How many subsets can S have? #flashcard  
 16
@@ -304,7 +302,7 @@ False
 <!--ID: 1642464971758-->
 
 
-### 1.4 Power Set:
+## 1.4 Power Set:
 ##### Power Set:
 **Definition:** The set of all possible subsets of set A is denoted by $\mathcal{P}(A)$, or known as power set of A
 - Cardinality of power set = $2^n$
@@ -323,7 +321,7 @@ Cardinality of power set = $2^n$
 
 
 
-### 1.5 Cartesian Products: 
+## 1.5 Cartesian Products: 
 ##### Cartesian Products:
 **Definition:** The multiplication of two sets where the output is ordered pairs of a tuple; notation: $A \times B$ 
 - Number of Power set of cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
@@ -359,7 +357,7 @@ The multiplication of two sets where the output is ordered pairs of a tuple; not
 <!--ID: 1642483217993-->
 
 
-### 1.6 Set Operations
+## 1.6 Set Operations
 ##### Union
 **Union:** Combines both sets into one set
 
@@ -379,6 +377,21 @@ $$A - B \{x | x \in A \text{ OR } x \not\in B\}$$
 $$\overline{A}=\{x \in U | x \not\in A\}$$
 
 ## 1.7 Identity Rules
+
+| Rule                   | 1                                                | 2                                                |
+| ---------------------- | ------------------------------------------------ | ------------------------------------------------ |
+| Identity Laws          | $A \cup \emptyset = A$                           | $A \cap U = A$                                   |
+| Domination Laws        | $A \cup U = U$                                   | $A \cap \emptyset = \emptyset$                   |
+| Idempotent Laws        | $A \cup A = A$                                   | $A \cap A = A$                                   |
+| Complement Laws        | $A\cup \overline{A}  = A$                        | $A \cap \emptyset = \emptyset$                   |
+| Absorption Laws        | $A \cup (A \cap B) = A$                          | $A \cap (A \cup B) = A$                          |
+| Double Complement Laws | $\overline{\overline{A}}=A$                      | XXXX                                             |
+| Commutative Laws       | $A \cup B = B \cup A$                            | $A \cap B = B \cap A$                            |
+| Associative Laws       | $(A \cup B) \cup C = A \cup (B \cup C)$          | $(A \cap B) \cap C = A \cap (B \cap C)$          |
+| Distributive Laws      | $(A \cup B) \cap C = (A \cup B) \cap (A \cup C)$ | $(A \cap B) \cup C = (A \cap B) \cup (A \cap C)$ |
+| De Morgan's Laws       | $\overline{A \cup B} = \overline{A} \cap \overline{B}$                                                 | $\overline{A \cap B} = \overline{A} \cup \overline{B}$                                                 |
+
+#### List
 ##### Identity Laws
 $$A \cup \emptyset = A$$
 $$A \cap U = A$$

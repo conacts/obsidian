@@ -1,3 +1,5 @@
+# Gauss Law
+
 ##### What is Gauss's Law
 A general statement about the nature of electric fields. It is more fundamental than coulomb's law and the first of what we later call Maxwell's equations, the governing equations of electricity and magnetism
 

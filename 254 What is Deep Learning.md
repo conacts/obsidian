@@ -1,4 +1,4 @@
-Artificial Intellegence Hierarchy
+# Artificial Intellegence Hierarchy
 ![[Pasted image 20220123185324.png |400]]
 
 ##### (1.1.1) Symbolic AI

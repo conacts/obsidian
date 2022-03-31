@@ -71,6 +71,6 @@ A summation sequence is the addition of a sequence and a product sequence of num
 **Summation Notation**
 $$\sum ^b_{k=n}x_n + n_{n+1} + ... + x_b$$
 ![[Pasted image 20220302032228.png]]
-## Hw #7
+## HW #7
 > Find the recursive formula for the given series (1, 2, 6, 24, 120, 710). Lets consider the index value starts at 1
 > $$\text{base case: }a_1 = 1 \quad a_n = a_{n-1} \cdot n$$

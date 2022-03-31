@@ -21,7 +21,6 @@
 
 **Uses: ** Regression is best used when you need an output of a [[Definitions#Continuous | continuous]] value. This would be applicable in something like predicting stock prices or house prices rather than desiring a percent of a chosen outcome
 
-
 ---
 
 # Unsupervised Learning

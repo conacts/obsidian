@@ -2,20 +2,20 @@
 
 **Radix:** A number system that represents a range starting at 0
 
+##### Analog System: 
+A device that utilizes the decimal system to compute. Used in older technology like clocks.
 
-#### Analog System: A device that utilizes the decimal system to compute. Used in older technology like clocks.
 **Decimal System:** A number system ranging with numbers from 0-9 (radix 10)
 ![[Pasted image 20220112103932.png | 400]]
 
 
-#### Digital Computer: A device utilizing the binary system to compute, computing through 0's and 1's. This is the type all computers use today due to speed and integrity it provides.
+#### Digital Computer
+A device utilizing the binary system to compute, computing through 0's and 1's. This is the type all computers use today due to speed and integrity it provides.
+
 **Binary System:** A number system ranging with numbers from 0-1 (radix 2)
-**Decimal to Binary:** 
-11011010 -> (128)(64)(32)(16)(8)(2)(1) -> 218
+**Decimal to Binary:** 11011010 -> (128)(64)(32)(16)(8)(2)(1) -> 218
 
 **Switches:** A compontent that can turn on and off the power supply recieved by the computer, making the binary system very lucrative (0V - 5V)
-
-
 
 ##### Difference Between Analog Computers and Digital Computers
 | Analog Computer        | Digital Computer       |
@@ -26,7 +26,7 @@
 | Less reliable          | More reliable          |
 | Less accurate          | More accurate          | 
 
-## Number Representation
+### Number Representation
 
 ##### Bases:
 | Name        | Radix | Digits                                         |
@@ -85,7 +85,6 @@ BASE 2 ANS: 101110.1011
 ```
 
 **Octal vs. Hexadecimal:** Octal only uses 3 bits with a radix of (0-7) while hex uses 4 digits and has (0-F) possible combinations.
-
 
 #### Sign bit schemas
 1. Sign and magnitude
@@ -156,9 +155,6 @@ You multiply it and shift over one space everytime
 Essentially binary long division
 ![[Pasted image 20220330112327.png | 500]]
 
-
-
-
 ![[Pasted image 20220326012358.png]]
 **2's Complement Overflow**
 You know you have overflow when
@@ -172,23 +168,33 @@ You know you have overflow when
 Is there overflow adding 1001 and 1110 in 2's complement system? (Y/N) #flashcard 
 Yes
 1001 +1110 = (-7) + (-2) = (-9) > 7 = overflow
+<!--ID: 1648697811697-->
+
 
 Is there overflow adding 1001 and 0010 in 2's complement system? #flashcard 
 No
 1001 + 0010 = (-7) + (2) = -5 < 7 = no overflow
+<!--ID: 1648697811707-->
+
 
 How can you determine an overflow? (2) #flashcard 
 1. If the number exceeds the number achievable from given bits
 2. If $C_n$ and $C_{n-1}$ are different (two most significant bits)
+<!--ID: 1648697811711-->
+
 
 How do you get a complement of a number under 2's complement system? #flashcard 
 
 How do you get a complement of a number under 2's complement system? #flashcard 
 1. If the number is negative, flip all the bits
 2. Add 1 to the least significant bit
+<!--ID: 1648697811713-->
+
 
 Why do we use 2's complement system over other systems? #flashcard 
 It is an easy way to calculate while only using one zero, while 1's complement uses two zeros
+<!--ID: 1648697811716-->
+
 
 
 ##### Homework Number Representation Examples
@@ -244,7 +250,7 @@ In subscript form
 
 ### Optimization
 There are 3 main ways we optimize and create a circuit
-#### Algebraic Reduction
+### Algebraic Reduction
 The use of boolean algebra rules to systematically reduce your equation to a much simpler equation
 (-) Tedious and complicated
 (-) Hard to predict timing hazards

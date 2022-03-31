@@ -566,3 +566,4 @@ Q* = J QN + KN * Q
 
 T Flip Flop #flashcard 
 Q* = (QN x T) + (TN x Q)
+

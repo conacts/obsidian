@@ -1,4 +1,4 @@
-Deck: Discrete Math
+TARGET DECK: Discrete Math
 
 # Chapter 3: Proofs
 ## 3.1 Proof Terminology
@@ -140,7 +140,7 @@ Proof where either a statement is true or it is false but not both
 
 # 6 Proof by Induction
 
-### 6.1 Induction
+## 6.1 Induction
 Proving a statement holds true for $P(n)$ by saying for every $P(n) \rightarrow P(n+1)$ is true. Starting with a base case and proving all the way to $n$ is how you accomplish this.
 
 **Note:**

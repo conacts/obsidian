@@ -3,9 +3,7 @@ TARGET DECK: Discrete Math
  ##### Binary Relation 
 A relation between the elements of two sets
 
-
 > Suppose there is a relation between set $A$ and set $B$. A binary relation $R$ from $A$ to $B$ is equal to $R \subseteq A \times B$  
-
 > $$R \subseteq A \times A \quad A=\{1, 2, 3, 4\}$$
 > $$R=\{(1, 2), (2, 1), (2, 3), (3, 2), (4, 1), (1, 4)\}$$
 > $R=\{(x,y) \quad | \quad (x-y) \text{ is odd } \}$ 
@@ -78,15 +76,10 @@ A relation satisfying...
 > Not Reflexive: $a \ne a$ is not reflexive
 > Symmetric: $3 \ne 9$ and $9 \ne 3$ 
 > Not transitive: $6 \ne 8$ but $8 \ne (4 + 2)$ and $6 \ne (4 + 2)$ is false
-
-
  
 ##### Partial Order Relation
 A relation satisfying...
 1. Reflexivity
 2. Anti-Symmetry
 3. Transivity
-
-
-##### Equivalence Classes
 

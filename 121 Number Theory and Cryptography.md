@@ -1,9 +1,10 @@
+TARGET DECK: Discrete Math
+
 ##### Number Theory
 The branch of mathematics that studies  whole numbers (natural numbers and integers)
 
-# 8.1 Divisibility and Modular Arithmetic
-
-## Division
+## 8.1 Divisibility and Modular Arithmetic
+### Division
 - Suppose $a, b \in \mathbb{Z}$ and $a \ne 0$.
 - We say $a|b$  iff (if and only if) there is an integer $k$ such that $b = a \cdot k$
 - The notation $a|b$ represents fraction $\frac{b}{a}$.
@@ -46,7 +47,7 @@ $$a = bq + r \text{ and } 0 \le r < b$$
 - $r$ is a reminder
 
 
-## Mod
+### Mod
 Let $a \in \mathbb{Z}$ and $b \in \mathbb{Z}^+$ 
 the integer quotient obtained when $a$ is divided by $b$, and 
 $$a \text{ mod } b = r, \quad \quad \mathbb{Z}_m = \mod m$$
@@ -107,7 +108,7 @@ Make the number up of $8^n$
 $$315_8 = 3 \cdot 8^2 + 1 \cdot 8^1 + 5 \cdot 8^0 = 205_{10}$$
 
 
-### 8.3 GCD as Linear Combinations
+## 8.3 GCD as Linear Combinations
 The greatest common divisor (GCD) can be expressed as a linear combination with integer coefficients $a$ and $b$.
 $$\text{linear combination} = (c)a + (d)b$$
 

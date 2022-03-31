@@ -7,23 +7,19 @@
         "id": "c55f31b3061d40a4",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "452 Computer Compontents.md",
-            "mode": "preview",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "75a96f79fc84a6fd",
+    "id": "27a10492b218b381",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "2cc81ce7e6462570",
+        "id": "c68112e2da5c34ad",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -31,7 +27,7 @@
         }
       },
       {
-        "id": "ce821b51de707c9e",
+        "id": "fd78e5cf387b24da",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -49,16 +45,15 @@
     "currentTab": 0
   },
   "right": {
-    "id": "1aad9b3bc769da36",
+    "id": "015bcf4c7975f628",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "b1789bf76f1f6b4f",
+        "id": "afe3d0d748b161b0",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "452 Computer Compontents.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -70,12 +65,11 @@
         }
       },
       {
-        "id": "f763f54397c8e2bb",
+        "id": "7dd68b02418c7197",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
           "state": {
-            "file": "452 Computer Compontents.md",
             "linksCollapsed": false,
             "unlinkedCollapsed": true
           }
@@ -86,15 +80,15 @@
   },
   "active": "c55f31b3061d40a4",
   "lastOpenFiles": [
-    "452 Computer Compontents.md",
+    "Physics 2 Recap.md",
+    "Physics Midterm 2.md",
     "451 Number and Binary Representation.md",
-    "CC491C3B-A1FA-4F68-A332-F6CE0285ADD7_1_201_a.jpeg",
-    "F3B6C1DF-AA60-4DB0-97C8-216900BD06A7_1_201_a.jpeg",
-    "CMPSC 360 Midterm 2.md",
-    "120 Sequences (Discrete Math).md",
-    "121 Number Theory and Cryptography.md",
-    "118 Relations and Functions.md",
-    "114 Multiple Integration.md",
-    "110 Vectors.md"
+    "450 Computer Engineering.md",
+    "402 Tree Notes.md",
+    "401 Leetcode Tree Problems.md",
+    "311 Gauss's Law.md",
+    "312 Capacitor Problems.md",
+    "300 Physics.md",
+    "310 Electric Charges and Forces.md"
   ]
 }
