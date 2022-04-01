@@ -1,0 +1,5 @@
+/* Scrolling long equations */
+.math-block {
+	padding: 0px;
+	overflow-x: auto;
+}

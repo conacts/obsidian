@@ -99,13 +99,137 @@ In the circuit below, when the switch is **CLOSED**, the current through the 12 
 ![[Pasted image 20220331133612.png |200]]
 
 OHMS Law: $V = IR$
-$I = I_1 + I_2$ 
-$R_T = 15 \Omega$  
-$V = IR_T = (0.5A)(15\Omega) = 7.5V$
+**With switch closed**
+$I_3 = I_1 + I_2$ 
+$I_1 = 0.5A$
+$I_2 = \frac{R_1I}{R_2} = \frac{(12\Omega)(0.5A)}{4\Omega}= 1.5A$ 
+$I_3 = I_1 + I_2 = 0.5A + 1.5A = 2.0A$
+$E = (12\Omega)(0.5A) + (3\Omega)(2.0A) = 12V$
 
+**With switch open**
+$R_T = 12 \Omega + 3 \Omega = 15 \Omega$
+$I = \frac{E}{R_T} = \frac{12V}{15\Omega} = 0.8A$
+ANS: 0.8A
 
 ----
 
 What is the power dissipated in the 1 Ω resistor?
 ![[Pasted image 20220331133639.png |300]]
+$I_1 = I_2 + I_3$
+$E_1 = I_1R_1 + I_3R_3 = 2I_1 + I_3$ 
+$E_2 = I_2R_2 + I_3R_3 = 2I_2 + I_3$
+$E_1 = E_2 = 10V$
+$E_1 = 2(I_2 + I_3) + I_3 = 2I_2 + 3I_3$
+$E_2 = 2(I_2 - I_3) + I_3 = 2I_2 - I_3$
+$E_1 = E_2 = ... = 2I_2 + 3I_3 = 2I_2 - I_3$
+$0 = 4I_3$
+$I_3 = 0$
+$2I_2 + 0 = 10V; I_2 = 5V$
+$2I_1 + 0 = 10V; I_1 = 5V$
 
+Power Disapated:
+$P = I_3E = 0(E) = 0W$
+
+-----
+
+The light bulbs in the circuit are identical. When the switch is closed...
+![[Pasted image 20220331201505.png |300]]
+1. the intensity of light bulb A decreases.
+2. the intensity of light bulb A increases.
+3. the intensity of light bulb B increases.
+4. both bulbs go out.
+5. nothing changes.
+
+ANS: We know that the two lightbulbs are identical, meaning the potential difference doesn't change therefore **nothing changes** in the lightbulbs
+
+----
+Two 110-V light bulbs, one “25W” and the other “100W”, are connected in series to a 110V source. Then:
+1. each bulb will have a potential difference of 55V
+2. the current in the 100-W bulb is greater than that in the 25-W bulb.
+3. both bulbs will light with equal brightness
+4. the current in the 100-W bulb is less than that in the 25-W bulb.
+5. none of the above
+
+ANS: **5 - None of the above** 
+
+----
+The switch in the circuit shown is initially open and the capacitor is initially uncharged. Then, the switch is closed at **_t_** **=** **0**. What is the **current** in the circuit **immediately** after the switch is closed?
+![[Pasted image 20220331201835.png |200]]
+1. 3 mA
+2. 1 mA
+3. 111.1 A
+4. 0 A
+5. 9 mA
+
+ANS: (5) $A = \frac{E}{R} = \frac{9V}{1000\Omega} = 9mA$ 
+
+-----
+
+The switch in the circuit below has been open for a long time and is then closed. A long time after the switch is closed, the current through the battery is:
+![[Pasted image 20220331202028.png |200]]
+1. $\epsilon/R_1$  
+2. 0
+3. $\epsilon/R_2$
+4. $\epsilon (R_1 + R_2)/(R_1R_2)$
+5. $\epsilon/(R_1 + R_2)$
+
+ANS: (5) $I = \frac{E}{R} = \frac{\epsilon}{(R_1 + R_2)}$ 
+
+-------
+Given the following vectors, what is the cross product $\vec{a} \times \vec{b}$ where $\vec{a} = -2i -3j$ and $\vec{b} = 6i + 4j$
+
+ANS: $\vec{a} \times \vec{b} = ad-bc = (-2)(4)-(-3)(6) = -8 + 18 = 10k$ 
+
+----
+A straight conductor carrying a current I splits into identical semicircular arcs as shown in the figure. The radius of the arcs is R. What is the magnetic field at the center _C_ of the resulting circular loop?
+![[Pasted image 20220331202518.png |200]]
+1. The field is zero
+2. $\mu_0 I / 2R^2$ 
+3. $\mu_0 I / 2R$
+4. $\mu_0 I / 2\pi R$ 
+
+ANS: The fields cancel each other out in the circle leaving the magnetic **field equal to zero**
+
+-----
+_Equal currents_ flow through four wires into or out of the page as shown. What is the direction of the magnetic field at the center point, C?
+![[Pasted image 20220331202656.png |150]]
+
+ANS: Arrow pointing to bottom right
+
+----
+An long wire with current I1 is tangent to a circular current loop with current I2, as shown below. The **_B_** field at the center of the loop is measured to be zero.
+![[Pasted image 20220331202803.png|200]]
+1. You need to know the radius of the loop to relate $i_1$ and $i_2$.
+2. $I_1 = \pi I_2$
+3. $I_1 = I_2/ \pi$
+4. $I_1 = -\pi I_2$
+5. $I_1 = -I_2 / \pi$
+
+ANS: (2) $I_1 = \pi I_2$ 
+
+-----
+
+Two long straight wires enter a room through a window 1.5 m high and 1.0 m wide. One wire carries a current of 3.0 A into the room while the other carries a current of 5.0 A out. The magnitude of the integral: $\int \vec{B} \cdot \vec{ds}$ around the window frame is (in T·m):
+
+$\int \vec{B} \cdot \vec{ds} = 2.5 \cdot 10^{-6}$ 
+
+----
+A beam of electrons is sent horizontally down the axis of a tube to strike a fluorescent screen at the end of the tube. On the way, the electrons encounter a magnetic field directed vertically downward. The spot on the screen will therefore be deflected:
+1. not at all
+2. to the right as seen from the electro source
+3. downward
+4. upward
+5. to the left as seen from the electron source
+
+ANS: (2) the beam will be deflected **towards the right**, it is seen from wheer the beam is ejecting
+
+-----
+Two particles, α and β, with the different masses but traveling at the same speed enter a region where a uniform magnetic field is directed **either** into the page or out of the page and perpendicular to their velocities (in the figure, the magnetic field is zero in the unshaded region and non-zero in the shaded region). The particles have the same magnitude charge but different sign charges. Particle α is positive, particle β is negative. The particle's trajectories are shown below:
+![[Pasted image 20220331203030.png |200]]
+1.  The magnetic field is **out of the page**
+2.  The magnetic field is **into the page**
+3.  Particle α's mass is **larger** than β's; $m_α > m_β$ 
+4.  Particle α's mass is **smaller** than β's; $m_α | < m_β$ 
+
+
+ANS: (1) and (3) are correct

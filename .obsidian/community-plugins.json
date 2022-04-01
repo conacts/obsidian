@@ -1,5 +1,7 @@
 [
   "table-editor-obsidian",
   "obsidian-to-anki-plugin",
-  "obsidian-outliner"
+  "obsidian-outliner",
+  "better-word-count",
+  "cycle-through-panes"
 ]

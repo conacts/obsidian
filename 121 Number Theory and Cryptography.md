@@ -119,10 +119,10 @@ Every positive integer greater than 1 can be expressed as a product of primes ca
 > $$100 / 2 = 50 / 2 = 25 / 5 = 5 / 5 = 1 = 2^2 \cdot 5^2$$
 > Find the prime factorization of 999
 > $$999/ 3 = 333 / 3 = 111 / 3 = 37 = 3^3 \cdot 37$$
-
+> ----
 > Determine whether 731 is a prime or not 
 > We get $\sqrt{731}=27$  and all prime numbers between 2 and 27
-
+> ----
 > Find $gcd(22, 44)$
 > Common divisors of 22 and 44 are 1, 2, 11, 22 and greatest common divisor of 22 and 44 is $gcd(22, 44) = 2$ 
 > ----

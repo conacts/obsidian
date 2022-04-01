@@ -332,7 +332,7 @@ $v=v_{||w} + v_{\bot w}$
 ## 12.4: The Cross Product
 Cross Product is a vector operation used typically to compute torque. Operating on an n x n matrix, using the determinant you can find the cross product. The cross product is often used in conjunction with the term determinant.
 ![[Pasted image 20220121064303.png]]
-##### Cross Product of a 2 x 2 matrix:
+##### Determinant / Cross Product of a 2 x 2 matrix:
 $$\begin{bmatrix}  
 a & b\\  
 c & d   

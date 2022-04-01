@@ -1,5 +1,9 @@
 {
   "baseFontSize": 17,
   "theme": "moonstone",
-  "translucency": false
+  "translucency": false,
+  "cssTheme": "Deep Work",
+  "enabledCssSnippets": [
+    "formatting"
+  ]
 }

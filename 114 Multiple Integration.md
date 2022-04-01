@@ -1,3 +1,4 @@
+
 ## 15.1 Integration in Two Variables
 
 ##### Double Integral 
@@ -344,8 +345,6 @@ Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is 
 | $z=z$                      | $z=z$                      |
 
 
-
-
 **Example :: Converting Cylindrical to Rectangular Coordinates:**
 > Find the rectangular coordinates of the point $P$ with the cylindrical coordinates $(r,\theta,z)=(2, \frac{3\pi}{4}, 5)$
 > $$x=r\cos\theta = 2\cos \frac{3\pi}{4}=2 \left(-\frac{\sqrt{2}}{2}\right)=-\sqrt{2}$$
@@ -467,11 +466,132 @@ $$\int^{\infty}_{x=-\infty}\int^{\infty}_{y=-\infty} p(x,y)dydx = 1$$
 > $$\iiint_W f(x,y,z)dV = ?$$
 > 1. Set up integral
 > $$\int^7_0 \int \int z(x^2 + y^2 + z^2)^{-3/2} $$
-
-
-$$\int_0^{2\pi} \int^{\pi/4}_0 \int^5_0 p^2 \sin x dpdxd\theta$$
-
+> $$\int_0^{2\pi} \int^{\pi/4}_0 \int^5_0 p^2 \sin x dpdxd\theta$$
+> ----
 > Use spherical coordinates to calculate the triple integral of 
 > $$f(x,y,z) = \frac{1}{x^2 + y^2 + z^2}$$
 > over the region $5 \le x^2 + y^2 + z^2 \le 25$
 > $$\int_0^{2\pi} \int_0^{\pi} \int_{\sqrt{5}}^5 \sin \phi d\rho d \phi d\theta$$
+
+
+
+## 15.6 Change of Variables
+
+##### Map (Domain)
+The input of the function 
+
+##### Image (Co-Domain)
+The output of the function that is *mapped* into a new space
+
+##### Range
+The set of all elements of a function
+
+
+> Let $G(u,v) = (uv^{-1}, uv)$ for$ u > 0$, $v > 0$. Determine the images of
+> 1. The lines $u = c$ and $v = c$
+> 2. $[1,2] \times [1,2]$
+> **ANS:**
+> 1. In the map we have 
+> 	1. $xy = u^2, \quad x = uv^{-1}$
+> 	2. $y = uv$
+> 2. G maps a point $(c,v)$ to a point in the xy-plane with $xy=c^2$. In other words, G maps the verticle line $u=c$ to the hyperbola $xy=c^2$. Similarly, by the second part of the equations above, the horizontal line $v=c$ is mapped to the set of points where $y/x = c^2$ or $y=c^2x$
+> 3. The image of $[1,2] \times [1,2]$ is the curvilinear rectangle bounded by four curves of the image defined by 
+> 	1. $1 \le xy \le 4, \quad 1 \le \frac{y}{x} \le 4$
+> 2. To find $G^{-1}$, we use $u^2 = xy$ to get $u = \sqrt{xy}$ and $v = \sqrt{y/x}$. Therefore the inverse map, $G^{-1}(x,y) = (\sqrt{xy}, \sqrt{x/y})$
+
+##### Jacobian Determinant
+How area changes under a mapping
+
+$$G(u,v) = (x(u,v), y(u,v))$$
+is equivalent to the determinant
+$$Jac(G) = \begin{bmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\end{bmatrix} = \frac{\partial x}{\partial u}\frac{\partial y}{\partial v} - \frac{\partial x}{\partial v}\frac{\partial y}{\partial u}$$
+Note: This still takes the form of a [[110 Vectors#Determinant Cross Product of a 2 x 2 matrix|typical determinant]] 
+
+
+##### Theorem 1: Jacobian of a Linear Map
+The Jacobian of a linear map...
+$$G(u,v) = (Au + Cv, Bu + Dv)$$
+is constant with value
+$$Jac(G) = \begin{bmatrix} A & C \\
+B & D \end{bmatrix} = AD-BC$$
+Under G, the area of a region $D$ is multiplied by the factor $|Jac(G)|area(D)$
+
+$$area(G(D)) \approx |Jac(G)(P)|area(D)$$
+$$|Jac(G)(P)| = \lim_{|D|\rightarrow 0} \frac{area(G(D))}{area(D)}$$
+Where $D$ is the maximum distance between two points
+
+
+> Compute the Jacobian $G(u,v) = (3ue^v, 6 + 8e^u)$
+> 1. Find the partial integrals for the $Jac(G)$ equation
+> $$\frac{\partial x}{\partial u} = 3e^v \quad \frac{\partial y}{\partial v} = 0 \quad  \frac{\partial x}{\partial v} = 3ue^{v} \quad \frac{\partial y}{\partial u} = 8e^{u}$$
+> 2. Plug values into $Jac(G)$ equation
+> $$Jac(G) = \begin{bmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\
+\frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\end{bmatrix} = \begin{bmatrix} 3e^v & 3ue^v \\
+8e^u & 0\end{bmatrix} = (3e^v)(0)-(3ue^v)(8e^u) = -24e^{u+v}u$$
+
+##### Theorem 2: Change of Variable Formula
+Let $G:D_0 \rightarrow D$ be a mapping that is one-to-one on the interior of $D_0$. if $f(x,y)$ is continuous then
+$$\iint_D f(x,y)dxdy = \iint_{D_0} f(x(u,v), y(u,v)) \Bigg | \frac{\partial(x,y)}{\partial(u,v)}\Bigg | du \space dv$$
+AKA:
+$$dx \space dy = \Big | Jac(G) \Big | = \Bigg | \frac{\partial(x,y)}{\partial(u,v)}\Bigg | du \space dv$$
+
+> Let $D$ be the parallelogram in the xy-plane spanned by the vectors $(3,8)$ and $(9,12)$. Apply the change of varibalse formula to the map $G(u,v) = (9u + 3v, 12u + 8v)$ to evaluate $\iint_D xydA$ as an integral over $D_0 = [0,1] \times [0,1]$ 
+> 1. Define a map
+> 	1. We can convert our double integral to an integral over the unit square $R = [0,1] \times [0,1]$ if we can find a map that sends $R$ to $P$. The following linear map does this $G(u,v) = (9u + 3v, 12u + 8v)$
+> 	2. Linear Map Formula: $G(u,v) = (Au + Cv, Bu + Dv)$
+> 	$$G(1,0) = (A, B) = (9,12) , \quad G(0,1) = (C, D) = (3, 8)$$
+> 2. Compute the Jacobian
+> $$Jac(G) = \begin{bmatrix} A & C \\
+B & D \end{bmatrix} = \begin{bmatrix} 9 & 3 \\
+12 & 8 \end{bmatrix} = AD - BC = (9)(8) - (12)(3) = 36$$
+> 3. Express $f(x,y)$ in terms of the new variables
+> 	1. Since $x = 9u + 3v$ and $y = 12u + 8v$ we have
+> 
+> $$\iint_D xydA = \iint_D (9u + 3v)(12u + 8v)dudv = \iint_D 108u^2 + 108uv + 24v^2 dxdy$$
+> 4. Replace $dxdy = 36 dudv$ achieved through Jacobian
+>  
+>  $$\iint_D 108u^2 + 108uv + 24v^2 dxdy = \iint_D 108u^2 + 108uv + 24v^2 (36dudv)$$
+> 5. Compute integral
+> $$36\int_0^1 \int^1_0108u^2 + 108uv + 24v^2dudv = 2556$$
+> ----
+> Calculate $\iint_D e^{64x^2 + 9y^2}dxdy$ where $D$ is the interior of the elipse $(\frac{x}{3})^2 + (\frac{y}{8})^2 \le 1$ 
+> 1. Convert from polar coordinates
+> $$u = \frac{x}{3}; \quad x = 3u, \quad v = \frac{y}{8}; \quad y = 8v, \quad = \langle 3u, 8v \rangle$$
+> 2. Solve for $G(1,0)$ and $G(0,1)$ to find values for cross multiplication
+> $$u^2 + v^2 \le 1; \quad G(1,0) = (3, 0), \quad G(0,1) = (0,8)$$
+> 3. Compute the Jacobian 
+> $$Jac(G) = \begin{bmatrix} A & C \\
+B & D \end{bmatrix} = \begin{bmatrix} 3 & 0 \\
+0 & 8 \end{bmatrix} = AD - BC = (3)(8) - (0)(0) = 24$$
+> 4. Replace x and y in the integral
+> 	1. Note: $dxdy = 24dudv, x = 3u, y = 8v$ 
+> $$\iint_D e^{64x^2 + 9y^2}dxdy = 24\iint_D e^{64(3u)^2 + 9(8v)^2}dudv$$
+> 5. Translate to circular coordinates
+> 	1. $x = r\cos \theta, \quad y = r \sin \theta$ 
+> $$24\iint_D e^{64(3u)^2 + 9(8v)^2}dudv = 24\iint_D e^{64(3u)^2 + 9(8v)^2}dudv$$
+> $$24\iint_D e^{576u^2+576v^2}dudv = 24\iint_D e^{576(u^2 + v^2)}dudv$$
+> Note: $u^2 + v^2 = r^2$
+> $$24\iint_D e^{576(r^2 \cos^2 \theta + r^2 \sin^2 \theta)}dudv = 24\iint_D e^{576(r^2)}dudv$$
+> 6. U-sub to translate from $du \space dv$ to  $dr \space d\theta$ 
+> 	1. $u = 576r^2$
+> 	2. $du = 1152rdr$
+> 	3. $rdr = \frac{du}{1152}$
+> 	$$24\int^{\theta_1}_{\theta_2}\int^1_0 \frac{e^{576r^2}}{1152}rdrdv = \int^{2\pi}_{0} 24 d\theta \int^1_0 r \cdot e^{576r^2}drdv$$
+> 	7. Calculate the inner integral
+> 	$$\int^1_0 r \cdot e^{576r^2}dr = \frac{e^{576}-1}{1152}$$
+> 	8. Calculate outer integral
+> 	$$\int^{2\pi}_024 \cdot \frac{e^{576}-1}{1152}d\theta = \frac{\pi \left(e^{576}-1\right)}{24}$$
+> ----
+> Let $D$ be the image of $R = [1, 4] \times [1, 4]$ under the map $G(u,v) = \left( \frac{u^2}{v}, \frac{v^2}{u}\right)$ 
+> 1. Compute $Jac(G)$
+> $$Jac(G) = \begin{bmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\end{bmatrix} = \begin{bmatrix} \frac{2u}{v} & -\frac{u^2}{v^2} \\ - \frac{v^2}{u^2} & \frac{2v}{u} \end{bmatrix} = \left( \frac{2u}{v} \right)\left( \frac{2v}{u} \right) - \left( -\frac{u^2}{v^2} \right)\left( -\frac{v^2}{u^2} \right)= 4-1 = 3$$
+> 2. Graph the equation
+> ![[Pasted image 20220401160317.png |250]]
+> 3. Use change of variables formula to compute the area of $D$
+> $$area(D) = 3\int^4_1 \int^4_1 1 dydx = 27$$
+> 4. Compute the integral $f(x,y) = x + y$ 
+> $$\iint_D (x + y) dxdy = 3\int^4_1 \int^4_1  \frac{u^2}{v} +  \frac{v^2}{u} dudv $$
+> $$3\int^4_1 \int^4_1  \frac{u^3+v^3}{uv} dudv = 252ln(2)$$
+> 5. Solve for bounds by plugging in for u and y
+

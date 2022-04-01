@@ -4,91 +4,113 @@
     "type": "split",
     "children": [
       {
-        "id": "c55f31b3061d40a4",
+        "id": "35336e38b2917a2b",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "114 Multiple Integration.md",
+            "mode": "preview",
+            "source": false
+          }
         }
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "27a10492b218b381",
-    "type": "mobile-drawer",
+    "id": "b0356c50aa4c5e8b",
+    "type": "split",
     "children": [
       {
-        "id": "c68112e2da5c34ad",
-        "type": "leaf",
-        "state": {
-          "type": "file-explorer",
-          "state": {}
-        }
-      },
-      {
-        "id": "fd78e5cf387b24da",
-        "type": "leaf",
-        "state": {
-          "type": "search",
-          "state": {
-            "query": "",
-            "matchingCase": false,
-            "explainSearch": false,
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical"
+        "id": "70885802a76fd47d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "64978c751ba8c2c9",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "2f79064604f237f4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
           }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
   },
   "right": {
-    "id": "015bcf4c7975f628",
-    "type": "mobile-drawer",
+    "id": "48cded7eaf213570",
+    "type": "split",
     "children": [
       {
-        "id": "afe3d0d748b161b0",
-        "type": "leaf",
-        "state": {
-          "type": "backlink",
-          "state": {
-            "collapseAll": false,
-            "extraContext": false,
-            "sortOrder": "alphabetical",
-            "showSearch": false,
-            "searchQuery": "",
-            "backlinkCollapsed": false,
-            "unlinkedCollapsed": true
+        "id": "edbfe61d594082e9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "778eb54675dd5e86",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "114 Multiple Integration.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b9a0ce2edecbdae9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "114 Multiple Integration.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
           }
-        }
-      },
-      {
-        "id": "7dd68b02418c7197",
-        "type": "leaf",
-        "state": {
-          "type": "outgoing-link",
-          "state": {
-            "linksCollapsed": false,
-            "unlinkedCollapsed": true
-          }
-        }
+        ]
       }
     ],
-    "currentTab": 0
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
   },
-  "active": "c55f31b3061d40a4",
+  "active": "35336e38b2917a2b",
   "lastOpenFiles": [
-    "Physics 2 Recap.md",
+    "114 Multiple Integration.md",
+    "121 Number Theory and Cryptography.md",
+    "120 Sequences (Discrete Math).md",
+    "110 Vectors.md",
+    "CMPSC 360 HW 9.md",
     "Physics Midterm 2.md",
+    "Physics 2 Recap.md",
     "451 Number and Binary Representation.md",
     "450 Computer Engineering.md",
-    "402 Tree Notes.md",
-    "401 Leetcode Tree Problems.md",
-    "311 Gauss's Law.md",
-    "312 Capacitor Problems.md",
-    "300 Physics.md",
-    "310 Electric Charges and Forces.md"
+    "402 Tree Notes.md"
   ]
 }
