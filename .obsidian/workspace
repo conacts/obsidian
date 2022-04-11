@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "114 Multiple Integration.md",
+            "file": "110 Vectors.md",
             "mode": "preview",
             "source": false
           }
@@ -19,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b0356c50aa4c5e8b",
+    "id": "98a83d532b794094",
     "type": "split",
     "children": [
       {
-        "id": "70885802a76fd47d",
+        "id": "d5a44b771d74f33f",
         "type": "tabs",
         "children": [
           {
-            "id": "64978c751ba8c2c9",
+            "id": "e3b168a35e3cb808",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +35,7 @@
             }
           },
           {
-            "id": "2f79064604f237f4",
+            "id": "2367b3f38b782dd0",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -57,20 +57,20 @@
     "collapsed": true
   },
   "right": {
-    "id": "48cded7eaf213570",
+    "id": "85c3fe1082edff81",
     "type": "split",
     "children": [
       {
-        "id": "edbfe61d594082e9",
+        "id": "35ec3b09b1d2eb6c",
         "type": "tabs",
         "children": [
           {
-            "id": "778eb54675dd5e86",
+            "id": "3bbd48894040fe33",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "114 Multiple Integration.md",
+                "file": "110 Vectors.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -82,12 +82,12 @@
             }
           },
           {
-            "id": "b9a0ce2edecbdae9",
+            "id": "2f33e4f2deafa19f",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "114 Multiple Integration.md",
+                "file": "110 Vectors.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +102,15 @@
   },
   "active": "35336e38b2917a2b",
   "lastOpenFiles": [
-    "114 Multiple Integration.md",
-    "121 Number Theory and Cryptography.md",
-    "120 Sequences (Discrete Math).md",
     "110 Vectors.md",
-    "CMPSC 360 HW 9.md",
-    "Physics Midterm 2.md",
-    "Physics 2 Recap.md",
-    "451 Number and Binary Representation.md",
-    "450 Computer Engineering.md",
-    "402 Tree Notes.md"
+    "115 Line and Surface Integrals.md",
+    "113 Multivariable Functions.md",
+    "Types of data scientists.md",
+    "254 What is Deep Learning.md",
+    "260 Neural Networks.md",
+    "261 Backpropagation.md",
+    "253 Types of machine learning.md",
+    "452 Computer Compontents.md",
+    "453 CMPEN.md"
   ]
 }

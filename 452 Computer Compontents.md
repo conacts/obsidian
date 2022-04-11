@@ -456,7 +456,51 @@ A vending machine with 2 inputs, representing 25c and 50c coin. When the machine
 ![[Pasted image 20220328223632.png |300]]
 ![[Pasted image 20220328223704.png |300]]
 
+### Counters
+Binary counters are an example of synchronous sequential circuit design.
+- Counters can just be represented as "degenerative" state machines
 
+##### Counter State Machine Diagrams
+- Have large number of states relative to transition
+- In simple counters, only one arc from each state
+
+##### Types of Counters
+- Modulo (ring-shaped state diagram)
+- Saturating (dead-end state diagram)
+- Many different types of counters for a given number of bits, with not all using $2^n$ possible states
+
+##### Simple Binary Counter
+- A counter with just a clock input. 
+- The output is a repeating sequence of binary numbers
+
+##### Creating a Counter
+1. Create state transition table
+2. K-Map
+3. Map function to D Flip-Flop
+	1. D is sent to output Q on CLK, so D should be the same as output of next stage logic
+
+
+> 1. Consider a counter that counts in a given sequence: $0 \rightarrow 3 \rightarrow 6 \rightarrow 1 \rightarrow 5$. Design the counter using D flip-flops.
+> 	1. Draw the state transition diagram
+> 	
+> 	
+> 	3. Write out the state transition table, and use K-maps to derive the equations of the next states
+> 	4. Draw the circuit
+> 	5. Design the counter using T flip-flops
+> 
+> 2. Design a 3-bit synchronous counter that counts the odd numbers in decreasing order. Use flip-flop of your choice
+> 3. What is a saturating counter? Give an example of its state transition diagram.
+> 4. Implement Q2 using a D flip-flop in verilog.  
+
+
+
+| $Q_2 Q_1 Q_0$ | $Q_2^*Q_1^*Q_0^*$ | $T_2T_1T_0$ |
+| ------------- | ----------------- | ----------- |
+| 000           | 011               | 011         |
+| 011           | 110               | 101         |
+| 110           | 001               | 111         |
+| 001           | 101               | 100         |
+| 101           | 000               | 101            |
 
 ### Practice Exam Flashcards
 
@@ -567,3 +611,71 @@ Q* = J QN + KN * Q
 T Flip Flop #flashcard 
 Q* = (QN x T) + (TN x Q)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Timing and Skews
+
+Timing metrics for a D flip flop
+![[Pasted image 20220411102202.png | 500]]
+
+Two overlapping in line timing lines stand for a measurement x
+![[Pasted image 20220411102435.png]]
+
+We also must have a stable state in this x time, shown here 
+![[Pasted image 20220411102711.png]]
+As shown above, flip-flops actually have **3 states** instead of 3
+1. 1 State
+2. 0 State
+3. Metastable State, a state between 0 and 1
+
+##### Metastable State
+A state in flip-flop circuits between 0 and 1 caused by "hold-times" of the flip flop not lasting for a clock cycle, leading to a change in the variable **x** during one clock cycle
+
+![[Pasted image 20220411103218.png |300]]
+
+If the clock period is too short, data changes will not propagate through the circuit to flip-flop inputs before the setup time intervals begin, causing a metastable state.
+![[Pasted image 20220411103402.png]]
+
+
+##### Clock Period $(t_p)$ 
+The interval between occurences of a specific clock edge in a periodic clock
+
+##### Longest Total Delay $(t_{pd,COMB})$ 
+The longest delay of combinational logic along the path from flip-flop output to flip-flop input
+
+##### Extra Time $(t_{slack})$
+Extra time in the clock period in addition to the sum of the delays and setup time on a path
+- Can be positive or negative 
+- Must be greater than or equal to zero on all paths for correct operation
+
+##### Timing Equations
+Used for all paths from flip-flop input to flip-flop output
+$$t_p = t_{slack} + (t_{cQ,FF} + t_{pd,COMB} + t_{s})$$
+For $t_{slack}$ greater than or equal to zero
+$$t_{p} \ge \max(t_{cQ,FF} + t_{pd,COMB} + t_{s}$$
+
+
+> How fast can you clock this?
+> Setup time = 0.6ns, Hold time = 0.4ns, $T_{cQ}$ = (0.8ns to 1.0ns), $t_{pd,inv}$ = 1.1ns where (1 + 0.1k) where K is the number of gate inputs
+> ![[Pasted image 20220411104156.png |200]]
+> 1. We use the equation with  $t_{slack}$ greater than or equal to zero
+> $$t_{p} \ge \max(t_{cQ,FF} + t_{pd,COMB} + t_{s})$$
+> $$t_{p} \ge \max(\text{Delay of flip flop} + \text{inverter} + \text{setup time})$$
+> $$t_{p} \ge \max(1.0ns + 1.1ns + 0.6ns)= 2.7ns$$
+> ----
+> What is the hold time?
+> Setup time = 0.6ns, Hold time = 0.4ns, $T_{cQ}$ = (0.8ns to 1.0ns), $t_{pd,inv}$ = 1.1ns where (1 + 0.1k) where K is the number of gate inputs
+> ![[Pasted image 20220411104156.png |200]]
+> $$t{cQ} + t_{pA, inv} \ge t_h$$ $$0.8ns + 1.1ns = 1.9ns \text{ of maximum hold time}$$
+> 

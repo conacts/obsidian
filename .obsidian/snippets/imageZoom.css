@@ -1,0 +1,6 @@
+/* Image Zoom Function */
+.markdown-preview-view img:hover {
+    -webkit-transform:scale(1.8); 
+    transform:scale(2.35);
+}
+

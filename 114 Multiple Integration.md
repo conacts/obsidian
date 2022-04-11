@@ -42,11 +42,16 @@ $$\iint_R f(x,y)dA=\lim_{||P|| \rightarrow 0} \sum^N_{i=1} \sum^M_{j=1} f(P_{ij}
 > $$S_{4,3} = \sum^N_{i=1} \sum^M_{j=1} f(P_{ij})\Delta A_{ij}= \sum^4_{i=1}\sum^3_{j=1} (6ij)\cdot (1)$$
 > 3. Sum for **Regular Partition**
 > ![[Pasted image 20220228142108.png | 300]]
-> $f(2,2) + f(2,3) + f(2, 4) + f(3,2) + f(3,3) + f(3, 4) +f(4,2) + f(4,3) + f(4, 4) + f(5,2) + f(5,3) + f(5, 4)  = ...$
+> $$f(2,2) + f(2,3) + f(2, 4) + f(3,2) + f(3,3) + f(3, 4) +f(4,2) + f(4,3) + f(4, 4) + f(5,2) + f(5,3) + f(5, 4)  = ...$$
 > $6(4 + 6 + 8 + 6 + 9 + 12 + 8 + 12 + 16 + 10 + 15 + 20)=756$
 
 ##### Theorem 1: Continuous Functions Are Integrable
-If a function $f$ of two variables is continuous on a rectangle $R$, then $f(x,y)$ is integrable over $R$
+If a function $f$ of two variables is [[114 Multiple Integration#Continuous|continuous]] on a rectangle $R$, then $f(x,y)$ is integrable over $R$
+
+##### Continuous
+A function is continuous when its graph is a single unbroken curve
+![[Pasted image 20220402213434.png |400]]  
+
 
 ##### Theorem 2: Linearity of the Double Integral
 Assume that $f(x,y)$ and $g(x,y)$ are integrable over a rectangle $R$. Then 
@@ -407,9 +412,9 @@ Spherical coordinates make use of the fact that a point $P$ on a sphere of radiu
 | Function              | In $R^2$                                                             | In $R^3$                                      |
 | --------------------- | -------------------------------------------------------------------- | --------------------------------------------- |
 | Total Mass            | $M = \iint_D \delta (x,y)dA$                                         | $M=\iiint_W \delta (x,y,z)dV$                 |
-| Moments X             | $M_x = \iint_D y\delta (x,y)dA$                                      | $M_{yz} = \iint_W x\delta (x,y)dA$            |
-| Moments Y             | $M_y = \iint_D x\delta (x,y)dA$                                      | $M_{xz} = \iint_W y\delta (x,y)dA$            |
-| Moments Z             | NA                                                                   | $M_{xy} = \iint_W z\delta (x,y)dA$            |
+| Moments X             | $M_x = \iint_D y\delta (x,y)dA$                                      | $M_{yz} = \iint_W x\delta (x,y,z)dA$            |
+| Moments Y             | $M_y = \iint_D x\delta (x,y)dA$                                      | $M_{xz} = \iint_W y\delta (x,y,z)dA$            |
+| Moments Z             | NA                                                                   | $M_{xy} = \iint_W z\delta (x,y,z)dA$            |
 | Moments of Intertia X | $I_x = \iint_D y^2 \delta (x,y)dA$                                   | $I_x = \iiint_W (y^2 + z^2) \delta (x,y,z)dV$ |
 | Moments of Intertia Y | $I_y = \iint_D x^2 \delta (x,y)dA$                                   | $I_x = \iiint_W (x^2 + z^2) \delta (x,y,z)dV$ |
 | Moments of Intertia Z | $I_0 = \iint_D (x^2  + y^2) \delta (x,y)dA, \quad (I_0 = I_x + I_y)$ | $I_x = \iiint_W (x^2 + y^2) \delta (x,y,z)dV$ |
@@ -487,7 +492,7 @@ The output of the function that is *mapped* into a new space
 The set of all elements of a function
 
 
-> Let $G(u,v) = (uv^{-1}, uv)$ for$ u > 0$, $v > 0$. Determine the images of
+> Let $G(u,v) = (uv^{-1}, uv)$ for $u > 0$, $v > 0$. Determine the images of
 > 1. The lines $u = c$ and $v = c$
 > 2. $[1,2] \times [1,2]$
 > **ANS:**
@@ -593,5 +598,31 @@ B & D \end{bmatrix} = \begin{bmatrix} 3 & 0 \\
 > 4. Compute the integral $f(x,y) = x + y$ 
 > $$\iint_D (x + y) dxdy = 3\int^4_1 \int^4_1  \frac{u^2}{v} +  \frac{v^2}{u} dudv $$
 > $$3\int^4_1 \int^4_1  \frac{u^3+v^3}{uv} dudv = 252ln(2)$$
-> 5. Solve for bounds by plugging in for u and y
+> ---
+> Calculate $\iint_D (2x+3y)dxdy$, where $D$ is the shaded region in the figure
+> Hint: Use the map $G(u,v)=(u-2v,v)$
+> ![[Pasted image 20220402214527.png|200]]
+> $$\iint_D(2x + 3y)dxdy$$
+> 1. Find the bounds of the integral
+> 	1. Looking at the picture we see that domain is 
+> $$6 \le x + 2y \le 10 \quad 1 \le x + 2y \le 3$$
+> $$6 \le u \le 10 \quad 1 \le v\le 3 \quad \Big |\quad u = x + 2y \quad v = y$$
+> 2. Find the Jacobian of the function $G(u,v)=(u-2v,v)$
+> $$Jac(G) = \begin{bmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\end{bmatrix} = \begin{bmatrix} 1 & -2 \\ 0 & 1 \end{bmatrix} = (1)(1)-(-2)(0) = 1$$
+> 3. sub $dxdy$ for $dudv$
+> $$\iint_D(2x + 3y)dxdy = (1)\iint_D (2(u-2v) + 3(v)dvdu$$
+> 4. Set up integral w/ limits
+> $$\int^3_1 \int^{10}_6 (2u-v)dudv = 112$$
 
+> Use the map $G(u,v) = \left( \frac{u}{v+1}, \frac{uv}{v+1}\right)$ to compute $\iint_D (x + y) dxdy$ where $D$ is the shaded region in the figure. Assume $a=7,b=14,c=5$
+> ![[Pasted image 20220404120748.png |300]]
+> 1. Find integral bounds
+> $$\frac{y}{x}=5 \quad \frac{y}{x}=1 \quad \Big |\quad  x + y = 7 \quad x + y = 14$$
+> $$D: 1\le \frac{y}{x} \le 5 \quad 7 \le x + y \le 14 \quad \Big | \quad u = x + y \quad v = \frac{y}{x}$$
+> 
+> 2. Compute Jacobian
+> $$Jac(G) = \begin{bmatrix} \frac{\partial x}{\partial u} & \frac{\partial x}{\partial v} \\ \frac{\partial y}{\partial u} & \frac{\partial y}{\partial v}\end{bmatrix} = \begin{bmatrix} \frac{1}{v+1} & \frac{-u}{(v+1)^2} \\ \frac{v}{v+1} & \frac{u}{(v+1)^2} \end{bmatrix}  = \frac{u}{(v+1)^2}$$
+> 3. Apply change of variable formula by writing $f(x,y)$ in terms of $u$ and $v$
+> $$f(x,y) = x + y = \frac{u}{v+1} + \frac{uv}{v+1} = u$$
+> 4. Set up integral
+> $$\int^5_1 \int^{14}_7 f(x,y) \cdot Jac(G) dudv = \int^5_1 \int^{14}_7u \cdot \frac{u}{(v+1)^2}dudv = 266.77$$

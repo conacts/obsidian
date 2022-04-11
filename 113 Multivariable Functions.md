@@ -3,7 +3,7 @@ Deck: Calculus
 ## 14.1 Functions of Two or More Variables
 Functions with multiple variables are typically denoted as:
 $$g(x, y, z) = c = \sqrt{x^2 + y^2 + z^2}$$
-![[Pasted image 20220206233040.png]]
+![[Pasted image 20220206233040.png |]] 
 ##### Traces
 A trace is freezing one coordinate on the function (typically x-coordinate, $x=a$) and examining the resulting curve in 2 dimensions
 
@@ -78,11 +78,9 @@ $$df=f_x(x, y)dx + f_y(x, y)dy$$
 > 1. Plug in 
 > $$\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y \approx 3x^2y^{-4} \Delta x -4x^3y^{-5} \Delta y$$
 > $$\approx 3(1)^2(1)^{-4} \Delta x -4(1)^3(1)^{-5} \Delta y$$
-> $$\Delta x = 1.04 - 1 = .04 \quad \Delta y=0.97 - 1= -.03$$
+> $$\Delta x = 1.04 - 1 = .04 \quad \Delta y=0.97 - 1= -.03$$$$\approx 3(1)^2(1)^{-4} (.04) -4(1)^3(1)^{-5} (-.03)$$
+> ----
 > 
-> $$\approx 3(1)^2(1)^{-4} (.04) -4(1)^3(1)^{-5} (-.03)$$
-> 
-
 > A person's Body Mass Index is $𝐼=\frac{𝑊}{𝐻^2}$, where 𝑊 is the body weight (in kilograms) and 𝐻 is the body height (in meters). A child has weight 𝑊=39 kg and height 𝐻=1.5 m. Use the linear approximation to estimate the change in 𝐼 if (𝑊,𝐻) changes to (41,1.53).
 > 1. Take the linear approximation of the formula starting with $f_x(x, y)$:
 > $$I_x=\frac{1}{H^2} \quad I_y=\frac{-2W}{W^3}$$
@@ -104,7 +102,7 @@ If $f_x(x, y)$ and $f_y(x, y)$ exist and are continuous on an open disk $D$, the
 
 ##### The Gradient
 The gradient of function $f(x,y)$ at point $P=(a,b)$ is the vector
-$$\nabla f_p= \langle f_x(a,b),f_y(a,b) \rangle$$
+$$\nabla f= \langle f_x(a,b,c),f_y(a,b,c), f_z (a,b,c) \rangle  = \langle \frac{\partial f}{\partial x}, \frac{\partial f}{\partial x}, \frac{\partial f}{\partial x}\rangle$$
 In three variables, for $f(x,y,z)$ and $P=(a,b,c)$ 
 $$\nabla f_p= \langle f_x(a,b,c),f_y(a,b,c),f_z(a,b,c) \rangle$$
 ![[Pasted image 20220223001205.png | 300]]
@@ -231,7 +229,7 @@ $$\frac{d}{dt}f(r(t))=\lim_{h \rightarrow 0} \frac{f(x(t + h), y (t + h)) - f(x(
 > $$T(r_1)=\sin^2(t)(t)(9-t^2), \quad T(r_2)=\cos^2(t)(1-t)(9-t^3)$$
 > $$D=\frac{d}{dt}(T(r_1)-T(r_2))=-11.196$$
 
-# FINDISH 14.6
+# FINISH 14.6
 
 ## 14.7 Optimization in Several Variables
 ![[Pasted image 20220223165429.png | 300]]
