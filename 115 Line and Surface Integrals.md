@@ -9,7 +9,7 @@ $$F(x,y,z) = \langle F_1(x,y,z), F_2(x,y,z), F_3(x,y,z) \rangle$$
 To each point $P=(a,b,c)$ is associated the vector $F(a,b,c)$, which we also denote as $F(P)$ or $F=F_1 {\bf i} +F_2 {\bf j}  + F_3 {\bf k}$  
 
 
-###### Ex:: Finding vector at a point using a vector field:
+###### Example :: Finding vector at a point using a vector field:
 
 > Which vector corresponds to the point $P = (2,4,2)$ for the vector field $F(x,y,z) = \langle y-z, x, z- \sqrt{y} \rangle$?
 > 1. Plug point $P$ into $F(x,y,z)$ 
@@ -153,6 +153,7 @@ $$ds=||r'(t)||dt \quad ||r'(t)||=\sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2}$$
 ### Vector Line Integrals
 The difference between vector and scalar line integrals is that vector line integrals depend on the direction along the curve. This can be analgous to travelling up and down a mountain being very important to distinguish when regarding work.
 
+##### Vector Line Integral Formula
 The line integral of a vector field $F$ along an oriented curve $C$ is the integral of the tangential component of $F$.
 
 $$\int_C (F \cdot T) \space ds = \int_C F \cdot dr\quad \quad dr = T \cdot ds$$
@@ -165,6 +166,31 @@ The specified direction along curve $C$ is known as the orientation. Positive is
 If $r(t)$ is a positively oriented regular paramtrization of an oriented curve $C$ for $a \le t \le b$, then 
 $$\int_C F \cdot dr = \int_C F \cdot Tds = \int_a^b F(r(t)) \cdot r'(t) dt$$
 $$dr = r'(t)dt = \langle x'(t), y'(t), z'(t) \rangle \space dt$$
+###### Example :: Computing Vector Line Integral:
+> Calculate the work done by the field $F(x,y,z) = \langle e^x, e^y, xyz \rangle$ when the object moves along the path $r=\langle t^2, t, \frac{t}{3} \rangle$ for $0 \le t \le 1$
+> 1. Using [[115 Line and Surface Integrals#Theorem 2 Computing a Vector Line Integral|Theorem 2]], we will follow and use the formula
+> $$W=\int_C F(r(t)) \cdot r'(t)dt$$
+> 2. Find the value of $F(r(t))$
+> $$F(r(t)) = \langle e^{t^2}, e^{t}, (t^2) (t)(\frac{t}{3}) \rangle = \langle e^{t^2}, e^{t},\frac{t^4}{3} \rangle$$
+> 3. Find the value of $r'(t)$
+> $$r'(t) = \langle 2t, 1, \frac{1}{3} \rangle$$
+> 4. Plug into the equation
+> $$F \cdot dr = F(r(t)) \cdot r'(t) dt = \langle e^{t^2}, e^{t},\frac{t^4}{3} \rangle \cdot \langle 2t, 1, \frac{1}{3} \rangle dt= (2te^{t^2} + e^{t} +\frac{t^4}{9})dt$$
+> 5. Set up integral
+> $$\int^1_0 (2te^{t^2} + e^{t} +\frac{t^4}{9})dt = 2e-\frac{89}{45}$$
+> ----
+> Evaluate the line integral:
+> $$\int_C 17ydx + 16zdy + xdz, \quad r(t) = (2 + t^{-1}, t^3, t^2) \text{ for } 0 \le t \le 1$$
+> 1. Using [[115 Line and Surface Integrals#Theorem 2 Computing a Vector Line Integral|Theorem 2]], we will follow and use the formula
+> $$\int_a^b F(r(t)) \cdot r'(t) dt$$
+> 2. Find $r'(t)$
+> $$r'(t) = ( -\frac{1}{t^2}, 3t^2, 2t)$$
+> 3. Plug in $r(t)$ to find $F(r(t))$ 
+> $$F = 17ydx + 16zdy + xdz = \langle 17y, 16z, x \rangle$$
+> $$F(r(t)) = \langle 17(t^3), 16(t^2), (2 + t^{-1}) \rangle$$
+> 4. Plug both $F(r(t))$ and $r'(t)$ into [[115 Line and Surface Integrals#Theorem 2 Computing a Vector Line Integral|Theorem 2]]
+> $$\int_a^b F(r(t)) \cdot r'(t) dt = \int_0^1 \langle 17t^3, 16t^2, 2 + t^{-1} \rangle \cdot  \langle  -\frac{1}{t^2}, 3t^2, 2t \rangle dt$$
+> $$=\int_0^1  -17t + 48t^4 + 4t + 2  =\frac{51}{10}$$
 
 ##### Theorem 3: Properties of Vector Line Integrals
 Let $C$ be a smooth oriented curve, and let $F$ and $G$ be vector fields
@@ -180,6 +206,9 @@ $$W = \text{tangential component of F} \times \text{distance}=(||F||\cos\theta) 
 ![[Pasted image 20220404111847.png |300]]
 
 
+> Calculate the line integral of $F(x,y,z) = (e^z, e^{x-y}, e^y$ over the closed path ABCA, where $A=(2,0,0), B=(0,4,0), C=(0,0,6)$. Solve for $\int_C F \cdot dr$ 
+> ![[Pasted image 20220411231447.png | 150]]
+> 
 
 > Find the total charge on the curve $y=x^{4/3}$ for $8 \le x \le 27$ assuming a charge density of $\delta (x,y) = \frac{x}{y}$ 
 > 1. We can equate 
@@ -191,11 +220,6 @@ $$W = \text{tangential component of F} \times \text{distance}=(||F||\cos\theta) 
 > $$u(8) = \frac{73}{9} \quad u(27) = 17$$
 > 3. Set up integral
 > $$\int^{27}_8 t^{-1/3} \sqrt{1 + \frac{16}{9}t^{2/3}}dt = \frac{27}{32 \int^{17}_{73/9}} \sqrt{u}du = 26.43$$
-> -----
-> $$V(P) =  8.99 \times 10^9\int_C \frac{xy}{D_P(x,y,z)}ds$$
-> where $k = 8.99 \times 10^9 N \cdot m^2 / C^2$ to compute the electric potential $V(P)$ at the point $P$ for the given charge density (in units of $10^{-6}$ C/m). Calculate $V(P)$ at $P = (0,0,20)$ if the electric charge is distributed along the quarter circle of radius 5 centered at the origin, lying in the first quadrant of the xy-plane with charge density $\delta(x,y,z) = xy$. Suppose that all distances are in meters. Express value of potential in kV, that is 1000V.
-> $$V(P) =  8.99 \times 10^9\int_C \frac{xy}{D_P(x,y,z)}ds$$
-
 
 ## 16.4 Parametrized Surfaces and Surface Integrals
 
@@ -233,7 +257,7 @@ For $f(x,y,z) = 1$, we obtain the surface area of $S$:
 $$area(S) = \iint_D ||N(u,v)|| dudv \quad \Big | \quad dS = ||N(u,v)||dudv$$
 
 
-
+###### Example :: Evaluating the Surface Area: 
 > Let $S = \Phi(D)$  where $D = \{(u,): u^2 + v^2 \le 1, u \ge 0, v \ge 0 \}$  and $\Phi (u,v) = (2u + 1, u-v, 3u+v)$ 
 > (a) calculate the surface area of S and (b) evaluate $\iint_S (5x -5y)dS$ 
 > 1. Find the area of S
