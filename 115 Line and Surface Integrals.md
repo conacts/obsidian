@@ -199,6 +199,27 @@ $$\int_C kF \space dr = k \int_C F \space dr \quad \text{(k a constant)}$$
 $$\text{ii. Reversing Orientation: } \int_{-C} F \space dr = -\int_C F \space dr$$
 $\text{iii.}$ **Additivity**: If $C$ is a union of $n$ smooth curves $C_1, ..., C_N$, then
 $$\int_C F \space dr = \int_{C_1} F \space dr + ... + \int_{C_N} F \space dr$$
+###### Example :: Additivity Integration:
+> Calculate the line integral of $F(x,y,z) = (e^z, e^{x-y}, e^y )$ over the closed path ABCA, where $A=(2,0,0), B=(0,4,0), C=(0,0,6)$. Solve for $\int_C F \cdot dr$ 
+> ![[Pasted image 20220411231447.png | 150]]
+> 1. To solve this problem we will use [[115 Line and Surface Integrals#Theorem 3 Properties of Vector Line Integrals|additivity theorem]] to find the area under a smooth curve
+> $$\int_C F \space dr = \int_{{\overline{AB}}} F \space dr + \int_{{\overline{BC}}} F \space dr + \int_{{\overline{CA}}} F \space dr$$
+> 2. First compute $r(t)$ for $\overline{AB}$ . 
+> $$r(t) = B-A = (0, 4t, 0) - (-2 + 2t, 0,0) = \langle 2-2t, 4t, 0 \rangle$$
+> 3. Set up integral of  $\overline{AB}$ .
+> $$\int_{{\overline{AB}}} F(r(t)) \cdot r'(t) = (e^0, e^{2-2t-4t}, e^{4t} ) \cdot (-2, 4, 0) = \int_0^1 -2 + 4e^{2-6t}$$
+> 4. Compute  $r(t)$ for $\overline{BC}$ . 
+> $$r(t) = C - B = (0,0,6t) - (0, -4 + t, 0) = (0, 4 - 4t, 6t)$$
+> 5. Set up integral of $\overline{BC}$
+> $$\int_{{\overline{BC}}} F \space dr = (e^{6t}, e^{0-4+4t}, e^{4-4t} ) \cdot (0, - 4, 6) =  \int^1_0 -4e^{4t-4} + 6e^{4-4t} dt$$
+> 6. Find $r(t)$ of $\overline{CA}$
+> $$r(t) = A - C = (2t, 0, 0) - (0 ,0 ,-6 + 6t) = (2t, 0, 6-6t)$$
+> 7. Set up integral for  $\overline{CA}$
+> $$\int_{{\overline{CA}}} F \space dr = (e^{6-6t}, e^{2t-0}, e^0 ) \cdot (2, 0, -6) = \int^1_0 2e^{6-6t} -6 dt$$
+> 8. Sum all the integrals together
+> $$\int_C F \space dr = \int_0^1 -2 + 4e^{2-2t}dt + \int^1_0 -4e^{4t-4} + 6e^{4-4t}dt + \int^1_0 2e^{6-6t} -6 dt$$
+> $$\int_0^1 ( 4e^{2-2t} -4e^{4t-4} + 6e^{4-4t}dt + 2e^{6-6t} -8 )dt$$
+> $$ = -\frac{65}{6} + \frac{1}{3}e^{-4} + \frac{2}{3}e^2 + \frac{3}{2}e^4 + \frac{1}{3}e^6$$
 
 ##### Work Equation
 Work refers to the energy expended when a force is applide to an object as it moves along a path.
@@ -206,10 +227,8 @@ $$W = \text{tangential component of F} \times \text{distance}=(||F||\cos\theta) 
 ![[Pasted image 20220404111847.png |300]]
 
 
-> Calculate the line integral of $F(x,y,z) = (e^z, e^{x-y}, e^y$ over the closed path ABCA, where $A=(2,0,0), B=(0,4,0), C=(0,0,6)$. Solve for $\int_C F \cdot dr$ 
-> ![[Pasted image 20220411231447.png | 150]]
-> 
 
+###### Example :: Integration for total charge:
 > Find the total charge on the curve $y=x^{4/3}$ for $8 \le x \le 27$ assuming a charge density of $\delta (x,y) = \frac{x}{y}$ 
 > 1. We can equate 
 > $$y = x^{4/3}, \quad r(t) =  \langle t, t^{4/3}, 0 \rangle \quad  8 \le t \le 27$$
@@ -220,6 +239,20 @@ $$W = \text{tangential component of F} \times \text{distance}=(||F||\cos\theta) 
 > $$u(8) = \frac{73}{9} \quad u(27) = 17$$
 > 3. Set up integral
 > $$\int^{27}_8 t^{-1/3} \sqrt{1 + \frac{16}{9}t^{2/3}}dt = \frac{27}{32 \int^{17}_{73/9}} \sqrt{u}du = 26.43$$
+
+
+###### Example :: Integration for work done by a field:
+> Calculate the work done by the field F when the object moves along the given path from the initial ponit to the final point.
+> $$F(x,y,z) = \langle x,y,z \rangle, \quad r(t) = \langle \cos t, \sin t, t \rangle \quad \frac{\pi}{2} \le t \le \frac{7\pi}{2}$$
+> 1. Using the [[115 Line and Surface Integrals#Theorem 2 Computing a Vector Line Integral|theorem 2 formula]], we can find the answer
+> 2. We find $r'(t)$
+> $$r'(t) = \langle -\sin t, \cos t, 1 \rangle$$
+> 3. Find $F(r(t))$
+> $$F(r(t)) = \langle \cos t, \sin t, t \rangle$$
+> 4. Plug it into the formula
+> $$\int_C = \langle \cos t, \sin t, t \rangle \cdot \langle -\sin t, \cos t, 1 \rangle = \int^{7\pi/2}_{\pi/2} (-\cos t \sin t + \sin t \cos t + t)dt = 6\pi ^2$$
+
+
 
 ## 16.4 Parametrized Surfaces and Surface Integrals
 
@@ -349,3 +382,5 @@ $$area(S) = \iint_D ||N(u,v)|| dudv \quad \Big | \quad dS = ||N(u,v)||dudv$$
 ##### Theorem 2: Gravitational Pontential of a Uniform Hollow Sphere
 The gravitational potential $V$ due to a hollow sphere of radius $R$ with uniform mass distribution of total mass $m$ at a point $P$ located at a distance $r$ from the center of the sphere is...
 $$V(P) = \Bigg \{ \begin{split} \frac{-Gm}{r} \quad if \space r > R\quad \text{(P outside the sphere)} \\ \frac{-Gm}{R} \quad if \space r < R\quad \text{(P inside  the sphere)} \end{split}$$
+
+## 16.5 
