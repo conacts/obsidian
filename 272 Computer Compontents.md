@@ -115,13 +115,13 @@ Denoted by $\overline{A \oplus B} = Y$
 ### Basic Hardware Implementations for Math
 
 #### Hardware Multiplier
-Implements the [[451 Number and Binary Representation#Binary Multiplication|binary multiplication]] operation
+Implements the [[271 Number and Binary Representation#Binary Multiplication|binary multiplication]] operation
 
 ![[CC491C3B-A1FA-4F68-A332-F6CE0285ADD7_1_201_a.jpeg | 600]]
 
 
 #### Hardware Addition
-Binary addition can come two forms, in either [[451 Number and Binary Representation#Adding Subtracting 1's Complement|1s complement]] or [[451 Number and Binary Representation#Adding Subtracting 2's Complement|2s complement]]. There are a few hardware components for adding binary numbers.
+Binary addition can come two forms, in either [[271 Number and Binary Representation#Adding Subtracting 1's Complement|1s complement]] or [[271 Number and Binary Representation#Adding Subtracting 2's Complement|2s complement]]. There are a few hardware components for adding binary numbers.
 
 ##### Half Adder
 A circuit that **adds two 1-bit numbers** where the output is 2 bits, the sum and the carry.
@@ -192,7 +192,7 @@ Transforming the output of the encoder to its original state through a reverse o
 A decoder used to invert the operation of a multiplexer
 
 ### CMOS Logic Gates
-Complementary metal-oxide semiconductor comprised of an [[452 Computer Compontents#NMOS|NMOS]] and [[452 Computer Compontents#NMOS|PMOS]] transistors.
+Complementary metal-oxide semiconductor comprised of an [[272 Computer Compontents#NMOS|NMOS]] and [[272 Computer Compontents#NMOS|PMOS]] transistors.
 
 ![[Pasted image 20220330131130.png |300]]
 #### NMOS
@@ -300,9 +300,9 @@ Two of the most popular varieties of storage cells
 **Level Sensitive** storage element
 
 Types: 
-1. [[452 Computer Compontents#S-R Latch|S-R latch]]
-2. [[452 Computer Compontents#Gated S-R Latch |Gated S-R Latch]]
-3. [[452 Computer Compontents#D Latch|D Latch]]
+1. [[272 Computer Compontents#S-R Latch|S-R latch]]
+2. [[272 Computer Compontents#Gated S-R Latch |Gated S-R Latch]]
+3. [[272 Computer Compontents#D Latch|D Latch]]
 
 
 | S-R Latch                                                            | S-R Latch | D Latch |                                                                     |
@@ -376,20 +376,20 @@ $$Q* = D$$
 **Edge Triggered** storage element
 
 Types:
-1. [[452 Computer Compontents#D Flip-Flop D-FF| D Flip-Flop (D-FF)]]
+1. [[272 Computer Compontents#D Flip-Flop D-FF| D Flip-Flop (D-FF)]]
 3. JK_FF
 4. T-FF
 
 
 ##### D Flip-Flop (D-FF)
 The D-type filp-flop is a modified Set-Reset flip-flop with the addition of an inverter to prevent the S and R inputs from being at the same logic level. 
-**Note:** This is the same as a [[452 Computer Compontents#D Latch |D Latch]], just with the use of a clock signal
+**Note:** This is the same as a [[272 Computer Compontents#D Latch |D Latch]], just with the use of a clock signal
 
 $$Q* = D$$
 ![[Pasted image 20220330160134.png]]
 
 ##### D Flip-Flop w/ Enable
-A [[452 Computer Compontents#D Latch |D Latch]] with an enable. The enable is a component that allows a flip-flop to hold it's value for more than a single clock cycle
+A [[272 Computer Compontents#D Latch |D Latch]] with an enable. The enable is a component that allows a flip-flop to hold it's value for more than a single clock cycle
 
 $$Q* = EN \cdot (D+EN(N)) \cdot Q$$
 

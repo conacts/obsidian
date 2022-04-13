@@ -47,7 +47,7 @@ $$a = bq + r \text{ and } 0 \le r < b$$
 - $r$ is a reminder
 
 
-### Mod
+### Mod / Modulus
 Let $a \in \mathbb{Z}$ and $b \in \mathbb{Z}^+$ 
 the integer quotient obtained when $a$ is divided by $b$, and 
 $$a \text{ mod } b = r, \quad \quad \mathbb{Z}_m = \mod m$$
@@ -97,16 +97,80 @@ var $a \in \mathbb{Z}_m$ where $a^{-1}$ is the inverse of a
 $$\mathbb{Z}_6 : 1 \times 1 \mod 6 = 1$$
 2. The inverse of 5 using mod 6 is 5
 $$\mathbb{Z}_6 : 5 \times 5 \mod 6 = 1$$
-> In $\mathbb{Z}_10, calculate $4 Ø 7$       
-> $$4 Ø 7 = 4 \otimes 7^{-1} = 4 \cdot 3 \mod 10 = 2$$
 
-##### Integer Representations
+##### Modular Division ⊘
+Modular division is equivalent to $a \otimes b^{-1}$
+
+###### Example :: Modular Division:
+> In $\mathbb{Z}_{10}$, calculate $4 \oslash 7$       
+> $$4 \oslash 7 = 4 \otimes 7^{-1} = 4 \cdot 3 \mod 10 = 2$$
+
+#### Integer Representations
 Some math is easier to do with numbers represented in another form such as binary
 
-**Octal:**
+##### Octal:
 Make the number up of $8^n$ 
 $$315_8 = 3 \cdot 8^2 + 1 \cdot 8^1 + 5 \cdot 8^0 = 205_{10}$$
+######  Example :: Decimal Representation of Base 6 :
+> Suppose we use base 6 number system. What is the decimal representation of $315_6$?
+> $$315_6 = 3 \cdot 6^2 + 1 \cdot 6^1 + 5 \cdot 6^0 = 119_{10}$$
 
+###### Example :: Decimal representation of Hex: 
+> What is the decimal representation of $BA7_{16}$
+> $$BA7_{16} = 11 \cdot 16^2 + 10 \cdot 16^2 + 7 \cdot 16^0 = 2983_{10}$$
+
+### Primes and Greatest Common Divisor
+
+##### Primes
+An integer $p$ greater than 1 is a prime number if its only factors are $1$ and $p$. 
+
+##### Composite
+A non-prime number that is greater than 1
+
+###### Prime vs. Composite
+> Determine whether 11 and 121 are prime.
+> 1. $11$ is prime since only $11 \cdot 1 = 11$ 
+> 2. $121$  is composite since $11 \cdot 11 = 121$ 
+
+##### Prime Factorization
+The expression of a number as a product of primes
+
+##### Fundamental Theorem of Arithmetic
+Every integer greater than 1 can be expressed as a prime number or a product of prime numbers
+
+###### Example :: Find Prime Factorization:
+> Find the prime factorization of 999
+> NOTE: Divide by the lowest divisor until you get a prime number
+> 1. Divide 999 by its lowest divisble prime 3
+> $$999 \div 3 = 333  $$
+> 2. Next divide 333 by 3 again
+> $$333 \div 3 = 111$$
+> 3. Next divide 111 by 3 again
+> $$111 \div 3 = 37$$
+> 4. Because 37 is prime
+> $$3 \cdot 3 \cdot 3 \cdot 37 = 3^3 \cdot 37 = 999$$
+> ---
+> Find the prime factorization of 100
+> $$100 / 2 = 50 / 2 = 25 / 5 = 5 / 5 = 1 = 2^2 \cdot 5^2$$
+
+###### Example :: Find If the Number is Prime:
+> Determine whether 731 is a prime or not 
+> We get $\sqrt{731}=27$  and all prime numbers between 2 and 27
+
+#### Prime Number Conjectures
+1. Every odd integer has a form of either $4k + 1$ or $4k + 3;ak + b$ 
+2. For all positive integers $n \le 40, f(n) = n^2 - n + 41$ is prime
+3. Every even number is the difference of two primes
+4. For every even number $2n$ there are infinetely many pairs of consecutive primes, which differ by $2n$
+
+##### Twin Prime Conjecture
+There are infinetely many twin primes. Twin primes are pairs of primes that differ by 2, such as 3 and 5, 5 and 7
+
+##### Goldbach's Conjecture
+Every integer $n > 5$ is the sum of three primes
+
+##### Euler Conjecture
+Every even integer $n, n > 2$ is the sum of two primes. 
 
 ## 8.3 GCD as Linear Combinations
 The greatest common divisor (GCD) can be expressed as a linear combination with integer coefficients $a$ and $b$.
@@ -115,14 +179,7 @@ $$\text{linear combination} = (c)a + (d)b$$
 ##### Fundamental Theorem of Arithmatic
 Every positive integer greater than 1 can be expressed as a product of primes called its prime factorization
 
-> Find the prime factorization of 100
-> $$100 / 2 = 50 / 2 = 25 / 5 = 5 / 5 = 1 = 2^2 \cdot 5^2$$
-> Find the prime factorization of 999
-> $$999/ 3 = 333 / 3 = 111 / 3 = 37 = 3^3 \cdot 37$$
-> ----
-> Determine whether 731 is a prime or not 
-> We get $\sqrt{731}=27$  and all prime numbers between 2 and 27
-> ----
+###### Example :: Find the GCD:
 > Find $gcd(22, 44)$
 > Common divisors of 22 and 44 are 1, 2, 11, 22 and greatest common divisor of 22 and 44 is $gcd(22, 44) = 2$ 
 > ----
@@ -132,10 +189,12 @@ Every positive integer greater than 1 can be expressed as a product of primes ca
 > $$gcd(112, 424) = 2^{min(3,4)} \cdot 7^{min(1,0)} \cdot 53^{min(1,0)}$$
 > $$= 2^3 \cdot 7^0 \cdot 53^0 = 8 \cdot 1 \cdot 1 = 8$$
 
+
 ##### Euclid Algorithm
 1. Suppose $a$ and $b$ are integers with $a > b \ge 0$
 2. To find the greatest common divisor of $a$ and $b$, first check whether $=0$. If it is, then using **"Lemma" GCD** (a, 0) = a
 
+###### Example :: Find GCD using Euclid Algorithm:
 > Express GCD(250, 115) = 5 as a linear combination of 250 and 115
 > **Euclid Algorithm:**
 > 1. $250 = 115 \cdot 2 + 20$

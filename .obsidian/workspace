@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "115 Line and Surface Integrals.md",
+            "file": "273 State Machine.md",
             "mode": "source",
             "source": false
           }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "115 Line and Surface Integrals.md",
+                "file": "273 State Machine.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "115 Line and Surface Integrals.md",
+                "file": "273 State Machine.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +102,15 @@
   },
   "active": "35336e38b2917a2b",
   "lastOpenFiles": [
-    "115 Line and Surface Integrals.md",
-    "CMPSC 360 HW 9.md",
-    "110 Vectors.md",
-    "113 Multivariable Functions.md",
-    "Types of data scientists.md",
-    "254 What is Deep Learning.md",
-    "260 Neural Networks.md",
-    "261 Backpropagation.md",
-    "253 Types of machine learning.md",
-    "452 Computer Compontents.md"
+    "273 State Machine.md",
+    "272 Computer Compontents.md",
+    "271 Number and Binary Representation.md",
+    "270 Computer Engineering.md",
+    "What is Deep Learning.md",
+    "Types of machine learning.md",
+    "Supervised Learning.md",
+    "Markov Decision Process.md",
+    "Reinforcement Learning.md",
+    "Statistics and Machine Learning.md"
   ]
 }

@@ -383,4 +383,62 @@ $$area(S) = \iint_D ||N(u,v)|| dudv \quad \Big | \quad dS = ||N(u,v)||dudv$$
 The gravitational potential $V$ due to a hollow sphere of radius $R$ with uniform mass distribution of total mass $m$ at a point $P$ located at a distance $r$ from the center of the sphere is...
 $$V(P) = \Bigg \{ \begin{split} \frac{-Gm}{r} \quad if \space r > R\quad \text{(P outside the sphere)} \\ \frac{-Gm}{R} \quad if \space r < R\quad \text{(P inside  the sphere)} \end{split}$$
 
-## 16.5 
+## 16.5 Surface Integrals of Vector Fields
+Flux integrals, or rates of flow through a surface. The orientation of a flux can vary with specifying vectors $n(P)$ to point upward and $-n(P)$ to point inside the sphere.
+![[Pasted image 20220412173725.png]]
+
+##### Normal Component on a Vector Field
+$$\text{normal compontent at } P=F(P) \cdot n(P) = ||F(P) || \cos \theta$$
+where $\theta$ is the angle between **field** $F(P)$ and [[110 Vectors#Unit Vector Normalizing a Vector|normal vector]] $n(P)$. 
+$$\text{vector surface integral} = \iint_S (F \cdot n) dS$$
+![[Pasted image 20220412174121.png]]
+
+**Reminder:** [[115 Line and Surface Integrals#Theorem 1 Surface Integrals and Surface Area|Scalar Surface Integral]]
+
+##### Theorem 1: Vector Surface Integral
+Let $G(u,v)$ be an oriented parametrization of a surface $S$ with parameter domain $D$. Assume that $G$ is one-to-one and regular, except possibly at points on the boundary of $D$. Then
+$$\iint_S (F \cdot n) dS = \iint_D F(G(u,v)) \cdot N(u,v) dudv$$
+If the orientation of $S$ is reversed, the surface integral changes sign. 
+
+
+### Fluid Flux
+Flow rate is the volume of water that flows through the net per unit time.
+
+To compute the flow rate...
+1. $v(P)$ is the velocity vector field at point $P$
+2. Flow Rate through surface $S$ is equal to the surface integral of $v$ over $S$
+
+$$\text{parallel  / straight flow rate} = \text{velocity} \cdot \text{area} = ||v_0|| A$$
+Points can also be visualizes as blocks, as shown below
+![[Pasted image 20220412180440.png | 500]]
+$$\text{flow rate at an angle} = \text{velocity} \cdot \text{area} \cdot \cos\theta = A||v_0||\cos \theta$$
+
+
+
+![[Pasted image 20220412180800.png |500]]
+##### Flow Rate Through a Surface
+For a fluid with velocity vector field v, 
+$$\text{flow rate across the surface} = \iint_S v \cdot dS$$
+
+### Electric and Magnetic Fields
+
+##### Faraday's Law of Induction
+$$\int_C E \cdot dr = -\frac{d}{dt} \iint_S B \cdot dS$$
+1. $E$ is the electric field
+2. $B$ is the magnetic field
+
+![[Pasted image 20220412181216.png | 500]]
+
+
+## Types of Integrals
+
+1. Scalar line integral along a curve $C$ given by $r(t)$ for $a \le t \le b$ (can be used to compute arc length, mass, electric potential):
+$$\int_C f(x,y,z) ds = \int^b_a f(r(t)) ||r'(t)|| dt$$
+2. Vector line integral to calculate work along a curve $C$ given by $r(t)$ for $a \le t \le b$
+$$\int_C F \cdot dr = \int^b_a F(r(t)) \cdot r'(t)dt = \int_C F_1 dx + F_2dy + F_3 dz$$
+1. Vector line integral to calculate flux across a curve $C$ given by $r(t)$ for $a \le t \le b$
+$$\int_C F \cdot n ds = \int^b_a F(r(t)) \cdot N(t) dt$$
+1. Surface integral over a surface with parametrization $G(u,v)$ and parameter domain $D$ (can be used to calculate surface area, total charge, gravitational potential)
+$$\iint_S f(x,y,z) dS = \iint_D f(G(u,v)) ||N(u,v)|| dudv$$
+1. Vector surface integral to calculate flux of a vector field $F$ across a surface $S$ with parameterization $G(u,v)$ and parameter domain $D$:
+$$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)dudv$$

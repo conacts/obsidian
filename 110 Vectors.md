@@ -221,13 +221,13 @@ Let $\theta$ be the angle between two nonzero vectors $v$ and $w$. Then
 $$v \cdot w = ||v|| \cdot ||w|| \cos\theta$$
 or also written as...
 $$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
+1. **Orthogonal:** if $v \cdot w = 0$, then it is orthogonal
+2. **Obtuse:** if $v \cdot w < 0$ and $\frac{\pi}{2} < \theta \le \pi$ then it is obtuse
+3. **Acute:** if $v \cdot w > 0$ and $0 < \theta < \frac{\pi}{2}$, then it is acute
 
 ###### Example :: Find the cos of the angle between vectors:
 > Find the cosine of the angle between the vectors $v=(1,1,1)$ and $w=(9,−10,4)$.
 > $$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}=\cos\theta=\frac{9-10+4}{\sqrt{1+1+1} \cdot \sqrt{9^2 + (-10)^2 + 4^2}}=\frac{3}{\sqrt{197 \cdot 3}}$$
-1. **Orthogonal:** if $v \cdot w = 0$, then it is orthogonal
-2. **Obtuse:** if $v \cdot w < 0$ and $\frac{\pi}{2} < \theta \le \pi$ then it is obtuse
-3. **Acute:** if $v \cdot w > 0$ and $0 < \theta < \frac{\pi}{2}$, then it is acute
 
 ###### Example :: Determine if a 2 vectors are orthogonal
 > Determine whether vector $v=(2, 6, 1)$ is orthogonal, acute or obtuse to $w=(-4, 1, 2)$, $u=(1, 1, 1)$ and $z=(4, -3, 1)$
@@ -585,6 +585,7 @@ $(u + v) \times w = u \times w + v \times w$
 
 ##### Normal Vector:
 A vector that is [[110 Vectors#Orthogonal Vectors |orthogonal]] to a plane. Typically used to determine how a plane is oriented in space.
+$$v_n=\frac{v}{||v||}=\frac{v}{\sqrt{v^2}}$$
 ![[Pasted image 20220122172954.png | 200]]
 
 
