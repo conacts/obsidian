@@ -444,10 +444,6 @@ $$\iint_S f(x,y,z) dS = \iint_D f(G(u,v)) ||N(u,v)|| dudv$$
 $$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)dudv$$
 
 
-
-> Compute $\iint_S F \cdot dS$ for $F=\langle y^2, 7, -x \rangle$, S being the portion of the plane $x + y + z = 1$ in the octant $x, y, z > 0$ with an upward pointing normal.
-
-
 > Compute $\iint_S F \cdot dS$ for $F = \langle xy, 7y, 0 \rangle$ S being the cone $z^2 =x^2 + y^2 , x^2 + y^2 \le 16, z \ge 0$ with the normal pointing downward
 > 1. Paramatrize the given surface
 > 	1. $$T(t , \theta) = \langle t\cos \theta, t \sin \theta, t \rangle \quad \quad 0 \le t \le 4 \quad  0 \le \theta \le 2\pi$$
@@ -456,12 +452,12 @@ $$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)du
 > 3. Cross Multiply $T_u \times T_v$ 
 > 	1. $$\begin{bmatrix} i & j & k \\ -t\sin \theta & t\cos \theta & 0 \\ \cos \theta & \sin \theta & 1 \end{bmatrix} = \langle t \cos \theta, t\sin \theta, -t \rangle$$
 > 4. Plug in for $F(u,v)$
-> 	1. $$F(u,v)= \langle t\sin \theta \cdot u \cos v, 7(u \cos v), 0 \rangle$$
+> 	1. $$F(t, \theta) = \langle t\cos\theta \cdot t \sin \theta, 7t \sin \theta, 0 \rangle = \langle t^2\sin\theta\cos\theta, 7, 0 \rangle$$
 > 5. Find $F(u,v) \cdot (T_u \times T_v)$ 
-> 	1. $$F(u,v) \cdot (T_u \times T_v)= \langle u\sin v \cdot u \cos v, 7(u \cos v), 0 \rangle \cdot \langle u \sin v, u\cos v, -u \rangle$$
-> 	2. $$=\langle u^2 \rangle$$ 
+> 	1. $$F(\theta ,t) \cdot (F_\theta \times F_t) = \langle t^2\sin\theta\cos\theta, 7, 0 \rangle \cdot \langle t \cos \theta, t\sin \theta, -t \rangle$$
+> 	2. $$=  t^3\cos^2\theta\sin\theta + 7t^2 \sin^2 \theta $$ 
 > 6. Integrate
-> 	1. $$\int_0^{2\pi}\int^5_0$$
+> 	1. $$\int_0^{2\pi}\int^4_0   t^3\cos^2\theta\sin\theta + 7t^2 \sin^2 \theta dtd\theta = \frac{448\pi}{3} $$
 
 > Let $v = 5z$**k** be the velocity field of a fluid in $R^3$. Calculate the flow rate through the upper hemisphere ($z \ge 0$) of the sphere $x^2 + y^2 + z^2 = 4$
 > 1. We use spherical coordinates
@@ -475,7 +471,21 @@ $$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)du
 > 4. Plug in for $v$
 > 	1. $$v=5zk = \langle 0, 0, 10\cos\phi \rangle$$
 > 5. Plug in and find the dot product
-> 	1. $$\iint_S v \cdot dS = \int^{\pi/2}_{\phi=0} \int^{2\pi}_{\theta=0} 40\sin\phi\cos^2\phi d\theta d\phi $$
+> 	1. $$\iint_S v \cdot dS = \int^{\pi/2}_{\phi=0} \int^{2\pi}_{\theta=0} 40\sin\phi\cos^2\phi d\theta d\phi = \frac{80\pi}{3} $$
+
+> Let $S$ be the ellipsoid $(\frac{x}{4})^2 + (\frac{y}{3})^2 + (\frac{z}{3})^2=1$ Calculate the flux of $F=zi$ over $S_1$, the upward-pointing normal. Parametrize $S$ using a modified form of spherical coordinates $(\theta, \phi)$ using $\iint_S F \cdot dS$ 
+> 1. Use the coordinates
+> 	1. $$x = 4\cos\theta \sin \phi \quad y = 3\sin \theta \sin \phi \quad z = 3\cos \phi$$
+> 2. Find $T_\theta$ and $T_\phi$ 
+> 	1. $$T_\theta = \langle -4\sin\theta \sin\phi, 3\cos\theta\sin\phi, 0 \rangle \quad T_\phi = \langle 4\cos\theta\cos\phi, 3\sin\theta\cos\phi, -3\sin\phi \rangle$$
+> 3. Find the cross product of  $T_\theta$ and $T_\phi$ 
+> 	1. $$N = T_\theta \times T_\phi = \begin{bmatrix}  i & j & k   \\ 4\cos\theta\cos\phi & 3\sin\theta\cos\phi & -3\sin\phi \\-4\sin\theta\sin\phi & 3\cos\theta\sin\phi & 0 \end{bmatrix}$$
+> 	2. $$ = \langle 9\cos\theta\sin^2\phi, 12\sin\theta\sin^2\phi, 12\cos\phi\sin\phi \rangle$$
+> 4. Plug in for equation $F=zi$
+> 	1. $$\langle 3\cos\phi, 1,0 \rangle$$
+> 5. Solve $\iint_S F \cdot dS$
+> 	1. $$\iint_S F \cdot dS = -\int^\pi_0 \int^{2\pi}_0 \langle 3\cos\phi, 1,0 \rangle \cdot  \langle 9\cos\theta\sin^2\phi, 12\sin\theta\sin^2\phi, 12\cos\phi\sin\phi \rangle$$
+> 	2. $$= \int^{\pi}_{\pi/2} \int^{3\pi/2}_{\pi} 27\cos\theta\sin^2\phi\cos\phi + 9\cos\theta\sin^2\phi  d\theta d \phi$$
 
 > A net is dipped in a river. Determine the flow rate of water across the net if the velocity vector field for the river is given by the net is described by the given equation. $v = \langle zy, 16xz, 17xy \rangle$, net given $y=1-x-z$ for $x,y,z \ge 0$ oriented in the positive y-direction
 > 1. Use the formula $\iint_S v \cdot dS$ to find the flow rate
