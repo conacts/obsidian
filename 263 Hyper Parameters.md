@@ -1,29 +1,6 @@
 # Hyper Parameters
 **Definition:** Parameters of a model that are implemented typically at the beginning of the learning process by humans which change how the model learns
 
-### Tensor Shape
-**Definition:** Tensor shape (or number of dimensions) is important for which application you are attacking
-1. 1D Tensor (Vector Data):
-	1. Samples
-2. 2D Tensor (Matrix Data):
-	1. Samples 
-	2. Features
-3. 3D Tensor (Sequential Data):
-	1. Samples
-	2. Time-steps
-	3. Features
-4. 4D Tensor (Images)
-	1.  Samples
-	3. Height
-	4. Width
-	5. Channels
-5. 5D Tensor (Video)
-	1. Samples
-	2. Frames
-	3. Height
-	4. Width
-	5. Channels
-
 ### Learning rate
 The rate at which weights and biases are adjusted
 

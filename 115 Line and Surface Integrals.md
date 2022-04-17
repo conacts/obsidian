@@ -391,7 +391,7 @@ Flux integrals, or rates of flow through a surface. The orientation of a flux ca
 $$\text{normal compontent at } P=F(P) \cdot n(P) = ||F(P) || \cos \theta$$
 where $\theta$ is the angle between **field** $F(P)$ and [[110 Vectors#Unit Vector Normalizing a Vector|normal vector]] $n(P)$. 
 $$\text{vector surface integral} = \iint_S (F \cdot n) dS$$
-![[Pasted image 20220412174121.png]]
+![[Pasted image 20220412174121.png|500]]
 
 **Reminder:** [[115 Line and Surface Integrals#Theorem 1 Surface Integrals and Surface Area|Scalar Surface Integral]]
 
@@ -436,9 +436,47 @@ $$\int_C E \cdot dr = -\frac{d}{dt} \iint_S B \cdot dS$$
 $$\int_C f(x,y,z) ds = \int^b_a f(r(t)) ||r'(t)|| dt$$
 2. Vector line integral to calculate work along a curve $C$ given by $r(t)$ for $a \le t \le b$
 $$\int_C F \cdot dr = \int^b_a F(r(t)) \cdot r'(t)dt = \int_C F_1 dx + F_2dy + F_3 dz$$
-1. Vector line integral to calculate flux across a curve $C$ given by $r(t)$ for $a \le t \le b$
+3. Vector line integral to calculate flux across a curve $C$ given by $r(t)$ for $a \le t \le b$
 $$\int_C F \cdot n ds = \int^b_a F(r(t)) \cdot N(t) dt$$
-1. Surface integral over a surface with parametrization $G(u,v)$ and parameter domain $D$ (can be used to calculate surface area, total charge, gravitational potential)
+4. Surface integral over a surface with parametrization $G(u,v)$ and parameter domain $D$ (can be used to calculate surface area, total charge, gravitational potential)
 $$\iint_S f(x,y,z) dS = \iint_D f(G(u,v)) ||N(u,v)|| dudv$$
-1. Vector surface integral to calculate flux of a vector field $F$ across a surface $S$ with parameterization $G(u,v)$ and parameter domain $D$:
+5. Vector surface integral to calculate flux of a vector field $F$ across a surface $S$ with parameterization $G(u,v)$ and parameter domain $D$:
 $$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)dudv$$
+
+
+
+> Compute $\iint_S F \cdot dS$ for $F=\langle y^2, 7, -x \rangle$, S being the portion of the plane $x + y + z = 1$ in the octant $x, y, z > 0$ with an upward pointing normal.
+
+
+> Compute $\iint_S F \cdot dS$ for $F = \langle xy, 7y, 0 \rangle$ S being the cone $z^2 =x^2 + y^2 , x^2 + y^2 \le 16, z \ge 0$ with the normal pointing downward
+> 1. Paramatrize the given surface
+> 	1. $$T(t , \theta) = \langle t\cos \theta, t \sin \theta, t \rangle \quad \quad 0 \le t \le 4 \quad  0 \le \theta \le 2\pi$$
+> 2. Take the partial integrals of $T(u,v)$
+> 	1. $$F_t = \langle \cos \theta, \sin \theta, 1 \rangle \quad \quad F_\theta = \langle -t\sin \theta, t\cos \theta, 0 \rangle$$
+> 3. Cross Multiply $T_u \times T_v$ 
+> 	1. $$\begin{bmatrix} i & j & k \\ -t\sin \theta & t\cos \theta & 0 \\ \cos \theta & \sin \theta & 1 \end{bmatrix} = \langle t \cos \theta, t\sin \theta, -t \rangle$$
+> 4. Plug in for $F(u,v)$
+> 	1. $$F(u,v)= \langle t\sin \theta \cdot u \cos v, 7(u \cos v), 0 \rangle$$
+> 5. Find $F(u,v) \cdot (T_u \times T_v)$ 
+> 	1. $$F(u,v) \cdot (T_u \times T_v)= \langle u\sin v \cdot u \cos v, 7(u \cos v), 0 \rangle \cdot \langle u \sin v, u\cos v, -u \rangle$$
+> 	2. $$=\langle u^2 \rangle$$ 
+> 6. Integrate
+> 	1. $$\int_0^{2\pi}\int^5_0$$
+
+> Let $v = 5z$**k** be the velocity field of a fluid in $R^3$. Calculate the flow rate through the upper hemisphere ($z \ge 0$) of the sphere $x^2 + y^2 + z^2 = 4$
+> 1. We use spherical coordinates
+> 	1. $$x = 2\cos\theta \sin \phi \quad y = 2\sin \theta \sin \phi \quad z = 2\cos \phi$$
+> 2. Find $T_\theta$ and $T_\phi$
+> 	1. $$T_\theta = \langle -2\sin\theta \sin\phi, 2\cos\theta\sin\phi, 0 \rangle \quad T_\phi = \langle 2\cos\theta\cos\phi, 2\sin\theta\cos\phi, -2\sin\phi \rangle$$
+> 3. Find the normal vector
+> 	1. $$N = T_\phi \times T_\theta = \begin{bmatrix}  i & j & k \\-2\sin\theta\sin\phi & 2\cos\theta\sin\phi & 0  \\ 2\cos\theta\cos\phi & 2\sin\theta\cos\phi & -2\sin\phi \end{bmatrix}=$$
+> 	2. $$=\langle 4\cos\theta\sin^2\phi - 0, -(-4\sin\theta\sin^2\phi), -4\sin^2\theta\sin\phi\cos\phi - 4\cos^2\theta\sin\phi\cos\phi \rangle$$
+> 	3. $$=\langle -4\cos\theta\sin^2\phi, - 4\sin\theta\sin^2\phi, -4\sin\phi\cos\phi(1) \rangle$$
+> 4. Plug in for $v$
+> 	1. $$v=5zk = \langle 0, 0, 10\cos\phi \rangle$$
+> 5. Plug in and find the dot product
+> 	1. $$\iint_S v \cdot dS = \int^{\pi/2}_{\phi=0} \int^{2\pi}_{\theta=0} 40\sin\phi\cos^2\phi d\theta d\phi $$
+
+> A net is dipped in a river. Determine the flow rate of water across the net if the velocity vector field for the river is given by the net is described by the given equation. $v = \langle zy, 16xz, 17xy \rangle$, net given $y=1-x-z$ for $x,y,z \ge 0$ oriented in the positive y-direction
+> 1. Use the formula $\iint_S v \cdot dS$ to find the flow rate
+> 2. 

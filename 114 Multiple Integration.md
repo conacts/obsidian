@@ -418,7 +418,7 @@ Spherical coordinates make use of the fact that a point $P$ on a sphere of radiu
 | Moments of Intertia X | $I_x = \iint_D y^2 \delta (x,y)dA$                                   | $I_x = \iiint_W (y^2 + z^2) \delta (x,y,z)dV$ |
 | Moments of Intertia Y | $I_y = \iint_D x^2 \delta (x,y)dA$                                   | $I_x = \iiint_W (x^2 + z^2) \delta (x,y,z)dV$ |
 | Moments of Intertia Z | $I_0 = \iint_D (x^2  + y^2) \delta (x,y)dA, \quad (I_0 = I_x + I_y)$ | $I_x = \iiint_W (x^2 + y^2) \delta (x,y,z)dV$ |
-| Center of Mass        | $x_{cm} = \frac{M_y}{M}, \quad y_{cm} = \frac{M_x}{M}$               | $x_{cm} = \frac{M_{yz}}{M}, \quad y_{cm} = \frac{M_{xz}}{M}, \quad z_{cm} = \frac{M_{xy}}{M}$                                            |
+| Center of Mass        | $x_{cm} = \frac{M_y}{M}, \quad y_{cm} = \frac{M_x}{M} \quad \langle \frac{M_y}{M}, \frac{M_x}{M}\rangle$               | $x_{cm} = \frac{M_{yz}}{M}, \quad y_{cm} = \frac{M_{xz}}{M}, \quad z_{cm} = \frac{M_{xy}}{M}$                                            |
 
 
 $$\text{Radius of gyration:   }r_g = \left(\frac{I}{M}\right)^{1/2}$$

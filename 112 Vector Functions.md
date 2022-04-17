@@ -10,7 +10,7 @@ Deck: Calculus
 -  $x(t), y(t)$ and $z(t)$ are the **compontents** or **coordinate functions**
 - $r(t)$ is referred to as the **vector paramtrization** of a path
 
-**Example :: Path vs. Curve:**
+###### Example :: Path vs. Curve:
 > Describe the path $r(t)= \langle cos(t), sin(t), 1 \rangle, \quad - \infty < t<\infty$
 > 1. Notice z is a constant and cos and sin in x and y respectively. This can be noted that it will form a circle at the height of $z=1$ 
 > ![[Pasted image 20220131145851.png]]
@@ -20,7 +20,7 @@ Deck: Calculus
 Note: **Plane Curve** is a line in $\mathbb{R}^2$  
 ![[Pasted image 20220131150136.png]]
 
-**Example :: Projecting from $\mathbb{R}^3$ onto $\mathbb{R}^2$ :** 
+###### Example :: Projecting from $\mathbb{R}^3$ onto $\mathbb{R}^2$ :
 > Describe the curve traced by $r(t)= \langle cos(t), sin(t), t \rangle, \quad t \le 0$ for  in terms of its projections onto the coordinate planes
 > 1. Onto xy-plane: set $z=0$; $r(t)= \langle cos(t), sin(t), 0 \rangle, \quad t \le 0$ = Circle
 > 2. Onto xz-plane: set $y=0$; $r(t)= \langle cos(t), 0, t \rangle, \quad t \le 0$ = Swirl
@@ -86,7 +86,7 @@ $$\lim_{t\rightarrow t_0} r(t)=u$$
 A vector-valued function $r(t)= \langle x(t), y(t), z(t) \rangle$ approaches a limit as $t \rightarrow t_0$ if and only if each compontent approaches a limit
 $$\lim_{t \rightarrow t_0} r(t)= \langle \lim_{t \rightarrow t_0}x(t), \lim_{t \rightarrow t_0}y(t), \lim_{t \rightarrow t_0}z(t) \rangle$$
 
-Example :: Taking the limit of a vector-value function
+###### Example :: Taking the limit of a vector-value function
 > Calculate $\lim _{t \rightarrow 3} r(t)$, where $r(t)= \langle t^2, 1-t, t^{-1} \rangle$ 
 > 1. Take the limit of each item individually as shown in... $\lim_{t \rightarrow t_0} r(t)= \langle \lim_{t \rightarrow t_0}x(t), \lim_{t \rightarrow t_0}y(t), \lim_{t \rightarrow t_0}z(t) \rangle$ 
 > $$\lim_{t \rightarrow t_0} r(t)= \langle \lim_{t \rightarrow 3}t^2, \lim_{t \rightarrow 3}(1-t), \lim_{t \rightarrow 3}(\frac{1}{t}) \rangle= \langle 9, -2, 1/3 \rangle$$ 
@@ -105,7 +105,7 @@ $$\lim_{h \rightarrow 0}\frac{r(t+h)-r(t)}{h}=\lim_{h \rightarrow 0} \langle \fr
 A vector-valued function $r(t)= \langle x(t), y(t), z(t) \rangle$
 $$r'(t)= \frac{d}{dt}r(t)=\langle x'(t), y'(t), z'(t) \rangle$$
 
-**Derivative of vector-value function:**
+###### Example :: Derivative of vector-value function:
 > Compute the derivative of $r(t)= \langle t,t^4,t^3 \rangle$
 > 1. Take the derivatives of each part separately...
 > $$\frac{d}{dt}r(t)=\langle 1,4t^3,3t^2 \rangle$$
@@ -122,7 +122,7 @@ $$c_1 (cr(t))'=cr'(t)$$
 $$\frac{d}{dt}(f(t)r(t))=f'(t)r(t)+f(t)r'(t)$$
  - **Chain Rule:** For any function of $g$, 
  $$\frac{d}{dt}r(g(t))=r'(g(t))g'(t)$$
-**Example :: Using differentiation rules to solve vector-valued problems**
+###### Example :: Using differentiation rules to solve vector-valued problems:
 > Let $r(t)= \langle t^2, yt, 1 \rangle$ and $f(t)=e^{3t}$ Calculate:
 > 1.  $\frac{d}{dt}f(t)r(t)$ :: Using scalar product rule $f'(t)r(t)+f(t)r'(t)$
 > $$=3e^{3t} \langle t^2, 5t, 1 \rangle + e^{3t} \langle 2t, 5, 0 \rangle=\langle 3e^{3t}(3t^2+2t), 3e^{3t}(15t + 5), 3e^{3t} \rangle$$
@@ -130,7 +130,8 @@ $$\frac{d}{dt}(f(t)r(t))=f'(t)r(t)+f(t)r'(t)$$
 
 ##### Theorem 3: Product rules for Dot and Cross Products
 **Dot Product Rule:** $$\frac{d}{dt}(r_1(t) \cdot r_2(t))=r'_1(t) \cdot r_2(t)+r_1(t) \cdot r'_2(t)$$
-**Cross Product Rule:** $$\frac{d}{dt}(r_1(t) \times r_2(t))=r'_1(t) \times r_2(t)+r_1(t) \times r'_2(t)$$
+**Cross Product Rule:** 
+$$\frac{d}{dt}(r_1(t) \times r_2(t))=r'_1(t) \times r_2(t)+r_1(t) \times r'_2(t)$$
 ##### The Derivative of a Tangent Vector
 This vector will point in a path tangent to the chosen instant in multiple dimensions, shown as the path traced by $r(t)$ at $t=t_0$ 
 $$\frac{\Delta r}{\Delta t}= \frac{r(t_0+h)-r(t_0)}{h}$$
@@ -139,7 +140,7 @@ $$\frac{\Delta r}{\Delta t}= \frac{r(t_0+h)-r(t_0)}{h}$$
 ##### Tangent Line
 Find the tangent line at $r(t_0)$: $\quad L(t)=r(t_0)+tr'(t_0)$ 
 ![[Pasted image 20220201012055.png]]
-**Example :: parametrization of the tangent line**
+###### Example :: parametrization of the tangent line
 > Find a parametrization of the tangent line at the point indicated
 > $r(t)=⟨6t,4t^2,2t^3⟩,\quad t=2$
 > 1. Take the derivative of the equation 
@@ -155,7 +156,7 @@ $$\int^b_a r(t)dt= \langle \int^b_a x(t)dt,\int^b_a y(t)dt,\int^b_a z(t)dt \rang
 If $R_1(t)$ and $R_2(t)$ are differentiable and $R'_1(t)=R'_2(t)$, then
 $$R_1(t)=R_2(t)+c$$ for some constant c
 
-**Example :: Taking the integral of a derivative**
+###### Example :: Taking the integral of a derivative
 > We must find the integral of $\frac{dr}{dt}=\langle 1-6\sin(3t), \frac{1}{5}t \rangle$ @ $t=4$ and $r(0)=\langle 4,1 \rangle$ 
 > 1. Find the general solution: 
 > $$r(t)= \int \langle 1-6\sin(3t), \frac{1}{5}t \rangle=r(t)= \langle t-2\sin(3t), \frac{1}{10}t^2 \rangle +c$$

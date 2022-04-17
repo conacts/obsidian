@@ -678,4 +678,18 @@ $$t_{p} \ge \max(t_{cQ,FF} + t_{pd,COMB} + t_{s}$$
 > Setup time = 0.6ns, Hold time = 0.4ns, $T_{cQ}$ = (0.8ns to 1.0ns), $t_{pd,inv}$ = 1.1ns where (1 + 0.1k) where K is the number of gate inputs
 > ![[Pasted image 20220411104156.png |200]]
 > $$t{cQ} + t_{pA, inv} \ge t_h$$ $$0.8ns + 1.1ns = 1.9ns \text{ of maximum hold time}$$
-> 
+
+##### Duty Cycle
+% of time in the states 1 or 0
+![[Pasted image 20220413102842.png |300]]
+
+Ideally your duty cycle keeps the equation true
+$$\frac{V_{out}}{V_{in}} = \frac{1}{1-d}$$
+where $d$ is duty cycle
+
+Voltage too high? ----> Increase Duty Cycle
+Voltage too low? ---> Decrease Duty Cycle
+Voltage Critically low / high? ----> Use a preset
+
+Do we need r in our tables or can we represent it in our circuit diagrams
+- no because we represent it in our circuit diagram in our preset

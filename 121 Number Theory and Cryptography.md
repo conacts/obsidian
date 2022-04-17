@@ -191,8 +191,80 @@ Every positive integer greater than 1 can be expressed as a product of primes ca
 
 
 ##### Euclid Algorithm
+An algorithm used to find the GCD using a "forward pass" and then a "backward pass", which involve multiple steps of division
+
 1. Suppose $a$ and $b$ are integers with $a > b \ge 0$
 2. To find the greatest common divisor of $a$ and $b$, first check whether $=0$. If it is, then using **"Lemma" GCD** (a, 0) = a
+
+##### Theorem 9:  Let $a, b$ and $c$ are positive integers such that $gcd(a,b)=1$ and $a|bc$ then $a|c$
+Suppose m be a positive integer and let a, b and c be integers
+$$IF \space a \cdot c \equiv (b \cdot c \mod m) \quad and \quad gcd(c,m) = 1, \space then \space a \equiv(b \mod m)$$
+
+
+###### Example :: Lemma Problem:
+> Proof that Let $a, b$ and $c$ are positive integers such that $gcd(a,b)=1$ and $a|bc$ then $a|c$
+> 1. Proof. 
+> 2. Suppose $a \cdot c \equiv b \cdot c$ and $gcd(c,m)=1$, where $m$ is a positive integer and $a,b$ and $c$ are integers
+> 3. By the definition of congruince modulo, we get $m|ac-bc$. Then, $m|c(a-b)$ 
+> 4. Since $gcd(c,m)=1$, by Lemma (Theorem 9), we get $m|(a-b)$
+> 5. Thus, $a \equiv b \mod m \space \square$ 
+> ----
+> If $15 \equiv -6 \mod 7$ and $gcd(3,7)=1$ then $5 \equiv -2 \mod 7$
+> Here, $m=7, a=5,b=-2,$ and $c=3$ 
+
+#### Linear Congrunce 
+We used to solve $cx=m$ in algebra, which is called a linear equation where $c,m \in \mathbb{R}$. To solve this equation, we multiply both sides of the equation by $c^{-1}=\frac{1}{x}$ and get $x=\frac{m}{c}$
+
+A congrunce of the form
+$$cx \equiv d \mod m$$
+where $m$ is a positive integer $c,d\in \mathbb{Z}$ and $x$ is a variable, is called a linear congruence.
+
+Suppose that we want to find the $x$ that satisfy $2x \equiv 5 \mod 7$ or $7|2x-5$. 
+If $x=6$, then $7|12-5$. Here, $x=6$ is one possible solution for $x$. There are many possible values for $x$. For instance, $x=13$ and $x=-8$ also satisfy the congruence. We will study now how to solve a linear congruence and find the values for variable $x$. 
+
+###### Solving Linear Congruence
+> Find the linear linear congruence of $cx \equiv d \mod m$
+> 1. Find an inverse of $c \mod m$ giving us $c^{-1}$
+> 2. Multiply both sides of the congruence by $c^{-1}$
+> 	1.  $$c^{-1}\cdot c \cdot x \equiv c^{-1} \cdot d \mod m$$
+> 3. We know $c^{-1} \cdot c \equiv 1 \mod m$. So we get $x \equiv c^{-1} \cdot d \mod m \equiv e \mod m$
+> 	1. This leaves us with $c^{-1} \cdot d \mod m = e$
+> 4. Therefore, one possible value for x is e. All possible values for $x$ are $e+m\cdot k$ where $k \in \mathbb{Z}$
+> ----
+> What are the solutions of linear congruence $2x \equiv 5 \mod 7$
+> 1. Find the inverse of 
+
+##### Theorem 10
+If $gcd(c,m)=1$ and $m>1$, then there exists an inverse of $c$ written as $c^{-1}$
+
+###### Proving Theorem 10
+> 1. Proof
+> 2. If $gcd(c,m)=1$, then by Bezout's theorem we know that there exists integers $u$ and $v$ such that $cu + mv=1$. 
+> 3. This implies: $cu + mv \equiv 1 \mod m$
+> 4. Since $mv \equiv \mod m$, we get $cu \equiv \mod m$
+> 5. Therefore, by the definition Theorem 10, $u$ is an inverse of $c$ modulo $m \space \square$  
+
+###### Finding the Inverse of a Modded Number
+> 1. $2 \mod 7$
+> 	1. $$2 \cdot c^{-1} \mod 7 = 1, \quad 2 \cdot 4 \mod 7 = 1, \quad c^{-1} = 4$$
+> 2. $4 \mod 9$
+> 	1. $4 \cdot c^{-1} \mod 9 = 1, \quad c^{-1}=7$
+
+###### Example :: Compute Congruence:
+> Solve the congruence $4x \equiv 3 \mod 6$
+> 1. We set variables 
+> 	1. $$a=4,m=6,c=3 \quad ax \equiv c \mod m$$
+> 2. Then $d=gcd(4,6)=2$ and we cannot divide 3 by 2
+> 3. Since it doesn't work, we divide $\frac{4x \equiv 2 \mod 6}{2}$ which gives us $2x \equiv 1 \mod 3$ 
+> 4. Then we repeat above, setting variables
+> 	1. $$a=2,m=3,c=1 \quad ax \equiv c \mod m$$
+> 5. Then $d=gcd(2,3)$
+
+##### Theorem 11
+Let $a,c,m$ be integers with $m \ge 1$ and let $d=gcd(a,m)$
+1. If $d|c$, then there is a solution for $ax\equiv c\mod m$
+2. If $d\space \not| \space c$, then there is a solution for $ax\equiv c\mod m$
+
 
 ###### Example :: Find GCD using Euclid Algorithm:
 > Express GCD(250, 115) = 5 as a linear combination of 250 and 115
@@ -218,6 +290,38 @@ Every positive integer greater than 1 can be expressed as a product of primes ca
 > 5. $60 = 4 \cdot 15 + 0$
 > 6. $GCD(816, 2260) = 4$
 
+##### Extended Euclidian Algorithm
+An extension of the euclid algorithm which is followed by a recursive pass
+
+> 
+> | i   | $r_i$ | $r_{i+1}$ | $q_{i+1}$ | $r_{i+2}$ |
+| --- | ----- | --------- | --------- | --------- |
+| 0   | 250   | 115       | 2         | 20        |
+| 1   | 115   | 20        | 5         | 15        |
+| 2   | 20    | 15        | 1         | 5         |
+| 3   | 15    | 5         | 3         | 0          |
+> 
+> Base Case: $s_0 = 1 \quad s_1 = 0$ and $t_0 = 0 \quad t_1 = 1$ 
+> Recursive Case: $s_i = s_{i-2} - q_{i-1} \cdot s_{i-1}$ and $t_i = t_{i-2} - q_{i-1} \cdot t_{i-1}$ 
+> 1. First compute s: 
+> $$i=2; \quad s_2 = s_0 - q_1 \cdot s_1 = 1 - 0 \cdot 2 = 1$$
+> $$i=3; \quad s_3 = s_1 - q_2 \cdot s_2 = 0-5 \cdot 1= -5$$
+> $$i=4; \quad s_4 = s_2 - q_3 \cdot s_3 = 1-1 \cdot (-5) = 6$$
+> 2. Then compute t:
+> $$i=2; \quad t_2 = t_0 - q_1 \cdot t_1 = 0 - 2 \cdot 1 = -2$$
+> $$i=3; \quad t_3 = t_1 - q_2 \cdot t_2 = 1-5 \cdot (-2)= 11$$
+> $$i=4; \quad t_4 = t_2 - q_3 \cdot t_3 = -2-1 \cdot 11 = -13$$
+> Since $s_4=6$ and $t_4 = -13$, $\text{gcd}(250,115)=6 \cdot 250 - 13 \cdot 115$
+> 
+> 
+> | i   | $r_i$ | $r_{i+1}$ | $q_{i+1}$ | $r_{i+2}$ | $s_i$ | $t_i$ |
+| --- | ----- | --------- | --------- | --------- | ----- | ----- |
+| 0   | 250   | 115       | 2         | 20        | 1     | 0     |
+| 1   | 115   | 20        | 5         | 15        | 0     | 1     |
+| 2   | 20    | 15        | 1         | 5         | 1     | -2    |
+| 3   | 15    | 5         | 3         | 0         | -5    | 11    |
+| 4   |       |           |           |           | 6     | -13   |
+
 ##### Relatively Prime
 If the GCD is 1
 
@@ -240,4 +344,6 @@ Suppose $a,b \in \mathbb{Z}^+$ and d is the greatest common divisor of $a$ and $
 | 1   | 115   | 20        | 5         | 15        |
 | 2   | 20    | 15        | 1         | 5         |
 | 3   | 15    | 5         | 3         | 0          | 
+
+#### Chinese Remainder Theorem
 
