@@ -24,7 +24,13 @@ $\mathbb{N} = \text{set of all natural numbers = \{1, 2, 3, ....\}}$ $\mathbb{N}
  $U = \text{a set containing every item}$  
  $\emptyset = \text{an empty set, otherwise referred to as nullset \{\}}$
 
-#### 1.1 Flashcards:
+##### Disjoint Sets
+Sets with no element in common
+
+##### Joint Sets
+Sets with at least one element in common
+
+###### 1.1 Flashcards:
 
  
 $\mathbb{N}$ #flashcard
@@ -139,8 +145,7 @@ How to prove or prove/disprove that A is a subset of set B? ($A \subset B$)
 - Prove: Must provethat if x belongs to A, then x belongs to B
 - Disprove: Show that one element x in A doesn't belong to B
 
-##### 1.2 Problems:
-
+###### 1.2 Problems:
 
 T / F : $0 \in \emptyset$ #flashcard 
 False
@@ -252,7 +257,7 @@ True
 > $$|\emptyset|=0$$
 > $$|\{\emptyset\}|=1$$
 
-##### 1.3 Problems:
+###### 1.3 Problems:
 Suppose A={2,3,5},C={6,1,2},B={8,5,3} are sets. What is A∩(B∪C) ? #flashcard 
 {2, 3, 5}
 <!--ID: 1642464971743-->
@@ -308,7 +313,7 @@ False
 - Cardinality of power set = $2^n$
 
 
-##### 1.4 Flashcards:
+###### 1.4 Flashcards:
 
 Definition: Powerset #flashcard
 The set of all possible subsets of set A is denoted by $\mathcal{P}(A)$
@@ -345,7 +350,7 @@ Cardinality of power set = $2^n$
  >  (a, 2, R), (b, 2, R), (c, 2, R)
  >  }
 
-##### 1.5 Flashcards:
+###### 1.5 Flashcards:
 
 How to get the power set of a cartesian product? #flashcard 
 Power set of cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
