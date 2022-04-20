@@ -651,8 +651,9 @@ If the clock period is too short, data changes will not propagate through the ci
 ##### Clock Period $(t_p)$ 
 The interval between occurences of a specific clock edge in a periodic clock
 
-##### Longest Total Delay $(t_{pd,COMB})$ 
+##### Longest Total Delay $(t_{pd,gate})$ 
 The longest delay of combinational logic along the path from flip-flop output to flip-flop input
+$$t_{pd,COMB} = \text{num of gates} \cdot (1 + 0.1 K) \quad K=\text{num of gate inputs}$$
 
 ##### Extra Time $(t_{slack})$
 Extra time in the clock period in addition to the sum of the delays and setup time on a path
@@ -664,7 +665,7 @@ Used for all paths from flip-flop input to flip-flop output
 $$t_p = t_{slack} + (t_{cQ,FF} + t_{pd,COMB} + t_{s})$$
 For $t_{slack}$ greater than or equal to zero
 $$t_{p} \ge \max(t_{cQ,FF} + t_{pd,COMB} + t_{s}$$
-
+![[Pasted image 20220411103402.png]] 
 
 > How fast can you clock this?
 > Setup time = 0.6ns, Hold time = 0.4ns, $T_{cQ}$ = (0.8ns to 1.0ns), $t_{pd,inv}$ = 1.1ns where (1 + 0.1k) where K is the number of gate inputs
@@ -678,8 +679,85 @@ $$t_{p} \ge \max(t_{cQ,FF} + t_{pd,COMB} + t_{s}$$
 > Setup time = 0.6ns, Hold time = 0.4ns, $T_{cQ}$ = (0.8ns to 1.0ns), $t_{pd,inv}$ = 1.1ns where (1 + 0.1k) where K is the number of gate inputs
 > ![[Pasted image 20220411104156.png |200]]
 > $$t{cQ} + t_{pA, inv} \ge t_h$$ $$0.8ns + 1.1ns = 1.9ns \text{ of maximum hold time}$$
+> ----
+> How fast can you clock this?
+> ![[Pasted image 20220419093514.png]]
+> 1. Find the longest path on the circuit
+> 	1. NOTE: 
+> 		1. $T_cQ = range(0.8, 1.0)$ 
+> 	2. From $Q_0 \rightarrow Q_3$ which visits 3 AND and 1 XOR Gate using the assumption of time $(1 + 0.1 \cdot K)$ 
+> 	3. $$t_{pd,comb} = \text{3 AND + 1 XOR } = 3 (1 + 0.1 \cdot 2) + 1 (1 + 0.1 \cdot 2) = 4.8ns$$
+> 3. Now solve for $T_p$
+> 	1. $$T_p = T_{cQ max} + t_{pd,comb} + t_{su} =  1 + 4.8 + .6 = 6.4ns$$
+> 4. Now to solve for MHz, we must change thsi from period to frequency
+> 	1. $$MHz = \frac{1}{T} = \frac{1}{6.4} = 156.2MHz$$
+> 5. What is the time of the shortest path in the image above
+> 	1. From $Q_0 \rightarrow Q_3$ which visits 1 XOR Gate using the assumption of time $(1 + 0.1 \cdot K)$ 
+> 		1.  $$t_{pd,comb} = \text{ 1 XOR } =  1 (1 + 0.1 \cdot 2) = 1.2$$
+> 	2. Now solve for $T_p$
+> 		1. $$T_p = T_{cQ min} + t_{pd,comb} + t_{su} = .8 + 1.2  = 2.0ns > t_{hold} = 0.4ns$$
 
-##### Duty Cycle
+### Synchronous Timing Basics
+
+![[Pasted image 20220419114432.png |400]]
+Ideally, 
+1. $t_{clk1} = t_{clk2}$
+2. $T \ge t_{c-q} + t_{plogic} + t_{su}$ 
+3. $t_{hold} \le t_{c-q,shortest} + t_{plogic, shortest}$
+However, the clock signal can have both spatial (clock skew) and temporal (clock jiitter) variations
+
+#### Clock Skew
+Causes time $T$ constant from cycle to cycle
+- [[272 Computer Compontents#Positive Clock Skew|(+)]] clock and data flowing in the same direction
+- [[272 Computer Compontents#Negative Clock Skew|(-)]] clock and data flowing in opposite directions
+
+##### Source of Clock Skew
+1. Manufacturing device variations in clock drivers
+2. Interconnect variations
+3. Enviornmental variations (power supply and temperature)
+
+##### Positive Clock Skew
+Clock and data flowing in the same direction
+![[Pasted image 20220419120236.png |500]]
+$$T: \quad T + \delta \ge t_{c-q} + t_{plogic} + t_{su} \quad \text{so} \quad T \ge t_{c-q} + t_{plogic} + t_{su} - \delta$$
+$$t_{hold}: \quad t_{hold} + \delta \le t_{c-q} + t_{plogic} \quad \text{so} \quad t_{hold} \le t_{c-q} + t_{plogic} - \delta$$
+**Note:** $\delta > 0$ Improves performance, but makes $t_{hold}$ harder to meet. If $t_{hold}$ is not met, the circuit malfunctions indpendent of the clock period
+
+##### Negative Clock Skew
+Clock and data flowing in opposite directions
+![[Pasted image 20220419120333.png |500]]
+$$T: \quad T + \delta \ge t_{c-q} + t_{plogic} + t_{su} \quad \text{so} \quad T \ge t_{c-q} + t_{plogic} + t_{su} - \delta$$
+$$t_{hold}: \quad t_{hold} + \delta \le t_{c-q} + t_{plogic} \quad \text{so} \quad t_{hold} \le t_{c-q} + t_{plogic} - \delta$$
+**Note:** $\delta < 0$ degrades performance, but $t_{hold}$ is easier to meet
+
+#### Clock Jitter
+Causes time $T$ to change on a cycle-by-cycle basis
+
+##### Source of Clock Jitter
+1. Clock generation
+2. Capacitive loading and coupling
+3. Enviornmental variations (power supply and temperature)
+![[Pasted image 20220419115655.png |500]]
+
+##### Absolute Jitter
+The worst variation of a clock edge with respect to the ideal clock signal
+![[Pasted image 20220419121541.png |400]]
+$$T: \quad T-2t_{jitter} \ge t_{c-q} + t_{plogic} + t_{su} \quad text{so} \quad T \ge t_{c-q} + t_{plogic} + t_{su} + 2t_{jitter}$$
+**Note:** Jitter directly reduces the performance of a sequential circuit
+
+#### Clock Skew + Clock Jitter
+where $\delta > 0$...
+![[Pasted image 20220419121839.png |400]]
+$$T \ge t_{c-q} + t_{plogic} + t_{su} - \delta + 2t_{jitter}$$
+$$t_{hold} \le t_{cdlogic} + t_{cdreg} - \delta -2t_{jitter}$$
+**Note:** $\delta > 0$ with jitter degrades performance and makes $t_{hold}$ even harder to meet. (The acceptable skew is reduced by jitter)
+
+> Longest path between flip-flop to flip-flop (clock at FF3 arrives 1.5ns later than at FF0-FF2)
+> $$t_{pd} = t_{c-q} + 3 \text{ AND gates} + 1 \text{ XOR gate} - \text{skew}$$
+> ![[Pasted image 20220419122537.png |300]]
+> 675 
+
+####  Duty Cycle
 % of time in the states 1 or 0
 ![[Pasted image 20220413102842.png |300]]
 
@@ -687,9 +765,9 @@ Ideally your duty cycle keeps the equation true
 $$\frac{V_{out}}{V_{in}} = \frac{1}{1-d}$$
 where $d$ is duty cycle
 
-Voltage too high? ----> Increase Duty Cycle
+Voltage too high? ---> Increase Duty Cycle
 Voltage too low? ---> Decrease Duty Cycle
-Voltage Critically low / high? ----> Use a preset
+Voltage Critically low / high? ---> Use a preset
 
 Do we need r in our tables or can we represent it in our circuit diagrams
 - no because we represent it in our circuit diagram in our preset

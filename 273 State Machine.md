@@ -49,3 +49,4 @@ A = 00, B = 01, C = 10, D = 11
 
 ##### State Redundancy
 Two states $S_i$ and $S_j$ are said to be equivalent if and only if ever ypossible input sequence, the same output sequence will be produced regardless of whether $S_i$ or $S_j$ is the inital state
+

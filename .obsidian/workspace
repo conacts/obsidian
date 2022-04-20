@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "122 Counting and Probability.md",
+            "file": "272 Computer Compontents.md",
             "mode": "preview",
             "source": false
           }
@@ -19,98 +19,82 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "25d9b4203a7097cb",
-    "type": "split",
+    "id": "e0898da63dfbdac1",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "186c6582a27ea566",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "878f77025dd45444",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "52f7999ffee0f293",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
+        "id": "abe6c2bbb365dae5",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "ec01bf0cea9f3d69",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
           }
-        ]
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "currentTab": 0
   },
   "right": {
-    "id": "9196a9ba4ad2b3d7",
-    "type": "split",
+    "id": "90ea0216978afce9",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "6fb3092f868622f7",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "65a95c2c557233bf",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "122 Counting and Probability.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "d95f740cfd9824aa",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "122 Counting and Probability.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
+        "id": "7d42eb7e66e731e0",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "272 Computer Compontents.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
           }
-        ]
+        }
+      },
+      {
+        "id": "919f298dea673839",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "272 Computer Compontents.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "currentTab": 0
   },
   "active": "a14db85570dd19c4",
   "lastOpenFiles": [
+    "272 Computer Compontents.md",
+    "273 State Machine.md",
+    "270 Computer Engineering.md",
     "122 Counting and Probability.md",
     "123 Graphs and Trees.md",
     "Untitled.md",
     "119 Sets.md",
     "100 Math.md",
     "263 Hyper Parameters.md",
-    "115 Line and Surface Integrals.md",
-    "260 Neural Networks.md",
-    "262 Loss Function and Optimizers.md",
-    "261 Backpropagation.md"
+    "115 Line and Surface Integrals.md"
   ]
 }
