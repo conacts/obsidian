@@ -13,7 +13,6 @@ $$L_1L_2L_3D_1D_2D_3 = 2 \cdot 2 \cdot2 \cdot 3 \cdot 3 \cdot 3 = 2^3 \cdot 3^3 
 > **Main Dishes:** Lasagna, Steak, Chicken Teriyaki
 > **Beverages:** Tea, Coffee, Juice, Soda
 > How many possible meals can a resturant build?
-> 
 > $$A \cdot M \cdot B = 3 \cdot 3 \cdot 4 = 36$$
 > ---
 > How many strings of length three can be formed using the letters ABCDEF with repetitions?

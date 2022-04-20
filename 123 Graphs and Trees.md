@@ -159,7 +159,9 @@ $G = (V,E)$ where $E= \emptyset$
 ##### Regular Graph
 If all teh verticies of a graph $G$ have the same degree $d$, then $G$ is called a "d-regular-graph"
 
-
+#### Undirected Graph
+A graph without directional edges
+![[Pasted image 20220420173149.png |400]]
 
 #### Directed Graph
 A graph where edges only connect in one direction
@@ -198,10 +200,10 @@ An empty graph with no edges
 #### Special Graphs
 
 ##### Complete Graph
-A [[123 Graphs and Trees#Simple Graph|simple graph]] in which each pair of distinct verticies is joined yb exactly one edge. A complete graph on $n$ verticies is denoted by $K_n$. 
+A [[123 Graphs and Trees#Simple Graph|simple graph]] in which each pair of distinct verticies is joined on exactly one edge. A complete graph on $n$ verticies is denoted by $K_n$. 
 
 To compute the number of edges $E$ using $n$ verticies
-$$E = \{(v_i, v_j) | v_i \ne v_j\}$$
+$$E = \frac{n(n-1)}{2}$$
 ![[Pasted image 20220419011125.png]]
 $$K_n \quad n=1,2,3,4,5,6 \text{ verticies}$$
 
@@ -245,9 +247,66 @@ A [[123 Graphs and Trees#Bipartite Graph|simple bipatite graph]] $G$ with bipart
 
 There is no edge from a vertex in $V_1$ to a vertex in $V_1$ and also no edge from a vertex in $V_2$ to a vetrex in $V_2$
 
-#### Undirected Graph
-A graph without directional edges
+#### Subgraph
+A new graph $G_2$ formed from only edges and verticies of the main graph $G_1$ meaning $G_1 \subseteq G_2$. However a graph $G$ cannot be a subgraph of itself meaning $G \not\subseteq G$ 
+![[Pasted image 20220420172316.png]]
 
+##### Spanning Graph
+A graph with the same verticies, but different edges.
+![[Pasted image 20220420172958.png]]
+
+##### Induced Graph
+When we remove a vertex $v$, we must delete all edges that are incident on vertex $v$
+![[Pasted image 20220420173546.png]]
+Therefore, the vertex set of $V(H)$ and set of edges $E(H)$ is:
+$$V(H-v)=H(H)-\{v\} \quad \quad E(H-v) = \{e \in E(H) | v \not\in e\}$$
+- The vertex set $V(H-v)$ contains all verticies of $H$ except $v$
+- The edge set $E(H-v)$ contains all edges of $H$ that are not incident on vertex $v$ 
+
+#### Operations on Graphs
+Mathmatical operations on graphs include...
+1. Union
+2. Intersect
+3. Ring Sum
+4. Complement
+
+![[Pasted image 20220420175854.png]]
+
+##### Graph Union $(\cup)$ 
+The union of two simple graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ is another simple graph $G = (V,E)$ denoted by $G = G_1 \cup G_2$, where vertex set $V = V_1 \cup V_2$ and the edge set $E = E_1 \cup E_2$ 
+- If $G_1$ and $G_2$ are edge [[119 Sets#Disjoint Sets|disjoint]], then the union $G \cup G_2 = G_1 \oplus G_2$
+
+![[Pasted image 20220420174302.png |500]]
+
+##### Graph Intersect $(\cap)$
+The intersection of two simple graphs $G_1$ and $G_2$ is another graph $H$ denoted by $H = G_1 \cap G_2$, which contains only those verticies and edges that exist in both $G_1$ and $G_2$
+- If $G_1$ and $G_2$ are vertex [[119 Sets#Disjoint Sets|disjoint]], then the intersection $G_1 \cap G_2$ is empty
+- If $G_1$ and $G_2$ are edge [[119 Sets#Disjoint Sets|disjoint]], then the intersection $G_1 \cap G_2$ is [[123 Graphs and Trees#Null Graph|null]] 
+
+![[Pasted image 20220420174511.png |500]]
+
+##### Ring Sum Graph
+The union of two simple graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$, denoted by $G_1 \oplus G_2$, is a simple graph consisting of the vertex set $V_1 \cup V_2$ and of edges that are either in $G_1$ or $G_2$, but not in both
+$$G_1 \oplus G_2 = (V_1 \cup V_2, (E_1 \cup E_2) - (E_1 \cap E_2))$$
+- If $G_1$ and $G_2$ are edge [[119 Sets#Disjoint Sets|disjoint]], then the ring sum $G_1 \oplus G_2 = G \cup G_2$ 
+
+![[Pasted image 20220420175303.png]]
+##### Complement Graph
+The complement graph of $G$, denoted as $\overline{G}$, is a graph where the vertex set and edge set satisfy:
+$$V(\overline{G}) = V(G) \quad \quad E(\overline{G}) = \{\{x, y\} | x,y \in V(G), x \ne y, \{x , y \} \not\in E(G) \}$$
+![[Pasted image 20220420181727.png]]
+###### Num of Edges in a Complement Graph
+$$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
+**Note:** The [[123 Graphs and Trees#Graph Union cup|union]] of $G$ and $\overline{G}$, $(G \cup \overline{G})$, gives us a [[123 Graphs and Trees#Complete Graph|complete graph]]
+![[Pasted image 20220420181822.png]]
+
+
+> Suppose that there is a complete graph $K_{31}$ with 31 verticies.
+> 1. What is the highest [[123 Graphs and Trees#Degree of vertex|degree of a vertex]] of the graph $K_{31}$?
+> 	1. Since every vertex in a complete graph is attached to every other vertex besides itself, we can form the equation $ANS = v_{total} - 1 = 31 - 1 = 30$ 
+> 2. If a graph $G$ with 31 verticies has 132 edges, how many edges are there in the complement graph of $G, \overline{G}$? 
+> 	1. Using the [[123 Graphs and Trees#Num of Edges in a Complement Graph|edges in a complement graph equation]]
+> 		1. $$|E(\overline{G})| = \frac{n(n-1)}{2} - E(G) = \frac{31(31-1)}{2} - 132 = 333 \space edges$$
 
 ##### Homework 11
 ###### Question 1:
@@ -281,4 +340,18 @@ A graph without directional edges
 ###### Question 6:
 > Is the given graph Bipartite?
 > ![[Pasted image 20220418190717.png |300]]
-> 1. 
+
+> Given a graph K and G, find the complement of graph G.
+> Graph K: 
+> ![[Pasted image 20220420170759.png]]
+> Graph G:
+> ![[Pasted image 20220420170826.png]]
+> You can draw th graph or you can represent the complement graph by the following presentation $G=(V,E)$
+
+> 1. Suppose we have a complete graph with 17 vertices, what is the sum of the [[123 Graphs and Trees#Degree of vertex|degrees of all vertices]] for this graph
+> 	1. Knowing that a complete graph, each vertex has $n-1$ connections, we can use the equation [[123 Graphs and Trees#Complete Graph|compute num of edges in complete graph]]
+> 	2. $$E = \frac{n(n-1)}{2} = \frac{17(17-1)}{2} = 136 \space edges$$ 
+> 2. Suppose we have an undirected [[123 Graphs and Trees#Complete Bipartite Graph|complete bipartite graph]] with 22 vertices, what is the maximum number of edges that could exist in this graph
+> 	1. A bipartite graph can only connect to verticies in the other subset of the graph. We will divide the graph into two pieces, $G_1$ and $G_2$. 
+> 	2. $|V(G_1)| = |V(G_2)| = 11$ verticies
+> 	3. Because each edge can connect to the other 11 verticies, we can compute $V(G_1) \cdot V(G_2) = 11 \cdot 11 = 121 \space edges$ 
