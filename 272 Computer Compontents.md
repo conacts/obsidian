@@ -755,7 +755,12 @@ $$t_{hold} \le t_{cdlogic} + t_{cdreg} - \delta -2t_{jitter}$$
 > Longest path between flip-flop to flip-flop (clock at FF3 arrives 1.5ns later than at FF0-FF2)
 > $$t_{pd} = t_{c-q} + 3 \text{ AND gates} + 1 \text{ XOR gate} - \text{skew}$$
 > ![[Pasted image 20220419122537.png |300]]
-> 675 
+> $$t_{c-q}=t_{cQmax}=max(range(0.8, 1.0)) \quad t_{plogic} = 4(1 + .1 \cdot 2) = 4.8$$
+> 1. Calculate $Q_0$ to $Q_2$
+> 	1. $$t_p = t_{cQmax} + t_{plogic} + t_{su} = 1.0 + 3.6 + 0.6 = 5.2ns$$
+> 2. Calculate $Q_0$ to $Q_3$
+> 	1. $$t_p = t_{cQmax} + t_{plogic} + t_{su} - \text{skew} = 1.0 + 4.8 + 0.6 - 1.5 = 4.9ns$$
+> 3. Therefore, $Q_0$ to $Q_2$ is the longest path in the circuit above
 
 ####  Duty Cycle
 % of time in the states 1 or 0
