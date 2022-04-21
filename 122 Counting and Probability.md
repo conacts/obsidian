@@ -70,24 +70,37 @@ If a task T can be done either by $T_1$ or by task $T_2$, where $T_1$ and $T_2$ 
 ### 7.2 Permutations and Combinations
 Two ways of finding different ways to arrange a number of distinct elements
 
+##### Difference between Permutation and Combination
+- Permutation is for when order **does** matter
+- Combination is for when order **doesn't** matter
+
+
 #### Permutations
+A permutation is an ordered [[122 Counting and Probability#Combinations|combination]], typically leading to more possible combinations.
+1. Permutations with repititon $(n^r)$  
+2. Permutations without repitition $(n!)$ 
+
 An arrangement of a set of (distinct) elements is an ordering of the elements, where order matters.
 
-##### Permutations Theorem
-If a set has $n$ numbers, then the total number of permutations of that set is $n!$, denoted by $P(n)$
+##### Permutations With Repition
+When an element is selected it doesn't affect the other sets left to choose for
+$$n = \text{num of items} \quad r = \text{num of choices} \quad P(n) = n^r$$
+
+> On a lock 3 digit combination lock with 0 through 10 on each digit, how many possible combinations are there for the lock?
+> $$10^3 = 1000 \text{ permutations}$$
+
+##### Permutations Without Repition
+Where selecting from a set affects the rest of the selections, denoted by $P(n)$
 $$P(n) = n!$$
 > Suppose there is a set with three elements {a,b,c}. What is the possible permutations?
 > **ANS:** $3! = 6$ 
+> ----
+> We have 16 pool balls. How many different orders can we draw the balls in?
+> **ANS:** $16! = 20,922,789,888,000$ 
 
 ##### Permutation Arrangements / r-permutations
-Finding a permutation of length $r$ such that $1 \le r \le n$, denoted by $P(n,r)$
-
-##### Permutation Arrangements Theorem
-Suppose $n,r \in \mathbb{Z}^+$. The number of r-permutations of a set with n distinct elements
-$$P(n,r) = n \cdot (n - 1) \cdot \cdot \cdot \cdot  (n-r+1) = \frac{n!}{(n-r)!} \quad r \le n$$
-###### Proof :: Permutation Arrangements Theorem:
-> Proof. When n and r are integers $1 \le r \le n$, we get 
-> $$\frac{n!}{(n-0)!} = \frac{n!}{n!} = 1 \quad \rightarrow \quad P(n,r) = \frac{n!}{(n-r)!}$$
+A [[122 Counting and Probability#Permutations Without Repition|permutation without repition]] where you don't select all the options available
+$$P(n,r) = \frac{n!}{(n-r)!} \quad r \le n \quad n = \text{items available} \quad r = \text{items selected}$$
 
 ###### Examples :: Permutation Arrangements:
 > In how many ways can we select a first-prize winner, a second-prize winner, a third-prize winner, and a fourth-prize winner from a group of 50 different people?
@@ -95,7 +108,7 @@ $$P(n,r) = n \cdot (n - 1) \cdot \cdot \cdot \cdot  (n-r+1) = \frac{n!}{(n-r)!} 
 > ----
 > How many three-digit numbers are there that do not contain repeated digits and start with a non-zero digit?
 > 
-> **ANS:** There are two ways we can do this. We can either (1) Compute the answer directly by finding the permutation of the set with 9 as the first number instead of 10 (since we don't use number 0 -> $10-1 = 9$). We can also find the total number of permutations and subtract the permutation of set 0 to get the same answer.
+> **ANS:** There are two ways we can do this. We can either (1) Compute the answer directly by finding the permutation of the set with 9 as the first number instead of 10 (since we don't use number 0 -> ($10-1 = 9$). We can also find the total number of permutations and subtract the permutation of set 0 to get the same answer.
 > $$9 \cdot 9 \cdot 8 = (10 \cdot 9 \cdot 8) - (1 \cdot 9 \cdot 8) = 648$$
 > ----
 > How many strings of four letters from the English alphabet contain exactly one vowel?
@@ -117,6 +130,49 @@ $$P_c(n) = (n-1)!$$
 If clockwise and anticlockwise orders are the same
 $$P_c(n) = \frac{(n-1)!}{2!}$$
 
+##### Permutation with Repeated Elements
+If elements in a set are repeated,we then we treate the permutation differently.
+- For example "apple" has two P's
+$$P(e) = \frac{P(n,r)}{e_1! \cdot e_2! \cdot ... e_k!} \quad e = \text{repeated items}$$
+> How many different 5-digit numbers can be formed using the following digits 1, 3, 5, 5, 7, 9, 9,11? Assume the repeated digits are all used.
+> 1. Since there are 2 5's and 2 9's, using the formula[[122 Counting and Probability#Permutations With Repition|permutation with repeated elements]]
+> $$P(e) = \frac{P(8,5)}{2! \cdot 2!} = \frac{\frac{8!}{(8-5)!}}{2! \cdot 2!} = \frac{6720}{16} = 1680$$
+
+#### Combinations
+Selecting items from a set where order **doesn't** matter.
+
+##### Combinatons without Repetition
+Combination where each element is a distinct set. For example, you can win the lottery with selecting all the numbers no matter the order you selected them.
+$$C(n,r) = nCr = \begin{pmatrix} n \\ r \end{pmatrix} = \frac{n!}{r!(n-r)!} \quad n = \text{items available} \quad r = \text{items chosen}$$
+> We have 16 pool balls and we will only draw 3. How many different combinations of the balls can we make where order doesn't matter?
+> 1. Using [[122 Counting and Probability#Combinatons without Repetition|combinations without repetition]] 
+> $$C(16, 3) = _{16}C_3 = \frac{16!}{3!(16-3)!} = 560$$
+> ---
+> How many five-person committees can be formed from 250 students?
+> 1. Since the order of students doesn't matter, we can use the [[122 Counting and Probability#Combinatons without Repetition|combinations without repetition]] formula
+> $$C(250, 5) = \frac{250!}{5!(250-5)!} = 7,817,031,300$$
+> ----
+> There are 10 different kinds of chocolates. In how many ways can we pick five chocolates from the first box, three chocolates from the second box, and two chocolates from the third box?
+> 1. Since the order in which the chocolates doesn't matter.
+> 2. The first box is equivalent to $C(10, 5)$ ways to select.
+> 3. The second box is equivelent to $C(5, 3)$ because after picking 5 chocolates we have 5 left and pick 3. 
+> 4. The third box is equivalent to $C(2, 2)$ because we have 2 chocolates left and pick 2
+> 5. We multiply all these values together to get our answer
+> $$C(10, 5) \cdot C(5, 3) \cdot C(2, 2) = \frac{10!}{5!5!} \frac{5!}{3!2!} \frac{2!}{2!0!} = 252 \cdot 10 \cdot 1 = 2520$$
+> ---
+> In how many different ways 5-letter arrangements can be formed from the word APPLE?
+> 1. Because the P in apple is used twice, we can set up our problem as
+> $$C(5, 2) = \frac{5!}{2!} = 60$$
+
+##### Theorem 7.7
+The number of r-combinations from a set with n elements when repetition of elements is allowed
+$$C(n + r - 1, r) = C(n + r - 1, n - 1)$$
+> How many ways are there to create a subset of 3 elements from a set {_a, b, c, d_} with repetitions?
+> 1. If we try to find the number of 3-combinations with repetition allowed, for set {a, b, c, d}, we get 20 combinations with repetition, which we can plug into our theorem 7.7 equation
+> $$C(4 + 3 - 1, 3) = C(6, 3) = \frac{6!}{3!(6-3)!} = 20$$
+
+
+# Homework 11
 
 > In how many ways can six people A, B, C, D, E, F seat at a round table?
 > 1. Using [[122 Counting and Probability#Unique Circular Permutation|unique circular permutation]] we can find 
