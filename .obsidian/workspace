@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "122 Counting and Probability.md",
-            "mode": "source",
+            "file": "80 Git.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "122 Counting and Probability.md",
+                "file": "80 Git.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "122 Counting and Probability.md",
+                "file": "80 Git.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,13 +102,13 @@
   },
   "active": "a14db85570dd19c4",
   "lastOpenFiles": [
+    "80 Git.md",
     "122 Counting and Probability.md",
     "123 Graphs and Trees.md",
     "119 Sets.md",
     "272 Computer Compontents.md",
     "273 State Machine.md",
     "270 Computer Engineering.md",
-    "Untitled.md",
     "100 Math.md",
     "263 Hyper Parameters.md",
     "115 Line and Surface Integrals.md"
