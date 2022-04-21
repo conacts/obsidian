@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "123 Graphs and Trees.md",
-            "mode": "source",
+            "file": "122 Counting and Probability.md",
+            "mode": "preview",
             "source": false
           }
         }
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "123 Graphs and Trees.md",
+                "file": "122 Counting and Probability.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "123 Graphs and Trees.md",
+                "file": "122 Counting and Probability.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,9 +102,9 @@
   },
   "active": "a14db85570dd19c4",
   "lastOpenFiles": [
+    "122 Counting and Probability.md",
     "123 Graphs and Trees.md",
     "119 Sets.md",
-    "122 Counting and Probability.md",
     "272 Computer Compontents.md",
     "273 State Machine.md",
     "270 Computer Engineering.md",

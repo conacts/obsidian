@@ -62,7 +62,7 @@ If a task T can be done either by $T_1$ or by task $T_2$, where $T_1$ and $T_2$ 
 > 2. B = Set / 5 = $\lfloor \frac{100}{5} \rfloor = 20$ 
 > 3. C = Set / 7 = $\lfloor \frac{100}{7} \rfloor = 14$  
 > Now you must find the total number of possible combinations while subtracting the overlapping elements so you have a **distinct** set
-> $$|A \cup B \cup C| = |A| + |B| + |C| - | A \cap B | - |b \cap C |  - | B \cap C | + | A \cap B \cap C| $$
+> $$|A \cup B \cup C| = |A| + |B| + |C| - | A \cap B | - |A \cap C |  - | B \cap C | + | A \cap B \cap C| $$
 > $$|A \cup B \cup C| = 33 + 20 + 14 - 6 - 4 - 2 + 0 = 55$$
 > 
 > 
@@ -125,9 +125,32 @@ $$P_c(n) = \frac{(n-1)!}{2!}$$
 > In how many ways can we arrange 9 kids to play musical chairs with 7 chairs?
 > $$\frac{P(9,7)}{7} = \frac{181440}{7} = 25920$$
 
-##### Homework 11
-> 1. Graph question.
-> 	1. How many edges are there in a graph with 10 verticies, each having a degree 3?
-> 	2. How many edges are there in a graph with 8 vertices, having a degree 1,1,2,2,3,3,3,3 respectively?
-> 	3. How many verticies are there in a graph with 19 edges, having 3 verticies of degree 4 and all the other vertices of degree 2?
-> 2. How many words can be made from the word "DOCTOR" using all the alphabets with repetition and without repetition respectively?
+> Find the number of integers between 1 and 10,000 inclusive which are divisible by at least one of 3, 5, 7, 11
+> 1. We can solve this problem using the [[122 Counting and Probability#Inclusion Exclusion Rule|inclusion exclusion rule]]. 
+> 	1. Set $A = \lfloor \frac{10000}{3}\rfloor = 3333$
+> 	2. Set $B = \lfloor \frac{10000}{5}\rfloor = 2000$
+> 	3. Set $C = \lfloor \frac{10000}{7}\rfloor = 1428$
+> 	4. Set $D = \lfloor \frac{10000}{11}\rfloor = 909$
+> 2. Now we use the inclusion exclusion formula
+> 	1. $$|A \cup B \cup C \cup D| = |A| + |B| + |C| + |D| - | A \cap B | - | A \cap C | - | A \cap D | - |B \cap C |  - | B \cap D | - |C \cap D| + | A \cap B \cap C| + |A \cap B \cap D| + |A \cap C \cap D| + |B \cap C \cap D| - | A \cap B \cap | C \cap D|$$
+> 		1. $|A \cap B| = \Big\lfloor \frac{10,000}{LCF(3, 5)} \Big\rfloor = \Big\lfloor\frac{10000}{15}\Big\rfloor = 666$ 
+> 		2. $|A \cap C| = \Big\lfloor \frac{10,000}{LCF(3, 7)} \Big\rfloor = \Big\lfloor\frac{10000}{21}\Big\rfloor = 476$
+> 		3. $|A \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 11)} \Big\rfloor = \Big\lfloor\frac{10000}{33}\Big\rfloor = 303$
+> 		4. $|B \cap C| = \Big\lfloor \frac{10,000}{LCF(5, 7)} \Big\rfloor = \Big\lfloor\frac{10000}{35}\Big\rfloor = 285$
+> 		5. $|B \cap D| = \Big\lfloor \frac{10,000}{LCF(5, 11)} \Big\rfloor = \Big\lfloor\frac{10000}{55}\Big\rfloor = 181$
+> 		6. $|C \cap D| = \Big\lfloor \frac{10,000}{LCF(7, 11)} \Big\rfloor = \Big\lfloor\frac{10000}{77}\Big\rfloor = 129$
+> 		7.  $|A \cap B \cap C| = \Big\lfloor \frac{10,000}{LCF(3, 5, 7)} \Big\rfloor = \Big\lfloor\frac{10,000}{105}\Big\rfloor = 285$ 
+> 		8. $|A \cap B \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 5, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{165}\Big\rfloor = 60$
+> 		9. $|A \cap C \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 7, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{231}\Big\rfloor = 43$
+> 		10. $|B \cap C \cap D| = \Big\lfloor \frac{10,000}{LCF(5, 7, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{385}\Big\rfloor = 25$
+> 		11. $|A \cap B \cap C \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 5, 7, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{1155}\Big\rfloor = 8$  
+> 	2. $$|A \cup B \cup C| = 3333 + 2000 + 1428 + 909 - 666 - 476 - 303 - 285 - 181 - 129 + 285 + 60 + 43 + 25 - 8 = 6035$$
+> 	3. ANS: 6035
+
+
+> A Professor needs to select 5 puzzles for the class quiz from a question bank containing 20 questions. How many ways are there?
+> $$\text{ANS: } \frac{20!}{(20-15)!} = 20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 = 27,907,200$$
+
+
+> A group of friends goes to a movie theatre to watch some movies. They found that there are 8 movies which they found interesting but they have money to watch only 3 of them. If they cannot watch "Fast & the Furious Part-2" unless they watch the Part-1, then, in how many ways can they watch exactly 3 movies?
+> $$\text{ANS: } \frac{(8-1) \cdot 7!}{(7-5)!} = 7 \cdot 7 \cdot 6 = 294$$

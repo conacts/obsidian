@@ -131,15 +131,14 @@ $$\sum_{v\in V}deg(v) = 2 \cdot |E|$$
 ##### Odd / Even Verticies
 A vertex can be odd or even based on its degree 
 
-##### Theorem 7.2
+##### Degree of Undirected Verticies 
 In any undirected graph, there is an even number of verticies to the odd degree
 
 > Is there a graph with eight verticies of degrees 1, 1, 2, 2, 4, 4, 5?
-> 
-> ANS:  It is not possible. Computing the total degree of the graph, we get 19 degrees and only 7 elements in the set. Based on [[123 Graphs and Trees#Theorem 7 2|Theorem 7.2]], this is **not possible**.
+> **ANS:** It is not possible. Computing the total degree of the graph, we get 19 degrees and only 7 elements in the set. Based on [[123 Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]], this is **not possible**.
 > ---
 > In a group of 7 people, is it possible for each person to have exactly 3 friends?
-> **ANS:** No, it is not possible since if we assume each person has 3 friends we would have a degree of 21. This is impossible since  [[123 Graphs and Trees#Theorem 7 2|Theorem 7.2]] 
+> **ANS:** No, it is not possible since if we assume each person has 3 friends we would have a degree of 21. This is impossible since [[123 Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]] 
 
 
 ##### Isolated Vertex
@@ -355,3 +354,24 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > 	1. A bipartite graph can only connect to verticies in the other subset of the graph. We will divide the graph into two pieces, $G_1$ and $G_2$. 
 > 	2. $|V(G_1)| = |V(G_2)| = 11$ verticies
 > 	3. Because each edge can connect to the other 11 verticies, we can compute $V(G_1) \cdot V(G_2) = 11 \cdot 11 = 121 \space edges$ 
+
+> 1. Suppose we have a complete graph with 13 vertices, what is the sum of the degrees of all vertices for this graph
+> 	1. The [[123 Graphs and Trees#Degree of vertex|degree of a vertex]] is equal to the number of edges it has. In a complete graph, each vertex has $n - 1$ edges. With 13 verticies, we can compute
+> 		1. $$D(G_c) = n \cdot (n - 1) = 13 \cdot (13 - 1) = 156$$
+> 2. Suppose we have an undirected complete bipartite graph with 18 vertices, what is the maximum number of edges that could exist in this graph
+> 	1. We first set the bipartite graph into two set of verticies, $G_1$ and $G_2$.
+> 		1. $$G_1 = \{ v_1, v_2, ..., v_9\} \quad G_2 = \{ v_{10}, v_{11}, ..., v_{18}\}$$
+> 	2. Then, we can assume that each vertex in $G_1$ is connected to each vertex in $G_2$ (and vice versa). This gives us the formula
+> 		1. $$V(G_1) \cdot V(G_2) = 9 \cdot 9 = 81$$
+
+> In a small class of 9 students, everyone was asked how many of their friends are also taking the class. Friendship is mutual. Is the following outcome possible: 6, 6, 5, 4, 4, 3, 2, 2, 1?
+> **ANS:** This is not possible as an undirected graph must have an odd number of degrees as stated by [[123 Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]], while the degrees of the formula given above is $6 + 6 + 5 + 4 + 4 + 3 + 2 + 2 + 1 = 33 \space degrees$ 
+
+> Which of the following is not a subgraph of this graph?
+> ![[Pasted image 20220420192934.png]]
+> 1. {(0,4), (3,2), (5,8), (3,6), (9,7)}
+> 2. {(1,3), (3,2), (5,8), (3,6), (9,7)}
+> 3. {(1,7), (3,2), (5,8), (3,6), (9,7)}
+> 4. {(1,7), (3,2), (5,8), (5,6), (9,7)}
+> **ANS:** Number 4 since (5,6) is not an edge
+
