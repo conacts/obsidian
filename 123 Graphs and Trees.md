@@ -339,6 +339,7 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 ###### Question 6:
 > Is the given graph Bipartite?
 > ![[Pasted image 20220418190717.png |300]]
+> **ANS:** The given graph is not [[123 Graphs and Trees#Bipartite Graph|bipartite]] as it fails the [[123 Graphs and Trees#Bipartite Test|bipartite color test]] 
 
 > Given a graph K and G, find the complement of graph G.
 > Graph K: 
@@ -346,6 +347,8 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > Graph G:
 > ![[Pasted image 20220420170826.png]]
 > You can draw th graph or you can represent the complement graph by the following presentation $G=(V,E)$
+> **ANS:** 
+> ![[Pasted image 20220421133646.png |300]]
 
 > 1. Suppose we have a complete graph with 17 vertices, what is the sum of the [[123 Graphs and Trees#Degree of vertex|degrees of all vertices]] for this graph
 > 	1. Knowing that a complete graph, each vertex has $n-1$ connections, we can use the equation [[123 Graphs and Trees#Complete Graph|compute num of edges in complete graph]]

@@ -84,10 +84,17 @@ An arrangement of a set of (distinct) elements is an ordering of the elements, w
 
 ##### Permutations With Repition
 When an element is selected it doesn't affect the other sets left to choose for
+
+**For a unique item available per pick**
 $$n = \text{num of items} \quad r = \text{num of choices} \quad P(n) = n^r$$
 
 > On a lock 3 digit combination lock with 0 through 10 on each digit, how many possible combinations are there for the lock?
 > $$10^3 = 1000 \text{ permutations}$$
+
+**Where unique items is less than picks**
+$$C(n + r - 1, r)$$
+- $n$ = number of items to choose from
+- $r$ is the number of choices
 
 ##### Permutations Without Repition
 Where selecting from a set affects the rest of the selections, denoted by $P(n)$
@@ -171,15 +178,57 @@ $$C(n + r - 1, r) = C(n + r - 1, n - 1)$$
 > 1. If we try to find the number of 3-combinations with repetition allowed, for set {a, b, c, d}, we get 20 combinations with repetition, which we can plug into our theorem 7.7 equation
 > $$C(4 + 3 - 1, 3) = C(6, 3) = \frac{6!}{3!(6-3)!} = 20$$
 
-
-# Homework 11
-
 > In how many ways can six people A, B, C, D, E, F seat at a round table?
 > 1. Using [[122 Counting and Probability#Unique Circular Permutation|unique circular permutation]] we can find 
 > $$P_c(6) = (6-1)! = 5! = 120$$
 > ---
 > In how many ways can we arrange 9 kids to play musical chairs with 7 chairs?
 > $$\frac{P(9,7)}{7} = \frac{181440}{7} = 25920$$
+
+# Homework 11
+> How many words can be made from the word “DOCTOR” using all the alphabets with repetition and without repetition?
+> 1. With Repetition
+> 	1. $5^6 = 5 \cdot 5 \cdot 5 \cdot 5 \cdot 5 = 15625$ 
+> 2. Without Repetiton
+> 	1. $\frac{6!}{2!} = 360$
+
+> In how many ways can the letters of the word PERMUTATIONS be arranged if the
+> 1. words start with P and end with S
+> 	1. $|PERMUTATIONS| = 12$
+> 	2. With p and s being stationary, we can essentially take them out of the word giving us of length $|ERMUTATION| = 10$
+> 	3. The letter T is repeated in the phrase above meaning we must divide by $2!$
+> 	4. $$\frac{10!}{2!} = 1,814,400$$
+> 2. vowels are all together
+> 	1. $|vowels| = 5$
+> 	2. $|consonants| = 8$
+> 	3. The letter t is still repeated twice, and we must multiply these equations by one another
+> 	4. $$5! \cdot \frac{8!}{2!} = 2,419,200$$
+> 3. there are always 4 letters between P and S
+> 	1. In this configuration, there will be 14 ways to arrange P and S while the other 10 letters are free
+> 	2. $$14 \cdot \frac{10!}{2!} = 25,401,600$$
+
+> Out of 2 Women and 5 Men, a committee of 3 is to be formed. In how many ways can it be formed if at least one woman is to be included? 
+> 1. There can either be 
+> 	1. Two women, 1 man
+> 	2. 2 men, 1 woman
+> 2. $$2 \cdot 10 + 1 \cdot 5$$
+
+> In an examination there are three multiple choice questions and each question has 4 choices. Find the number of ways in which a student can fail to get all answer correct.
+> 1. Find all the possible combinations of answers
+> 	1. $4^3 = 64$
+> 2. Now only one of these is getting all the answers correct, meaning we subtract one from 64
+> 	1. $64 - 1 = 63$
+> 3. $4^3 - 1 = 63$
+
+> How many solutions are there to th equation $x_1 + x_2 + x_3 + x_4 = 10$ where $x_1, x_2, x_3, x_4$ are non-negative integers such that $0 \le x_2 \le 4$.
+> 1. Since $x_2$ is constrained we can sum all the possible combinations of $x_1 + x_3 + x_4 = 10 - x_2$. 
+> 	1. $x_1 + x_3 + x_4 = 10 = C(10 + 3 - 1, 3-1) = C(12, 2)$ 
+> 	2. $x_1 + x_3 + x_4 = 9 = C(9 + 3 - 1, 3-1) = C(11, 2)$
+> 	3. $x_1 + x_3 + x_4 = 8 = C(8 + 3 - 1, 3-1) = C(10, 2)$
+> 	4. $x_1 + x_3 + x_4 = 7 = C(7 + 3 - 1, 3-1) = C(9, 2)$
+> 	5. $x_1 + x_3 + x_4 = 6 = C(6 + 3 - 1, 3-1) = C(8, 2)$ 
+> 2. $C(12, 2) + C(11,2) + C(10, 2) + C(9, 2) + C(8,2)$
+> 3. $\frac{12!}{2!(12-2)!} + \frac{11!}{2!(11-2)!} + \frac{10!}{2!(10-2)!} + \frac{9!}{2!(9-2)!} + \frac{8!}{2!(8-2)!} = 230$  
 
 > Find the number of integers between 1 and 10,000 inclusive which are divisible by at least one of 3, 5, 7, 11
 > 1. We can solve this problem using the [[122 Counting and Probability#Inclusion Exclusion Rule|inclusion exclusion rule]]. 
@@ -195,18 +244,25 @@ $$C(n + r - 1, r) = C(n + r - 1, n - 1)$$
 > 		4. $|B \cap C| = \Big\lfloor \frac{10,000}{LCF(5, 7)} \Big\rfloor = \Big\lfloor\frac{10000}{35}\Big\rfloor = 285$
 > 		5. $|B \cap D| = \Big\lfloor \frac{10,000}{LCF(5, 11)} \Big\rfloor = \Big\lfloor\frac{10000}{55}\Big\rfloor = 181$
 > 		6. $|C \cap D| = \Big\lfloor \frac{10,000}{LCF(7, 11)} \Big\rfloor = \Big\lfloor\frac{10000}{77}\Big\rfloor = 129$
-> 		7.  $|A \cap B \cap C| = \Big\lfloor \frac{10,000}{LCF(3, 5, 7)} \Big\rfloor = \Big\lfloor\frac{10,000}{105}\Big\rfloor = 285$ 
+> 		7.  $|A \cap B \cap C| = \Big\lfloor \frac{10,000}{LCF(3, 5, 7)} \Big\rfloor = \Big\lfloor\frac{10,000}{105}\Big\rfloor = 95$ 
 > 		8. $|A \cap B \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 5, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{165}\Big\rfloor = 60$
 > 		9. $|A \cap C \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 7, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{231}\Big\rfloor = 43$
 > 		10. $|B \cap C \cap D| = \Big\lfloor \frac{10,000}{LCF(5, 7, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{385}\Big\rfloor = 25$
 > 		11. $|A \cap B \cap C \cap D| = \Big\lfloor \frac{10,000}{LCF(3, 5, 7, 11)} \Big\rfloor = \Big\lfloor\frac{10,000}{1155}\Big\rfloor = 8$  
-> 	2. $$|A \cup B \cup C| = 3333 + 2000 + 1428 + 909 - 666 - 476 - 303 - 285 - 181 - 129 + 285 + 60 + 43 + 25 - 8 = 6035$$
-> 	3. ANS: 6035
-
+> 	2. $$|A \cup B \cup C| = 3333 + 2000 + 1428 + 909 - 666 - 476 - 303 - 285 - 181 - 129 + 95 + 60 + 43 + 25 - 8 = 5845$$
+> 	3. ANS: 5845
 
 > A Professor needs to select 5 puzzles for the class quiz from a question bank containing 20 questions. How many ways are there?
-> $$\text{ANS: } \frac{20!}{(20-15)!} = 20 \cdot 19 \cdot 18 \cdot 17 \cdot 16 \cdot 15 = 27,907,200$$
-
+> $$\text{ANS: } \frac{n!}{r!(n-r)!} = \frac{20!}{15!(20-15)!} = 15504$$
 
 > A group of friends goes to a movie theatre to watch some movies. They found that there are 8 movies which they found interesting but they have money to watch only 3 of them. If they cannot watch "Fast & the Furious Part-2" unless they watch the Part-1, then, in how many ways can they watch exactly 3 movies?
-> $$\text{ANS: } \frac{(8-1) \cdot 7!}{(7-5)!} = 7 \cdot 7 \cdot 6 = 294$$
+> $$\text{ANS: } 6P3 + 6P2 + 6 = 120 + 30 + 6 = 156$$
+
+> By using the Binomial Theorem, the expansion of $(2x + 3)^4$ is...
+> $k = 0: \begin{pmatrix} 4 \\ 0 \end{pmatrix} (2x)^{4-0} \cdot 3^0 = \frac{4!}{(4-0)!0!}(2x)^{4-0} \cdot 3^0 = 16x^4$ 
+> $k = 1: \begin{pmatrix} 4 \\ 1 \end{pmatrix} (2x)^{4-1} \cdot 3^1 = \frac{4!}{(4-1)!1!}(2x)^{4-1} \cdot 3^1 = 96x^3$ 
+> $k = 2: \begin{pmatrix} 4 \\ 2 \end{pmatrix} (2x)^{4-2} \cdot 3^2 = \frac{4!}{(4-2)!2!}(2x)^{4-2} \cdot 3^2 = 216x^2$ 
+> $k = 3: \begin{pmatrix} 4 \\ 3 \end{pmatrix} (2x)^{4-3} \cdot 3^3 = \frac{4!}{(4-3)!3!}(2x)^{4-3} \cdot 3^3 = 216x$ 
+> $k = 4: \begin{pmatrix} 4 \\ 4 \end{pmatrix} (2x)^{4-4} \cdot 3^4 = \frac{4!}{(4-4)!4!}(2x)^{4-4} \cdot 3^4 = 81$ 
+> **ANS:** $16x^4 + 96x^3 + 216x^2 + 216x + 81$ 
+> 

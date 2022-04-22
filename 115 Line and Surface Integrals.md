@@ -59,8 +59,6 @@ $$\text{div}(F) = \nabla \cdot F = \Bigg \langle \frac{\partial}{\partial x}, \f
 | Distributive | $\text{div}(F+G) = \text{div}(F) + \text{div}(G)$ |
 | Scalar       | $\text{div}(cF) = c \cdot \text{div}(F)$                             |
 
-
-
 ##### Curl 
 Operations on a vector field using cross product
 $$\text{curl}(F) = \nabla \times F = \begin{bmatrix} {\bf i} & {\bf j} & {\bf k} \\ \frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
@@ -252,7 +250,117 @@ $$W = \text{tangential component of F} \times \text{distance}=(||F||\cos\theta) 
 > 4. Plug it into the formula
 > $$\int_C = \langle \cos t, \sin t, t \rangle \cdot \langle -\sin t, \cos t, 1 \rangle = \int^{7\pi/2}_{\pi/2} (-\cos t \sin t + \sin t \cos t + t)dt = 6\pi ^2$$
 
+## 16.3 Conservative Vector Fields
+A conservative vector field is one that satisfies the equation
+$$\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x} \quad \quad \frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y} \quad \quad \frac{\partial F_3}{\partial x} = \frac{\partial F_1}{\partial z}$$
+![[Pasted image 20220421151453.png |300]]
+- The circulation around a closed path is denoted as $\oint_C F \cdot dr$ 
 
+##### Path Independence
+Theorem indicating that the line integral of $F$ along a path from $P$ to $Q$ depends only on the endpoints $P$ and $Q$
+![[Pasted image 20220421151734.png|300]]
+
+##### Theorem: Fundamental Theorem for Conservative Vector Fields
+Assume that $F = \nabla f$ on a domain $D$
+1. If $r$ is a path along a curve $C$ from $P$ to $Q$ in $D$, then 
+$$\int_C F \cdot dr = f(Q) - f(P)$$
+where $F$ is path independent
+1. In circulation around a closed curve $C$, where $P=Q$, we get 0
+$$\oint_C F \cdot dr = 0$$
+###### Example :: Fundamental Theorem for Conservative Vector Field
+> Let $F(x,y,z) = \langle 2xy + z, x^2, x \rangle$ 
+> 1. Verify that $f(x,y,z) = x^2 y  + xz$ is a potential function for $F$
+> 	1. Find the partial derivative of $f(x,y,z)$
+> 		1. $$ \text{Potential function} = \nabla f = \langle 2xy + z, x^2, x \rangle$$
+> 2. Evaluate $\int_C F \cdot dr$, where $C$ is a curve from $P = (1, -1, 2)$ to $Q = (2, 2, 3)$
+> 	1. Use the [[115 Line and Surface Integrals#Fundamental Theorem for Conservative Vector Fields|fundamental theorem for conservative vector fields]] to find $\int_C F \cdot dr$
+> 	2. $$\int_C F \cdot dr = f(Q) - f(P) = f(2,2,3) - f(1, -2, 2)$$
+> ![[Pasted image 20220422001859.png |300]]
+> ---
+> Let $f(x,y) = 7x \cos(y)$. Find the [[115 Line and Surface Integrals#Conservative Vector Fields|conservative vector field]] $F$, which is the gradient of f.
+> 1. Find the gradient of $f(x,y)$
+> 	1. $$\nabla f = F = \langle 7 \cos (y) , - 7x \sin (y)\rangle$$
+> Evaluate the line integral of $F$ over the upper half of the unit circle centered at the origin, oriented clockwise
+> 1. Since the orgiin is oriented clockwise we get...
+> 	1. $P=(-1, 0)$
+> 	2. $Q = (1, 0)$
+> $$\int_C F \cdot dr = f(Q) - f(P) = 7(1)\cos(0) -  7(-1)\cos (0) = 7 + 7 = 14$$
+> ---
+> Let $f(x,y,z) = 3y + 3z\ln(x)$. Find the conservative vector field $F$, which is the gradient of $f$.
+> 1. $$F = \nabla f = \langle \frac{3z}{x}, 3, 3\ln(x) \rangle$$
+> Evaluate the line integral of $F$ over the circle $(x - 2)^2 + y^2 = 1$ in the counter clockwise direction. Find $\int_C F \cdot dr = ?$ 
+> 1. Since the line is a circle, we know that the integral is equal to zero
+> ---
+> > A vector field $F$ and contour lines of a potential function for $F$ are shown in the figure
+> ![[Pasted image 20220421235924.png |150]]
+> Calculate the common value of $\int_C F \cdot dr$ for the curves in the direction from $P$ to $Q$, where $\int_C F \cdot dr = ?$ 
+> 1. Find $f(Q)$ and $f(P)$
+> 	1. $f(Q) = 22 + 3.5 = 25.5$
+> 	2. $f(P) = 1 + 3.5 = 4.5$
+> 2. $$\int_C F \cdot dr = f(Q) - f(P) = 25.5 - 4.5 = 21$$
+
+##### Theorem 2
+A vector field $F$ on an open connected domain $D$ is path independent if and only if it is conservative
+![[Pasted image 20220422002235.png |400]]
+
+> Consider the vector field $F = \langle y, x, z^3 \rangle$. Choose a potential function for $F = \langle y, x, z^3 \rangle$ if it exists.
+> 1. Identify whether F is conservative. So, determine whether the field $F = \langle y, x, z^3 \rangle$ satisfies the **cross-partials condition**. 
+> 	1. $\frac{\partial F_1}{\partial y} = \frac{\partial}{\partial y}(y) = 1$ 
+> 	2. $\frac{\partial F_1}{\partial z} = \frac{\partial}{\partial z}(y) = 0$
+> 	3. $\frac{\partial F_1}{\partial x} = \frac{\partial}{\partial x}(x) = 1$
+> 	4. $\frac{\partial F_1}{\partial z} = \frac{\partial}{\partial z}(x) = 0$
+> 	5. $\frac{\partial F_1}{\partial x} = \frac{\partial}{\partial x}(z^3) = 0$
+> 	6. $\frac{\partial F_1}{\partial y} = \frac{\partial}{\partial y}(z^3) = 0$
+> 2. Now compare values to check
+> 	1. $\frac{\partial F_1}{\partial y} = \frac{\partial F_2}{\partial x} = 1$
+> 	2. $\frac{\partial F_2}{\partial z} = \frac{\partial F_3}{\partial y} = 0$
+> 	3. $\frac{\partial F_3}{\partial x} = \frac{\partial F_1}{\partial z} = 0$
+> 3. Thus, $F$ satisfies the cross-partial condition everywhere. Hence, $F$ is conservative. If$f(x,y,z)$ is a potential function, then it satisfies the following equation
+> 	1. $f(x,y,z) = \int ydx = xy + f(y,z)$
+> 	2. $f(x,y,z) = \int xdy = xy + g(x,z)$
+> 	3. $f(x,y,z) = \int z^3 dz = \frac{1}{4}z^4 + h(x,y)$
+> 4. These three ways of writing $f(x,y,z)$ must be equal so
+> 	1. $xy + f(x,y) = xy + g(x,z) = \frac{z^4}{4} + h(x,y)$ for any constant $C$
+> 5. Therefore, there are two potential functions for $F$:
+> 	1. $f(x,y,z) = xy + \frac{z^4}{4} + 2\pi$
+> 	2. $f(x,y,z) = xy + \frac{z^4}{4} - 67$
+
+> Evaluate $\int_C 2xyzdx + x^2 z dy + x^2 y dz$ over the path $r(t) = \Big( \frac{t^2}{6}, \sin(\frac{\pi t}{2}), e^{t^2 - 6t} \Big )$ over the path $0 \le t \le 6$
+> 1. Find the points $P$ and $Q$
+> 	1. $P = r(0) = \Big( \frac{(0)^2}{6}, \sin(\frac{\pi (0)}{2}), e^{(0)^2 - 6(0)} \Big ) = r(t) = \Big( 0, 0, 1\Big )$ 
+> 	2. $Q = r(6) = \Big( \frac{(6)^2}{6}, \sin(\frac{\pi (6)}{2}), e^{(6)^2 - 6(6)} \Big ) = r(t) = \Big( 6, 0, 1 \Big )$ 
+> 2. Find the gradient of 
+> 	1. $f = \langle 2xyz, x^2z, x^2y \rangle$
+> 	2. $\nabla f = F = \langle 2yz, 0, 0 \rangle$ 
+> 3. Integrate
+> 	1. $\int_C F \cdot dr = f(Q) - f(P)$
+> 	2. $f(P) = 2(0)(0)(1)dx + (0)^2 (1) dy + (0)^2 (0) dz = 0$
+> 	3. $f(Q) = 2(6)(0)(1)dx + (6)^2 (1) dy + (6)^2 (0) dz = 36$
+
+
+#### Conservative Fields in Physics
+The conservation of energy priciple says that $KE + PE$, or kenetic energy plus potential energy, remains constant in an isolated system
+
+In a conservative force field, the work $W$ against $F$ required to move the particle from $P$ to $Q$ is equal to the change in potential energy
+$$W = - \int_C F \cdot dr = V(Q) - V(P)$$
+
+##### Theorem: Conservation of Energy
+The total energy $E$ of a particle moving under the influence of conservative force field $F = -\nabla V$ is constant in time. That is, $\frac{dE}{dt} = 0$
+
+> Compute the work W against the earth’s gravitational field required to move a satellite of mass  kg along any path from an orbit of altitude 2000 km to an orbit of altitude 4000 km.
+> 1. The earth's gravitational field is the inverse-square field
+> 	1. $F = -k \frac{e_r}{r^2} = -\nabla f, \quad f = -\frac{k}{r}$
+> 		1. $r = 6.4 \times 10^6 =$ radius of earth 
+> 		2. $k = 4 \times 10^{14}$
+> 2. Calculate the integral
+> 	1. $$W = - \int_r mF \cdot dr = 600 \int_r \nabla f \cdot dr = -\frac{600k}{r}\Big|^{10.4 \times 10^6}_{8.4 \times 10^6} \approx 5.5 \times 10^9 \text{ joules}$$
+
+
+
+##### Theorem: Existence of a Potential Function Theorem
+Let $F$ be a vector field on a smiply connected domain $D$. If $F$ satisfies the cross-partials condition, then $F$ is conservative.
+
+![[Pasted image 20220421160627.png]]
 
 ## 16.4 Parametrized Surfaces and Surface Integrals
 
