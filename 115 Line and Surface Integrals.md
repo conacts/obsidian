@@ -291,7 +291,7 @@ $$\oint_C F \cdot dr = 0$$
 > Evaluate the line integral of $F$ over the circle $(x - 2)^2 + y^2 = 1$ in the counter clockwise direction. Find $\int_C F \cdot dr = ?$ 
 > 1. Since the line is a circle, we know that the integral is equal to zero
 > ---
-> > A vector field $F$ and contour lines of a potential function for $F$ are shown in the figure
+> A vector field $F$ and contour lines of a potential function for $F$ are shown in the figure
 > ![[Pasted image 20220421235924.png |150]]
 > Calculate the common value of $\int_C F \cdot dr$ for the curves in the direction from $P$ to $Q$, where $\int_C F \cdot dr = ?$ 
 > 1. Find $f(Q)$ and $f(P)$
@@ -303,6 +303,7 @@ $$\oint_C F \cdot dr = 0$$
 A vector field $F$ on an open connected domain $D$ is path independent if and only if it is conservative
 ![[Pasted image 20220422002235.png |400]]
 
+###### Potential Function
 > Consider the vector field $F = \langle y, x, z^3 \rangle$. Choose a potential function for $F = \langle y, x, z^3 \rangle$ if it exists.
 > 1. Identify whether F is conservative. So, determine whether the field $F = \langle y, x, z^3 \rangle$ satisfies the **cross-partials condition**. 
 > 	1. $\frac{\partial F_1}{\partial y} = \frac{\partial}{\partial y}(y) = 1$ 
