@@ -4,6 +4,7 @@
   "obsidian-outliner",
   "better-word-count",
   "cycle-through-panes",
-  "oz-image-plugin",
-  "cm-editor-syntax-highlight-obsidian"
+  "cm-editor-syntax-highlight-obsidian",
+  "obsidian-admonition",
+  "obsidian-excalidraw-plugin"
 ]

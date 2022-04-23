@@ -1,4 +1,15 @@
-Integration over vectorfields
+## Types of Integrals
+
+1. Scalar line integral along a curve $C$ given by $r(t)$ for $a \le t \le b$ (can be used to compute arc length, mass, electric potential):
+$$\int_C f(x,y,z) ds = \int^b_a f(r(t)) ||r'(t)|| dt$$
+2. Vector line integral to calculate work along a curve $C$ given by $r(t)$ for $a \le t \le b$
+$$\int_C F \cdot dr = \int^b_a F(r(t)) \cdot r'(t)dt = \int_C F_1 dx + F_2dy + F_3 dz$$
+3. Vector line integral to calculate flux across a curve $C$ given by $r(t)$ for $a \le t \le b$
+$$\int_C F \cdot n ds = \int^b_a F(r(t)) \cdot N(t) dt$$
+4. Surface integral over a surface with parametrization $G(u,v)$ and parameter domain $D$ (can be used to calculate surface area, total charge, gravitational potential)
+$$\iint_S f(x,y,z) dS = \iint_D f(G(u,v)) ||N(u,v)|| dudv$$
+5. Vector surface integral to calculate flux of a vector field $F$ across a surface $S$ with parameterization $G(u,v)$ and parameter domain $D$:
+$$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)dudv$$
 
 ## 16.1 Vector Fields
 ##### Vector Field
@@ -537,21 +548,6 @@ $$\int_C E \cdot dr = -\frac{d}{dt} \iint_S B \cdot dS$$
 2. $B$ is the magnetic field
 
 ![[Pasted image 20220412181216.png | 500]]
-
-
-## Types of Integrals
-
-1. Scalar line integral along a curve $C$ given by $r(t)$ for $a \le t \le b$ (can be used to compute arc length, mass, electric potential):
-$$\int_C f(x,y,z) ds = \int^b_a f(r(t)) ||r'(t)|| dt$$
-2. Vector line integral to calculate work along a curve $C$ given by $r(t)$ for $a \le t \le b$
-$$\int_C F \cdot dr = \int^b_a F(r(t)) \cdot r'(t)dt = \int_C F_1 dx + F_2dy + F_3 dz$$
-3. Vector line integral to calculate flux across a curve $C$ given by $r(t)$ for $a \le t \le b$
-$$\int_C F \cdot n ds = \int^b_a F(r(t)) \cdot N(t) dt$$
-4. Surface integral over a surface with parametrization $G(u,v)$ and parameter domain $D$ (can be used to calculate surface area, total charge, gravitational potential)
-$$\iint_S f(x,y,z) dS = \iint_D f(G(u,v)) ||N(u,v)|| dudv$$
-5. Vector surface integral to calculate flux of a vector field $F$ across a surface $S$ with parameterization $G(u,v)$ and parameter domain $D$:
-$$\iint_S (F \cdot n) dS = \iint_S F \cdot dS = \iint_D F(G(u,v)) \cdot N(u,v)dudv$$
-
 
 > Compute $\iint_S F \cdot dS$ for $F = \langle xy, 7y, 0 \rangle$ S being the cone $z^2 =x^2 + y^2 , x^2 + y^2 \le 16, z \ge 0$ with the normal pointing downward
 > 1. Paramatrize the given surface

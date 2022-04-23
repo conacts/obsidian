@@ -9,8 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "115 Line and Surface Integrals.md",
-            "mode": "preview",
+            "file": "Math 230 Homework 11.md",
+            "mode": "source",
+            "backlinks": false,
             "source": false
           }
         }
@@ -70,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "115 Line and Surface Integrals.md",
+                "file": "Math 230 Homework 11.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "115 Line and Surface Integrals.md",
+                "file": "Math 230 Homework 11.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +103,15 @@
   },
   "active": "0862f4bdae6dfd0d",
   "lastOpenFiles": [
-    "115 Line and Surface Integrals.md",
     "Math 230 Homework 11.md",
+    "115 Line and Surface Integrals.md",
+    "Design Project 3.md",
+    "Excalidraw/Drawing 2022-04-22 19.16.37.excalidraw.md",
     "113 Multivariable Functions.md",
-    "Untitled.md",
     "122 Counting and Probability.md",
     "123 Graphs and Trees.md",
     "121 Number Theory and Cryptography.md",
     "80 Git.md",
-    "119 Sets.md",
-    "272 Computer Compontents.md"
+    "119 Sets.md"
   ]
 }
