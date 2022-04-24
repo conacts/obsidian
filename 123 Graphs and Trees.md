@@ -378,3 +378,172 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > 4. {(1,7), (3,2), (5,8), (5,6), (9,7)}
 > **ANS:** Number 4 since (5,6) is not an edge
 
+### Euler Graphs and Hamiltonian Graphs
+
+##### Euler Graph
+A graph containing a Euler trail
+
+##### Euler Trail 
+A path $G$ where you can visit each edge of the graph $G$
+
+##### Closed Euler Trail / Euler Circuit
+A path $G$ where you can visit each edge of the graph only once to span the graph.
+
+> Determine which graph has an Euler path and which graph has an Euler circuit. Find the sequence of vertices for that Euler path and circuit.
+> ![[Pasted image 20220423160203.png |300]]
+> $G_1:$ Euler Path ~ C - A - B - C - E - G - F - D - C - F
+> $G_2:$ Closed Euler Path ~ A - B - C - E - G - F - C - F - D - C - A
+
+##### Determine if a Graph is a Euler Circuit
+If a graph $G$ is connected and the degree of every vertex of $G$ is a positive even integer, then $G$ has a Euler Circuit
+
+##### Determine if a Graph is a Euler Trail
+A graph $G$ has a Euler trail, but not Euler circuit if and only if it has exactly two verticies of odd degree
+
+> Determine which graph has an Euler path and an Euler circuit. Find a sequence of vertices if an Euler path or an Euler circuit exits in any graph.
+> ![[Pasted image 20220423184736.png |400]]
+> 1. Graph $G_1$ has Euler path
+> 	1. b ~ a ~ c ~ b ~ d 
+> 2. Graph $G_2$ has neither an Euler path nor a circuit
+> 3. Graph $G_3$ has an Euler circuit 
+> 	1.  a ~ b ~ d ~ c ~ e ~ f ~d ~ e ~ b ~ c ~a 
+
+
+#### Hamilton graph
+A graph containing a hamilton cycle, or can have each vertex visited once using a start and end point
+
+##### Hamilton Cycle / Hamilton Circuit
+Visiting each vertex once, compared to [[123 Graphs and Trees#Euler Trail|euler trail]] which visits each edge once
+
+##### Hamilton Path
+Similar to a Hamilton Cycle, it has to visit each vertex once but doesn't have a starting or ending vertex.
+
+##### Odd Cycle 
+A [[123 Graphs and Trees#Cycle Graph|cycle]] with an **odd** number of verticies
+
+##### Even Cycle
+A [[123 Graphs and Trees#Cycle Graph|cycle]] with an **even** number of verticies
+
+> Determine whether each graph has a hamilton cycle, hamilton path, or neither.
+> ![[Pasted image 20220424133404.png |400]]
+> 1. $G_1$ has a Hamilton Circuit
+> 	1. Each complete graph $K_n$ has a Hamiltonian cycle, where $n \ge 3$. Also, a $K_{mn}$ has a Hamiltonian cycle if and only if $m = n \ge 2$.
+> 1. $G_2$ has a Hamilton path, but not a Hamilton Circuit
+> 	1. Every $C_n$ graph is a Hamiltonian graph
+> 2. $G_3$ neither a Hamilton path nor Hamilton Circuit
+> 	1.  A simple graph $G$ is called maximal _non-Hamiltonian,_ if it is not Hamiltonian but adding any edge connecting two nonadjacent vertices forms a Hamiltonian graph.
+
+##### Dirac's Theorem to Solve for Hamilton Circuit
+If $G$ is a simple graph with $n$ verticies, where $n \ge 3$ and the degree of every vertex of $G$ is at least $\frac{n}{2}$, then $G$ has a [[123 Graphs and Trees#Hamilton Cycle Hamilton Circuit|Hamilton circuit]] .
+![[Pasted image 20220424134514.png|200]]
+
+##### Ore's Theorem to Solve for Hamilton Circuit
+If $G$ is a simple graph with $n$ verticies where $n \ge 3$ and for every pair of nonadjacent verticies $u$ and $v$ in $G, deg(u) + deg(v) \ge n$, then $G$ has a Hamilton circuit.
+![[Pasted image 20220424135027.png |200]]
+
+
+##### Petersen Graph
+An undirected graph with 10 verticies and 15 edges, typically drawn as a pentagram within a pentagon
+![[Pasted image 20220424153322.png]]
+
+#### Plane Graph
+A graph where edges do not overlap each other and only meet at verticies
+
+##### Nonplanar Graph
+A graph where the edges must overlap to display the graph properly
+
+> Is $K_4$ a planar graph?
+> 1. **ANS:** A different representation of $K_4$ can be expressed as a planar graph, shown in the last 3 examples
+> 	1. ![[Pasted image 20220424140110.png |400]]
+
+##### Determine if a Graph is Planar
+
+##### Regions
+Boundaries formed through the edges of a planar graph, denoted below as $R$ ![[Pasted image 20220424141005.png |400]]
+
+> Is $K_{3,3}$ a planar graph?
+> **ANS:** No
+
+
+##### Euler's Theorem
+Let $G$ be a connected planar simple graph with $e$ edges and $v$ verticies let $r$ be the number of regions in a planar representation of $G$. Then $r = e - v + 2$
+
+> Suppose that a connected planar simple graph has 30 vertices, each of degree 2. Into how many regions do a representation of this planar graph split the plane?
+> **ANS:**
+> 1. We know that there are 30 verticies.
+> 2. BY handshaking theorem, $\sum deg(v) = 30 \cdot 2 = 2 \cdot |E|$
+> 3. By Euler's Theorem, $r = 30 - 30 + 2 = 2$
+> 4. Therefore, there are two regions of that planar graph
+
+##### Corollary Collary 2
+If $G$ is a connected planar simple graph with $e$ edges and $v$ verticies, where $v > 3$, then $e \le 3v - 6$ 
+
+> Is $K_5$ nonplanar?
+> **ANS:** 
+> 1. We know that graph $K_5$ has five verticies and 10 edges
+> 2. Using Collary 2, we can say that $3 \cdot 5 - 6 = 9$
+> 3. We know that $10 \not \le 9$ 
+> 4. By Corollary 2, $K_5$ is not a planar graph
+
+##### Corollary 3
+If $G$ is a connected planar simple graph, then $G$ has a vertex of degree not exceeding five.
+
+> Determine whether $K_{10}$ is planar or not
+> **ANS:** With each vertex in $K_{10}$ having a degree of 9, we know this is not planar due to Corollary 3
+
+
+##### Corollary 4
+If a connected planar simple graph $G$ has $e$ edges and $v$ verticies where $v \ge 3$ and there is no circuit of length three, then $e \le 2v -4$
+
+> Determine whether $K_{3,3}$ is planar or nonplanar by Corollary 4
+> **ANS:** 
+> Graph $K_{3,3}$ is bipartite graph then it has no circuits of length three.
+> We know that there are six verticies and nine deges in $K_{3,3}$
+> We get $2v - 4 = 8$, but $e = 9$. We know that $9 \le 8$ 
+> $K_{3,3}$ is nonplanar
+
+#### Subdivision
+Replacing an edge in a graph with a vertex and two edges to connect where the previous edge was removed
+![[Pasted image 20220424152754.png |400]]
+
+#### Homeomorphic
+Two graphs are homeomorphic if they can be obtained from the same graph by a sequence of [[123 Graphs and Trees#Subdivision|subdivisions]] 
+![[Pasted image 20220424152952.png |500]]
+
+
+
+##### Kuratowski's Theorem
+A graph is planar if and only if it does not contain a subgraph homeomorphic to $K_{3,3}$ or $K_5$ 
+
+> Is the [[123 Graphs and Trees#Petersen Graph|petersen graph]] a planar graph?
+> **ANS:** The petersen graph is a subgraph of $K_{3,3}$, meaning the petersen graph is not planar
+
+##### Graph Coloring
+There are two ways to color a graph
+1. Edge Coloring
+2. Vertex Coloring
+![[Pasted image 20220424155413.png |400]]
+
+##### Proper Coloring
+Coloring each vertex of the graph so that no two adjacent verticies are assigned the same color
+
+##### K-coloring
+Coloring verticies $k$ colors so that no two verticies of the same color are connected through a mutual edge
+
+##### Chromatic Number
+The smallest number $k$ of the [[123 Graphs and Trees#K-coloring|k-coloring]] of a graph, denoted by $x(G)$
+- There is currently no efficient algorithm to find the chromatic number of any graph. The current technique uses greedy algortihm to assign colors.
+
+##### Greedy Algorithm
+- Number of set of possible colors
+- Order the verticies of the graph in any arbitrary order
+- Color the first vertex with the first color
+- For the remaining set of verticies, assign $v$ a color that is different from the color of $v$'s neighbors and use the lowest numbered color possible to select a color for $v$. 
+
+##### Bipartite Color Theorem
+A bipartite graph has a chromatic number of $x(G) = 2$.
+
+##### Odd Cycle Color Theorem
+If graph $G$ has an [[123 Graphs and Trees#Odd Cycle|odd cycle]], then it has a chromatic number of $x(G) = 3$
+
+##### Four Color Theorem
