@@ -1,12 +1,6 @@
 Deck: Computer Science
 # Trees
 
-#### Preorder Traversal
-
-
-#### Post Order Traversal
-
-### Breadth-First Search (BFS)
 
 ### Depth First Search (DFS)
 **Defintion:** Traverses from the root to visit the deepest branches within that path

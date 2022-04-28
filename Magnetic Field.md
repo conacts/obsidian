@@ -55,17 +55,3 @@ Notation for vectors and currents perpendicular to the page
 3. Our created magnetic field exerts forces on earth's magnetic poles. The force on the north pole is parallel to $\vec{B}$. The force on the south pole is opposite to $\vec{B}$ 
 ![[Pasted image 20220327011901.png |300]]
 
-## 29.3 The Source of the Magnetic Field: Moving Charges
-
-## 29.4 The Magnetic Field of a Current
-
-## 29.5 Magnetic Dipoles
-
-## 29.6  Ampère’s Law and Solenoids
-
-## 29.7 The Magnetic Force on a Moving Charge
-
-## 29.8 Magnetic Forces on Current-Carrying Wires
-
-## 29.9 Forces and Torques on Current Loops
-

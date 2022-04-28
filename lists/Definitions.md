@@ -84,3 +84,7 @@ $$\int^b_af(x)dx=F(b)-F(a)$$
 ##### Cyclontron Motion
 Centripetal Acceleration, or moving in a circle
 ![[Pasted image 20220327005325.png | 300]]
+
+
+##### Acyclic graph
+A graph with no cycles, otherwise known as a tree

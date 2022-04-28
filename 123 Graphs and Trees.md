@@ -378,6 +378,45 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > 4. {(1,7), (3,2), (5,8), (5,6), (9,7)}
 > **ANS:** Number 4 since (5,6) is not an edge
 
+
+### Walk, Trails, Paths
+
+##### Walk
+A sequence of alternating verticies and edges that starts and ends with a vertex
+
+##### Trivial Walk
+A walk with no edges, giving a walk length of 0
+
+
+
+
+### Graph Representation
+
+##### Adjacency List
+A list for directed or undirected graphs where you acknowledge the verticies connected to the edges of another vertex
+![[Pasted image 20220424203358.png]]
+
+![[Pasted image 20220424203407.png]]
+
+
+#### Matrix Representation of Graphs
+
+##### Adjacency Matrix
+An $m \times n$ matrix where you use you track the adjacent verticies
+![[Pasted image 20220424203655.png]]
+
+> Find the adjacency matrix of the directed graph
+> ![[Pasted image 20220424203814.png |200]]
+> 
+> |    | a   | b   | c   | d   | e   |
+| --- | --- | --- | --- | --- | --- |
+| a   | 0   | 1   | 1   | 0   | 0   |
+| b   | 1   | 0   | 0   | 0   | 0   |
+| c   | 0   | 0   | 0   | 0   | 1   |
+| d   | 1   | 0   | 0   | 0   | 0   |
+| e   | 0   | 0   | 0   | 1   | 0    |
+
+
 ### Euler Graphs and Hamiltonian Graphs
 
 ##### Euler Graph
@@ -502,7 +541,7 @@ If a connected planar simple graph $G$ has $e$ edges and $v$ verticies where $v 
 > We get $2v - 4 = 8$, but $e = 9$. We know that $9 \le 8$ 
 > $K_{3,3}$ is nonplanar
 
-#### Subdivision
+### Subdivision
 Replacing an edge in a graph with a vertex and two edges to connect where the previous edge was removed
 ![[Pasted image 20220424152754.png |400]]
 
@@ -534,6 +573,17 @@ Coloring verticies $k$ colors so that no two verticies of the same color are con
 The smallest number $k$ of the [[123 Graphs and Trees#K-coloring|k-coloring]] of a graph, denoted by $x(G)$
 - There is currently no efficient algorithm to find the chromatic number of any graph. The current technique uses greedy algortihm to assign colors.
 
+###### Chromatic Number of $K_n$ 
+> The chromatic number of $K_n$ is $n$. The chromatic number of $K_5$ is 5
+> ![[Pasted image 20220424163722.png |500]]
+> 
+
+> Chromatic numbers of $G_1, G_2, G_3$
+> ![[Pasted image 20220424163158.png |400]]
+> $x(G_1) = 2$
+> $x(G_2) = 3$
+> $x(G_3) = 3$ where $Y=R$
+
 ##### Greedy Algorithm
 - Number of set of possible colors
 - Order the verticies of the graph in any arbitrary order
@@ -547,3 +597,239 @@ A bipartite graph has a chromatic number of $x(G) = 2$.
 If graph $G$ has an [[123 Graphs and Trees#Odd Cycle|odd cycle]], then it has a chromatic number of $x(G) = 3$
 
 ##### Four Color Theorem
+The chromatic number of a planar graph is no greater than 4, meaning $x(G) \le 4$ 
+
+## 9.8 Trees
+A graph where every vertex is connected by exactly one path, otherwise known as an [[Definitions#Acyclic graph|acyclic graph]].
+
+##### Trivial Tree
+A tree with a single vertex
+
+##### Empty Tree
+A tree with no verticies
+
+#### Forest
+A collection of trees, otherwise known as a simple, undirected graph with no simple circuits
+![[Pasted image 20220424171159.png |400]]
+
+##### Tree Test Theorem
+Every vertex in a tree is connected by exactly one path
+
+##### Tree Edge Theorem
+For any positive integer $n$, any tree with $n$ verticies has $n - 1$ edges
+
+###### Proving Tree Edge Theorem
+
+> | Step | Name                 | Description                                                                                                                                                |
+| ---- | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1    | Proof.               | Proof step                                                                                                                                                 |
+| 2    | Assignment           | Let $P(n)$ hold the property of the statement for vertex $n$                                                                                               |
+| 3    | Base case            | When $n=1$, $P(1) = 1$                                                                                                                                     |
+| 4    | Inductive Hypothesis | $k \ge 1$. Assume $P(n)$ is true for all tree on $n = k$ verticies                                                                                         |
+| 5    | Inductive step       | Let $T$ be a tree with $n = k + 1$ verticies. Let $v$ be a leaf of the tree $T$ and tree $T' = T - v$, meaning $T' = k-1$ edges. $T = (k-1) + 1 = k$ edges |
+| 6    | Therefore            | Therefore, any tree with $n$ verticies has $n-1$ edges $\square$                                                                                                                                                            |
+
+#### Rooted Tree
+A tree where one vertex has been designated as a root and every edge is directed away from the root
+![[Pasted image 20220424172706.png|400]]
+
+##### Parent
+A vertex above the current vertex (max 1 parent)
+
+##### Child
+The verticies connected beneath a vertex
+
+##### Terminal Node
+A vertex with no children
+
+##### Ancestors
+Vertices connecting a vertex to the root
+
+##### Descendants
+Verticies beneath a vertex
+
+##### Internal Node
+Verticies with children
+
+##### Siblings
+Verticies with the same parent
+
+##### m-ary tree
+For $m > 1$, if every internal vertex of a rooted tree has at most $m$ children. 
+![[Pasted image 20220424173928.png |400]]
+
+
+##### Binary Tree
+A tree with a max of two children per vertex. 
+- Can be described as an m-ary tree where $m = 2$
+![[Pasted image 20220424174348.png]]
+
+
+##### Full Binary Tree
+A binary tree where each vertex has either 2 children, or no children
+![[Pasted image 20220424174425.png]]
+
+##### Level of Tree
+How many parent verticies separate the current node from the root
+
+![[Pasted image 20220424174739.png |300]]
+
+##### Height of a Tree
+The maximum level of a tree
+![[Pasted image 20220424174831.png |400]]
+
+
+##### Balanced Tree
+A binary tree where the height of the left and right subtree of any vertex don't differ by more than 1
+![[Pasted image 20220424175136.png |400]]
+
+##### Heap / Ordered Rooted Tree
+Where the children of each node are organized from least to greatest from left to right
+![[Pasted image 20220424175606.png|400]]
+
+##### Theorem 17
+A full m-ary tree with $i$ internal verticies contains a total of $n = mi + 1$ verticies and $i + 1$ leaves.
+
+> If $T$ is a full binary tree with 8 internal verticies, then $T$ has $2 \cdot 8 + 1 = 17$ vertices
+
+##### Full m-ary tree Theorems
+
+| condition              | formula 1                            | formula 2                        |
+| ---------------------- | ------------------------------------ | -------------------------------- |
+| $n$ verticies          | $i = \frac{(n - 1)}{m}$              | $l = \frac{ (m - 1) n + 1  }{m}$ leaves |
+| $i$ internal verticies | $n = mi + 1$ vertices                | $l = (m - 1)i + 1$ leaves              |
+| l leaves               | $n = \frac{ml - 1}{m - 1}$ verticies | $i = \frac{(l - 1)}{(m - 1)}$ internal verticies                                |
+
+##### Theorem 19
+If $T$ is a binary tree with $t$ leaves and height $h$ then $t \le 2^h$ 
+
+> How many verticies does a full 3-ary tree with 100 internal vertices have?
+> **ANS:** 
+> Since the tree is a full 3-ary tree, every internal vertex has three children. Therefore, the total number of verticies of the tree is $3 \cdot 100 + 1 = 301$ 
+
+> How many leaves does a full 4-ary tree with 97 verticies have?
+> **ANS:** 
+> We know a full m-ary tree with $n$ verticies has leaves $l = \frac{(m-1) n +1}{m}$ 
+> Therefore, a full 4-ary tree with 97 verticies
+
+##### Theorem 20
+There are at most $m^h$ leaves in an m-ary tree of height $h$
+
+##### Corollary 5
+If an m-ary tree of height $h$ has $l$ leaves, then $h \ge \lceil \log_m l \rceil$ 
+
+##### Binary Search Tree (BST)
+![[Pasted image 20220424182234.png |400]]
+
+> (Binary Search Trees). Construct a binary search tree for the words: “the quick brown fox jumps over the lazy dog”
+> ![[Pasted image 20220424182725.png |400]]
+
+
+##### Decision Tree 
+Rooted trees can be used to model problem based on a series of decisions
+![[Pasted image 20220424182847.png |300]]
+
+> (Decision Trees). A decision tree is used to sort three distinct elements x, y, z
+> **ANS:**
+> ![[Pasted image 20220424182914.png | 500]]
+
+
+## Tree Traversal Algorithms
+1. Breadth First Search (BFS)
+	1. Djikstra's Algorithm
+2. Depth First Search (DFS)
+	1. Inorder Traversal
+	2. Preorder Traversal
+	3. Postorder Traversal
+
+
+##### Universal Address System
+A way to order the verticies of an ordered rooted tree using recursion.
+1. The root $r$ is labeled with 0 and its children are labeled 1, 2, ..., n left to right
+2. If an internal vertex $v \ne r$ has a label $L$, then its $k_v$ children get lebels $L \cdot 1, L \cdot 2, ..., L \cdot k_v$ respectively
+
+>$0 < 1 < 1 < 1 \cdot 1 < 1 \cdot 2 < 1 \cdot 3 < 2 < 2 \cdot 1 < \cdot 3 < 3 \cdot 1 < 3 \cdot 2$ 
+> ![[Pasted image 20220424184025.png |400]]
+
+### Depth First Search (DFS)
+**Defintion:** Traverses from the root to visit the deepest branches within that path
+**Data Structure:** Stack
+-  Traverse down a trees path until it ends. Pop off the stack until you find a node you havent traversed yet
+![[Pasted image 20220131163658.png]]
+##### Preorder Traversal Algorithm
+A DFS variant, visiting
+1. Visit root
+2. Visit left subtrees recursively
+3. Visit right subtrees recursively by preorder
+
+![[Pasted image 20220131164832.png]]
+
+> Apply the preorder traversal algorithm on ordered rooted tree $T$ and list all the vertices of the tree visited based on preorder traversal.
+> ![[Pasted image 20220424184507.png |400]]
+> 1. i, j, m, s, t, u, k
+> 2. n, o, l, p, v, w
+> 3. x, q, r, y, z
+
+##### Inorder Traversal Algorithm
+1. Visit left subtrees recursively by inorder
+2. Visit root
+3. Visit right subtrees recursively preorder
+
+![[Pasted image 20220131162858.png |400]]
+
+> Apply inorder traversal algorithm on an ordered rooted tree $T$ and list all the verticies of the tree visited by inorder treversal algorithm
+> ![[Pasted image 20220424185108.png |400]]
+> 1. s, m, t, u, j, i, n
+> 2. k, o, v, p, w, x, l
+> 3. q, y, r, z
+
+##### Postorder Traversal Algorithm
+1. Visit left subtrees recursively by inorder
+2. Visit right subtrees recursively by preorder
+3. Visit root
+
+![[Pasted image 20220131164959.png]]
+
+> Apply the postorder traversal algorithm on ordered rooted tree T and list all the vertices of the tree visited by postorder traversal algorithm.
+> ![[Pasted image 20220424194408.png |400]]
+> 1. s, t, u, m, j, n
+> 2. o, k, v, w, x, p
+> 3. q, y, z, r, l, i
+
+### Breadth-First Search
+Data Structure: Queue
+Definition: Starts at the root node and visits each node on the current depth before moving to the next level
+![[Pasted image 20220131165123.png]]
+
+#### Tree Expression
+Mathmatical expressions can be expressed using trees
+
+![[Pasted image 20220424194647.png |400]]
+
+##### Prefix Notation
+Notation where operators precede their operands. When traversing a tree to obtain prefix notation we traverse in preorder
+
+> Find the prefix expression of the tree $T$
+> Note: 1 in level 3 is supposed to be a "/" (division)
+> ![[Pasted image 20220424195124.png]]
+> **ANS:** Using preorder traversal, we can find the expression of our equation is 
+> $$* \quad + \quad / \quad 36 \quad 9 \quad 4 \quad * \quad 2 \quad 3 \quad / \quad 10 \quad 5$$
+
+##### Postfix Notation
+Notation where numbers are written before operands and is obtained through [[123 Graphs and Trees#Postorder Traversal Algorithm|postorder traversal]]
+
+> What is the postfix expression of tree $T$
+> ![[Pasted image 20220424195124.png]]
+> $$36 \quad 9 \quad / \quad 4 \quad + \quad 2 \quad 3 \quad * \quad 10 \quad 5 \quad / \quad - \quad *$$
+
+
+##### Spanning Trees
+Essentially a graph turned into a tree by deleting edges and keeping all the verticies
+![[Pasted image 20220424200500.png |300]]
+
+> Find the spanning tree of the graph using the DFS algorithm
+> ![[Pasted image 20220424201324.png |400]]
+> **ANS:**
+> ![[Pasted image 20220424201348.png |200]]
+> 
+> 
