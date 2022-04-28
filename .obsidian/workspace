@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "271 Number and Binary Representation.md",
+            "file": "Math 230 HW 12.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -71,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "271 Number and Binary Representation.md",
+                "file": "Math 230 HW 12.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "271 Number and Binary Representation.md",
+                "file": "Math 230 HW 12.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -103,15 +103,15 @@
   },
   "active": "28b79111bddbc1c0",
   "lastOpenFiles": [
+    "Math 230 HW 12.md",
+    "124 Fundamental Theorems of Vector Analysis.md",
+    "115 Line and Surface Integrals.md",
     "271 Number and Binary Representation.md",
     "272 Computer Compontents.md",
     "273 State Machine.md",
     "300 Physics.md",
     "310 Electric Charges and Forces.md",
     "311 Gauss's Law.md",
-    "312 Capacitor Problems.md",
-    "400 Computer Science.md",
-    "402 Tree Notes.md",
-    "CMPSC 360 HW 9.md"
+    "312 Capacitor Problems.md"
   ]
 }
