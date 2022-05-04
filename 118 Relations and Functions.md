@@ -59,7 +59,7 @@ Essentially just flipping the order of the ordered pair, as (x,y) = (y, x)
 
 
 #### Types of Relations
-There are two types of relations frequently occuring in mathematics, 
+There are two types of relations (equivalence classes) frequently occuring in mathematics, 
 1. Equivalence Relation
 2. Partial Ordering
 

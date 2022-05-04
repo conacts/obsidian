@@ -423,10 +423,10 @@ An $m \times n$ matrix where you use you track the adjacent verticies
 A graph containing a Euler trail
 
 ##### Euler Trail 
-A path $G$ where you can visit each edge of the graph $G$
+A path $G$ where you can visit each edge of the graph $G$, without having to return to where you started
 
 ##### Closed Euler Trail / Euler Circuit
-A path $G$ where you can visit each edge of the graph only once to span the graph.
+A path $G$ where you can visit each edge of the graph only once and have to return to where you started
 
 > Determine which graph has an Euler path and which graph has an Euler circuit. Find the sequence of vertices for that Euler path and circuit.
 > ![[Pasted image 20220423160203.png |300]]

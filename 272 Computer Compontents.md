@@ -742,7 +742,7 @@ Causes time $T$ to change on a cycle-by-cycle basis
 ##### Absolute Jitter
 The worst variation of a clock edge with respect to the ideal clock signal
 ![[Pasted image 20220419121541.png |400]]
-$$T: \quad T-2t_{jitter} \ge t_{c-q} + t_{plogic} + t_{su} \quad text{so} \quad T \ge t_{c-q} + t_{plogic} + t_{su} + 2t_{jitter}$$
+$$T: \quad T-2t_{jitter} \ge t_{c-q} + t_{plogic} + t_{su} \quad \text{so} \quad T \ge t_{c-q} + t_{plogic} + t_{su} + 2t_{jitter}$$
 **Note:** Jitter directly reduces the performance of a sequential circuit
 
 #### Clock Skew + Clock Jitter

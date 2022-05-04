@@ -10,12 +10,6 @@
 8. Derive the equations for output functions and flip-flop input functions
 
 
-
-$Y_2 = wy_1$
-$Y_1 = w$
-$z = y_2$
-
-
 ![[Pasted image 20220406102506.png |300]]
 What does it do? 
 - swaps values between registers, more specifically the contents of R1 and R2
@@ -48,5 +42,5 @@ A = 00, B = 01, C = 10, D = 11
 | 1           | 0   | 1   | 0   | 1    |
 
 ##### State Redundancy
-Two states $S_i$ and $S_j$ are said to be equivalent if and only if ever ypossible input sequence, the same output sequence will be produced regardless of whether $S_i$ or $S_j$ is the inital state
+Two states $S_i$ and $S_j$ are said to be equivalent if and only if every possible input sequence, the same output sequence will be produced regardless of whether $S_i$ or $S_j$ is the inital state
 

@@ -200,3 +200,29 @@ $$\iint_S curl(F) \cdot dS = 0$$
 > 	1. $$\int^5_{r=0} \int^{2\pi}_0 (5, 0, -7) \cdot (0,0,r) = -7\int^5_{r=0} \int^{2\pi}_0r d\theta dr = -175\pi$$
 
 
+
+## 17.3 Divergence Theorem
+
+##### The Divergence Theorem
+Let $S$ be a clsed surface that enclosed a region $W$ in $R^3$. Assume that $S$ is piceewise smooth and is oriented by normal vectors pointing to the outside of $W$. If $F$ is a vector field whose components have continuous partial derivatives in an open domain containing $W$, then
+$$\iint_S F \cdot dS = \iiint_W div(F) dV \quad\quad div(F) = \nabla F$$
+
+> Use the Divergence Theorem to evaluate the flux $\iint_S F \cdot dS$ $F(x,y,z) = \langle zx, 4yx^3, x^2 z \rangle$. Let $S$ be the surface that bounds the solid region with bondary given by $y = 4-x^2 - z^2,y=0$. 
+> $\iint_S F \cdot dS = ~?$ 
+> 1. Find the divergence
+> 	1. $div(F) = \nabla F = z + 4x^3 + x^2$
+> 2. Paramatrize the shape using cylindrical coordinates
+> 	1. $x = r\cos \theta, \quad y = y, \quad z = r\sin \theta$
+> 	2. $div(F) = r\sin\theta + 4r^3\cos^3\theta + r^2\cos^2\theta$
+> 3. Integrate
+> 	1. $$\iiint_W div(F) = \int^2_0 \int^{2\pi}_0 \int_0^{4-r} r\sin\theta + 4r^3\cos^3\theta + r^2\cos^2\theta ~ dy~ d\theta  ~dr = \frac{16\pi}{3}$$
+> ---
+> Use the Divergence Theorem to evaluate the flux of the field $F(x,y,z) = \langle e^{z^2}, 4y + \sin(x^2 z), 3z + \sqrt{x^2 + 9y^2} \rangle$ through the surface $S$, where $S$ is the region $x^2 + y^2 \le z \le 8 - x^2 - y^2$
+> 1. Find the $div(F)$
+> 	1. $div(F) = \nabla F = 0 + 4 + 3 = 7$
+> 3. Find bounds for $r$ by seeing where the bounds intersect
+> 	1. $x^2 + y^2 = 8 - x^2 - y^2$
+> 	2. $x^2 + y^2 = 4$
+> 	3. $r = 2$
+> 4. Integrate
+> 	1. $$\int^2_0 \int^{2\pi}_0 4r - r^3 dr~d\theta = $$

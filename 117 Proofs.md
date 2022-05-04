@@ -313,12 +313,12 @@ $2^{2n-1}$ is divisible by $3$
 | 7    | Therefore             | Therefore, we know that $F_2 + F_4 + F_6 + ... + F_{2n+1}-1 \space \square$                                                                                                                       |
 
 
-7) Let $a_n$ be the sequence defined by $a_1 = 1, a_2 = 8$, and $a_n = a_{n-1} + 2a_{n-2}$ for $n \ge 3$. Prove that $a_n = 3 \cdot 2^{n-1} + 2(-1)^n$ for all $n \in \mathbb{N}$
+7) Let $a_n$ be the sequence defined by $a_1 = 1, a_2 = 8$, and $a_n = a_{n-1} + 2a_{n-2}$ for $n \ge 3$. Prove that $a_n = 3 \cdot 2^{n-1} + 2(-1)^n$ for all $n \in \mathbb{N}$ WRONG
 
-| Step | Rule                    | Proof                                                                                                                                           |     |
-| ---- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --- |
-| 1    | State proof             | Proof.                                                                                                                                          |     |
-| 2    | Induction of variable   | We proceed with induction on variable "n"                                                                                                       |     |
+| Step | Rule                    | Proof                                                                                                                                           |     
+| ---- | ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | 
+| 1    | State proof             | Proof.                                                                                                                                          |     
+| 2    | Induction of variable   | We proceed with induction on variable "n"                                                                                                       |    
 | 3    | Assume                  | $a_{n-1} + 2a_{n-2}$ for $n \ge 3$ for all $n \in \mathbb{N}$                                                                                   |     |
 | 4    | Base case               | $a_1 = 1^3 = 1, a_2 = 2^3= 8, a_3^ = 8 + 2 = 10, a^4 = (8 + 2) + 2(8) = 26$                                                                     |     |
 | 5    | Strong Inductive hypothesis    | For any arbitrary integer $1 \le k \le n$ where $n \ge 3$                                                                                                 |     |
@@ -338,7 +338,7 @@ $2^{2n-1}$ is divisible by $3$
 | 4    | Base case                       | $a_0 = 2^0 = 1,a_1 =  2^1 = 2,a_2 = 2^2 = 4$                                              |
 | 5    | Strong Inductive Hypothesis     | For any arbitrary number $n < k < n+1$ where $n \ge 0$                                    |
 | 6    | Inductive Step                  | We must show that $a_n + a_{n-1} = k$                                                     |
-| 7    | Euler's Theorem for powers of 2 | Based on eulers theorem for powers of two we can create any number from the powers of two |
+| 7    | Euler's Theorem for powers of 2 | Based on eulers theorem for powers of two we can create any number from the powers of two (SHOW EULER'S THEOREM) |
 | 8    | More...                         | $a_{k-3} + a_{k-2} + a_{k-1} + ... + a_{k} = k$                                           |
 | 9    | Conclusion                      | By summation, we can show the equation $a_n + a_{n-1}$ as a series that gives us any real number $n \space \square$                                                                                          |
 
