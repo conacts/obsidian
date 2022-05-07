@@ -18,7 +18,7 @@ $$\text{x-head}=a_1+a \quad \text{y-head}=b_1+b$$
 
 
 ---
-#### Vector Algebra:
+#### Vector Algebra
 ##### Translation of a Vector:
 Changing only the vectors location, not its magnitude or direction. This is equivalent to moving the tail and head of a vector equal distance.
 
@@ -243,7 +243,7 @@ $$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
 >  $$\theta_A=\arccos\frac{(3, 1) \cdot (4, -7)}{\sqrt{3^2+1^2} \cdot \sqrt{4^2 + (-7)^2 }}=\arccos(0.196)=1.373 rad$$
 >  3. Repeat for $\theta_B$ and $\theta_C$ 
 
-##### Projections:
+##### Projections
 **Definition:** Mapping points and lines from one plane onto another, resembling something of a shadow
 ![[Pasted image 20220117000038.png | 200]]
 **Equation :: Projection of u along v:**
@@ -321,7 +321,7 @@ $v=v_{||w} + v_{\bot w}$
 
 
 ## 12.4: The Cross Product
-Cross Product is a vector operation used typically to compute torque. Operating on an n x n matrix, using the determinant you can find the cross product. The cross product is often used in conjunction with the term determinant.
+Cross Product is a vector operation used typically to compute torque. Operating on an $n \times n$ matrix, using the determinant you can find the cross product. The cross product is often used in conjunction with the term determinant.
 ![[Pasted image 20220121064303.png]]
 ##### Determinant / Cross Product of a 2 x 2 matrix:
 $$\begin{bmatrix}  
@@ -583,13 +583,13 @@ $(u + v) \times w = u \times w + v \times w$
 
 ## 12.5: Planes in 3D Space
 
-##### Normal Vector:
+##### Normal Vector
 A vector that is [[110 Vectors#Orthogonal Vectors |orthogonal]] to a plane. Typically used to determine how a plane is oriented in space.
 $$v_n=\frac{v}{||v||}=\frac{v}{\sqrt{v^2}}$$
 ![[Pasted image 20220122172954.png | 200]]
 
 
-##### Geometric Description of a Plane:
+##### Geometric Description of a Plane
 $P_0=(x_0, y_0, z_0)$, is the origin of the plane
 ![[Pasted image 20220122173708.png |200]]
 ##### Equations of a Plane:

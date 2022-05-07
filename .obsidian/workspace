@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "6f5a94e6a388896e",
+        "id": "bbc4051989a56253",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "124 Fundamental Theorems of Vector Analysis.md",
+            "file": "Multivariable Calc Cheatsheet.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -20,15 +20,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "4ec12b98e8fb26a2",
+    "id": "a5734c9bb81e0690",
     "type": "split",
     "children": [
       {
-        "id": "e462649abc550559",
+        "id": "b22aac23c5aed514",
         "type": "tabs",
         "children": [
           {
-            "id": "f4fb1a5ad66260c6",
+            "id": "6e841ebf9888d2e2",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -36,7 +36,7 @@
             }
           },
           {
-            "id": "2bd5b9487fb95523",
+            "id": "6a8f31c56d0d52de",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -54,24 +54,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
-    "id": "e4a2ee533e314ab5",
+    "id": "ac678028e54ab1b9",
     "type": "split",
     "children": [
       {
-        "id": "803207e6cc92202d",
+        "id": "9470d10f3fbff75b",
         "type": "tabs",
         "children": [
           {
-            "id": "5cc9f8fea20dce3f",
+            "id": "6edd13d7922ac177",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "124 Fundamental Theorems of Vector Analysis.md",
+                "file": "Multivariable Calc Cheatsheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -83,12 +82,12 @@
             }
           },
           {
-            "id": "ba6780c78cba0a84",
+            "id": "9b99f56893706de1",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "124 Fundamental Theorems of Vector Analysis.md",
+                "file": "Multivariable Calc Cheatsheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -101,17 +100,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "6f5a94e6a388896e",
+  "active": "bbc4051989a56253",
   "lastOpenFiles": [
+    "Multivariable Calc Cheatsheet.md",
+    "115 Line and Surface Integrals.md",
     "124 Fundamental Theorems of Vector Analysis.md",
+    "114 Multiple Integration.md",
+    "113 Multivariable Functions.md",
+    "112 Vector Functions.md",
+    "assets/Pasted image 20220411115409.png",
+    "110 Vectors.md",
     "118 Relations and Functions.md",
-    "117 Proofs.md",
-    "123 Graphs and Trees.md",
-    "122 Counting and Probability.md",
-    "CMPSC 360 Practice Exam.md",
-    "CMPSC 360 HW 7.md",
-    "CMPSC 360 HW 9.md",
-    "Math 230 Homework 11.md",
-    "272 Computer Compontents.md"
+    "117 Proofs.md"
   ]
 }

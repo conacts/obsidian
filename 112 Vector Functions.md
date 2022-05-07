@@ -27,7 +27,7 @@ Note: **Plane Curve** is a line in $\mathbb{R}^2$
 > 3. Onto yz-plane: set $x=0$; $r(t)= \langle 0, sin(t), t \rangle, \quad t \le 0$ = Swirl
 	> ![[Pasted image 20220131151223.png]]
 
-**Examples:**
+###### Examples ::
 > 1. $r(4)$ will get us the proper x, therefore I will plug 4 into all values of t
 > 2. $r(4)=(1+4, 2+4^2,4^4)=(5, 18, 256)$, therefore point P does lie on the line
 > ----

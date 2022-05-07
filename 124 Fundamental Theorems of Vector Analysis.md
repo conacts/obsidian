@@ -222,7 +222,19 @@ $$\iint_S F \cdot dS = \iiint_W div(F) dV \quad\quad div(F) = \nabla F$$
 > 	1. $div(F) = \nabla F = 0 + 4 + 3 = 7$
 > 3. Find bounds for $r$ by seeing where the bounds intersect
 > 	1. $x^2 + y^2 = 8 - x^2 - y^2$
-> 	2. $x^2 + y^2 = 4$
+> 	2. $8 - 2x^2 - 2y^2$ 
 > 	3. $r = 2$
 > 4. Integrate
-> 	1. $$\int^2_0 \int^{2\pi}_0 4r - r^3 dr~d\theta = $$
+> 	1. $$7 \int^2_0 \int^{2\pi}_0 (8-2x^2-2y^2)r d\theta~dr = 14 \int^2_0 \int^{2\pi}_0 (4-r^2)r d\theta~dr$$
+> ---
+> Use the Divergence Theorem to evaluate the flux of the field $F(x,y,z) = \langle 3x^2 - z^2, e^{z^2}-\cos x, 3y^3\rangle$ through the surface $S$, where $S$ is the boundary of the region bounded by $x + 2y + 4z = 12$ and the coordinate planes in the first octant. $\iint_S F \cdot dS$
+> 1. Find the $div(F)$
+> 	1. $div(F) = \nabla F = 6x + 0 + 0 = 6x$
+> 2. Find bounds
+> 	1. $0 \le x \le 12$ 
+> 	2. $0 \le y \le 6 - \frac{x}{2}$
+> 	3. $0 \le z \le 3 - \frac{y}{2} - \frac{x}{4}$
+> 4. Integrate
+> 	1. $$\int^{12}_0 \int^{6 - \frac{x}{2}}_0 \int^{3 - \frac{y}{2} - \frac{x}{4}}_0 6x ~dz~dy~dx = 648$$
+
+

@@ -90,13 +90,18 @@ $$df=f_x(x, y)dx + f_y(x, y)dy$$
 ##### Theorem 1: Confirming Differentiability
 If $f_x(x, y)$ and $f_y(x, y)$ exist and are continuous on an open disk $D$, then $f(x, y)$ is differentiable on $D$ 
 
+###### Example :: Linear Approximation to find Tangent Plane
 > Find the equation of the tangent plane to the graph of $f(x, y) = 2xy^2 + 2x^3y^2$ at the point $(-1, 3)$. 
 > 1. Find $f_x$, then $f_y$ 
-> $$f_x=2y^2+6x^2y^2 \quad f_y=4xy+4x^3y$$
-> $$f(-1, 3) = 2(-1)(3)^2 + 2(-1)^3(3)^2=-36$$
-> $$f_x=2(3)^2+6(-1)^2(3)^2=72 \quad f_y=4(-1)(3)+4(-1)^3(3)=-24$$ 
-> 2. Plug into the equation $df=f_x(x, y)dx + f_y(x, y)dy$
-> $$df=-36 + 72(x+1)-24(y-3)=72x-24y+108$$ 
+> 	1. $f_x=2y^2+6x^2y^2$
+> 	2. $f_y=4xy+4x^3y$
+> 2. Plug the point into the original equation
+> $f(-1, 3) = 2(-1)(3)^2 + 2(-1)^3(3)^2=-36$
+> 3. Plug the point into the partial derivatives
+> 	1. $f_x=2(3)^2+6(-1)^2(3)^2=72$ 
+> 	2. $f_y=4(-1)(3)+4(-1)^3(3)=-24$
+> 4. Plug into the equation $df=f_x(x, y)dx + f_y(x, y)dy$
+> 	1. $df=-36 + 72(x+1)-24(y-3)=72x-24y+108$ 
 
 ## 14.5 Gradient and Directional Derivatives
 
@@ -143,7 +148,7 @@ $$\frac{d}{dt}f(r(t))= \nabla f_{r(t)} \cdot r'(t)$$
 **Chain rule for paths example:**
 $$\frac{d}{dt}f(r(t))= \langle \frac{\partial f}{\partial x} ,\frac{\partial y}{dy} \rangle  \cdot \langle x'(t),y'(t) \rangle = \frac{\partial f}{\partial x} \frac{dx}{dt}+\frac{\partial f}{\partial y} \frac{dy}{dt}$$
 
-##### Directional Derivative:
+##### Directional Derivative
 The directional derivative of $f$ at $P=(a, b)$ in the direction of a unit vector $u= \langle h,k\rangle$ is the limit (assuming it exists)
 $$D_uf(P)=U_uf(a,b)=\lim_{t \rightarrow 0}\frac{f(a + th,b + tk)-f(a,b)}{t}$$
 ADD DESCRIPTION:
@@ -284,7 +289,7 @@ $$\nabla f_p = \lambda \nabla g_p$$
 The critical point that satisifes the values of the Lagrange Equations:
 $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 
-**Example :: Lagrange Multiplier in 3 Variables:**
+###### Example :: Lagrange Multiplier in 3 Variables:
 > Find the minimum and maximum values of the function with values
 > $$\text{max: } f(x,y,z)=x^2 + y^2 + z^2 \quad \text{constraint: } g(x,y,z)=x+4y+5z=10 $$
 > 1. Find the values of $\nabla f$ and $\nabla g$ 

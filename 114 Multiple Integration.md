@@ -1,4 +1,3 @@
-
 ## 15.1 Integration in Two Variables
 
 ##### Double Integral 
