@@ -37,9 +37,6 @@ Algebra: $k^2 = 4$
 Algebra: $k = 2$
 Therefore, any $k \ge 2$ we can claim that if $n^2$ is not divisible by 3, then $n^2 -1$ always will be divisible by 3
 
------
-
-
 ----
 Find GCD of $2947$ and $3997$ using Euclidian Theorem.
 
