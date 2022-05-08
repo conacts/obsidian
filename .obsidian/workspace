@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "123 Graphs and Trees.md",
+            "file": "401 Intro to Algorithms.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "ac678028e54ab1b9",
@@ -70,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "123 Graphs and Trees.md",
+                "file": "401 Intro to Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "123 Graphs and Trees.md",
+                "file": "401 Intro to Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,6 +103,7 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
+    "401 Intro to Algorithms.md",
     "123 Graphs and Trees.md",
     "115 Line and Surface Integrals.md",
     "CMPSC 360 HW 9.md",
@@ -110,7 +112,6 @@
     "CMPSC 360 Midterm 2.md",
     "CMPSC 360 Practice Exam.md",
     "Math 230 Homework 11.md",
-    "114 Multiple Integration.md",
-    "Reinforcement Learning.md"
+    "114 Multiple Integration.md"
   ]
 }
