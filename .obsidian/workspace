@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "115 Line and Surface Integrals.md",
+            "file": "124 Fundamental Theorems of Vector Analysis.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "ac678028e54ab1b9",
@@ -71,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "115 Line and Surface Integrals.md",
+                "file": "124 Fundamental Theorems of Vector Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "115 Line and Surface Integrals.md",
+                "file": "124 Fundamental Theorems of Vector Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -103,15 +102,15 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
-    "115 Line and Surface Integrals.md",
-    "114 Multiple Integration.md",
-    "113 Multivariable Functions.md",
-    "112 Vector Functions.md",
-    "110 Vectors.md",
-    "100 Math.md",
-    "80 Git.md",
-    "000 Index.md",
-    "Multivariable Calc Cheatsheet.md",
-    "124 Fundamental Theorems of Vector Analysis.md"
+    "124 Fundamental Theorems of Vector Analysis.md",
+    "260 Neural Networks.md",
+    "261 Backpropagation.md",
+    "262 Loss Function and Optimizers.md",
+    "263 Hyper Parameters.md",
+    "270 Computer Engineering.md",
+    "271 Number and Binary Representation.md",
+    "272 Computer Compontents.md",
+    "300 Physics.md",
+    "400 Computer Science.md"
   ]
 }

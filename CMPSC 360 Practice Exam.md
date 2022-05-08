@@ -18,11 +18,6 @@ Suppose that there is a certain town in which all the men either shave themselve
 
 ----
 
-
-
-
----
-
 Consider the following graph. Starting from node 1, how many Hamiltonian paths (ways to visit each node once) there exists in this graph? How many Eulerian trails (ways you can visit each edge once) can be found in this graph?
 
 ![[Pasted image 20220503133524.png|150]]
