@@ -1,4 +1,4 @@
-Deck: Calculus
+TARGET DECK: Calculus
 
 ## 14.1 Functions of Two or More Variables
 Functions with multiple variables are typically denoted as:
@@ -24,18 +24,24 @@ The coloring of certain areas within a 3D contour map to show the different heig
 ![[Pasted image 20220206235637.png]]
 
 ## 14.3 Partial Derivatives:
-**Definition:** Finding the rates of change in respect to only one variable in the equation.
 
+##### Partial Derivative:
+Finding the rates of change in respect to only one variable in the equation.
+$$\frac{\partial f}{\partial x}, \quad \frac{\partial f}{\partial y}$$
 **Concept:** The idea behind partial derivaties is to find the derivative of only one variable to see how manipulation of that variable affects the rest of the equation. This is done by treating every variable as a constant except the one being integrated
 
 **Partial Derivative of variable x:**
 $$f_x(a, b)= \lim_{h\rightarrow 0}\frac{f(a+h,b)-f(a,b)}{h}$$
 **Partial Derivative of variable y:**
 $$f_y(a, b)= \lim_{h\rightarrow 0}\frac{f(a, b+k)-f(a,b)}{k}$$
+###### Example :: Partial Derivative:
+> Compute the partial derivatives of $f(x,y) = x^2 y^5$
+> 1. Compute the partial derivative of $x$
+> 	1. $$\frac{\partial f}{\partial x} = \frac{\partial}{\partial x} (x^2 y^5) = y^5(2x) = 2xy^5$$
+> 2. Compute the partial derivative of $y$
+> 	1. $$\frac{\partial f}{\partial y} = \frac{\partial}{\partial y} (x^2 y^5) = (5y^4)x^2 = 5x^2y^4$$
 
-The Notation for partial derivative is...
-$$\frac{\partial f}{\partial x}, \quad \frac{\partial f}{\partial y}$$ ![[Pasted image 20220212235521.png]]
-##### Clairaut's Theorem: 
+##### Clairaut's Theorem
 **Equality of Mixed Partials**
 If $f_{xy}$ and $f_{yx}$ both exist and are continuous on a disk $D$, then $f_{xy}(a, b)=f_{yx}(a, b)$ for all $(a, b) \in D$. Therefore, on D, 
 $$\frac{\partial^2f}{\partial x \partial y}=\frac{\partial^2f}{\partial y \partial x}$$
@@ -62,7 +68,7 @@ $$df=f_x(x, y)dx + f_y(x, y)dy$$
 ![[Pasted image 20220213192352.png | 400]]
 
 
-**Linear Approximation:**
+###### Example :: Linear Approximation:
 > Use the Linear Approximation to $f(x, y)=\sqrt{\frac{x}{y}}$ at $(81, 16)$ to estimate $\sqrt{\frac{81.1}{15.9}}$ 
 > 1. Use the linear approximation formula of $L(x, y)=f(a, b) + f_x (a, b)(x-a)+f_y(a, b)(y-b)$, first we will solve for $f_x$ 
 > $$f_x(81,16)=\frac{1}{2\sqrt{{y}}\sqrt{x}}=\frac{1}{2 \cdot 9 \cdot 4}=\frac{1}{72}$$
@@ -73,7 +79,7 @@ $$df=f_x(x, y)dx + f_y(x, y)dy$$
 > Now plug into the equation
 > $$L(81.1, 15.9)=2.25 + \frac{1}{72}(81.1-81)-\frac{9}{128}(15.9-16)=2.2584$$
 
-**Approximating Change in function:**
+###### Example :: Approximating change in function:
 > Let $f(x, y)=x^3y^{-4}$. Use the equation $\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y$ to estimate $\Delta f = f(1.04, 0.97) - f(1, 1)$
 > 1. Plug in 
 > $$\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y \approx 3x^2y^{-4} \Delta x -4x^3y^{-5} \Delta y$$
@@ -111,7 +117,7 @@ $$\nabla f= \langle f_x(a,b,c),f_y(a,b,c), f_z (a,b,c) \rangle  = \langle \frac{
 In three variables, for $f(x,y,z)$ and $P=(a,b,c)$ 
 $$\nabla f_p= \langle f_x(a,b,c),f_y(a,b,c),f_z(a,b,c) \rangle$$
 ![[Pasted image 20220223001205.png | 300]]
-**Example :: Computing the Gradient:**
+###### Example :: Computing the Gradient:
 > Calculate the gradient of $g(x,y)=\frac{9x}{x^2+y^2}$
 > 1. Set up problem using the **Quotient Rule of Derivatives**
 > $$(\frac{f}{g})'=\frac{f' \cdot g - g' \cdot f}{g^2}$$
@@ -151,7 +157,6 @@ $$\frac{d}{dt}f(r(t))= \langle \frac{\partial f}{\partial x} ,\frac{\partial y}{
 ##### Directional Derivative
 The directional derivative of $f$ at $P=(a, b)$ in the direction of a unit vector $u= \langle h,k\rangle$ is the limit (assuming it exists)
 $$D_uf(P)=U_uf(a,b)=\lim_{t \rightarrow 0}\frac{f(a + th,b + tk)-f(a,b)}{t}$$
-ADD DESCRIPTION:
 ![[Pasted image 20220222204536.png |300]]
 
 ##### Theorem 3: Computing the Directional Derivative
@@ -159,7 +164,7 @@ $$D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$$
 - where $u= \langle h,k \rangle$ is a unit vector
 - Also expands for more dimensions
 
-**Example :: Calculating the directional derivative:**
+###### Example :: Calculating the directional derivative:
 > Calculate the directional derivative of $𝑔(𝑥,𝑦,𝑧)=𝑧^2−𝑥𝑦+3𝑦^2$  in the direction $𝐯=⟨1,−4,2⟩$ at the point $𝑃=(3,1,−7)$. Remember to use a unit vector in directional derivative computation. Find $D_vg(3,1,-7)$
 > 1. Use the directional derivative formula, we must find the partial derivative of each compontent and then multiply by the unit vector.
 > $$D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$$
@@ -197,7 +202,7 @@ $$F_x(a,b,c)(x-a) + F_y(a,b,c)(y-b) + F_z(a,b,c)(z-c)=0$$
 $$\frac{d}{dt}f(r(t))= \nabla f_{r(t)} \cdot r'(t)\approx f_x(x(t),y(t) \lim_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} + f_y(x(t),y(t) \lim_{\Delta t \rightarrow 0} \frac{\Delta y}{\Delta t}$$
 $$\frac{d}{dt}f(r(t))= \langle \frac{\partial f}{\partial x},\frac{\partial f}{\partial y},\frac{\partial f}{\partial z} \rangle \cdot \langle x'(t), y'(t), z'(t) \rangle = \langle \frac{\partial f}{\partial x} \frac{dx}{dt},\frac{\partial f}{\partial y}\frac{dy}{dt},\frac{\partial f}{\partial z} \frac{dz}{dt} \rangle$$
 $$\frac{d}{dt}f(r(t))=\lim_{h \rightarrow 0} \frac{f(x(t + h), y (t + h)) - f(x(t),y(t))}{h}$$
-**Example :: Calculating Chain Rule:**
+###### Example :: Calculating Chain Rule:
 > Let $f(x,y,z) = xy + z^3, x= r + s-5t, y = 3rt, z = s^4$. Find $\frac{\partial f}{dr}$ and $\frac{\partial f}{dt}$ 
 > $$f(x,y,z) = xy + z^3 =(r + s-5t)(3rt) + (s^4)^3=3rt\left(r+s-5t\right)+s^{12}$$
 > $$\frac{\partial f}{ \partial r}(3r^2t+3rts-15rt^2+s^{12})=6rt + 3ts - 15t^2$$
@@ -233,8 +238,6 @@ $$\frac{d}{dt}f(r(t))=\lim_{h \rightarrow 0} \frac{f(x(t + h), y (t + h)) - f(x(
 > 1. Plug $r_1$ and $r_2$ into $T(x,y,z)$
 > $$T(r_1)=\sin^2(t)(t)(9-t^2), \quad T(r_2)=\cos^2(t)(1-t)(9-t^3)$$
 > $$D=\frac{d}{dt}(T(r_1)-T(r_2))=-11.196$$
-
-# FINISH 14.6
 
 ## 14.7 Optimization in Several Variables
 ![[Pasted image 20220223165429.png | 300]]

@@ -1,3 +1,4 @@
+TARGET DECK: Calculus
 ## 15.1 Integration in Two Variables
 
 ##### Double Integral 
@@ -32,7 +33,7 @@ $$\Delta x = \frac{b-a}{N}, \quad \Delta y = \frac{d-c}{M}$$
 The double integral of $f(x,y)$ over a rectangle $R$ is defined as the limit. This technique is used to find the volume of an area over a rectangle
 $$\iint_R f(x,y)dA=\lim_{||P|| \rightarrow 0} \sum^N_{i=1} \sum^M_{j=1} f(P_{ij})\Delta A_{ij}$$
 
-**Example :: Estimating Double Integral:**
+###### Example :: Estimating Double Integral:
 > Compute the Riemann sum $S_{4,3}$ to estimate the double integral of $f(x,y)=6xy$ over $R=[1,5]×[1,4]$. Use the regular partition and upper‑right vertices of the sub‑rectangles as sample points.
 > 
 > 1. Calculate length of sides of subrectangle
@@ -56,7 +57,8 @@ A function is continuous when its graph is a single unbroken curve
 Assume that $f(x,y)$ and $g(x,y)$ are integrable over a rectangle $R$. Then 
 $$\text{i. } \iint_R (f(x,y) + g(x,y))dA = \iint_R f(x,y)dA + \iint_R g(x,y) dA$$
 $$\text{ii. For any constant C...} \iint_R C \cdot f(x,y)dA= C \iint_R f(x,y)dA$$
-**Example :: Calculating a iterated integral:**
+
+###### Example :: Calculating a iterated integral:
 > Evaluate the iterated integral...
 > $$\int^5_1 \int^{\pi / 3} _0 x^2 \sin(y)dy dx$$
 > 1. Take the inner integral (x)
@@ -64,7 +66,7 @@ $$\text{ii. For any constant C...} \iint_R C \cdot f(x,y)dA= C \iint_R f(x,y)dA$
 > 2. Take the outer integral
 > $$\frac{1}{2}\int^5_1 x^2dx = \frac{1}{2}[\frac{x^3}{3}]|^5_1=\frac{1}{2}(\frac{125}{3}-\frac{1}{3})=\frac{62}{3}$$
 
-**Example :: Double Integral:**
+###### Example :: Double Integral:
 > Evaluate the integral
 > $$\iint _R \frac{23x}{y}dA, \quad R=[-2,4] \times [1,3]$$
 > 1. Replace with more readable terms
@@ -122,7 +124,7 @@ Since $\tilde{f}(x,y)$  is zero outside $D$, so for fixed x, $\tilde{f}(x,y)$ is
 $$\int^d_c \tilde{f}(x,y)dy = \int^{g_2(x)}_{g_1(x)} f(x,y)dydx$$
 **Integration over a horizontally or vertically simple region is similar to integration over a rectangle with one difference: The limits of the inner integral may be functions instead of constants.**
 
-**Example :: Compute double integral over domain D**
+###### Example :: Compute double integral over domain D
 > Compute the double integral of $f(x,y)=x^2y$ over the given shaded domain in the figure. Assume that $a=1$.
 > 1. Describe $D$ as a vertically simple region.
 > $$0 \le x \le (2a=2), \quad f(x)=? \le y \le a$$
@@ -161,7 +163,7 @@ $$\int^d_c \tilde{f}(x,y)dy = \int^{g_2(x)}_{g_1(x)} f(x,y)dydx$$
 > $$\int^1_0(-x^2\sqrt{x}+x^4-35x^5+35x^2) \space dx=\frac{1207}{210}$$
 > ANS: $\frac{1207}{210}$
 
-#### Changing the Order of Integration
+### Changing the Order of Integration
 > Change the order of integration
 > $$\int^b_a \int^{g_2(y)}_{g_1(y)} f(x,y)= \int^8_0 \int^8_x xe^{y^{3/64}}\space dydx$$
 > $$0 \le x \le 8, \quad x \le y \le 8$$
@@ -200,7 +202,7 @@ The mean value theorem for double integrals only applies to continuous functions
 
 
 
-**Example :: Find volume from 3 points in 3D space:**
+###### Example :: Find volume from 3 points in 3D space:
 > Calculate the double integral of $f(x,y)=5-8x$ over the triangle with verticies $O=(0,0),A=(2,7),B=(6,7)$
 > $$\iint_D(5-8x)dA$$
 > $$\int^7_0 \int_{\frac{2}{7}y}^{\frac{6}{7}y}(5-8x)dxdy=-\frac{686}{3}$$
@@ -210,7 +212,7 @@ The mean value theorem for double integrals only applies to continuous functions
 > $$z=72-(z),\quad z=36, \quad x^2=36-x^2, \quad x=\sqrt{18}, \quad y=18$$
 > 
 
-**Example :: Estimating area of the subdomain:**
+###### Example :: Estimating area of the subdomain:
 > Using the table below find the average area of the list of sub-domains
 > ![[Pasted image 20220314191152.png | 400]]
 > Estimate $\iint_D f(x,y) dA$
@@ -245,7 +247,7 @@ The triple integral of a continuous function $f(x,y,z)$ over a box $B= [a,b] \ti
 $$\iiint_B f(x,y,z)dV= \int^b_{x=a}\int^d_{y=c}\int^q_{z=p}f(x,y,z)dz \space dy \space dx$$
 Furthermore, the iterated integral can be evaluated in any order
 
-**Example :: Triple Integral:**
+###### Example :: Triple Integral:
 > Evaluate 
 > $$\iiint_B (xz + yz^2) dV \text{ for box: } 0 \le x \le 4, \quad 2 \le y \le 4, \quad 0 \le z \le 4$$
 > 1. Rewrite:
@@ -268,7 +270,7 @@ More generally, integrals of functions of $n$ variables (for any $n$ ) arise nat
 The volume of a region $W$ is defined as 
 $$V=\iiint_W 1dV$$
 
-**Example :: Integrating inner integral with equations:**
+###### Example :: Integrating inner integral with equations:
 > Integrate $f(x,y,z)=x$ over the region $W$ in the first octant above $z=y^2$ and below $z=80-5x^2 -4y^2$ 
 > Rewrite:
 > $$\iint_D \int^{80-5x^2-4y^2}_{z=y^2}x$$
@@ -318,7 +320,7 @@ The typical coordinate system relying on an absolute origin
 Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is the distance to the origin $O$ and $\theta$ is the angle between $\overline{OP}$. $\theta$ moves counterclockwise
 
 
-**Example :: Rectangular to Polar:**
+###### Example :: Rectangular to Polar:
 > Convert Rectangular to Polar Coordinates
 > 1. (0,-1)
 > $$r = \sqrt{0^2 + (-1)^2})=1 \quad \tan^{-1}(1)= \frac{\pi}{4}$$
@@ -327,7 +329,7 @@ Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is 
 > 3. $(-1, \sqrt{3})$
 > $$r=\sqrt{(-1)^2+(\sqrt{3})^2}=\sqrt{10} \quad \tan^{-1}(\sqrt{10}) = 1.26451$$
 
-**Example :: Integrating a circle:**
+###### Example :: Integrating a circle:
 > Assume that $a=1$. Integrate $f(x,y)=y(x^2 + y^2)^3$ over $D$ using polar coordinates.
 > $$\iint_D y(x^2 + y^2)^3 dA$$
 > $$y=a \sin \theta, \quad x = a \cos \theta $$
@@ -349,7 +351,7 @@ Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is 
 | $z=z$                      | $z=z$                      |
 
 
-**Example :: Converting Cylindrical to Rectangular Coordinates:**
+###### Example :: Converting Cylindrical to Rectangular Coordinates:
 > Find the rectangular coordinates of the point $P$ with the cylindrical coordinates $(r,\theta,z)=(2, \frac{3\pi}{4}, 5)$
 > $$x=r\cos\theta = 2\cos \frac{3\pi}{4}=2 \left(-\frac{\sqrt{2}}{2}\right)=-\sqrt{2}$$
 > $$y=r\sin\theta = 2\sin \frac{3\pi}{4}=2 \left(\frac{\sqrt{2}}{2}\right)=\sqrt{2}$$
@@ -363,7 +365,7 @@ Labeling a point $P$ through coordinate ordering of $(r, \theta)$  where $r$ is 
 > $$r = \sqrt{x^2+y^2} = \sqrt{12^2+(4\sqrt{3})^2} = 8\sqrt{3}$$
 > $$\theta = \tan^{-1} \frac{y}{x} = \tan^{-1} \frac{4\sqrt{3}}{12}=\tan^{-1} \frac{\sqrt{3}}{3}=\frac{\pi}{6}$$
 
-**Example :: Use cylindrical coordinates to integrate:**
+###### Example :: Use cylindrical coordinates to integrate:
 > Use cylindrical coordinates to calculate the triple integral $\iiint_W f(x,y,z)dV$ for the function $f(x,y,z)=\frac{1}{2116}z\sqrt{x^2+y^2}$ and the region $x^2 + y^2 \le z \le 46 - (x^2 + y^2)$
 > 1. Transform rectangular into cylindrical coordinates
 > $$f(x,y,z)=\frac{1}{2116}z\sqrt{x^2+y^2}=\frac{1}{2116}z(r)$$
@@ -398,7 +400,8 @@ Spherical coordinates make use of the fact that a point $P$ on a sphere of radiu
 
 ![[Pasted image 20220322135757.png | 300]]
 ![[Pasted image 20220322135900.png]]
-**Example :: Integrating using cylindrical coordinates:**
+
+###### Example :: Integrating using cylindrical coordinates:
 > Use cylindrical coordinates to calculate $\iiint_W f(x,y,z)dV$ for $f(x,y,z)=x$ while $x^2 + y^2 \le 9$ and $x \ge 0$ and $y \ge 0$ and $-4 \le z \le 4$
 > 1. Solve for $\rho$ 
 > $$x^2 + y^2 = 9,\quad \rho^2 = 9, \quad \rho = 3$$
@@ -425,7 +428,7 @@ Random variables $X$ and $Y$ have joint probabliity density function $p(x,y)$ if
 $$P(a \le X \le b; c \le Y \le d) = \int^b_{x=a} \int^d_{y=c} p(x,y) dydx$$
 A joint probability density function must satisfy $p(x,y) \ge 0$ and 
 $$\int^{\infty}_{x=-\infty}\int^{\infty}_{y=-\infty} p(x,y)dydx = 1$$
-**Examples :: Density:**
+###### Examples :: Density:
 > Find the total mass of the rectangle $0 \le x \le 4, 1 \le y \le 7$ assuming a mass density of $\delta (x,y) = 4x^2 + y^2$
 > 1. Use the total mass formula of $M = \iint_D \delta (x,y)dA$
 > $$M = \iint_D \delta (x,y)dA = \int^4_0 \int_1^7 4x^2 + y^2 dydx$$
@@ -490,7 +493,6 @@ The output of the function that is *mapped* into a new space
 ##### Range
 The set of all elements of a function
 
-
 > Let $G(u,v) = (uv^{-1}, uv)$ for $u > 0$, $v > 0$. Determine the images of
 > 1. The lines $u = c$ and $v = c$
 > 2. $[1,2] \times [1,2]$
@@ -525,7 +527,6 @@ $$area(G(D)) \approx |Jac(G)(P)|area(D)$$
 $$|Jac(G)(P)| = \lim_{|D|\rightarrow 0} \frac{area(G(D))}{area(D)}$$
 Where $D$ is the maximum distance between two points
 
-
 > Compute the Jacobian $G(u,v) = (3ue^v, 6 + 8e^u)$
 > 1. Find the partial integrals for the $Jac(G)$ equation
 > $$\frac{\partial x}{\partial u} = 3e^v \quad \frac{\partial y}{\partial v} = 0 \quad  \frac{\partial x}{\partial v} = 3ue^{v} \quad \frac{\partial y}{\partial u} = 8e^{u}$$
@@ -537,7 +538,6 @@ Where $D$ is the maximum distance between two points
 ##### Theorem 2: Change of Variable Formula
 Let $G:D_0 \rightarrow D$ be a mapping that is one-to-one on the interior of $D_0$. if $f(x,y)$ is continuous then
 $$\iint_D f(x,y)dxdy = \iint_{D_0} f(x(u,v), y(u,v)) \Bigg | \frac{\partial(x,y)}{\partial(u,v)}\Bigg | du \space dv$$
-AKA:
 $$dx \space dy = \Big | Jac(G) \Big | = \Bigg | \frac{\partial(x,y)}{\partial(u,v)}\Bigg | du \space dv$$
 
 > Let $D$ be the parallelogram in the xy-plane spanned by the vectors $(3,8)$ and $(9,12)$. Apply the change of varibalse formula to the map $G(u,v) = (9u + 3v, 12u + 8v)$ to evaluate $\iint_D xydA$ as an integral over $D_0 = [0,1] \times [0,1]$ 
@@ -613,6 +613,7 @@ B & D \end{bmatrix} = \begin{bmatrix} 3 & 0 \\
 > 4. Set up integral w/ limits
 > $$\int^3_1 \int^{10}_6 (2u-v)dudv = 112$$
 
+###### Example :: Integrate using Jacobian:
 > Use the map $G(u,v) = \left( \frac{u}{v+1}, \frac{uv}{v+1}\right)$ to compute $\iint_D (x + y) dxdy$ where $D$ is the shaded region in the figure. Assume $a=7,b=14,c=5$
 > ![[Pasted image 20220404120748.png |300]]
 > 1. Find integral bounds

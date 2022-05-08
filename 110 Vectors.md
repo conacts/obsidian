@@ -1,7 +1,7 @@
 TARGET DECK: Calculus
 
 ## 12.1: Vectors in a Plane
-### Vectors:
+### Vectors
 A vector determined by two points, the tail (start) P and head (end) Q. These two points form the vectors compontents, based on which planes it traverses giving it dimensions
 $$v=\overrightarrow{PQ}$$
 
@@ -19,7 +19,7 @@ $$\text{x-head}=a_1+a \quad \text{y-head}=b_1+b$$
 
 ---
 #### Vector Algebra
-##### Translation of a Vector:
+##### Translation of a Vector
 Changing only the vectors location, not its magnitude or direction. This is equivalent to moving the tail and head of a vector equal distance.
 
 ##### Finding the Length of a Vector
@@ -28,16 +28,16 @@ $$||v||=||(a, b)||=\sqrt{a^2+b^2}$$
 
 **AKA:** Length, Magnitude, Norm
 
-##### Unit Vector / Normalizing a Vector:
+##### Unit Vector / Normalizing a Vector
 Finding a parallel vector with a magnitude of 1.
 $$v_n=\frac{v}{||v||}=\frac{v}{\sqrt{v^2}}$$
-##### Finding the Angles of a Vector:
+##### Finding the Angles of a Vector
 $$v_1=\{||v||\cos\theta\} \quad v_2=\{||v||\sin\theta\} \quad e_v=\{\cos\theta, \sin\theta\} $$
 
-##### Vector Addition:
+##### Vector Addition
 You multiply each compontent of the vector with each corresponding compontent
 
-###### Example :: Vector Addition:
+###### Example :: Vector Addition
 > Add the vectors $v = \{3, 5\}$ and  $u=\{7, 3\}$ together.
 > $$\overrightarrow{u}+\overrightarrow{v}=\{10, 8\}$$
 
@@ -47,28 +47,28 @@ When mulitplying a vector by a scalar, you multiply each component within the ve
 
 ---
 
-### Types of Vectors:
-##### Basis Vectors:
+### Types of Vectors
+##### Basis Vectors
 Basis vectors are a set of linearly independent vectors that span the whole vector space
 
 $$i=\{1, 0\} \quad j=\{0, 1\}$$
 
-##### Zero Vector:
+##### Zero Vector
 A vector with no x or y compontent, equivalent to (0, 0).
 $$\overrightarrow{0}=\{0, 0, ...\}$$
 
-##### Parallel Vectors:
+##### Parallel Vectors
 Vectors can be be parallel in either the same or opposite direction. They can also be parallel if they are scaled unevenly.
 $$w=\lambda v$$
 ![[Pasted image 20220113200945.png | 200]]
-##### Orthogonal Vectors:
+##### Orthogonal Vectors
 Vectors that meet to form a right angle
 **AKA:** perpendicular
 
-##### Equivalent Vectors:
+##### Equivalent Vectors
 Vectors that share the same compontents. Vectors are equivalent based on their magnitude and direction, not their location.
 
-##### Inverse Vector:
+##### Inverse Vector
 Flipping a vectors orientation through mulitplying by scalar -1.
 $$V=(12, 4)$$
 $$-V=(-12, -4)$$
@@ -127,7 +127,7 @@ When you find a parallel vector of length 1 using $v_n=\frac{v}{||v||}=\frac{v}{
 #### Finding the radius of geometry
 **Note:** All previous rules apply similar to 2D vectors, just include an extra dimension $k=\{0, 0, 1\}$ as the basis vector
 
-##### Sphere Equation:
+##### Sphere Equation
 $$(x-a)^2+(y-b)^2+(z-c)^2=R^2$$
 ###### Example :: Finding the equation of a sphere:
 > Problem: Give an equation for the sphere with diameter $\overrightarrow{PQ}$ where $P=(1,1,−7)$ and $Q=(1,5,1)$.
@@ -142,22 +142,21 @@ $$(x-a)^2+(y-b)^2+(z-c)^2=R^2$$
 > $$(x-a)^2+(y-b)^2+(z-c)^2=R^2$$
 > $$(x-1)^2+(y-3)^2+(z+3)^2=20$$
 
-##### Cylinder Equation:
+##### Cylinder Equation
 
 $$(x-a)^2 + (y-b)^2=R^2$$
-#### Vectors in 3D Space:
+#### Vectors in 3D Space
 ##### Theorem 3: Distance Formula in $R^3$
  The distance between $|P-Q|$ between the points $P=(a_1, b_1, c_1) \quad Q=(a_2, b_2, c_3)$
 
-##### Parametrization of a vector:
+##### Parametrization of a vector
 Representing a vector in multiple dimensions in 2 dimensions
 
-**Parametric Equation:**
+**Parametric Equation**
 $$r(t)=r_0 +tv=\{x_0, y_0, z_0\}+t\{a, b, c\}$$
 
 $$x(t)=x_0 + at, \quad y(t)=y_0 + bt, \quad z(t)=z_0 + ct$$
-###### Example :: Find the parametric equation:
-
+###### Example :: Find the parametric equation
 > Find vector parametrization for the line passing through $P_0=(3, -1, 4)$ with the direction vector $v=(2, 1, 7)$?
 > 1. Multiply vector v by t and add each compontent to the point $P_0$
 > $r(t)=(3, -1, 4) + t(2, 1, 7)=(3+2t, -1+t, 4+7t)$
@@ -198,10 +197,10 @@ $r(t)=r_0 +tv=\{x_0, y_0, z_0\}+t\{a, b, c\}$
 
 
 ## 12.3: Dot Product and the Angle Between Two Vectors
-#### Dot Product:
+#### Dot Product
 Multiply the corresponding compontents, and then add those products. Noted as $v \cdot w$ , can also be referred to as scalar product, where $v=(v_1, v_2, v_3), \quad w=(w_1, w_2, w_3)$ 
 $$v \cdot w = v_1 w_1 + v_2 w_2 + v_3 w_3$$
-##### Properties of Dot Product:
+##### Properties of Dot Product
 1. Identity: $0 \cdot v = v \cdot 0 = 0$
 2. Communitive: $v \cdot w = w \cdot v$
 3. Pulling out scalars: $(\lambda v) \cdot w = v \cdot (\lambda w) = \lambda (v \cdot w)$
@@ -216,11 +215,9 @@ $$v \cdot w = v_1 w_1 + v_2 w_2 + v_3 w_3$$
 > 1. Match all equivalent compontents to each other and multiply. If no compontent pair is present, then multiply by 0.
 > $$(9j+2k)\cdot (i-4j)=9j \cdot -4j + 2k \cdot 0k + i \cdot 0i=-36$$
 
-##### Theorem 4: Dot Product and the Angle:
-Let $\theta$ be the angle between two nonzero vectors $v$ and $w$. Then 
-$$v \cdot w = ||v|| \cdot ||w|| \cos\theta$$
-or also written as...
-$$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
+##### Theorem 4: Dot Product and the Angle
+Let $\theta$ be the angle between two nonzero vectors $v$ and $w$, then 
+$$v \cdot w = ||v|| \cdot ||w|| \cos\theta \quad \text{or}\quad \cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
 1. **Orthogonal:** if $v \cdot w = 0$, then it is orthogonal
 2. **Obtuse:** if $v \cdot w < 0$ and $\frac{\pi}{2} < \theta \le \pi$ then it is obtuse
 3. **Acute:** if $v \cdot w > 0$ and $0 < \theta < \frac{\pi}{2}$, then it is acute
@@ -244,19 +241,17 @@ $$\cos\theta=\frac{v \cdot w}{||v|| \cdot ||w||}$$
 >  3. Repeat for $\theta_B$ and $\theta_C$ 
 
 ##### Projections
-**Definition:** Mapping points and lines from one plane onto another, resembling something of a shadow
+Mapping points and lines from one plane onto another, resembling something of a shadow
 ![[Pasted image 20220117000038.png | 200]]
-**Equation :: Projection of u along v:**
+
 Assume $v \ne 0$ and the projection of u along v is the vector $u_{||v}$
 $$u_{||v}=(\frac{u \cdot v}{v \cdot v})v=(\frac{u \cdot v}{||v||^2})v=(\frac{u \cdot v}{||v||})e_v$$
 Sometimes $\frac{u \cdot v}{||v||}$ is referred to as the **component** of u along v.
 
-**Equation :: Finding the orthogonal vector from the projection vector $u_{||v}$ :**
-$$u_{\bot v}=u - u_{||v}$$
-also...
-$$u=u_{||v} + u_{\bot v}$$
+Finding the orthogonal vector from the projection vector $u_{||v}$ 
+$$u_{\bot v}=u - u_{||v} \quad \text{or} \quad u=u_{||v} + u_{\bot v}$$
 
-##### 12.3 flashcards:
+###### 12.3 flashcards:
 
 Dot product of $(2, 9, 2) \cdot (7, 1, 6)$ #flashcard 
 $(2, 9, 2) \cdot (7, 1, 6) = 2 \cdot 7 + 9 \cdot 1 + 2 \cdot 6=35$
@@ -323,7 +318,7 @@ $v=v_{||w} + v_{\bot w}$
 ## 12.4: The Cross Product
 Cross Product is a vector operation used typically to compute torque. Operating on an $n \times n$ matrix, using the determinant you can find the cross product. The cross product is often used in conjunction with the term determinant.
 ![[Pasted image 20220121064303.png]]
-##### Determinant / Cross Product of a 2 x 2 matrix:
+##### Determinant / Cross Product of a 2 x 2 matrix
 $$\begin{bmatrix}  
 a & b\\  
 c & d   
@@ -338,7 +333,7 @@ c & d
 > Find the determinant of a 2x2 matrix
 > $$\begin{bmatrix}   8 & 17\\  9 & 12   \end{bmatrix} = 8 \cdot 12 - 9 \cdot 17 = -57$$
 
-##### Cross product of a 3 x 3 matrix:
+##### Cross product of a 3 x 3 matrix
 $$\begin{bmatrix}  
 a_1 & b_1 & c_1\\  
 a_2 & b_2 & c_2\\
@@ -379,7 +374,7 @@ a_2 & b_2\\ a_3 & b_3
 -3 & 0\\ 8 & 7
 \end{bmatrix}=4(0 - 4 \cdot 7) - (0) + 7(-21-0)=-259$$
 
-##### Cross Product of 2 vectors: 
+##### Cross Product of 2 vectors
 The cross product of vector $v=(v_1, v_2, v_3)$ and $w=(w_1, w_2, w_3)$ is the determinant of $v \times w$
 $$v \times w =\begin{bmatrix}  
 i & j & k\\  
@@ -394,7 +389,13 @@ v_1 & v_3\\ w_1 & w_3
 +k\begin{bmatrix}\
 v_1 & v_2\\ w_1 & w_3
 \end{bmatrix}$$
-###### Example :: v x w
+The cross product is also unique with 3 properties:
+1. $v \times w$ is orthogonal to $v$ and $w$ 
+2. $v \times w$ has a length $||v|| \cdot ||w||\sin\theta$ (w/ $\theta$ being the angle between $v$ and $w$)
+3. $\{v, w, v \times w\}$ is a [[110 Vectors#Right-handed system|right-handed system]] 
+
+
+###### Example :: Cross Product of Two Vectors:
 > Calculate $v \times w = (u_1, u_2, u_3)$; $v=(3, 7, 4)$ and $w=(-2, 2, -5)$
 > $$v \times w =\begin{bmatrix}  
 i & j & k\\  
@@ -411,26 +412,22 @@ i & j & k\\
 \end{bmatrix}$$
 > $$=(-35i-8i, -(-15j+8j), 6k-(-14k))=(-43i, 7j, 20k) $$
 
-The cross product is also unique with 3 properties:
-1. $v \times w$ is orthogonal to $v$ and $w$ 
-2. $v \times w$ has a length $||v|| \cdot ||w||\sin\theta$ (w/ $\theta$ being the angle between $v$ and $w$)
-3. $\{v, w, v \times w\}$ is a right-handed system
-
 ##### Properties of the cross product:
 
-1. Anti-communative: $$w \times v = -v \times w$$
-2. Identity:
-$$v \times v = 0$$
-3. Parallel Identity:
-$$v \times w = 0 \text{ if and only if } w = \lambda v \text{ for some scalar or } v=0$$
-
+1. Anti-communative: $w \times v = -v \times w$
+2. Identity: $v \times v = 0$
+3. Parallel Identity: $v \times w = 0 \text{ if and only if } w = \lambda v \text{ for some scalar or } v=0$
 4. Scalar multiplication: 
-$$(\lambda v) \times w = v \times (\lambda w) = \lambda (v \times w)$$
-5. Distributive Property:
-$$(u + v) \times w = u \times w + v \times w$$
-##### Cross product of basis vectors:
-$$i \times j = k, \quad j \times k = i, \quad k \times i = j$$
-$$j \times i = -k, \quad k \times j = -i, \quad i \times k = -j$$
+$(\lambda v) \times w = v \times (\lambda w) = \lambda (v \times w)$
+5. Distributive Property: $(u + v) \times w = u \times w + v \times w$
+
+##### Cross product of basis vectors
+$$ \text{Positive: }\quad i \times j = k, \quad j \times k = i, \quad k \times i = j$$
+$$ \text{Negative: } \quad j \times i = -k, \quad k \times j = -i, \quad i \times k = -j$$
+
+**Note:** Best way to remember i, j and k formulas
+![[Pasted image 20220121171425.png]]
+
 ###### Example :: finding the cross product of two vectors:
 > Find the cross product of vectors $v=(2i + k)$ and $w=(3j+5k)$
 > $$(2i+k) \times (3j + 5k) = (2i) \times (3j) + (2i) \times (5k) + k \times (3j) + k \times (5k)$$
@@ -453,16 +450,11 @@ i & j & k\\
 \end{bmatrix}$$
 > $$=i(20-7)-j(-40-7)+k(8-(-4))=(13i, 47j, 12k)$$
 
-**Right-handed system:**
+##### Right-handed system
 A method of approximating cross product directions
 ![[Pasted image 20220121171042.png | 400]]
 
-
-Best way to remember i, j and k formulas
-![[Pasted image 20220121171425.png]]
-
-
-##### Area of parallelogram:
+##### Area of parallelogram
 $area(P)=||v \times w||$
 
 ###### Example :: Area of parallelogram:
@@ -483,12 +475,12 @@ i & j & k\\
 \end{bmatrix}=...$$
 > $$||v \times w||=||(0, -45,-25)|| =\sqrt{(-25)^2+(-45)^2}=\sqrt{2650} \approx 51$$
 
-##### Area of triangle:
+##### Area of triangle
 $area(T)=\frac{||v \times w||}{2}$
 
-Note: If you think, a parallelogram is essentially two triangles together, relating to why they are the same equation with the triangle just being half that of the parallelogram.
+**Note:** If you think, a parallelogram is essentially two triangles together, relating to why they are the same equation with the triangle just being half that of the parallelogram.
 
-##### Volume of parallelpiped:
+##### Volume of parallelpiped
 $Volume(D)=|u \cdot (v \times w)|= \text{det}\begin{pmatrix}u \\ v \\ w \end{pmatrix}$
 ![[Pasted image 20220122154310.png]]
 

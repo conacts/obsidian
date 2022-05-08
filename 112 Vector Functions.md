@@ -1,4 +1,4 @@
-Deck: Calculus
+TARGET DECK: Calculus
 
 # Vector functions
 
@@ -15,9 +15,11 @@ Deck: Calculus
 > 1. Notice z is a constant and cos and sin in x and y respectively. This can be noted that it will form a circle at the height of $z=1$ 
 > ![[Pasted image 20220131145851.png]]
 
+##### Plane Curve 
+A line in $\mathbb{R}^2$  
+
 ##### Space Curve
-**Definition:** A line (curve) in $\mathbb{R}^3$  visualized as...
-Note: **Plane Curve** is a line in $\mathbb{R}^2$  
+**Definition:** A line (curve) in $\mathbb{R}^3$  
 ![[Pasted image 20220131150136.png]]
 
 ###### Example :: Projecting from $\mathbb{R}^3$ onto $\mathbb{R}^2$ :
@@ -27,14 +29,16 @@ Note: **Plane Curve** is a line in $\mathbb{R}^2$
 > 3. Onto yz-plane: set $x=0$; $r(t)= \langle 0, sin(t), t \rangle, \quad t \le 0$ = Swirl
 	> ![[Pasted image 20220131151223.png]]
 
-###### Examples ::
+###### Example :: Find point on paramtrization:
 > 1. $r(4)$ will get us the proper x, therefore I will plug 4 into all values of t
 > 2. $r(4)=(1+4, 2+4^2,4^4)=(5, 18, 256)$, therefore point P does lie on the line
-> ----
+
+##### Example :: Find circular paramatrization:
 > Select the correct sine and cosine parametrization $r(t)$ of the intersection of the surfaces $x^2 + y^2 =16$ and $z=3x^2$ 
 > 1. Knowing we are building a circle based on equation $x^2 + y^2 =R^2$ we can assume the equation w/ the radius $x=4cos(t), y=4sin(t)$ meaning we can write the equation as $r(t)= \langle 4cos(t), 4sin(t), z \rangle$ 
 > 2. We also know $z=3x^2$, therefore we replace z with this equation getting $r(t)= \langle 4cos(t), 4sin(t), 3x^2 \rangle=r(t)= \langle 4cos(t), 4sin(t), 48cos^2(t) \rangle$ 
-> ---
+
+##### Example :: Finding plane using paramatrizations:
 > Let $C$ the curve be parametrized by $𝐫(𝑡)=⟨𝑡^2−1,𝑡−2𝑡^2,4−6𝑡⟩$. Evaluate $𝐫(𝑡)$ at $𝑡=0$, $𝑡=1$, and $𝑡=3$.
 > 1. $v_1=r(0)=⟨−1,0,4⟩$
 > 2. $v_2=r(1)=⟨0,-1,-2⟩$
@@ -43,11 +47,10 @@ Note: **Plane Curve** is a line in $\mathbb{R}^2$
 > Find an equation for the plane containing $r$ at $𝑡=0$, $𝑡=1$, and $𝑡=3$.
 > 1. Find a point $P_0$ where that I can multiply by the orthogonal vector using the equation $n \cdot P_0$ 
 > 2. Find the vectors connecting the points of $v_1, v_2, v_3$ as shown above
-> 3. $v_1=(0,-1,-2)-(-1,0,4)=\langle 1,-1,-6 \rangle$
-> 4. $v_2=(8, -15, -14)-(-1,0,4)=\langle 9, -15, -18 \rangle$
-> 6. Find the orthogonal vector through the cross product
-> 
-> $$n=v \times w =\begin{bmatrix}  
+> 	1. $v_1=(0,-1,-2)-(-1,0,4)=\langle 1,-1,-6 \rangle$
+> 	2. $v_2=(8, -15, -14)-(-1,0,4)=\langle 9, -15, -18 \rangle$
+> 3. Find the orthogonal vector through the cross product
+> 	1. $$n=v \times w =\begin{bmatrix}  
 i & j & k\\  
 1 & -1 & -6\\
 9 & -15 & -18
@@ -60,13 +63,12 @@ i & j & k\\
 +k\begin{bmatrix}\
 1 & -1\\ 9 & -15
 \end{bmatrix}$$
-> $$=\langle -72,-36,-6 \rangle=\langle -12, 6,1 \rangle$$
-> 3. Now find point $P_0$ by subtracting 2 vectors
-> $$⟨8,-15,-14⟩-⟨0,-1,-2⟩=(8, -14, -12)$$
-> 4. Plug in 
-> $$12(-1)+6(0)+1(4)=-8$$
-> $$12(𝑡^2−1)+6(𝑡−2𝑡^2)+4−6𝑡=−8$$
-
+ $=\langle -72,-36,-6 \rangle=\langle -12, 6,1 \rangle$
+> 4. Now find point $P_0$ by subtracting 2 vectors
+> 	1. $⟨8,-15,-14⟩-⟨0,-1,-2⟩=(8, -14, -12)$
+> 5. Plug in 
+> 	1. $12(-1)+6(0)+1(4)=-8$
+> 	2. $12(𝑡^2−1)+6(𝑡−2𝑡^2)+4−6𝑡=−8$
 
 > Determine whether $r_1(𝑡)=⟨𝑡^2+2,𝑡+1,5𝑡−1⟩$ and $r_2(𝑡)=⟨3𝑡,2𝑡−2,𝑡^2−6⟩$ collide or intersect
 > 1. They collide if $r_1(t)=r_2(t)$ where a value of t exists
@@ -154,7 +156,7 @@ Integrals are taken componentwise as shown below.
 $$\int^b_a r(t)dt= \langle \int^b_a x(t)dt,\int^b_a y(t)dt,\int^b_a z(t)dt \rangle$$
 ##### Theorem 4:
 If $R_1(t)$ and $R_2(t)$ are differentiable and $R'_1(t)=R'_2(t)$, then
-$$R_1(t)=R_2(t)+c$$ for some constant c
+$$R_1(t)=R_2(t)+c$$ for some constant $c$
 
 ###### Example :: Taking the integral of a derivative
 > We must find the integral of $\frac{dr}{dt}=\langle 1-6\sin(3t), \frac{1}{5}t \rangle$ @ $t=4$ and $r(0)=\langle 4,1 \rangle$ 

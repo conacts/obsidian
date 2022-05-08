@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "114 Multiple Integration.md",
+            "file": "115 Line and Surface Integrals.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -71,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "114 Multiple Integration.md",
+                "file": "115 Line and Surface Integrals.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "114 Multiple Integration.md",
+                "file": "115 Line and Surface Integrals.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -103,15 +103,15 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
+    "115 Line and Surface Integrals.md",
     "114 Multiple Integration.md",
-    "assets/D280F227-EB89-4D6D-9FD8-7B09EA417F03_1_201_a.jpeg",
-    "files/HW2_SOLUTIONS_SPRING22.pdf",
-    "files/HW3_SOLUTIONS_SPRING22-1.pdf",
-    "273 State Machine.md",
-    "310 Electric Charges and Forces.md",
-    "402 Tree Notes.md",
-    "400 Computer Science.md",
-    "312 Capacitor Problems.md",
-    "311 Gauss's Law.md"
+    "113 Multivariable Functions.md",
+    "112 Vector Functions.md",
+    "110 Vectors.md",
+    "100 Math.md",
+    "80 Git.md",
+    "000 Index.md",
+    "Multivariable Calc Cheatsheet.md",
+    "124 Fundamental Theorems of Vector Analysis.md"
   ]
 }
