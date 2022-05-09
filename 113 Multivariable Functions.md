@@ -7,7 +7,7 @@ $$g(x, y, z) = c = \sqrt{x^2 + y^2 + z^2}$$
 ##### Traces
 A trace is freezing one coordinate on the function (typically x-coordinate, $x=a$) and examining the resulting curve in 2 dimensions
 
-Note: Verticle trace is where you freeze the y-axis ($y=b$), rather than x, to find your trace
+Note: Vertical trace is where you freeze the y-axis ($y=b$), rather than x, to find your trace
 
 ##### Contour Map
 Tracing the height of a map and projecting those shadows onto a plane below
@@ -121,7 +121,7 @@ $$\nabla f_p= \langle f_x(a,b,c),f_y(a,b,c),f_z(a,b,c) \rangle$$
 > Calculate the gradient of $g(x,y)=\frac{9x}{x^2+y^2}$
 > 1. Set up problem using the **Quotient Rule of Derivatives**
 > $$(\frac{f}{g})'=\frac{f' \cdot g - g' \cdot f}{g^2}$$
-> 2. Solve for the x-compontent
+> 2. Solve for the x-component
 > 
 > $$(\frac{f}{g})_x'=\frac{f' \cdot g - g' \cdot f}{g^2}=9\frac{\frac{\partial}{\partial x}(x)(x^2+y^2)-\frac{\partial}{\partial x}(x^2 + y^2)x}{(x^2 + y^2)^2}$$
 > $$(\frac{f}{g})_x'=9\frac{x^2+y^2-2x^2}{(x^2+y^2)^2}=9\frac{(-x^2+y^2)}{(x^2+y^2)^2}$$
@@ -132,11 +132,11 @@ $$\nabla f_p= \langle f_x(a,b,c),f_y(a,b,c),f_z(a,b,c) \rangle$$
 > ---
 > Calculate the gradient $h(a, b, c)=xyz^{-9}$
 > $$\nabla h_p= \langle h_x,h_y,h_z \rangle$$
-> 1. Compute x-compontent
+> 1. Compute x-component
 > $$h_x=\frac{\partial}{\partial x}xyz^{-9}=yz^{-9}\frac{\partial}{\partial x}(x)=yz^{-9}$$
-> 3. Compute y-compontent
+> 3. Compute y-component
 > $$h_y=\frac{\partial}{\partial y}xyz^{-9}=xz^{-9}\frac{\partial}{\partial y}(y)=xz^{-9}$$
-> 5. Compute z-compontent
+> 5. Compute z-component
 > $$h_z=\frac{\partial}{\partial z}xyz^{-9}=-9xyz^{-10}$$
 > 7. Plug in 
 > $$\nabla h_p= \langle yz^{-9},xz^{-9},-9xyz^{-10} \rangle$$
@@ -166,11 +166,11 @@ $$D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$$
 
 ###### Example :: Calculating the directional derivative:
 > Calculate the directional derivative of $𝑔(𝑥,𝑦,𝑧)=𝑧^2−𝑥𝑦+3𝑦^2$  in the direction $𝐯=⟨1,−4,2⟩$ at the point $𝑃=(3,1,−7)$. Remember to use a unit vector in directional derivative computation. Find $D_vg(3,1,-7)$
-> 1. Use the directional derivative formula, we must find the partial derivative of each compontent and then multiply by the unit vector.
+> 1. Use the directional derivative formula, we must find the partial derivative of each component and then multiply by the unit vector.
 > $$D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$$
-> 2. Compute the unit vectors of each compontent
+> 2. Compute the unit vectors of each component
 > $$\langle \frac{1}{\sqrt{21}},\frac{-4}{\sqrt{21}},\frac{2}{\sqrt{21}} \rangle$$
-> 4. Compute the x-compontent, y-compontent, and z-compontent:
+> 4. Compute the x-component, y-component, and z-component:
 > $$g_x=-y, \quad g_y=6y-x, \quad g_z=2z$$
 > 4. Multiply each partial derivative of g(x,y,z) by the proper component of the unit vector
 > $$D_vg= \frac{1}{\sqrt{21}} (-1) + \frac{-4}{\sqrt{21}} (6(1)-(3)) +  \frac{2}{\sqrt{21}} (2(-7)) = \frac{-1-12-28 }{\sqrt{21}}=\frac{-41}{\sqrt{21}}$$
@@ -195,7 +195,7 @@ Let $P=(a,b,c)$ be a point on the surface given by $F(x,y,z)=k$ and assume that 
 $$F_x(a,b,c)(x-a) + F_y(a,b,c)(y-b) + F_z(a,b,c)(z-c)=0$$
 ![[Pasted image 20220222233848.png | 250]]
 
-## 14.6 Multivariable Calculus Chain Rules
+## 14.6 Multi-variable Calculus Chain Rules
 - Chain Rule for Paths applies to compositions $f(r(t))$ where $f$ and $r$ are differentiable.
 
 ##### Theorem 1: Chain Rule for Paths
@@ -258,7 +258,7 @@ A point $P=(a,b)$ in the domain of $f(x,y)$ is called a critical point if:
 - $f_x(a,b)=0$ or $f_x(a,b)$ does not exist, and
 - $f_y(a,b)=0$ or $f_y(a,b)$ does not exist
 
-##### Formula for Descriminant D
+##### Formula for Discriminant D
 $$D=D(a,b)=f_{xx}(a,b)f_{yy}(a,b)-f^2_{xy}(a,b)$$
 ##### Theorem 1: Fermat's Theorem
 if $f(x,y)$ has a local minimum or maximum at $P=(a,b)$, then $(a,b)$ is a critical point of $f(x,y)$
@@ -289,7 +289,7 @@ With $Q(h,k)$ and $D$ as above:
 Assume that $f(x,y)$ and $g(x,y)$ are differentiable functions. If $f(x,y)$ has a local minimum or a local maximum on the constraint curve $g(x,y)=0$ at $P=(a,b)$ and if $\nabla g_p \ne 0$, then there is a scalar $\lambda$ such that...
 $$\nabla f_p = \lambda \nabla g_p$$
 ##### Critical Value
-The critical point that satisifes the values of the Lagrange Equations:
+The critical point that satisfies the values of the Lagrange Equations:
 $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 
 ###### Example :: Lagrange Multiplier in 3 Variables:
@@ -305,9 +305,9 @@ $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 > $$y=4x=\frac{40}{42}, \quad z = 5x = \frac{50}{42}$$
 > $$\text{Solve for MIN: }x^2+y^2+z^2 = (\frac{10}{42})^2 + (\frac{40}{42})^2 + (\frac{50}{42})^2 = \frac{50}{21}$$
 > Note: We know that $\frac{50}{21}$ is a min because since $f(10,0,0)=100 > \frac{50}{21}$  
-> 5. Max is DNE because we can go into the negatives for basically infnitely large values
+> 5. Max is DNE because we can go into the negatives for basically infinitely large values
 > ----
-> Find the minimum and maximum values of the function $f(x,y)=x^2 + y^2$ subject ot the constraint $2x+5y=2$
+> Find the minimum and maximum values of the function $f(x,y)=x^2 + y^2$ subject on the constraint $2x+5y=2$
 > $$\text{MIN: } x^2 + y^2 \quad \text{CONSTRAINT: } 2x+5y=2$$
 > 1. Find the values of $\nabla f$ and $\nabla g$ 
 > $$\nabla f= \langle 2x, 2y \rangle , \quad \nabla g = \langle 2, 5 \rangle$$
@@ -322,7 +322,7 @@ $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 > Use Lagrange multipliers to find the maximum area 𝑆 of a rectangle inscribed in the ellipse $\frac{x^2}{9} + \frac{y^2}{64}=1$
 > 1. Use the values of...
 > $$\text{MAX: }f(x,y)=4xy,\quad \text{CONSTRAINT: }g(x,y)=\frac{x^2}{9} + \frac{y^2}{64}=1$$
-> 2. Write out the larange equations
+> 2. Write out the Lagrange equations
 > $$\nabla f=\langle 4y,4x \rangle, \quad \nabla g = \lambda\langle \frac{8x}{9},\frac{8y}{64} \rangle$$
 > 3. Solve for $\lambda$ in terms of x and y
 > $$y=\lambda \frac{8x}{9}\quad \lambda = \frac{9y}{8x},\quad x=\lambda \frac{y}{8} \quad \lambda = \frac{8x}{y}$$

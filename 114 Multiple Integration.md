@@ -2,12 +2,12 @@ TARGET DECK: Calculus
 ## 15.1 Integration in Two Variables
 
 ##### Double Integral 
-Intgreation of two variables 
+Integration of two variables 
 $$\iint_D f(x,y) dA$$
 - Volume of region between graph when $f(x,y) \ge 0$ on domain $D$
 
 **Similarities Between Double and Single Integrals:**
-- Double Intgerals are defined as limits of Riemann sums.
+- Double Integrals are defined as limits of Riemann sums.
 - Double integrals are evaluated using the [[Definitions#Fundamental Theorem of Calculus | Fundamental Theorem of Calculus]], but applied twice
 
 **Integrals are broken into 3 parts**
@@ -15,8 +15,8 @@ $$\iint_D f(x,y) dA$$
 Subdivide $[a,b]$ and $[c,d]$ by choosing partitions:
 $$a=x_0 < x_1 < ... <x_N=b, \quad c = y_0<y_1<...<y_M=d$$
 3. Summation
-Create an $N \times M$ grid of subrectangles $R_{ij}$
-5. Pasage to the limit
+Create an $N \times M$ grid of sub-rectangles $R_{ij}$
+5. Passage to the limit
 Choose a sample point $P_{ij}$ in each $R_{ij}$
 
 ![[Pasted image 20220228131235.png]]
@@ -45,7 +45,7 @@ $$\iint_R f(x,y)dA=\lim_{||P|| \rightarrow 0} \sum^N_{i=1} \sum^M_{j=1} f(P_{ij}
 > $$f(2,2) + f(2,3) + f(2, 4) + f(3,2) + f(3,3) + f(3, 4) +f(4,2) + f(4,3) + f(4, 4) + f(5,2) + f(5,3) + f(5, 4)  = ...$$
 > $6(4 + 6 + 8 + 6 + 9 + 12 + 8 + 12 + 16 + 10 + 15 + 20)=756$
 
-##### Theorem 1: Continuous Functions Are Integrable
+##### Theorem 1: Continuous Functions Are Integrable 
 If a function $f$ of two variables is [[114 Multiple Integration#Continuous|continuous]] on a rectangle $R$, then $f(x,y)$ is integrable over $R$
 
 ##### Continuous
@@ -163,21 +163,6 @@ $$\int^d_c \tilde{f}(x,y)dy = \int^{g_2(x)}_{g_1(x)} f(x,y)dydx$$
 > $$\int^1_0(-x^2\sqrt{x}+x^4-35x^5+35x^2) \space dx=\frac{1207}{210}$$
 > ANS: $\frac{1207}{210}$
 
-### Changing the Order of Integration
-> Change the order of integration
-> $$\int^b_a \int^{g_2(y)}_{g_1(y)} f(x,y)= \int^8_0 \int^8_x xe^{y^{3/64}}\space dydx$$
-> $$0 \le x \le 8, \quad x \le y \le 8$$
-> $$\int^8_0 \int^8_y xe^{y^{3/64}} \space dxdy=\int^8_0 \left(32e^{y^{\frac{3}{64}}}-\frac{y^2e^{y^{\frac{3}{64}}}}{2}\right)dy=$$
-> $$\int^8_0 \frac{x^2e^{y^{3/64}}}{2} \vert^8_y=\int^8_0 \frac{64e^{y^{3/64}}}{2}- \int^8_0\frac{y^2e^{y^{3/64}}}{2}$$
-> $$ \frac{ 3 e^{y^{3/64}}}{2y^{61/64}}- \frac{3y^3e^{y^{3/64}}}{6 * 64y^{61/64}}$$
-> $$du$$
-> ---
-> Change the order of integration
-> $$\int^9_0\int^3_{\sqrt{y}} \sqrt{x^3 + 4} \space dx dy$$
-> 1. Use your imaginaton...
-> $$\int^3_0\int^{x^2}_0 \sqrt{x^3+4} \space dxdy=\frac{62\sqrt{31}-16}{9}$$
-
-
 ##### Theorem 3
 Let $f(x,y)$ and $g(x,y)$ be integrable functions on $D$
 1. If $f(x,y) \le g(x,y)$ for all $(x,y) \in D$ then,
@@ -203,7 +188,7 @@ The mean value theorem for double integrals only applies to continuous functions
 
 
 ###### Example :: Find volume from 3 points in 3D space:
-> Calculate the double integral of $f(x,y)=5-8x$ over the triangle with verticies $O=(0,0),A=(2,7),B=(6,7)$
+> Calculate the double integral of $f(x,y)=5-8x$ over the triangle with vertices $O=(0,0),A=(2,7),B=(6,7)$
 > $$\iint_D(5-8x)dA$$
 > $$\int^7_0 \int_{\frac{2}{7}y}^{\frac{6}{7}y}(5-8x)dxdy=-\frac{686}{3}$$
 > $$\int^6_0 \int^{7x/2}_{6x/2}(5-8x)dxdy$$
@@ -237,7 +222,7 @@ $$p = z_0 < z_1 < ... < z_L = q$$
 
 Here, N, M, and L are positive integers. The volume of $B_{ijk}$ is $\Delta V_{ijk}=\Delta x_i, \Delta y_j, \Delta z_k$  where 
 $$\Delta x_i = x_i - x_{i-1}, \quad \Delta y_j = y_j - y_{j-1}, \quad \Delta z_k = z_k - z_{k-1}$$
-Then we choose a sample point $P_{ijk}$ in each subbox $B_{ijk}$ and form the Riemann sum...
+Then we choose a sample point $P_{ijk}$ in each sub box $B_{ijk}$ and form the Riemann sum...
 $$S_{N,M,L}=\sum^N_{i=1}\sum^M_{j=1}\sum^L_{k=1} f(P_{ijk}) \Delta V_{ijk}$$
 We write $P=\{\{x_i\},\{y_j\},\{z_k\}\}$ for the partition and let $||P||$ be the maximum of the widths $\Delta x_i, \Delta y_j, \Delta z_k$. If the sums $S_{N,M,L}$ approach a limit as $||P|| \rightarrow 0$  for arbitrary choices of sample points, we say that $f$ is **integrable** over $B$. The limit value is denoted
 $$\iiint_B f(x,y,z)dV = \lim_{||P|| \rightarrow 0} S_{N,M,L}$$
@@ -274,7 +259,7 @@ $$V=\iiint_W 1dV$$
 > Integrate $f(x,y,z)=x$ over the region $W$ in the first octant above $z=y^2$ and below $z=80-5x^2 -4y^2$ 
 > Rewrite:
 > $$\iint_D \int^{80-5x^2-4y^2}_{z=y^2}x$$
-> 1. Now we find the ranges for the next two integrals. Knowing that the first quadrant starts at $x=0$ and $y=0$ we can assume those are the bottom constraints. For the top constaints we can set the two equations equal to one another
+> 1. Now we find the ranges for the next two integrals. Knowing that the first quadrant starts at $x=0$ and $y=0$ we can assume those are the bottom constraints. For the top constants we can set the two equations equal to one another
 > $$80-5x^2-4y^2 = y^2, \quad 16 - x^2 = y^2, \quad x^2 + y^2 = 16, \quad x = 4, y = \sqrt{16-x^2}$$
 > 3. Now we rewrite the integral
 > $$\int_0^4 \int_0^{\sqrt{16-x^2}} \int^{80-5x^2-4y^2}_{z=y^2}x$$

@@ -33,22 +33,26 @@ Noted as $R^{-1}$
 Essentially just flipping the order of the ordered pair, as (x,y) = (y, x)
 ![[Pasted image 20220222111553.png]]
 
-**Example :: Reflexive? Symmetric? Transitive?**
-> Let $A=\{a,b,c\}$ where $R=\{(a,b),(a,c),(c,b),(b,c)\}$ Determine whether it is reflexive, symmetric or transitive.
-> 
-> **ANS:** 
-> Not reflexive: $(a,a),(b,b),(c,c) \not\in R$ 
-> Not symmetric: $(a,b) \in R$ but $(b,a) \not\in R$ 
-> Not transitive: $(c,b) \in R$ and $(b,c) \in R$ are true, but $(c,c) \not\in R$ 
-> 
-> -----
-> Let $A=\{a,b,c\}$ where $R=\{(a,a),(a,b),(a,c),(c,c),(b,b),(c,b)\}$ Determine whether it is reflexive, symmetric, anti-symmetric, or transitive.
->
-> **ANS:** 
-> Reflexive:  $(a,a),(b,b),(c,c) \in R$ 
-> Not Symmetric: $(a,b) \in R$, but $(b,a) \not\in R$ 
-> Transitive: Not sure why but it is
-> Anti-Symmetric: $(a,b)$ but no $(b,a)$, $(a,c)$ but no $(c,a)$, and $(c,b)$ but no $(b,c)$
+###### Example :: Reflexive? Symmetric? Transitive?
+```ad-example
+title: Example: Cartesian product
+color: grey
+Let $A=\{a,b,c\}$ where $R=\{(a,b),(a,c),(c,b),(b,c)\}$ Determine whether it is reflexive, symmetric or transitive.
+
+**ANS:** 
+Not reflexive: $(a,a),(b,b),(c,c) \not\in R$ 
+Not symmetric: $(a,b) \in R$ but $(b,a) \not\in R$ 
+Not transitive: $(c,b) \in R$ and $(b,c) \in R$ are true, but $(c,c) \not\in R$ 
+
+-----
+Let $A=\{a,b,c\}$ where $R=\{(a,a),(a,b),(a,c),(c,c),(b,b),(c,b)\}$ Determine whether it is reflexive, symmetric, anti-symmetric, or transitive.
+**ANS:** 
+Reflexive:  $(a,a),(b,b),(c,c) \in R$ 
+Not Symmetric: $(a,b) \in R$, but $(b,a) \not\in R$ 
+Transitive: Not sure why but it is
+Anti-Symmetric: $(a,b)$ but no $(b,a)$, $(a,c)$ but no $(c,a)$, and $(c,b)$ but no $(b,c)$
+```
+
 
 | Relation  | Reflexive | Symmetric | Transitive | Anti-Symmetric |
 | --------- | --------- | --------- | ---------- | -------------- | 
@@ -59,7 +63,7 @@ Essentially just flipping the order of the ordered pair, as (x,y) = (y, x)
 
 
 #### Types of Relations
-There are two types of relations (equivalence classes) frequently occuring in mathematics, 
+There are two types of relations (equivalence classes) frequently occurring in mathematics, 
 1. Equivalence Relation
 2. Partial Ordering
 
@@ -67,19 +71,21 @@ There are two types of relations (equivalence classes) frequently occuring in ma
 A relation satisfying...
 1. Reflexivity
 2. Symmetry
-3. Transivity
+3. Transitivity
 
-**Example :: Is R an equivalence relation?**
-> $R \text{ is } \ne$ 
-> 
-> **ANS:**
-> Not Reflexive: $a \ne a$ is not reflexive
-> Symmetric: $3 \ne 9$ and $9 \ne 3$ 
-> Not transitive: $6 \ne 8$ but $8 \ne (4 + 2)$ and $6 \ne (4 + 2)$ is false
- 
+**Example :: Equivalence relation?**
+```ad-example
+title: Example: Cartesian product
+color: grey
+If $R \text{ is } \ne$, is R an equivalence relation?
+**ANS:**
+Not Reflexive: $a \ne a$ is not reflexive
+Symmetric: $3 \ne 9$ and $9 \ne 3$ 
+Not transitive: $6 \ne 8$ but $8 \ne (4 + 2)$ and $6 \ne (4 + 2)$ is false
+```
+
 ##### Partial Order Relation
 A relation satisfying...
 1. Reflexivity
 2. Anti-Symmetry
-3. Transivity
-
+3. Transitivity

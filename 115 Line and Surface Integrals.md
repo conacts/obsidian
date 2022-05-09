@@ -138,7 +138,7 @@ The line integral where $f(x,y,z)=1$ is equal to the length of the line shown be
 $$\int_C 1ds = length(C)=\Delta s_i = \int^{t_i}_{t_{i-1}}||r'(t)||dt$$
 
 ##### Theorem 1: Computing a Scalar Line Integral
-Let $r(t)$ be a paramatrization that directly traverses $C$ for $a \le t \le b$. If $f(x,y,z)$ and $r'(t)$ are continuous, then
+Let $r(t)$ be a parametrization that directly traverses $C$ for $a \le t \le b$. If $f(x,y,z)$ and $r'(t)$ are continuous, then
 $$\int_C f(x,y,z)ds = \int^b_a f(r(t))||r'(t)||dt$$
 $$ds=||r'(t)||dt \quad ||r'(t)||=\sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2}$$
 
@@ -408,7 +408,7 @@ Let $F$ be a vector field on a smiply connected domain $D$. If $F$ satisfies the
 
 ## 16.4 Parametrized Surfaces and Surface Integrals
 
-### Paramatrization of a Sphere
+### parametrization of a Sphere
 $$G(\theta, \phi ) = (R \cos \theta \sin \phi, R \sin \theta \sin \phi, R \cos \phi ), \quad 0 \le \theta \le 2\pi , \quad 0 \le \phi \le \pi $$
 Location of north pole: $G(\theta, 0) = (0, 0, R)$
 Location of south pole: $F(\theta, \pi) = (0,0,-R)$
@@ -417,7 +417,7 @@ Location of south pole: $F(\theta, \pi) = (0,0,-R)$
 ### Parametrization of a Graph: 
 $$G(x,y) = (x,y,f(x,y))$$
 
-###### Paramatrization Examples:
+###### parametrization Examples:
 > ![[Pasted image 20220404164624.png |100]] 
 > $$\langle u, v^3, v \rangle$$
 > ![[Pasted image 20220404164702.png |100]]

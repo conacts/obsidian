@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "401 Intro to Algorithms.md",
+            "file": "120 Sequences (Discrete Math).md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 291
   },
   "right": {
     "id": "ac678028e54ab1b9",
@@ -71,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "401 Intro to Algorithms.md",
+                "file": "120 Sequences (Discrete Math).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "401 Intro to Algorithms.md",
+                "file": "120 Sequences (Discrete Math).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -103,15 +102,15 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
-    "401 Intro to Algorithms.md",
-    "123 Graphs and Trees.md",
-    "115 Line and Surface Integrals.md",
-    "CMPSC 360 HW 9.md",
-    "CMPSC 360 HW 7.md",
-    "Math 230 HW 12.md",
-    "CMPSC 360 Midterm 2.md",
-    "CMPSC 360 Practice Exam.md",
-    "Math 230 Homework 11.md",
-    "114 Multiple Integration.md"
+    "120 Sequences (Discrete Math).md",
+    "Statistics & Machine Learning.md",
+    "100 Math.md",
+    "000 Index.md",
+    "80 Git.md",
+    "113 Multivariable Functions.md",
+    "110 Vectors.md",
+    "112 Vector Functions.md",
+    "124 Fundamental Theorems of Vector Analysis.md",
+    "115 Line and Surface Integrals.md"
   ]
 }

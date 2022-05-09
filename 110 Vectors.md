@@ -2,18 +2,18 @@ TARGET DECK: Calculus
 
 ## 12.1: Vectors in a Plane
 ### Vectors
-A vector determined by two points, the tail (start) P and head (end) Q. These two points form the vectors compontents, based on which planes it traverses giving it dimensions
+A vector determined by two points, the tail (start) P and head (end) Q. These two points form the vectors components, based on which planes it traverses giving it dimensions
 $$v=\overrightarrow{PQ}$$
 
 #### Compontents of a Vector:
 - The components of a vector can be broken down based on the dimensions in which it travels. 
 
-##### Finding the compontents with two points
-Vectors are only equivalent if they have the same compontents
+##### Finding the components with two points
+Vectors are only equivalent if they have the same components
 $$v= \overrightarrow{PQ} \quad \quad P=(a_1, b_1); Q=(a_2, b_2)$$
 $$\text{x-compontent}=a_1-a_2 \quad \text{y-compontent}=b_1-b_2$$
 
-##### Finding the vector's head with the compontents and the tail
+##### Finding the vector's head with the components and the tail
 $$\text{x-head}=a_1+a \quad \text{y-head}=b_1+b$$
 
 
@@ -23,7 +23,7 @@ $$\text{x-head}=a_1+a \quad \text{y-head}=b_1+b$$
 Changing only the vectors location, not its magnitude or direction. This is equivalent to moving the tail and head of a vector equal distance.
 
 ##### Finding the Length of a Vector
-The length of a vector can be found through squaring each of the vectors compontents, summing them and taking the square root as shown below.
+The length of a vector can be found through squaring each of the vectors components, summing them and taking the square root as shown below.
 $$||v||=||(a, b)||=\sqrt{a^2+b^2}$$
 
 **AKA:** Length, Magnitude, Norm
@@ -35,14 +35,14 @@ $$v_n=\frac{v}{||v||}=\frac{v}{\sqrt{v^2}}$$
 $$v_1=\{||v||\cos\theta\} \quad v_2=\{||v||\sin\theta\} \quad e_v=\{\cos\theta, \sin\theta\} $$
 
 ##### Vector Addition
-You multiply each compontent of the vector with each corresponding compontent
+You multiply each component of the vector with each corresponding component
 
 ###### Example :: Vector Addition
 > Add the vectors $v = \{3, 5\}$ and  $u=\{7, 3\}$ together.
 > $$\overrightarrow{u}+\overrightarrow{v}=\{10, 8\}$$
 
 ##### Scalar Multiplication on a Vector:
-When mulitplying a vector by a scalar, you multiply each component within the vector by said scalar to achieve a vector scaled by that number
+When multiplying a vector by a scalar, you multiply each component within the vector by said scalar to achieve a vector scaled by that number
 ![[Pasted image 20220114115957.png | 300]]
 
 ---
@@ -54,7 +54,7 @@ Basis vectors are a set of linearly independent vectors that span the whole vect
 $$i=\{1, 0\} \quad j=\{0, 1\}$$
 
 ##### Zero Vector
-A vector with no x or y compontent, equivalent to (0, 0).
+A vector with no x or y component, equivalent to (0, 0).
 $$\overrightarrow{0}=\{0, 0, ...\}$$
 
 ##### Parallel Vectors
@@ -66,15 +66,15 @@ Vectors that meet to form a right angle
 **AKA:** perpendicular
 
 ##### Equivalent Vectors
-Vectors that share the same compontents. Vectors are equivalent based on their magnitude and direction, not their location.
+Vectors that share the same components. Vectors are equivalent based on their magnitude and direction, not their location.
 
 ##### Inverse Vector
-Flipping a vectors orientation through mulitplying by scalar -1.
+Flipping a vectors orientation through multiplying by scalar -1.
 $$V=(12, 4)$$
 $$-V=(-12, -4)$$
 
 ##### Theorem 1: Properties of Vector Algebra
-Communitive Law: $v+w=w+v$
+Commutative Law: $v+w=w+v$
 Associative Law: $u+(v+w)=(u+v)+w$
 Distributive Law for Scalars: $\lambda (v+w)=\lambda v + \lambda w$
 
@@ -158,7 +158,7 @@ $$r(t)=r_0 +tv=\{x_0, y_0, z_0\}+t\{a, b, c\}$$
 $$x(t)=x_0 + at, \quad y(t)=y_0 + bt, \quad z(t)=z_0 + ct$$
 ###### Example :: Find the parametric equation
 > Find vector parametrization for the line passing through $P_0=(3, -1, 4)$ with the direction vector $v=(2, 1, 7)$?
-> 1. Multiply vector v by t and add each compontent to the point $P_0$
+> 1. Multiply vector v by t and add each component to the point $P_0$
 > $r(t)=(3, -1, 4) + t(2, 1, 7)=(3+2t, -1+t, 4+7t)$
 > $r(t)=(3+2t, -1+t, 4+7t)$
 
@@ -198,11 +198,11 @@ $r(t)=r_0 +tv=\{x_0, y_0, z_0\}+t\{a, b, c\}$
 
 ## 12.3: Dot Product and the Angle Between Two Vectors
 #### Dot Product
-Multiply the corresponding compontents, and then add those products. Noted as $v \cdot w$ , can also be referred to as scalar product, where $v=(v_1, v_2, v_3), \quad w=(w_1, w_2, w_3)$ 
+Multiply the corresponding components, and then add those products. Noted as $v \cdot w$ , can also be referred to as scalar product, where $v=(v_1, v_2, v_3), \quad w=(w_1, w_2, w_3)$ 
 $$v \cdot w = v_1 w_1 + v_2 w_2 + v_3 w_3$$
 ##### Properties of Dot Product
 1. Identity: $0 \cdot v = v \cdot 0 = 0$
-2. Communitive: $v \cdot w = w \cdot v$
+2. Commutative: $v \cdot w = w \cdot v$
 3. Pulling out scalars: $(\lambda v) \cdot w = v \cdot (\lambda w) = \lambda (v \cdot w)$
 4. Distributive Property: $u \cdot (v + w) = u \cdot v + u \cdot w$
 5. Relation with length: $\sqrt{v \cdot v} = ||v||$
@@ -212,7 +212,7 @@ $$v \cdot w = v_1 w_1 + v_2 w_2 + v_3 w_3$$
 
 ###### Example :: Dot product using i, j, k:
 > Compute the dot product of $(9j+2k)\cdot (i-4j)$
-> 1. Match all equivalent compontents to each other and multiply. If no compontent pair is present, then multiply by 0.
+> 1. Match all equivalent components to each other and multiply. If no component pair is present, then multiply by 0.
 > $$(9j+2k)\cdot (i-4j)=9j \cdot -4j + 2k \cdot 0k + i \cdot 0i=-36$$
 
 ##### Theorem 4: Dot Product and the Angle
@@ -234,7 +234,7 @@ $$v \cdot w = ||v|| \cdot ||w|| \cos\theta \quad \text{or}\quad \cos\theta=\frac
 
 ###### Example :: Find the angles of a triangle using 3 points:
 > A triangle is defined by the three points $A=(1,8)$, $B=(4,9)$, and $C=(5,1)$. Determine all angles 𝜃𝐴, 𝜃𝐵, and 𝜃𝐶 in the triangle. Give your answer in radians.
-> 1. Find the compontents of the vectors
+> 1. Find the components of the vectors
 >  $$\overrightarrow{AB}=(4-1, 9-8)=(3, 1),\quad \overrightarrow{AC}=(5-1, 1-8)=(4, -7)$$
 >  2. Then calculate each angle using $\theta = \arccos(\frac{v \cdot w}{||v|| \cdot ||w||})$
 >  $$\theta_A=\arccos\frac{(3, 1) \cdot (4, -7)}{\sqrt{3^2+1^2} \cdot \sqrt{4^2 + (-7)^2 }}=\arccos(0.196)=1.373 rad$$
@@ -392,7 +392,7 @@ v_1 & v_2\\ w_1 & w_3
 The cross product is also unique with 3 properties:
 1. $v \times w$ is orthogonal to $v$ and $w$ 
 2. $v \times w$ has a length $||v|| \cdot ||w||\sin\theta$ (w/ $\theta$ being the angle between $v$ and $w$)
-3. $\{v, w, v \times w\}$ is a [[110 Vectors#Right-handed system|right-handed system]] 
+3. $\{v, w, v \times w\}$ is a [[110 Vectors#Right-handed rule|right-handed rule]] 
 
 
 ###### Example :: Cross Product of Two Vectors:
@@ -414,9 +414,17 @@ i & j & k\\
 
 ##### Properties of the cross product:
 
-1. Anti-communative: $w \times v = -v \times w$
+| Rule                  | Forumla                                                                   |
+| --------------------- | ------------------------------------------------------------------------- |
+| Anti-commutative      | $w \times v = -v \times w$                                                |
+| Identity              | $v \times v = 0$                                                          |
+| Parallel Identity     | $v \times w = 0$  if and only if $w = \lambda v$ for some scalar or $v=0$ |
+| Scalar multiplication | $(\lambda v) \times w = v \times (\lambda w) = \lambda (v \times w)$      |
+| Distributive Property                      | $(u + v) \times w = u \times w + v \times w$                                                                          |
+
+1. Anti-commutative: 
 2. Identity: $v \times v = 0$
-3. Parallel Identity: $v \times w = 0 \text{ if and only if } w = \lambda v \text{ for some scalar or } v=0$
+3. Parallel Identity: $v \times w = 0$  if and only if $w = \lambda v$ for some scalar or $v=0$
 4. Scalar multiplication: 
 $(\lambda v) \times w = v \times (\lambda w) = \lambda (v \times w)$
 5. Distributive Property: $(u + v) \times w = u \times w + v \times w$
@@ -450,7 +458,7 @@ i & j & k\\
 \end{bmatrix}$$
 > $$=i(20-7)-j(-40-7)+k(8-(-4))=(13i, 47j, 12k)$$
 
-##### Right-handed system
+##### Right-handed rule
 A method of approximating cross product directions
 ![[Pasted image 20220121171042.png | 400]]
 
@@ -487,8 +495,9 @@ $Volume(D)=|u \cdot (v \times w)|= \text{det}\begin{pmatrix}u \\ v \\ w \end{pma
 
 ###### Example :: Volume of Parallelpiped
 > Calculate the volume of the parallelepiped spanned by 𝐮=⟨2,0,3⟩, 𝐯=⟨2,4,2⟩, and 𝐰=⟨−4,3,7⟩
-> $$|u \cdot (v \times w)|=...$$
-> $$v \times w =\begin{bmatrix}  
+> 1. Find the volume using the formula
+> 	1.  $|u \cdot (v \times w)|=...$
+> 	2. $$v \times w =\begin{bmatrix}  
 i & j & k\\  
 2 & 4 & 2\\
 -4 & 3 & 7
@@ -501,8 +510,8 @@ i & j & k\\
 +k\begin{bmatrix}\
 2 & 4\\ -4 & 3
 \end{bmatrix}=...$$
-> $$=i(28-6)-j(14+8)+k(6+16)=(22i, -22j, 22k)$$
-> $$|u \cdot (v \times w)|=(2i, 0j, 3k) \cdot (22i, -22j, 22k)=(44 + 0+ 66)=110$$
+$=i(28-6)-j(14+8)+k(6+16)=(22i, -22j, 22k)$
+$|u \cdot (v \times w)|=(2i, 0j, 3k) \cdot (22i, -22j, 22k)=(44 + 0+ 66)=110$ 
 
 
 
@@ -592,7 +601,7 @@ $$ \text{Scalarform 2: } \quad ax+by+cz=d$$
 
 ###### Example :: Find the plane's equation using a normal vector and $P_0$:
 > Find the equation of the plane with normal vector 𝐧 passing through point $P_0$ in the scalar form  $ax+by+cz=d$, where $n=\langle −10,9,5 \rangle,P_0=(9,11,2)$ 
-> Using scalarform 1: $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$ 
+> Using scalar-form 1: $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$ 
 > $$-10(x-9)+9(y-11)+5(z-2)=0$$
 > Then we solve for the actual equation...
 > $$-10x+90+9y-99+5z-10=0$$
@@ -610,9 +619,9 @@ $$ \text{Scalarform 2: } \quad ax+by+cz=d$$
 ###### Example :: Find a plane's equation using 3 points:
 > Find an equation of the plane passing through the three points given $P=(4,5,7), 𝑄=(5,10,15), 𝑅=(11,11,8)$
 > 1. Find a normal vector using $\overrightarrow{PQ}$ and $\overrightarrow{PR}$
-> $$\overrightarrow{PQ}=Q-P=(5-4, 10-5, 15-7)=\langle 1, 5, 8 \rangle$$
-> $$\overrightarrow{PR}=Q-R=(11-4, 11-5, 8-7)=\langle 7, 6, 1 \rangle$$
-> $$n = \overrightarrow{PQ} \times \overrightarrow{PR} =\begin{bmatrix}  
+> 	1.  $\overrightarrow{PQ}=Q-P=(5-4, 10-5, 15-7)=\langle 1, 5, 8 \rangle$
+> 	2. $\overrightarrow{PR}=Q-R=(11-4, 11-5, 8-7)=\langle 7, 6, 1 \rangle$
+> 	3. $$n = \overrightarrow{PQ} \times \overrightarrow{PR} =\begin{bmatrix}  
 i & j & k\\  
 1 & 5 & 8\\
 7 & 6 & 1
@@ -624,10 +633,9 @@ i & j & k\\
 \end{bmatrix}
 +k\begin{bmatrix}\
 1 & 5\\ 7 & 6
-\end{bmatrix}=...$$
-> $$=i(5-48)-j(1-56)+k(6-35)= \langle -43i, 55j, -29k \rangle$$
+\end{bmatrix}=...$$ $$=i(5-48)-j(1-56)+k(6-35)= \langle -43i, 55j, -29k \rangle$$
 > 2. Choose a point on the plane and compute d (using P)
-> $$d=n\cdot \overrightarrow{OP}= \langle -43, 55, -29 \rangle \cdot (4, 5, 7)=-100$$
+> 	1. $d=n\cdot \overrightarrow{OP}= \langle -43, 55, -29 \rangle \cdot (4, 5, 7)=-100$ 
 
 
 
@@ -640,8 +648,8 @@ A vector perpendicular to a plane
 
 What are the 3 forms of the equation to describe a plane? #flashcard 
 1. **Vector form:** $n \cdot (x, y, z) = d$
-2. **Scalarform 1:** $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$
-3. **Scalarform 2:** $ax+by+cz=d$
+2. **Scalar-form 1:** $a(x-x_0)+b(y-y_0)+c(z-z_0)=0$
+3. **Scalar-form 2:** $ax+by+cz=d$
 <!--ID: 1642970415148-->
 
 
@@ -668,43 +676,43 @@ The geographic representation of a shape by holding one variable constant for pr
 ![[Pasted image 20220126133238.png]]
 ![[Pasted image 20220126133251.png]]
 
-##### Ellipsoids:
+#### Ellipsoid
 $$(\frac{x}{a})^2+(\frac{y}{b})^2+(\frac{z}{c})^2=1$$
 ![[Pasted image 20220126132512.png]]
 
-##### Hyperboloids:
-**One Sheet Hyperboloids:**
+#### Hyperboloids
+##### One Sheet Hyperboloids
 $$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2+1$$
 ![[Pasted image 20220126132428.png]]
-**Two Sheet Hyperboloids:**
+##### Two Sheet Hyperboloids
 $$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2-1$$
 ![[Pasted image 20220126132353.png]]
 
 
-**Elliptic Cone:**
+##### Elliptic Cone
 $$(\frac{x}{a})^2+(\frac{y}{b})^2=(\frac{z}{c})^2$$
 ![[Pasted image 20220126132746.png]]
 
-##### Paraboloids:
-**Elliptic Paraboloid:**
+#### Paraboloids
+##### Elliptic Paraboloid
 $$z=(\frac{x}{a})^2+(\frac{y}{b})^2$$
 ![[Pasted image 20220126133023.png |300]]
-**Hyperbolic Paraboloid (saddle point):**
+##### Hyperbolic Paraboloid (saddle point)
 $$z=(\frac{x}{a})^2-(\frac{y}{b})^2$$
 ![[Pasted image 20220126133102.png]]
 
 
-##### Cylinders:
+#### Cylinders
 ![[Pasted image 20220126133341.png]]
-**Elliptic Cylinder:**
+##### Elliptic Cylinder
 $$(\frac{x}{a})^2+(\frac{y}{b})^2=1$$
 ![[Pasted image 20220126133559.png |300]]
 
 
-**Hyperbolic Cylinder:**
+##### Hyperbolic Cylinder
 $$(\frac{y}{b})^2-(\frac{x}{a})^2=1$$
 ![[Pasted image 20220126133539.png]]
-**Parabolic Cylinder:**
+##### Parabolic Cylinder
 $$y=ax^2$$
 ![[Pasted image 20220126133518.png]]
 

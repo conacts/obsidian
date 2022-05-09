@@ -1,15 +1,18 @@
 TARGET DECK: Discrete Math
 # Propositional Logic
 ## 2.1 Propositional Logic
-**Definition:** A sentence that is either true or false but not both is called a proposition. A proposition is typically expressed as a declarative sentence.
+A sentence that is either true or false but not both is called a proposition. A proposition is typically expressed as a declarative sentence.
 
-**Example of proposition:**
+###### Example :: Proposition:
 > True statement :: "The earth is round"
 > False statement :: "4 is a prime number"
 
-**Propositional variables:** "p, q and r" are the propositional variables since "x, y and z" are typically used for real numbers.
 
-**Truth value:** The outcome of the statement where the value is either true or false.
+##### Propositional variables: 
+"p, q and r" are the propositional variables since "x, y and z" are typically used for real numbers.
+
+##### Truth value: 
+The outcome of the statement where the value is either true or false.
 
 #### Connectives and Logical Operators
 
@@ -17,12 +20,12 @@ TARGET DECK: Discrete Math
 
 | Connectives                       | Notation              | English                               |
 | --------------------------------- | --------------------- | ------------------------------------- |
-| Negation ($\lnot$)                | $\lnot$p              | "not p" / "it is not the case that p" |
-| Disjunction ($\lor$)              | p $\lor$ q            | "disjunction of p and q" / "p or q"   |
-| Conjunction ($\land$)             | p $\land$ q           | "conjunction of p and q" / "p and q"  |
-| Exclusive Or ($\oplus$)           | p $\oplus$ q          | "either p or q but not both"          |
-| Conditional ($\rightarrow$)       | p $\rightarrow$ q     | "if p then q"                         |
-| Biconditional ($\leftrightarrow$) | p $\leftrightarrow$ q | "p if and only if q"                  |
+| Negation ($\lnot$)                | $\lnot$p              | not p / it is not the case that p |
+| Disjunction ($\lor$)              | p $\lor$ q            | disjunction of p and q / p or q   |
+| Conjunction ($\land$)             | p $\land$ q           | conjunction of p and q / p and q  |
+| Exclusive Or ($\oplus$)           | p $\oplus$ q          | either p or q but not both          |
+| Conditional ($\rightarrow$)       | p $\rightarrow$ q     | if p then q                         |
+| Biconditional ($\leftrightarrow$) | p $\leftrightarrow$ q | p if and only if q                  |
 
 **Disjunction (OR) Table:**
 
@@ -52,9 +55,9 @@ TARGET DECK: Discrete Math
 | F   | F   | F             |
 
 
-**Prescedence in propositional logic:**
+**Precedence in propositional logic:**
 
-| Operators                           | prescedence |
+| Operators                           | precedence |
 | ----------------------------------- | ----------- |
 | $\lnot$                             | 1           |
 | $\lor \quad \land$                  | 2           |
@@ -211,7 +214,7 @@ T, F, T, F
 | F   | T   | T                 |
 | F   | F   | T                 |
 
-Examples: 
+###### Example :: English to conditional statement:
 > **Translate the following statement:**
 > "If an integer $a$  is a multiple of 6 then $a$ is divisible by 2." 
 > r = an integer $a$  a multiple of 6
@@ -234,7 +237,8 @@ Types of a Conditional Statement:
 | Inverse        | $\lnot p \rightarrow \lnot q$ | IF it is not raining today, the game will not be cancelled |
 
 
-Biconditional Statement :: $p\leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$:
+##### Biconditional Statement
+$p\leftrightarrow q = (p \rightarrow q) \land (q \rightarrow p)$:
 - A biconditional statement can also be written as 
 
 | p   | q   | $p \leftrightarrow q$ |
@@ -244,8 +248,7 @@ Biconditional Statement :: $p\leftrightarrow q = (p \rightarrow q) \land (q \rig
 | F   | T   | F                     |
 | F   | F   | T                     |
 
-Example:
-
+###### Example :: Truth statement:
 > "An integer $a$ is even if and only if $a$ is divisible by 2"
 > p = An integer $a$ is even
 > q = $a$ is divisible by 2
@@ -325,8 +328,6 @@ $$\lnot(p \land q) \approx \lnot p \lor \lnot q$$
 2. Negation of **or**
 $$\lnot(p \land q) \approx \lnot p \land \lnot q$$
 ##### Logical Equivalence etc.
-
-
 | Laws            | AND                                                      | OR                                                      |
 | --------------- | -------------------------------------------------------- | ------------------------------------------------------- |
 | Communitive     | $p \land q \approx q \land p$                            | $p \lor q \approx q \lor p$                             |
@@ -348,7 +349,7 @@ $$\lnot(p \land q) \approx \lnot p \land \lnot q$$
 ##### Biconditional Logical Equivalence
 ![[Pasted image 20220201053427.png]]
 
-**Example :: Using Logical Equivalence:** 
+###### Example :: Using Logical Equivalence:
 > Simplify the following compound proposition $\lnot ((p \land \lnot q) \land r)$ using logical equivalence rules
 > 1. Given Statement: $\lnot ((p \land \lnot q) \land r)$ 
 > 2. De Morgan: $(\lnot (p \lor \lnot \lnot q) \lor \not r)$
@@ -356,18 +357,18 @@ $$\lnot(p \land q) \approx \lnot p \land \lnot q$$
 > 4. Double Negation Rule: $\lnot ((p \lor q) \lor \lnot r)$
 
 ## 2.6 Predicate Logic
-**Definition:** The property of a statement is called a predicate, essentially being the object of the sentence
+The property of a statement is called a predicate, essentially being the object of the sentence
 Ex. "x is a prime number"
 
 ##### Domain of a predicate
 Typical domain of a predicate is $U$ 
 
-Example :: Using predicate logic:
+###### Example :: Using predicate logic:
 > 1.  “y is greater than 5"
-    Let Q be a predicate where Q stands for “_is greater than 5". The predicate Q(y) is read as “y is greater than 5". Suppose y=3 and Q(3) translates as “3 is greater than 5". The truth value of Q(3) is False.
-	>
+> 	1. Let Q be a predicate where Q stands for “_is greater than 5". The predicate Q(y) is read as “y is greater than 5". Suppose y=3 and Q(3) translates as “3 is greater than 5". The truth value of Q(3) is False.
+> ----
 >2. “The subtraction of x and y is equal to z
-    Let R be a predicate where R stands for “The subtraction of _ and _ is equal to _." The predicate R(x,y,z) is read as “The subtraction of x and y is equal to z". Suppose, x=5, y=3, and z=7. The truth value of R(5,3,7) is False.
+>	1. Let R be a predicate where R stands for “The subtraction of _ and _ is equal to _." The predicate R(x,y,z) is read as “The subtraction of x and y is equal to z". Suppose, x=5, y=3, and z=7. The truth value of R(5,3,7) is False.
 
 ## 2.7 Quantifiers
 Quantifiers are words that can turn any statement into a propositional statement
@@ -383,7 +384,7 @@ $$\exists x \in U, P(x) \equiv P(x_1) \lor P(x_2) \lor P(x_3)$$
 
 ### Sufficient and Necassry Conditions
 ##### Sufficient
-$\forall x P(x)$ is a sufficent condition for $Q(x)$ 
+$\forall x P(x)$ is a sufficient condition for $Q(x)$ 
 $$\forall x (P(x)\rightarrow Q(x))$$
 
 

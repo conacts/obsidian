@@ -4,11 +4,12 @@ TARGET DECK: Calculus
 
 ## 13.1 Vector-Valued Functions
 ##### Vector-Valued Functions
-**Definiton:** $r(t)$ is a vector that points from the origin to a particles path at a time t
+$r(t)$ is a vector that points from the origin to a particles path at a time t
+
 > $$r(t)=\langle x(t), y(t), z(t) \rangle = x(t)i+y(t)j+z(t)k$$
 -  In the equation above, variable t is a **parameter** as t is often representative of time
--  $x(t), y(t)$ and $z(t)$ are the **compontents** or **coordinate functions**
-- $r(t)$ is referred to as the **vector paramtrization** of a path
+-  $x(t), y(t)$ and $z(t)$ are the **components** or **coordinate functions**
+- $r(t)$ is referred to as the **vector parametrization** of a path
 
 ###### Example :: Path vs. Curve:
 > Describe the path $r(t)= \langle cos(t), sin(t), 1 \rangle, \quad - \infty < t<\infty$
@@ -29,17 +30,17 @@ A line in $\mathbb{R}^2$
 > 3. Onto yz-plane: set $x=0$; $r(t)= \langle 0, sin(t), t \rangle, \quad t \le 0$ = Swirl
 	> ![[Pasted image 20220131151223.png]]
 
-###### Example :: Find point on paramtrization:
+###### Example :: Find point on parametrization:
 > 1. $r(4)$ will get us the proper x, therefore I will plug 4 into all values of t
 > 2. $r(4)=(1+4, 2+4^2,4^4)=(5, 18, 256)$, therefore point P does lie on the line
 
-##### Example :: Find circular paramatrization:
+##### Example :: Find circular parametrization:
 > Select the correct sine and cosine parametrization $r(t)$ of the intersection of the surfaces $x^2 + y^2 =16$ and $z=3x^2$ 
 > 1. Knowing we are building a circle based on equation $x^2 + y^2 =R^2$ we can assume the equation w/ the radius $x=4cos(t), y=4sin(t)$ meaning we can write the equation as $r(t)= \langle 4cos(t), 4sin(t), z \rangle$ 
 > 2. We also know $z=3x^2$, therefore we replace z with this equation getting $r(t)= \langle 4cos(t), 4sin(t), 3x^2 \rangle=r(t)= \langle 4cos(t), 4sin(t), 48cos^2(t) \rangle$ 
 
-##### Example :: Finding plane using paramatrizations:
-> Let $C$ the curve be parametrized by $𝐫(𝑡)=⟨𝑡^2−1,𝑡−2𝑡^2,4−6𝑡⟩$. Evaluate $𝐫(𝑡)$ at $𝑡=0$, $𝑡=1$, and $𝑡=3$.
+##### Example :: Finding plane using parametrizations:
+> Let $C$ the curve be parameterized by $𝐫(𝑡)=⟨𝑡^2−1,𝑡−2𝑡^2,4−6𝑡⟩$. Evaluate $𝐫(𝑡)$ at $𝑡=0$, $𝑡=1$, and $𝑡=3$.
 > 1. $v_1=r(0)=⟨−1,0,4⟩$
 > 2. $v_2=r(1)=⟨0,-1,-2⟩$
 > 3. $v_3=r(3)=⟨8,-15,-14⟩$
@@ -69,12 +70,12 @@ i & j & k\\
 > 5. Plug in 
 > 	1. $12(-1)+6(0)+1(4)=-8$
 > 	2. $12(𝑡^2−1)+6(𝑡−2𝑡^2)+4−6𝑡=−8$
-
+> ---
 > Determine whether $r_1(𝑡)=⟨𝑡^2+2,𝑡+1,5𝑡−1⟩$ and $r_2(𝑡)=⟨3𝑡,2𝑡−2,𝑡^2−6⟩$ collide or intersect
 > 1. They collide if $r_1(t)=r_2(t)$ where a value of t exists
 > 2.  $t+1=2t-2$ equals $t=3$ but when plugged in doesn't equal out
 > 3. If they don't collide, they can still intersect. We can find this out if we set $r_1(s)=r_2(t)$ which implies $t=1$ and $s=-1$, which satisfies the equations meaning the equations intersect, but don't collide at the same moment  
-
+> ----
 > The intersection of the plane $𝑦=2$ with the sphere $𝑥^2+𝑦^2+𝑧^2=104$
 > 1. To find this we must plug the values into the equation, and since we know y has a radius of 2 we can create the equation $x^2+2^2+z^2=104$ where $x^2+z^2=100$
 > 2. $x=\sqrt{100}cos(t) \quad z=\sqrt{100}sin(t)$ therefore $r(t)= \langle 10cos(t), 2, sin(t) \rangle$
@@ -84,8 +85,8 @@ i & j & k\\
 A vector-valued function $r(t)$ approaches the limit u (a vector) as t approaches $t_0$ if $\lim_{t\rightarrow t_0} ||r(t)-u|| = 0$ In this case, we write...
 $$\lim_{t\rightarrow t_0} r(t)=u$$
 
-##### Theorem 1: Vector-valued Limits are Computed Componentwise
-A vector-valued function $r(t)= \langle x(t), y(t), z(t) \rangle$ approaches a limit as $t \rightarrow t_0$ if and only if each compontent approaches a limit
+##### Theorem 1: Vector-valued Limits are Computed Component-wise
+A vector-valued function $r(t)= \langle x(t), y(t), z(t) \rangle$ approaches a limit as $t \rightarrow t_0$ if and only if each component approaches a limit
 $$\lim_{t \rightarrow t_0} r(t)= \langle \lim_{t \rightarrow t_0}x(t), \lim_{t \rightarrow t_0}y(t), \lim_{t \rightarrow t_0}z(t) \rangle$$
 
 ###### Example :: Taking the limit of a vector-value function
@@ -97,13 +98,13 @@ $$\lim_{t \rightarrow t_0} r(t)= \langle \lim_{t \rightarrow t_0}x(t), \lim_{t \
 A vector-value function is **continuous** if...
 $$\lim_{t \rightarrow t_0}r(t)=t(t_0)$$
 **Derivative of Theorem 1:**
-$r(t)$ is continuous at $t_0$ if and only if the compontents $x(t),y(t),z(t)$ are continuous at $t_0$ 
+$r(t)$ is continuous at $t_0$ if and only if the components $x(t),y(t),z(t)$ are continuous at $t_0$ 
 $$r'(t)=\frac{d}{dt}r(t)=\lim_{h \rightarrow 0}\frac{r(t+h)-r(t)}{h}$$
 $$\lim_{h \rightarrow 0}\frac{r(t+h)-r(t)}{h}=\lim_{h \rightarrow 0} \langle \frac{x(t+h)-x(t)}{h},\frac{y(t+h)-y(t)}{h},\frac{z(t+h)-z(t)}{h} \rangle$$
 
 - If the limit exists as shown above, $r(t)$ is differentiable
 
-##### Theorem 2: Vector-valued Derivatives are computed compontentwise
+##### Theorem 2: Vector-valued Derivatives are computed component-wise
 A vector-valued function $r(t)= \langle x(t), y(t), z(t) \rangle$
 $$r'(t)= \frac{d}{dt}r(t)=\langle x'(t), y'(t), z'(t) \rangle$$
 
@@ -192,7 +193,7 @@ $$R_1(t)=R_2(t)+c$$ for some constant $c$
 > $$= \langle \frac{\sqrt{3}}{2}-\frac{\sqrt{2}}{2},\frac{75\pi^2}{16}-\frac{3\pi^2}{16}, \frac{3\pi^2+4}{16}-\frac{\pi^2 + 8}{16}\rangle$$
 
 ##### Fundamental Theorem of Calculus for Vector-valued functions
-**Part 1:** If $r(t)$ is continuous on $[a,b]$, and $R(t)$ is an antiderivative of $r(t)$, then...
+**Part 1:** If $r(t)$ is continuous on $[a,b]$, and $R(t)$ is an anti-derivative of $r(t)$, then...
 $$\int^b_a r(t)dt=R(b)-R(a)$$
 **Part 2:** Assume that $r(t)$ is continuous on an open interval $I$ and let $a$ be in $I$, then...
 $$\frac{d}{dt}\int^t_a r(s)ds=r(t)$$
@@ -204,31 +205,31 @@ $$s = \int^b_a ||r'(t) || dt = \int^b_a \sqrt{x'(t)^2 + y'(t)^2 + z'(t)^2}$$
 
 **Example :: Length of a vector**
 > Find the arc length $s$ of the helix given by $r(t)= \langle \cos3t, \sin 3t, 3t \rangle$ for $0 \le t \le 2 \pi$ 
-> 1. Calculate the derivative of each compontent in the equation
+> 1. Calculate the derivative of each component in the equation
 > $$r'(t) = \langle -3\sin3t, 3\cos3t, 3 \rangle $$
-> 2. Square each compontent of  $r'(t)$ and add them
+> 2. Square each component of  $r'(t)$ and add them
 > $$r'(t)^2 = 9\sin^2 3t + 9\cos 3t + 9 = 9(\sin^23t + \cos^2 3t ) + 9 = 18$$
 > 3. Take the integral
 > $$s = \int^{2\pi}_0 ||r'(t)||dt = \int^{2\pi}_0 \sqrt{18}dt = 6 \sqrt{2} \pi$$
 > Compute the length of the curve $𝐫(𝑡)=⟨−8𝑡,5𝑡+6,−5𝑡−2⟩$ over the interval $0≤𝑡≤5$.
-> 1. Calculate the derivative of each compontent
+> 1. Calculate the derivative of each component
 > $$r'(t) = ⟨−8,5,−5⟩$$
-> 2. Square each compontent, add them and then take the square root
+> 2. Square each component, add them and then take the square root
 > $$||r'(t)|| = \sqrt{(-8)^2 + 5^2 + (-5)^2} = \sqrt{114}$$
 > 3. Integrate over the range
 > $$s = \int^5_0 \sqrt{114}dt = \sqrt{114}t|^5_0= 5\sqrt{114}$$
 > ---
 > 
 > Compute the length of the curve $𝐫(𝑡)=⟨2𝑡,ln(𝑡),𝑡^2⟩$ over the interval $1≤𝑡≤3$.
-> 1. Calculate the derivative of each compontent
+> 1. Calculate the derivative of each component
 > $$r'(t) = ⟨2,\frac{1}{t},2t⟩$$
-> 2. Square each compontent, add them and then take the square root
+> 2. Square each component, add them and then take the square root
 > $$||r'(t)|| = \sqrt{(2)^2 + (\frac{1}{t})^2 + (2t)^2} = \sqrt{4 + \frac{1}{t^2} + 4t^2}$$
 > 3. Integrate over the range
 > $$s = \int^3_0 \sqrt{\frac{4t^2 + 1 + 4t^4}{t^2}}dt =  (t^2 + ln|t|)|^3_1 = 9 + ln|3| - 1 - ln|1|$$
 > ---
 > Compute the arc length function $s(t)= \int^t_a ||r'(u)||du$ for $r(t)= \langle 14t^2, 12t^2, t^3 \rangle$ where $a=0$
-> 1. Take the derivative of each compontent
+> 1. Take the derivative of each component
 > $$r'(t)= \langle 28t, 24t, 3t^2 \rangle$$
 > 2. Find the length
 > $$||r'(t)||=\sqrt{784t^2+576t^2+9t^4}=\sqrt{1360t^2+9t^4}$$
@@ -258,7 +259,7 @@ $$s(t) = \frac{ds}{dt}=||r'(t)||$$
 > 
 
 ##### Arc Length Parametrization
-**Note:** paramatrizations of a curve are often not unique, as shown in $r_1(t) = \langle t, t^2 \rangle$ is equal to $r_2(u)= \langle u^3, u^6 \rangle$
+**Note:** parametrizations of a curve are often not unique, as shown in $r_1(t) = \langle t, t^2 \rangle$ is equal to $r_2(u)= \langle u^3, u^6 \rangle$
 $$||r'(s)||=1 \quad \text{for all s}$$
 **3 properties of acr length parametrization:**
 1. Every velocity vector $r'(s)$ has length equal to 1
@@ -269,7 +270,7 @@ $$\text{distance traveled over [a,b]} = \int^b_a||r'(s)||ds=\int^b_a1dt=b-a$$
 
 ##### Finding the arc length parametrization
 **Note:** Start with any parametrization $r(t)$ such that $r'(t) \ne 0$ for all $t$.
-1. Form the arc length intergral
+1. Form the arc length integral
 $$s = g(t)= \int^t_0 ||r'(u)||du$$
 2. Determine the inverse of $g(t)$
 	- Note that because $||r'(t)|| \ne 0, \quad s = g(t)$ is an increasing function, and $g$ has an inverse $t=g^{-1}(s)$
@@ -277,13 +278,13 @@ $$s = g(t)= \int^t_0 ||r'(u)||du$$
 $$r_1(s) = r(g^{-1}(s))$$
 
 **Example :: Finding the arc length parametrization:**
-> Find the paremetrization $𝐫(𝑡)=⟨13cos(𝑡),13sin(t), \frac{33t}{2\pi}⟩$ of the helix. 
+> Find the parametrization $𝐫(𝑡)=⟨13cos(𝑡),13sin(t), \frac{33t}{2\pi}⟩$ of the helix. 
 > 1. First, calculate the arc length function
 > $$||r'(t)||= \sqrt {169\sin^2(t) + 169\cos^2(t) + \frac{33^2}{4\pi^2}}=\sqrt{169 + \frac{1089}{4\pi^2}}$$
 > $$\int^t_0\sqrt{169 + \frac{1089}{4\pi^2}}=\sqrt{169 + \frac{1089}{4\pi^2}}t$$
 > 2. Find the inverse of the arc length function
 > $$s = \sqrt{169 + \frac{1089}{4\pi^2}}t; \quad t = \frac{s}{\sqrt{169 + \frac{1089}{4\pi^2}}}$$
-> 3. Subsitute our new $t$ into the original paramatrization gives us the arc length parametrization
+> 3. Substitute our new $t$ into the original parametrization gives us the arc length parametrization
 > $$r(\frac{s}{\sqrt{169 + \frac{1089}{4\pi^2}}})=⟨13cos(\frac{s}{\sqrt{169 + \frac{1089}{4\pi^2}}}),13\sin(\frac{s}{\sqrt{169 + \frac{1089}{4\pi^2}}}), \frac{33(\frac{s}{\sqrt{169 + \frac{1089}{4\pi^2}}})}{2\pi}⟩$$
 > 4. To verify the answer, see if your new equation equals 1, but I do not give a fuck to do that
 
@@ -294,7 +295,7 @@ $$r_1(s) = r(g^{-1}(s))$$
 $$v(t)=r'(t)=\lim_{h \rightarrow 0} \frac{r(t+h)-r(t)}{h}$$
 **Acceleration vector** is the 2nd derivative:
 $$a(t)=r''(t)$$
-##### Theorem 1: Tangential and Normal Compontents of Acceleration
+##### Theorem 1: Tangential and Normal Components of Acceleration
 In the decomposition $a=a_T T + a_N N$, we have 
 $$a_T=a \cdot T = \frac{a \cdot v}{||v||}, \quad a_N=a \cdot N = \sqrt{||a||^2-|a_T|^2}$$
 and...

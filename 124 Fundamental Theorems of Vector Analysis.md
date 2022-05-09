@@ -122,7 +122,7 @@ Let $S$ be a 3D surface, and let $F$ be a vector field whose components have con
 $$\oint_{\partial S} F \cdot dr = \iint_S curl(F) \cdot dS = \iint_S ( \nabla \times F) \cdot dS$$
 $$dS = N(u, v) dudv \quad \text{N = normal vector}$$
 The integral on the left is defined relative to the boundary orientation of $\partial S$. 
-The paramatrization is...
+The parametrization is...
 $$r(t) = \langle x(t), y(t), f(x(t), y(t)) \rangle$$
 If $S$ is a closed surface, then
 $$\iint_S curl(F) \cdot dS = 0$$

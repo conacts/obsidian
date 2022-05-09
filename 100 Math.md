@@ -9,3 +9,5 @@
 [[119 Sets]]
 [[120 Sequences (Discrete Math)]]
 [[121 Number Theory and Cryptography]]
+[[122 Counting and Probability]]
+[[124 Fundamental Theorems of Vector Analysis]]

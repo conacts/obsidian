@@ -1,11 +1,12 @@
 TARGET DECK: Discrete Math
 # Sets:
 ## 1.1 Set Theory
-##### Set: 
-**Definition:** A set is an unordered collection of distinct objects, otherwise known as members or elements.
- - Order of the elements doesn't matter in a set, meaning two sets with the same elements are the same.
- - ...  == "and so forth"
 
+##### Set 
+A set is an unordered collection of distinct objects, otherwise known as members or elements.
+ - Order of the elements doesn't matter in a set, meaning two sets with the same elements are the same.
+
+##### Example :: Set notation:
 >  $a \in A$ : element a **is** in set A
 > $a \notin A$ : element a **is not** in set A
 > 
@@ -13,7 +14,7 @@ TARGET DECK: Discrete Math
 
 ![[Pasted image 20220118002628.png | 400]]
 
-#### Important Sets:
+#### Important Sets
 $\mathbb{N} = \text{set of all natural numbers = \{1, 2, 3, ....\}}$ $\mathbb{N}_0 = \text{set of all natural numbers with 0 = \{0, 1, 2, 3, ...\}}$
  $\mathbb{Z} = \text{set of all integers}=\{...,-2, -1, 0, 1, 2, ...\}$
  $\mathbb{Z}^+ = \text{set of all positive integers}=\{1, 2, 3, ...\}$
@@ -116,33 +117,29 @@ a set with only one element
 ------
 
 ## 1.2 Set Builder Notation
-##### Set Builder Notation:
+
+##### Set Builder Notation
 A mathematical way to describe a set
-
-
 $$\text{set = \{expression | rule\}}$$
+###### Example :: Set builder notation:
 
+$\{3x | x \in \mathbb{Z}\}= \text{Set of multiples of 3}$
 
-**Examples:**
-
-$$\{3x | x \in \mathbb{Z}\}= \text{Set of multiples of 3}$$
-
-$$S = \{3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39\}$$
+$S = \{3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39\}$
 
 #### Subset notation
-$$\subseteq = \text{belongs to subset}$$
-$$\nsubseteq = \text{doesn't belong to subset}$$
+$$\subseteq = \text{is element of} \quad \nsubseteq = \text{is not element of}$$
 
-**Theorem 1:**
-> The empty set is a subset of all sets
-> $$\emptyset \subseteq A$$
-> A subset is a subset of itself
-> $$A \subseteq A$$
+##### Theorem :: Subset Theorems:
+The empty set is a subset of all sets
+$$\emptyset \subseteq A$$
+A subset is a subset of itself
+$$A \subseteq A$$
 
 #### Proofs
 
 How to prove or prove/disprove that A is a subset of set B? ($A \subset B$)
-- Prove: Must provethat if x belongs to A, then x belongs to B
+- Prove: Must prove that if x belongs to A, then x belongs to B
 - Disprove: Show that one element x in A doesn't belong to B
 
 ###### 1.2 Problems:
@@ -249,13 +246,13 @@ True
 
 
 ## 1.3 Set Cardinality:
-##### Set Cardinality:
-**Definition:** Number of distinct elements in the set A, denoted by $|A|$
+
+##### Set Cardinality
+Number of distinct elements in the set A, denoted by $|A|$
 
 **Theorem 2:**
-> nullset within a set counts as a distinct element
-> $$|\emptyset|=0$$
-> $$|\{\emptyset\}|=1$$
+Nullset within a set counts as a distinct element
+$$|\emptyset|=0 \quad \quad |\{\emptyset\}|=1$$
 
 ###### 1.3 Problems:
 Suppose A={2,3,5},C={6,1,2},B={8,5,3} are sets. What is A∩(B∪C) ? #flashcard 
@@ -307,10 +304,10 @@ False
 <!--ID: 1642464971758-->
 
 
-## 1.4 Power Set:
 ##### Power Set:
-**Definition:** The set of all possible subsets of set A is denoted by $\mathcal{P}(A)$, or known as power set of A
+The set of all possible subsets of set A is denoted by $\mathcal{P}(A)$, or known as power set of A
 - Cardinality of power set = $2^n$
+$$|\mathcal{P}(A)| = 2^n \quad n=\text{num of elements}$$
 
 
 ###### 1.4 Flashcards:
@@ -328,32 +325,32 @@ Cardinality of power set = $2^n$
 
 ## 1.5 Cartesian Products: 
 ##### Cartesian Products:
-**Definition:** The multiplication of two sets where the output is ordered pairs of a tuple; notation: $A \times B$ 
-- Number of Power set of cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
+The multiplication of two sets where the output is ordered pairs of a tuple; notation: $A \times B$ 
+- Number of Power set of Cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
 - Number of Cartesian Products: Multiply the number of all elements
 
 
-**Example:**
-> $A=\{a, b\}$
-> $B=\{1, 2, 3\}$
-> $A\times B = (a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)$
+###### Example :: Cartesian product:
 
-**Example 2:**
+```ad-example
+title: Example: Cartesian product
+color: grey
+$A=\{a, b\}$, $B=\{1, 2, 3\}$
+$A\times B = (a, 1), (a, 2), (a, 3), (b, 1), (b, 2), (b, 3)$
+----
+$A$ = {a, b, c}, $B$ = {1, 2}, $C$ = {L, R}
+ $A \times B \times C$ = { (a, 1, L), (b, 1, L), (c, 1, L),  
+(a, 1, R), (b, 1, R), (c, 1, R),  
+(a, 2, L), (b, 2, L), (c, 2, L), 
+(a, 2, R), (b, 2, R), (c, 2, R)
+}
+```
 
- > $A$ = {a, b, c}
- >  $B$ = {1, 2} 
- >  $C$ = {L, R}
- $A \times B \times C$ = {
- (a, 1, L), (b, 1, L), (c, 1, L),  
- > (a, 1, R), (b, 1, R), (c, 1, R),  
- > (a, 2, L), (b, 2, L), (c, 2, L), 
- >  (a, 2, R), (b, 2, R), (c, 2, R)
- >  }
 
 ###### 1.5 Flashcards:
 
-How to get the power set of a cartesian product? #flashcard 
-Power set of cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
+How to get the power set of a Cartesian product? #flashcard 
+Power set of Cartesian products: $|\mathcal{P}(A)|=2^{|A\times B|}$
 <!--ID: 1642483217986-->
 
 
@@ -363,74 +360,27 @@ The multiplication of two sets where the output is ordered pairs of a tuple; not
 
 
 ## 1.6 Set Operations
-##### Union
-**Union:** Combines both sets into one set
 
-$$A \cup B\{x | x \in A \text{ OR } x \in B\}$$
 
-##### Intersection
-**Intersection:** Items within two sets that are the same
-
-$$A \cap B\{x | x \in A \text{ AND } x \in B\}$$
-
-##### Difference
-**Difference:** The set containing all the elements of set A that arent in set B
-
-$$A - B \{x | x \in A \text{ OR } x \not\in B\}$$
-
-**Complement** ($\overline{A}$): The difference of the universal set minus set A
-$$\overline{A}=\{x \in U | x \not\in A\}$$
+| Set Operation | Representation | Set Builder Notation                     | Definition                                      |
+| ------------- | -------------- | ---------------------------------------- | ----------------------------------------------- |
+| Union         | $A \cup B$     | $\{x ~l~ x \in A \text{ OR } x \in B\}$  | Combines both sets into one set                 |
+| Intersection  | $A \cap B$     | $\{x ~l~ x \in A \text{ AND } x \in B\}$ | Items within two sets that are the same                                                |
+| Difference    | $A - B$               |  $\{x ~l~ x \in A \text{ OR } x \not\in B\}$                                        | The set containing all the elements of set A that aren't in set B                                                |
+| Complement    | $\overline{A}$ | $\{x \in U ~l~ x \not\in A\}$            | The difference of the universal set minus set A |
 
 ## 1.7 Identity Rules
 
-| Rule                   | 1                                                | 2                                                |
-| ---------------------- | ------------------------------------------------ | ------------------------------------------------ |
-| Identity Laws          | $A \cup \emptyset = A$                           | $A \cap U = A$                                   |
-| Domination Laws        | $A \cup U = U$                                   | $A \cap \emptyset = \emptyset$                   |
-| Idempotent Laws        | $A \cup A = A$                                   | $A \cap A = A$                                   |
-| Complement Laws        | $A\cup \overline{A}  = A$                        | $A \cap \emptyset = \emptyset$                   |
-| Absorption Laws        | $A \cup (A \cap B) = A$                          | $A \cap (A \cup B) = A$                          |
-| Double Complement Laws | $\overline{\overline{A}}=A$                      | XXXX                                             |
-| Commutative Laws       | $A \cup B = B \cup A$                            | $A \cap B = B \cap A$                            |
-| Associative Laws       | $(A \cup B) \cup C = A \cup (B \cup C)$          | $(A \cap B) \cap C = A \cap (B \cap C)$          |
-| Distributive Laws      | $(A \cup B) \cap C = (A \cup B) \cap (A \cup C)$ | $(A \cap B) \cup C = (A \cap B) \cup (A \cap C)$ |
-| De Morgan's Laws       | $\overline{A \cup B} = \overline{A} \cap \overline{B}$                                                 | $\overline{A \cap B} = \overline{A} \cup \overline{B}$                                                 |
+| Rule                   | 1                                                      | 2                                                      |
+| ---------------------- | ------------------------------------------------------ | ------------------------------------------------------ |
+| Identity Laws          | $A \cup \emptyset = A$                                 | $A \cap U = A$                                         |
+| Domination Laws        | $A \cup U = U$                                         | $A \cap \emptyset = \emptyset$                         |
+| Idempotent Laws        | $A \cup A = A$                                         | $A \cap A = A$                                         |
+| Complement Laws        | $A\cup \overline{A}  = A$                              | $A \cap \emptyset = \emptyset$                         |
+| Absorption Laws        | $A \cup (A \cap B) = A$                                | $A \cap (A \cup B) = A$                                |
+| Double Complement Laws | $\overline{\overline{A}}=A$                            | XXXX                                                   |
+| Commutative Laws       | $A \cup B = B \cup A$                                  | $A \cap B = B \cap A$                                  |
+| Associative Laws       | $(A \cup B) \cup C = A \cup (B \cup C)$                | $(A \cap B) \cap C = A \cap (B \cap C)$                |
+| Distributive Laws      | $(A \cup B) \cap C = (A \cup B) \cap (A \cup C)$       | $(A \cap B) \cup C = (A \cap B) \cup (A \cap C)$       |
+| De Morgan's Laws       | $\overline{A \cup B} = \overline{A} \cap \overline{B}$ | $\overline{A \cap B} = \overline{A} \cup \overline{B}$ |
 
-#### List
-##### Identity Laws
-$$A \cup \emptyset = A$$
-$$A \cap U = A$$
-
-##### Domination Laws
-$$A \cup U = U$$
-$$A \cap \emptyset = \emptyset$$
-
-##### Idempotent Laws
-$$A \cup A = A$$
-$$A \cap A = A$$
-
-##### Complement Laws
-$$A\cup \overline{A}  = A$$
-$$A \cap \emptyset = \emptyset$$
-
-##### Absorption Laws
-$$A \cup (A \cap B) = A$$
-$$A \cap (A \cup B) = A$$
-##### Double Complement Laws
-$$\overline{\overline{A}}=A$$
-
-##### Commutative Laws
-$$A \cup B = B \cup A$$
-$$A \cap B = B \cap A$$
-
-##### Associative Laws
-$$(A \cup B) \cup C = A \cup (B \cup C)$$
-$$(A \cap B) \cap C = A \cap (B \cap C)$$
-
-##### Distributive Laws
-$$(A \cup B) \cap C = (A \cup B) \cap (A \cup C)$$
-$$(A \cap B) \cup C = (A \cap B) \cup (A \cap C)$$
-
-##### De Morgan's Laws
-$$\overline{A \cup B} = \overline{A} \cap \overline{B}$$
-$$\overline{A \cap B} = \overline{A} \cup \overline{B}$$

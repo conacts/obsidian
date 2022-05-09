@@ -10,4 +10,3 @@ A problem solved through the use of an algorithm due to it's computational compl
 ##### Data Structures
 A way to store and organize data in order to facilitate access and modifications. Each structure has it's pros and cons as "one size does not fit all"
 
-##### Technique

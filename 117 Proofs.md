@@ -3,13 +3,13 @@ TARGET DECK: Discrete Math
 # Chapter 3: Proofs
 ## 3.1 Proof Terminology
 ##### Proof
-**Definition:** A statement that can be verified as true for any condition
+A statement that can be verified as true for any condition
 
 ##### Lemma
-**Definition:** A theorem whose purpose is to help prove another theorem
+A theorem whose purpose is to help prove another theorem
 
 ##### Corollary
-**Definition:** An immediate consequence of a theorem or proposition
+An immediate consequence of a theorem or proposition
 
 
 ##### Odd theorem
@@ -118,7 +118,6 @@ $$\forall a, \exists c \quad a = 2c + 1$$
 
 ### Case Analysis
 
-
 ## 3.3 Indirect Proofs
 ### Proof by Contraposative:
 Proof where a conditional statement is equivalent to its contrapositive
@@ -151,7 +150,7 @@ Summation ( $\sum$ ) is key to **Proof by Induction**
 2. **Inductive Hypothesis:** Assume that for any arbitrary integer $k \ge$ initial value, $P(k)$ is true
 3. **Inductive Step:** With the proof of inductive hypothesis, show that $P(k+1)$ is true, otherwise written as $P(k) \rightarrow P(k+1)$ is true
 
-**Example :: Proof by Induction:**
+###### Example :: Proof by Induction:
 > **IDEA BEHIND THE PROOF**
 > Proof: "for all integers $\forall n,\sum^n_{i=1}i=\frac{n(n+1)}{2}$ is true"
 > 1. See if the proof is true or false
@@ -163,8 +162,7 @@ Summation ( $\sum$ ) is key to **Proof by Induction**
 > 5. For inductive step, we must prove that $P(k+1)$ for $n=k+1$ proving $P(k+1)$ claims that $\sum^{k+1}_{i=1} i=\frac{k+1(k+2)}{2}$
 > 6. We can rewrite the equation as 
 > $$1 + 2 + 3 + ... + (k + 1) = \frac{k+1(k+2)}{2}$$
-
- **Example :: Proof By Induction:**
+> ----
  > 1. We proceed by **induction on the variable** $n$ (necessary)
  > 2. **Base Case:** $(n=1)$: We must prove $\sum^1_{i=1} i=\frac{1(1+1)}{2}$
  > We must compute both sides of the equation to confirm the same answer
@@ -192,13 +190,18 @@ Inductions used to prove a statement or a property for all nonnegative integers 
 
 
 #### Weak Induction
-
-![[Pasted image 20220323194120.png]]
+For problems without multiple base cases
+Let $S(n)$ denote a statement regarding an integer $n$, and let $k \in \mathbb{Z}$ be fixed. If
+1. $S(k)$ holds true 
+2. for every $m \ge k$, $S(m) \rightarrow S(m + 1)$,
+then for every $n \ge k$, the statement $S(n)$ holds true.
 
 #### Strong Induction
 Strong Induction specializes in solving a problem with multiple base cases
-
-![[Pasted image 20220323194106.png]]
+Let $S(n)$ denote a statement regarding an integer $n$. If 
+1. $S(k)$ is true 
+2. for every $m \ge k$, $[S(k) \land S(k+1) \land ... \land S(m)] \rightarrow S(m + 1)$ 
+then for every $n \ge k$, $S(n)$ is true
 
 ##### Strong Induction Structure
 Theorem: $\forall n P(n)$
