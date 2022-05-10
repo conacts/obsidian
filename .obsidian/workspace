@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "124 Fundamental Theorems of Vector Analysis.md",
+            "file": "Late HTB.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -71,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "124 Fundamental Theorems of Vector Analysis.md",
+                "file": "Late HTB.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -88,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "124 Fundamental Theorems of Vector Analysis.md",
+                "file": "Late HTB.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -103,6 +103,7 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
+    "Late HTB.md",
     "124 Fundamental Theorems of Vector Analysis.md",
     "260 Neural Networks.md",
     "261 Backpropagation.md",
@@ -111,7 +112,6 @@
     "270 Computer Engineering.md",
     "271 Number and Binary Representation.md",
     "272 Computer Components.md",
-    "400 Computer Science.md",
-    "401 Intro to Algorithms.md"
+    "400 Computer Science.md"
   ]
 }
