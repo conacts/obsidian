@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "120 Sequences (Discrete Math).md",
+            "file": "403 Designing Algorithms.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -70,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "120 Sequences (Discrete Math).md",
+                "file": "403 Designing Algorithms.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "120 Sequences (Discrete Math).md",
+                "file": "403 Designing Algorithms.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +102,15 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
-    "120 Sequences (Discrete Math).md",
-    "Statistics & Machine Learning.md",
-    "100 Math.md",
-    "000 Index.md",
-    "80 Git.md",
-    "113 Multivariable Functions.md",
-    "110 Vectors.md",
-    "112 Vector Functions.md",
-    "124 Fundamental Theorems of Vector Analysis.md",
-    "115 Line and Surface Integrals.md"
+    "403 Designing Algorithms.md",
+    "402 Sorting Algorithms.md",
+    "401 Intro to Algorithms.md",
+    "400 Computer Science.md",
+    "272 Computer Components.md",
+    "Leetcode.md",
+    "123 Linked Lists, Graphs and Trees.md",
+    "lists/Definitions.md",
+    "Types of machine learning.md",
+    "What is Deep Learning.md"
   ]
 }

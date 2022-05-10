@@ -187,12 +187,11 @@ Transforming the output of the encoder to its original state through a reverse o
 **Larger Decoder**
 ![[D280F227-EB89-4D6D-9FD8-7B09EA417F03_1_201_a.jpeg |300]]
 
-
 ##### Demultiplexer
 A decoder used to invert the operation of a multiplexer
 
 ### CMOS Logic Gates
-Complementary metal-oxide semiconductor comprised of an [[272 Computer Compontents#NMOS|NMOS]] and [[272 Computer Compontents#NMOS|PMOS]] transistors.
+Complementary metal-oxide semiconductor comprised of an [[272 Computer Components#NMOS|NMOS]] and [[272 Computer Components#NMOS|PMOS]] transistors.
 
 ![[Pasted image 20220330131130.png |300]]
 #### NMOS
@@ -262,7 +261,6 @@ You can create custom CMOS circuits by grouping together known circuits to make 
 > 4. Draw CMOS
 > 	1. ![[Pasted image 20220330140258.png |500]]
 
-
 ## Circuits
 #### Sequential Circuits
 A circuit whose output depends on not only current inputs but past inputs as well
@@ -300,9 +298,9 @@ Two of the most popular varieties of storage cells
 **Level Sensitive** storage element
 
 Types: 
-1. [[272 Computer Compontents#S-R Latch|S-R latch]]
-2. [[272 Computer Compontents#Gated S-R Latch |Gated S-R Latch]]
-3. [[272 Computer Compontents#D Latch|D Latch]]
+1. [[272 Computer Components#S-R Latch|S-R latch]]
+2. [[272 Computer Components#Gated S-R Latch |Gated S-R Latch]]
+3. [[272 Computer Components#D Latch|D Latch]]
 
 
 | S-R Latch                                                            | S-R Latch | D Latch |                                                                     |
@@ -359,9 +357,6 @@ Essentially a gated S-R latch but the input S is inverted
 ![[Pasted image 20220330172424.png |300]]
 
 $$Q* = D$$
-
-
-
 | CLK   | D   | Q           | $\overline{Q}$ |
 | --- | --- | ----------- | -------------- |
 | 0   | 0   | LAST Q | LAST $\overline{Q}$    |
@@ -376,21 +371,19 @@ $$Q* = D$$
 **Edge Triggered** storage element
 
 Types:
-1. [[272 Computer Compontents#D Flip-Flop D-FF| D Flip-Flop (D-FF)]]
+1. [[272 Computer Components#D Flip-Flop D-FF| D Flip-Flop (D-FF)]]
 3. JK_FF
 4. T-FF
 
-
 ##### D Flip-Flop (D-FF)
 The D-type filp-flop is a modified Set-Reset flip-flop with the addition of an inverter to prevent the S and R inputs from being at the same logic level. 
-**Note:** This is the same as a [[272 Computer Compontents#D Latch |D Latch]], just with the use of a clock signal
+**Note:** This is the same as a [[272 Computer Components#D Latch |D Latch]], just with the use of a clock signal
 
 $$Q* = D$$
 ![[Pasted image 20220330160134.png]]
 
 ##### D Flip-Flop w/ Enable
-A [[272 Computer Compontents#D Latch |D Latch]] with an enable. The enable is a component that allows a flip-flop to hold it's value for more than a single clock cycle
-
+A [[272 Computer Components#D Latch |D Latch]] with an enable. The enable is a component that allows a flip-flop to hold it's value for more than a single clock cycle
 $$Q* = EN \cdot (D+EN(N)) \cdot Q$$
 
 | D   | EN  | CLK        | Q      | QN      |
@@ -415,9 +408,9 @@ $$Q* = (QN \cdot  T) + (TN \cdot  Q)$$
 
 
 ##### Rising Edge Flip Flop
-![[Pasted image 20220330182310.png]]
+![[Pasted image 20220330182310.png|500]]
 ##### Falling Edge Flip Flop
-![[Pasted image 20220330182324.png]]
+![[Pasted image 20220330182324.png |500]]
 
 
 ## State Machines
@@ -503,7 +496,6 @@ Binary counters are an example of synchronous sequential circuit design.
 | 101           | 000               | 101            |
 
 ### Practice Exam Flashcards
-
 What 2 types of transistors are used in CMOS? What kind of input (0 or 1) activates each type of transistor? #flashcard 
 1. PMOS and NMOS are transistors used in CMOS
 2. PMOS: Activated at input 0
@@ -611,19 +603,6 @@ Q* = J QN + KN * Q
 T Flip Flop #flashcard 
 Q* = (QN x T) + (TN x Q)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### Timing and Skews
 
 Timing metrics for a D flip flop
@@ -637,9 +616,9 @@ We also must have a stable state in this x time, shown here
 As shown above, flip-flops actually have **3 states** instead of 3
 1. 1 State
 2. 0 State
-3. Metastable State, a state between 0 and 1
+3. Meta-stable State, a state between 0 and 1
 
-##### Metastable State
+##### Meta-stable State
 A state in flip-flop circuits between 0 and 1 caused by "hold-times" of the flip flop not lasting for a clock cycle, leading to a change in the variable **x** during one clock cycle
 
 ![[Pasted image 20220411103218.png |300]]
@@ -708,8 +687,8 @@ However, the clock signal can have both spatial (clock skew) and temporal (clock
 
 #### Clock Skew
 Causes time $T$ constant from cycle to cycle
-- [[272 Computer Compontents#Positive Clock Skew|(+)]] clock and data flowing in the same direction
-- [[272 Computer Compontents#Negative Clock Skew|(-)]] clock and data flowing in opposite directions
+- [[272 Computer Components#Positive Clock Skew|(+)]] clock and data flowing in the same direction
+- [[272 Computer Components#Negative Clock Skew|(-)]] clock and data flowing in opposite directions
 
 ##### Source of Clock Skew
 1. Manufacturing device variations in clock drivers
@@ -721,7 +700,7 @@ Clock and data flowing in the same direction
 ![[Pasted image 20220419120236.png |500]]
 $$T: \quad T + \delta \ge t_{c-q} + t_{plogic} + t_{su} \quad \text{so} \quad T \ge t_{c-q} + t_{plogic} + t_{su} - \delta$$
 $$t_{hold}: \quad t_{hold} + \delta \le t_{c-q} + t_{plogic} \quad \text{so} \quad t_{hold} \le t_{c-q} + t_{plogic} - \delta$$
-**Note:** $\delta > 0$ Improves performance, but makes $t_{hold}$ harder to meet. If $t_{hold}$ is not met, the circuit malfunctions indpendent of the clock period
+**Note:** $\delta > 0$ Improves performance, but makes $t_{hold}$ harder to meet. If $t_{hold}$ is not met, the circuit malfunctions independent of the clock period
 
 ##### Negative Clock Skew
 Clock and data flowing in opposite directions
@@ -736,7 +715,7 @@ Causes time $T$ to change on a cycle-by-cycle basis
 ##### Source of Clock Jitter
 1. Clock generation
 2. Capacitive loading and coupling
-3. Enviornmental variations (power supply and temperature)
+3. Environmental variations (power supply and temperature)
 ![[Pasted image 20220419115655.png |500]]
 
 ##### Absolute Jitter
@@ -775,4 +754,4 @@ Voltage too low? ---> Decrease Duty Cycle
 Voltage Critically low / high? ---> Use a preset
 
 Do we need r in our tables or can we represent it in our circuit diagrams
-- no because we represent it in our circuit diagram in our preset
+- No, because we represent it in our circuit diagram in our preset

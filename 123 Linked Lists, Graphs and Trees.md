@@ -1,18 +1,52 @@
+## Linked Lists
+A data structure comprising of a chain of nodes. Each node contains a value and an address to the next node.
+
+##### Singly Linked List
+A linked list where each node only contains one address
+![[Pasted image 20220509234801.png]]
+
+``` python
+class Node:
+    def __init__(self, data):
+        self.data = data  # Assign data
+        self.next = None  # Initialize 
+```
+
+##### Doubly Linked List
+A linked list where each node contains two addresses. One backward to the previous node and one to the next node
+![[Pasted image 20220509234826.png]]
+
+``` python
+class Node:
+    def __init__(self, next=None, prev=None, data=None):
+        self.next = next # reference to next node in DLL
+        self.prev = prev # reference to previous node in DLL
+        self.data = data
+
+```
+
 ## 9.1 Graphs
 A data structure used to show relations from one node to multiple other nodes. This can be conceptualized as a set of finite sets.
 ![[Pasted image 20220418154300.png |400]]
 
 $$A, D = \{B\} \quad  B = \{C\} \quad C = \{E\} \quad E = \{D, F\} \quad F = \{\emptyset\}$$
 
-There are two types of graphs, [[123 Graphs and Trees#Directed Graph|directed graphs]] and [[123 Graphs and Trees#Undirected Graph|undirected graphs]] 
+There are two types of graphs, [[123 Linked Lists, Graphs and Trees#Directed Graph|directed graphs]] and [[123 Linked Lists, Graphs and Trees#Undirected Graph|undirected graphs]] 
 
 ### Graph Components
 
 #### Node / Vertex
-Elements of data in the graph, typicall represented as circles
+Elements of data in the graph, typically represented as circles
 ![[Pasted image 20220418155152.png]]
 In the graph above we have, 
-- 5 Verticies
+- 5 Vertices
+
+``` python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+```
 
 #### Edge / Link
 Connections between nodes on a graph, representing relationships between two pieces of data
@@ -21,6 +55,15 @@ Connections between nodes on a graph, representing relationships between two pie
 $$E_1 = \{A,C\} \quad E_2 = \{A, B\} \quad E_3 = \{C, D\} \quad ...$$
 In the graph above we have,
 - 7 Edges
+
+``` python
+``` python
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None  # An edge
+        self.prev = None  # An edge
+```
 
 ##### Loop Edges
 An edge with just one endpoint is called a loop, meaning it connects to the same node twice
@@ -34,7 +77,7 @@ Two or more edges with the same connection nodes
 #### Types of Graphs
 
 ##### Simple Graph
-A graph that has neither loop nor parallel edges and each edge connects two different verticies
+A graph that has neither loop nor parallel edges and each edge connects two different vertices
 ![[Pasted image 20220418160524.png|200]]
 The maximum number of edges in a simple graph $K_n$ with $n$ verticies:
 $$\text{Max(E)} = \frac{n(n-1)}{2}$$
@@ -49,17 +92,17 @@ A graph that includes loops as well as parallel edges
 ![[Pasted image 20220418160638.png |200]]
 
 ##### Finite Graph
-A graph with a finite number of verticies and finite number of edges
+A graph with a finite number of vertices and finite number of edges
 ![[Pasted image 20220418160808.png |300]]
 
-##### Inifinite Graph
-A graph without a finite number of verticies and edges
+##### Infinite Graph
+A graph without a finite number of vertices and edges
 ![[Pasted image 20220418160822.png |300]]
 
 ### Graph Terminology
 
 ##### Adjacent / Neighbors
-Two verticies connected by an edge. A vertex is adjacent to itself if connected by a loop.
+Two vertices connected by an edge. A vertex is adjacent to itself if connected by a loop.
 ![[Pasted image 20220418162201.png |200]]
 $$\text{Adjacent Edges: } E_1=\{A, B\} \quad E_2=\{A, C\} \quad E_3=\{B, C\}$$
 
@@ -70,10 +113,10 @@ When a vertex is an endpoint of some edge, the vertex $v$ is an incident on edge
 $$\text{Incident Edges: } A=\{E_1, E_4, E_5\} \quad B = \{E_1, E_2\} \quad C = \{E_3, E_4\} \quad D=\{E_2, E_3, E_5\}$$
 
 ##### Neighborhood
-The set of all [[123 Graphs and Trees#Adjacent Neighbors|neighbors]] is called a neighborhood.
+The set of all [[123 Linked Lists, Graphs and Trees#Adjacent Neighbors|neighbors]] is called a neighborhood.
 
 ##### Degree of vertex
-The number of edges [[123 Graphs and Trees#Incident On|incident on a vertex]].
+The number of edges [[123 Linked Lists, Graphs and Trees#Incident On|incident on a vertex]].
 $$deg(v) = |N(v)|$$
 ##### Degree Sequence
 List of all the verticies of a graph written in non-decreasing or non-increasing order.
@@ -114,9 +157,6 @@ $$\sum_{v\in V}deg(v) = 2 \cdot |E|$$
 > 	2. $$\sum_{v\in V}deg(v) = 2 \cdot |E'| + 2 = 2(|E'| + 1)= 2(|E|-1+1) = 2|E|$$
 
 
-
-
-
 ###### Example :: Handshake Theorem:
 > A graph has 5 verticies and 8 edges. What is the sum of the degree of the graph?
 > 1. Using the handshake theorem we can plug in for $E=8$
@@ -135,16 +175,15 @@ A vertex can be odd or even based on its degree
 In any undirected graph, there is an even number of verticies to the odd degree
 
 > Is there a graph with eight verticies of degrees 1, 1, 2, 2, 4, 4, 5?
-> **ANS:** It is not possible. Computing the total degree of the graph, we get 19 degrees and only 7 elements in the set. Based on [[123 Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]], this is **not possible**.
+> **ANS:** It is not possible. Computing the total degree of the graph, we get 19 degrees and only 7 elements in the set. Based on [[123 Linked Lists, Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]], this is **not possible**.
 > ---
 > In a group of 7 people, is it possible for each person to have exactly 3 friends?
-> **ANS:** No, it is not possible since if we assume each person has 3 friends we would have a degree of 21. This is impossible since [[123 Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]] 
+> **ANS:** No, it is not possible since if we assume each person has 3 friends we would have a degree of 21. This is impossible since [[123 Linked Lists, Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]] 
 
 
 ##### Isolated Vertex
 A vertex having no incident edge is called an isolated vertex.
 ![[Pasted image 20220418191616.png |300]]
-
 
 ##### Pendant Vertex
 A vertex of degree one, meaning it only has one connection.
@@ -156,7 +195,7 @@ If there are no edges
 $G = (V,E)$ where $E= \emptyset$
 
 ##### Regular Graph
-If all teh verticies of a graph $G$ have the same degree $d$, then $G$ is called a "d-regular-graph"
+If all the vertices of a graph $G$ have the same degree $d$, then $G$ is called a "d-regular-graph"
 
 #### Undirected Graph
 A graph without directional edges
@@ -176,10 +215,10 @@ The starting node in the directed edge
 The ending node in the directed edge
 
 ##### In-degree
-Number of [[123 Graphs and Trees#Terminal Vertex|terminal vertexes]], denoted by $deg^-(v)$ 
+Number of [[123 Linked Lists, Graphs and Trees#Terminal Vertex|terminal vertexes]], denoted by $deg^-(v)$ 
 
 ##### Out-degree
-Number of [[123 Graphs and Trees#Initial Vertex|initial vertex]], denoted by $deg^+(v)$
+Number of [[123 Linked Lists, Graphs and Trees#Initial Vertex|initial vertex]], denoted by $deg^+(v)$
 
 > What is the in-degree and the out-degree of each node in the graph $G$
 > ![[Pasted image 20220418205717.png |300]]
@@ -199,7 +238,7 @@ An empty graph with no edges
 #### Special Graphs
 
 ##### Complete Graph
-A [[123 Graphs and Trees#Simple Graph|simple graph]] in which each pair of distinct verticies is joined on exactly one edge. A complete graph on $n$ verticies is denoted by $K_n$. 
+A [[123 Linked Lists, Graphs and Trees#Simple Graph|simple graph]] in which each pair of distinct verticies is joined on exactly one edge. A complete graph on $n$ verticies is denoted by $K_n$. 
 
 To compute the number of edges $E$ using $n$ verticies
 $$E = \frac{n(n-1)}{2}$$
@@ -207,19 +246,19 @@ $$E = \frac{n(n-1)}{2}$$
 $$K_n \quad n=1,2,3,4,5,6 \text{ verticies}$$
 
 ##### Cycle Graph
-A [[123 Graphs and Trees#Simple Graph|simple graph]] consisting of $n$ verticies $\{v_1, v_2, ..., v_n\}$ where $n \ge 3$ and edges $\{\{v_1, v_2 \}, \{ v_2, v_3 \}, ..., \{v_n, v_1\}\}$. A cycle with $n$ verticies can be denoted as $C_n$
+A [[123 Linked Lists, Graphs and Trees#Simple Graph|simple graph]] consisting of $n$ verticies $\{v_1, v_2, ..., v_n\}$ where $n \ge 3$ and edges $\{\{v_1, v_2 \}, \{ v_2, v_3 \}, ..., \{v_n, v_1\}\}$. A cycle with $n$ verticies can be denoted as $C_n$
 ![[Pasted image 20220419012706.png ]] 
 
 $$C_n \quad n=3,4,5,6 \text{ verticies and edges}$$
 
 ##### Wheel Graph
-A wheel is a [[123 Graphs and Trees#Simple Graph|simple graph]] formed by connecting a single vertex to all verticies of a cycle $C_n$ where $n \ge 3$. A wheel on $n$ verticies is denoted by $W_n$. 
+A wheel is a [[123 Linked Lists, Graphs and Trees#Simple Graph|simple graph]] formed by connecting a single vertex to all verticies of a cycle $C_n$ where $n \ge 3$. A wheel on $n$ verticies is denoted by $W_n$. 
 $$W_n(E) = 2(n-1) \quad \quad \text{n = num of vetricies}$$
 ![[Pasted image 20220419013409.png]]
 $$W_n \quad n = 4,5,6,7$$
 
 ##### Bipartite Graph
-A [[123 Graphs and Trees#Simple Graph|simple graph]] where its vertex set can be partitioned into two non-empty disjoint and independent sets $V_1$ and $V_2$ ($V_1 \cap V_2 = \emptyset$) such that every edge of the graph connects a vertex in $V_1$ and a vertex in $V_2$
+A [[123 Linked Lists, Graphs and Trees#Simple Graph|simple graph]] where its vertex set can be partitioned into two non-empty disjoint and independent sets $V_1$ and $V_2$ ($V_1 \cap V_2 = \emptyset$) such that every edge of the graph connects a vertex in $V_1$ and a vertex in $V_2$
 ![[Pasted image 20220419013719.png |450]]
 **Note:** Any Cycle $C_n$ with an odd numbers of verticies cannot be a bipartite graph
 
@@ -233,14 +272,14 @@ A simple graph $G$ is bipartite if and only if it is possible to assign one of t
 > ----
 > Is this graph bipartite?
 > ![[Pasted image 20220419015155.png |300]]
-> No the graph isn't bipartite as stated by [[123 Graphs and Trees#Bipartite Test|bipartite test]]. If we assign the colors to...
+> No the graph isn't bipartite as stated by [[123 Linked Lists, Graphs and Trees#Bipartite Test|bipartite test]]. If we assign the colors to...
 > - U = Red
 > - W = Blue
 > - Y = Blue
-> Note that W and Y are both blue, yet they are connected meaning this graph fails the [[123 Graphs and Trees#Bipartite Test|bipartite test]]
+> Note that W and Y are both blue, yet they are connected meaning this graph fails the [[123 Linked Lists, Graphs and Trees#Bipartite Test|bipartite test]]
 
 ##### Complete Bipartite Graph
-A [[123 Graphs and Trees#Bipartite Graph|simple bipatite graph]] $G$ with bipartition $V = V_1 \cup V_2$ such that every vertex in $V_1$ is adjacent to every vertex of $V_2$ suppose $V_1$ has $m$ verticies and $V_2$ has $n$ verticies, denoted through $K_{m,n}$ 
+A [[123 Linked Lists, Graphs and Trees#Bipartite Graph|simple bipatite graph]] $G$ with bipartition $V = V_1 \cup V_2$ such that every vertex in $V_1$ is adjacent to every vertex of $V_2$ suppose $V_1$ has $m$ verticies and $V_2$ has $n$ verticies, denoted through $K_{m,n}$ 
 
 ![[Pasted image 20220419020313.png]]
 
@@ -280,7 +319,7 @@ The union of two simple graphs $G_1 = (V_1, E_1)$ and $G_2 = (V_2, E_2)$ is anot
 ##### Graph Intersect $(\cap)$
 The intersection of two simple graphs $G_1$ and $G_2$ is another graph $H$ denoted by $H = G_1 \cap G_2$, which contains only those verticies and edges that exist in both $G_1$ and $G_2$
 - If $G_1$ and $G_2$ are vertex [[119 Sets#Disjoint Sets|disjoint]], then the intersection $G_1 \cap G_2$ is empty
-- If $G_1$ and $G_2$ are edge [[119 Sets#Disjoint Sets|disjoint]], then the intersection $G_1 \cap G_2$ is [[123 Graphs and Trees#Null Graph|null]] 
+- If $G_1$ and $G_2$ are edge [[119 Sets#Disjoint Sets|disjoint]], then the intersection $G_1 \cap G_2$ is [[123 Linked Lists, Graphs and Trees#Null Graph|null]] 
 
 ![[Pasted image 20220420174511.png |500]]
 
@@ -296,27 +335,27 @@ $$V(\overline{G}) = V(G) \quad \quad E(\overline{G}) = \{\{x, y\} | x,y \in V(G)
 ![[Pasted image 20220420181727.png]]
 ###### Num of Edges in a Complement Graph
 $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
-**Note:** The [[123 Graphs and Trees#Graph Union cup|union]] of $G$ and $\overline{G}$, $(G \cup \overline{G})$, gives us a [[123 Graphs and Trees#Complete Graph|complete graph]]
+**Note:** The [[123 Linked Lists, Graphs and Trees#Graph Union cup|union]] of $G$ and $\overline{G}$, $(G \cup \overline{G})$, gives us a [[123 Linked Lists, Graphs and Trees#Complete Graph|complete graph]]
 ![[Pasted image 20220420181822.png]]
 
 
 > Suppose that there is a complete graph $K_{31}$ with 31 verticies.
-> 1. What is the highest [[123 Graphs and Trees#Degree of vertex|degree of a vertex]] of the graph $K_{31}$?
+> 1. What is the highest [[123 Linked Lists, Graphs and Trees#Degree of vertex|degree of a vertex]] of the graph $K_{31}$?
 > 	1. Since every vertex in a complete graph is attached to every other vertex besides itself, we can form the equation $ANS = v_{total} - 1 = 31 - 1 = 30$ 
 > 2. If a graph $G$ with 31 verticies has 132 edges, how many edges are there in the complement graph of $G, \overline{G}$? 
-> 	1. Using the [[123 Graphs and Trees#Num of Edges in a Complement Graph|edges in a complement graph equation]]
+> 	1. Using the [[123 Linked Lists, Graphs and Trees#Num of Edges in a Complement Graph|edges in a complement graph equation]]
 > 		1. $$|E(\overline{G})| = \frac{n(n-1)}{2} - E(G) = \frac{31(31-1)}{2} - 132 = 333 \space edges$$
 
 ##### Homework 11
 ###### Question 1:
 > (a) How many edges are there in a graph with 10 vertices, each having a degree 3?
-> 1. Using the [[123 Graphs and Trees#Handshaking Theorem|handshake theorem]] we can solve this problem
+> 1. Using the [[123 Linked Lists, Graphs and Trees#Handshaking Theorem|handshake theorem]] we can solve this problem
 > 2. Multiply the degree by the verticies
 > 	1. $$d \cdot v = 10 \cdot 3 = 30$$
-> 3. Set the number $d \cdot v$ equal to the [[123 Graphs and Trees#Handshaking Theorem|handshake theorem's]] $2 \cdot |E|$
+> 3. Set the number $d \cdot v$ equal to the [[123 Linked Lists, Graphs and Trees#Handshaking Theorem|handshake theorem's]] $2 \cdot |E|$
 > 	1. $$30 = 2 \cdot E \quad E = 15$$
-> (b) How many edges are there in a graph with 8 vertices, having a [[123 Graphs and Trees#Degree Sequence|degree sequence]] of 1,1,2,2,3,3,3,3 respectively?
-> 1. Using the [[123 Graphs and Trees#Handshaking Theorem|handshake theorem]] we can solve this problem
+> (b) How many edges are there in a graph with 8 vertices, having a [[123 Linked Lists, Graphs and Trees#Degree Sequence|degree sequence]] of 1,1,2,2,3,3,3,3 respectively?
+> 1. Using the [[123 Linked Lists, Graphs and Trees#Handshaking Theorem|handshake theorem]] we can solve this problem
 > 2. We can sum the number of edges of each degree separately
 > 	1. Degree 3: $v=4$ and $d=3$
 > 	2. $$d \cdot v = 3 \cdot 4 = 12$$
@@ -324,22 +363,22 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > 	4. $$d \cdot v = 2 \cdot 2 = 4$$
 > 	5. Degree 3: $v=2$ and $d=1$
 > 	6. $$d \cdot v = 1 \cdot 2 = 2$$
-> 3. Sum all the components and set equal to [[123 Graphs and Trees#Handshaking Theorem|handshake theorem's]] $2 \cdot |E|$
+> 3. Sum all the components and set equal to [[123 Linked Lists, Graphs and Trees#Handshaking Theorem|handshake theorem's]] $2 \cdot |E|$
 > 	1. $$E = \frac{12 + 4 + 2}{2} = 9$$
 > (c) How many vertices are there in a graph with 19 edges, having 3 vertices of degree 4 and all the other vertices are of degree 2?
-> 1. Using the [[123 Graphs and Trees#Handshaking Theorem|handshake theorem]] we can solve this problem
+> 1. Using the [[123 Linked Lists, Graphs and Trees#Handshaking Theorem|handshake theorem]] we can solve this problem
 > 2. We can sum the number of edges of each degree separately
 > 	1. Degree 4: $v=3$ and $d=4$
 > 	2. $$d \cdot v = 3 \cdot 4 = 12 $$
 > 	3. Degree 2: $v=?$ and $d=2$
 > 	4. $$d \cdot v = 2v$$
-> 3. Sum the elements and set equal to [[123 Graphs and Trees#Handshaking Theorem|handshake theorem's]] $2 \cdot |E|$
+> 3. Sum the elements and set equal to [[123 Linked Lists, Graphs and Trees#Handshaking Theorem|handshake theorem's]] $2 \cdot |E|$
 > 4. $$2(19) = 12 + 2v \quad v=\frac{38-12}{2}=13 \text{ verticies of degree 2}$$
 
 ###### Question 6:
 > Is the given graph Bipartite?
 > ![[Pasted image 20220418190717.png |300]]
-> **ANS:** The given graph is not [[123 Graphs and Trees#Bipartite Graph|bipartite]] as it fails the [[123 Graphs and Trees#Bipartite Test|bipartite color test]] 
+> **ANS:** The given graph is not [[123 Linked Lists, Graphs and Trees#Bipartite Graph|bipartite]] as it fails the [[123 Linked Lists, Graphs and Trees#Bipartite Test|bipartite color test]] 
 
 > Given a graph K and G, find the complement of graph G.
 > Graph K: 
@@ -350,16 +389,16 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > **ANS:** 
 > ![[Pasted image 20220421133646.png |300]]
 
-> 1. Suppose we have a complete graph with 17 vertices, what is the sum of the [[123 Graphs and Trees#Degree of vertex|degrees of all vertices]] for this graph
-> 	1. Knowing that a complete graph, each vertex has $n-1$ connections, we can use the equation [[123 Graphs and Trees#Complete Graph|compute num of edges in complete graph]]
+> 1. Suppose we have a complete graph with 17 vertices, what is the sum of the [[123 Linked Lists, Graphs and Trees#Degree of vertex|degrees of all vertices]] for this graph
+> 	1. Knowing that a complete graph, each vertex has $n-1$ connections, we can use the equation [[123 Linked Lists, Graphs and Trees#Complete Graph|compute num of edges in complete graph]]
 > 	2. $$E = \frac{n(n-1)}{2} = \frac{17(17-1)}{2} = 136 \space edges$$ 
-> 2. Suppose we have an undirected [[123 Graphs and Trees#Complete Bipartite Graph|complete bipartite graph]] with 22 vertices, what is the maximum number of edges that could exist in this graph
+> 2. Suppose we have an undirected [[123 Linked Lists, Graphs and Trees#Complete Bipartite Graph|complete bipartite graph]] with 22 vertices, what is the maximum number of edges that could exist in this graph
 > 	1. A bipartite graph can only connect to verticies in the other subset of the graph. We will divide the graph into two pieces, $G_1$ and $G_2$. 
 > 	2. $|V(G_1)| = |V(G_2)| = 11$ verticies
 > 	3. Because each edge can connect to the other 11 verticies, we can compute $V(G_1) \cdot V(G_2) = 11 \cdot 11 = 121 \space edges$ 
 
 > 1. Suppose we have a complete graph with 13 vertices, what is the sum of the degrees of all vertices for this graph
-> 	1. The [[123 Graphs and Trees#Degree of vertex|degree of a vertex]] is equal to the number of edges it has. In a complete graph, each vertex has $n - 1$ edges. With 13 verticies, we can compute
+> 	1. The [[123 Linked Lists, Graphs and Trees#Degree of vertex|degree of a vertex]] is equal to the number of edges it has. In a complete graph, each vertex has $n - 1$ edges. With 13 verticies, we can compute
 > 		1. $$D(G_c) = n \cdot (n - 1) = 13 \cdot (13 - 1) = 156$$
 > 2. Suppose we have an undirected complete bipartite graph with 18 vertices, what is the maximum number of edges that could exist in this graph
 > 	1. We first set the bipartite graph into two set of verticies, $G_1$ and $G_2$.
@@ -368,7 +407,7 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 > 		1. $$V(G_1) \cdot V(G_2) = 9 \cdot 9 = 81$$
 
 > In a small class of 9 students, everyone was asked how many of their friends are also taking the class. Friendship is mutual. Is the following outcome possible: 6, 6, 5, 4, 4, 3, 2, 2, 1?
-> **ANS:** This is not possible as an undirected graph must have an odd number of degrees as stated by [[123 Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]], while the degrees of the formula given above is $6 + 6 + 5 + 4 + 4 + 3 + 2 + 2 + 1 = 33 \space degrees$ 
+> **ANS:** This is not possible as an undirected graph must have an odd number of degrees as stated by [[123 Linked Lists, Graphs and Trees#Degree of Undirected Verticies|degree of undirected verticies]], while the degrees of the formula given above is $6 + 6 + 5 + 4 + 4 + 3 + 2 + 2 + 1 = 33 \space degrees$ 
 
 > Which of the following is not a subgraph of this graph?
 > ![[Pasted image 20220420192934.png]]
@@ -382,18 +421,15 @@ $$\text{num of edges} = |E(\overline{G})| = \frac{n(n-1)}{2}-|E(G)|$$
 ### Walk, Trails, Paths
 
 ##### Walk
-A sequence of alternating verticies and edges that starts and ends with a vertex
+A sequence of alternating vertices and edges that starts and ends with a vertex
 
 ##### Trivial Walk
 A walk with no edges, giving a walk length of 0
 
-
-
-
 ### Graph Representation
 
 ##### Adjacency List
-A list for directed or undirected graphs where you acknowledge the verticies connected to the edges of another vertex
+A list for directed or undirected graphs where you acknowledge the vertices connected to the edges of another vertex
 ![[Pasted image 20220424203358.png]]
 
 ![[Pasted image 20220424203407.png]]
@@ -447,23 +483,22 @@ A graph $G$ has a Euler trail, but not Euler circuit if and only if it has exact
 > 3. Graph $G_3$ has an Euler circuit 
 > 	1.  a ~ b ~ d ~ c ~ e ~ f ~d ~ e ~ b ~ c ~a 
 
-
 #### Hamilton graph
-A graph containing a hamilton cycle, or can have each vertex visited once using a start and end point
+A graph containing a Hamilton cycle, or can have each vertex visited once using a start and end point
 
 ##### Hamilton Cycle / Hamilton Circuit
-Visiting each vertex once, compared to [[123 Graphs and Trees#Euler Trail|euler trail]] which visits each edge once
+Visiting each vertex once, compared to [[123 Linked Lists, Graphs and Trees#Euler Trail|Euler trail]] which visits each edge once
 
 ##### Hamilton Path
 Similar to a Hamilton Cycle, it has to visit each vertex once but doesn't have a starting or ending vertex.
 
 ##### Odd Cycle 
-A [[123 Graphs and Trees#Cycle Graph|cycle]] with an **odd** number of verticies
+A [[123 Linked Lists, Graphs and Trees#Cycle Graph|cycle]] with an **odd** number of vertices
 
 ##### Even Cycle
-A [[123 Graphs and Trees#Cycle Graph|cycle]] with an **even** number of verticies
+A [[123 Linked Lists, Graphs and Trees#Cycle Graph|cycle]] with an **even** number of vertices
 
-> Determine whether each graph has a hamilton cycle, hamilton path, or neither.
+> Determine whether each graph has a Hamilton cycle, Hamilton path, or neither.
 > ![[Pasted image 20220424133404.png |400]]
 > 1. $G_1$ has a Hamilton Circuit
 > 	1. Each complete graph $K_n$ has a Hamiltonian cycle, where $n \ge 3$. Also, a $K_{mn}$ has a Hamiltonian cycle if and only if $m = n \ge 2$.
@@ -473,22 +508,22 @@ A [[123 Graphs and Trees#Cycle Graph|cycle]] with an **even** number of verticie
 > 	1.  A simple graph $G$ is called maximal _non-Hamiltonian,_ if it is not Hamiltonian but adding any edge connecting two nonadjacent vertices forms a Hamiltonian graph.
 
 ##### Dirac's Theorem to Solve for Hamilton Circuit
-If $G$ is a simple graph with $n$ verticies, where $n \ge 3$ and the degree of every vertex of $G$ is at least $\frac{n}{2}$, then $G$ has a [[123 Graphs and Trees#Hamilton Cycle Hamilton Circuit|Hamilton circuit]] .
+If $G$ is a simple graph with $n$ vertices, where $n \ge 3$ and the degree of every vertex of $G$ is at least $\frac{n}{2}$, then $G$ has a [[123 Linked Lists, Graphs and Trees#Hamilton Cycle Hamilton Circuit|Hamilton circuit]].
 ![[Pasted image 20220424134514.png|200]]
 
 ##### Ore's Theorem to Solve for Hamilton Circuit
-If $G$ is a simple graph with $n$ verticies where $n \ge 3$ and for every pair of nonadjacent verticies $u$ and $v$ in $G, deg(u) + deg(v) \ge n$, then $G$ has a Hamilton circuit.
+If $G$ is a simple graph with $n$ vertices where $n \ge 3$ and for every pair of nonadjacent vertices $u$ and $v$ in $G, deg(u) + deg(v) \ge n$, then $G$ has a Hamilton circuit.
 ![[Pasted image 20220424135027.png |200]]
 
 
 ##### Petersen Graph
-An undirected graph with 10 verticies and 15 edges, typically drawn as a pentagram within a pentagon
+An undirected graph with 10 vertices and 15 edges, typically drawn as a pentagram within a pentagon
 ![[Pasted image 20220424153322.png]]
 
 #### Plane Graph
 A graph where edges do not overlap each other and only meet at verticies
 
-##### Nonplanar Graph
+##### Non-planar Graph
 A graph where the edges must overlap to display the graph properly
 
 > Is $K_4$ a planar graph?
@@ -517,10 +552,10 @@ Let $G$ be a connected planar simple graph with $e$ edges and $v$ verticies let 
 ##### Corollary Collary 2
 If $G$ is a connected planar simple graph with $e$ edges and $v$ verticies, where $v > 3$, then $e \le 3v - 6$ 
 
-> Is $K_5$ nonplanar?
+> Is $K_5$ non-planar?
 > **ANS:** 
-> 1. We know that graph $K_5$ has five verticies and 10 edges
-> 2. Using Collary 2, we can say that $3 \cdot 5 - 6 = 9$
+> 1. We know that graph $K_5$ has five vertices and 10 edges
+> 2. Using Corollary 2, we can say that $3 \cdot 5 - 6 = 9$
 > 3. We know that $10 \not \le 9$ 
 > 4. By Corollary 2, $K_5$ is not a planar graph
 
@@ -532,30 +567,30 @@ If $G$ is a connected planar simple graph, then $G$ has a vertex of degree not e
 
 
 ##### Corollary 4
-If a connected planar simple graph $G$ has $e$ edges and $v$ verticies where $v \ge 3$ and there is no circuit of length three, then $e \le 2v -4$
+If a connected planar simple graph $G$ has $e$ edges and $v$ vertices where $v \ge 3$ and there is no circuit of length three, then $e \le 2v -4$
 
-> Determine whether $K_{3,3}$ is planar or nonplanar by Corollary 4
+> Determine whether $K_{3,3}$ is planar or non-planar by Corollary 4
 > **ANS:** 
 > Graph $K_{3,3}$ is bipartite graph then it has no circuits of length three.
-> We know that there are six verticies and nine deges in $K_{3,3}$
+> We know that there are six vertices and nine edges in $K_{3,3}$
 > We get $2v - 4 = 8$, but $e = 9$. We know that $9 \le 8$ 
-> $K_{3,3}$ is nonplanar
+> $K_{3,3}$ is non-planar
 
 ### Subdivision
 Replacing an edge in a graph with a vertex and two edges to connect where the previous edge was removed
 ![[Pasted image 20220424152754.png |400]]
 
 #### Homeomorphic
-Two graphs are homeomorphic if they can be obtained from the same graph by a sequence of [[123 Graphs and Trees#Subdivision|subdivisions]] 
+Two graphs are homeomorphic if they can be obtained from the same graph by a sequence of [[123 Linked Lists, Graphs and Trees#Subdivision|subdivisions]] 
 ![[Pasted image 20220424152952.png |500]]
 
 
 
 ##### Kuratowski's Theorem
-A graph is planar if and only if it does not contain a subgraph homeomorphic to $K_{3,3}$ or $K_5$ 
+A graph is planar if and only if it does not contain a sub-graph homeomorphic to $K_{3,3}$ or $K_5$ 
 
-> Is the [[123 Graphs and Trees#Petersen Graph|petersen graph]] a planar graph?
-> **ANS:** The petersen graph is a subgraph of $K_{3,3}$, meaning the petersen graph is not planar
+> Is the [[123 Linked Lists, Graphs and Trees#Petersen Graph|petersen graph]] a planar graph?
+> **ANS:** The Petersen graph is a subgraph of $K_{3,3}$, meaning the petersen graph is not planar
 
 ##### Graph Coloring
 There are two ways to color a graph
@@ -570,7 +605,7 @@ Coloring each vertex of the graph so that no two adjacent verticies are assigned
 Coloring verticies $k$ colors so that no two verticies of the same color are connected through a mutual edge
 
 ##### Chromatic Number
-The smallest number $k$ of the [[123 Graphs and Trees#K-coloring|k-coloring]] of a graph, denoted by $x(G)$
+The smallest number $k$ of the [[123 Linked Lists, Graphs and Trees#K-coloring|k-coloring]] of a graph, denoted by $x(G)$
 - There is currently no efficient algorithm to find the chromatic number of any graph. The current technique uses greedy algortihm to assign colors.
 
 ###### Chromatic Number of $K_n$ 
@@ -594,7 +629,7 @@ The smallest number $k$ of the [[123 Graphs and Trees#K-coloring|k-coloring]] of
 A bipartite graph has a chromatic number of $x(G) = 2$.
 
 ##### Odd Cycle Color Theorem
-If graph $G$ has an [[123 Graphs and Trees#Odd Cycle|odd cycle]], then it has a chromatic number of $x(G) = 3$
+If graph $G$ has an [[123 Linked Lists, Graphs and Trees#Odd Cycle|odd cycle]], then it has a chromatic number of $x(G) = 3$
 
 ##### Four Color Theorem
 The chromatic number of a planar graph is no greater than 4, meaning $x(G) \le 4$ 
@@ -602,11 +637,88 @@ The chromatic number of a planar graph is no greater than 4, meaning $x(G) \le 4
 ## 9.8 Trees
 A graph where every vertex is connected by exactly one path, otherwise known as an [[Definitions#Acyclic graph|acyclic graph]].
 
+![[Pasted image 20220509235548.png|600]] 
+
+``` python
+class Node:
+   def __init__(self, data):
+      self.left = None
+      self.right = None
+      self.data = data
+```
+
+#### Tree Functions
+##### Insert in Tree
+Insert new node into tree
+``` python
+def insert(self, data):
+# Compare the new value with the parent node
+    if self.data:
+        if data < self.data:
+	        if self.left is None:
+	            self.left = Node(data)
+            else:
+               self.left.insert(data)
+        elif data > self.data:
+            if self.right is None:
+	            self.right = Node(data)
+            else:
+                self.right.insert(data)
+    else:
+	    self.data = data
+
+```
+
+##### Print Tree
+```python
+def printValues(self):
+    if self.left:
+        self.left.printValues()
+    print(self.val)
+    if self.right:
+        self.right.printValues()
+```
+
+##### Remove Node ([[123 Linked Lists, Graphs and Trees#Binary Search Tree BST|BST Only]]) 
+``` python
+def deleteNode(root, key): # BST
+    if root is None:
+        return root
+ 
+    if key < root.key:
+        root.left = deleteNode(root.left, key)
+ 
+    elif(key > root.key):
+        root.right = deleteNode(root.right, key)
+
+    else:
+ 
+
+        if root.left is None:
+            temp = root.right
+            root = None
+            return temp
+ 
+        elif root.right is None:
+            temp = root.left
+            root = None
+            return temp
+
+        temp = minValueNode(root.right)
+ 
+        root.key = temp.key
+ 
+        root.right = deleteNode(root.right, temp.key)
+ 
+    return root
+
+```
+
 ##### Trivial Tree
 A tree with a single vertex
 
 ##### Empty Tree
-A tree with no verticies
+A tree with no vertices
 
 #### Forest
 A collection of trees, otherwise known as a simple, undirected graph with no simple circuits
@@ -637,7 +749,7 @@ A tree where one vertex has been designated as a root and every edge is directed
 A vertex above the current vertex (max 1 parent)
 
 ##### Child
-The verticies connected beneath a vertex
+The vertices connected beneath a vertex
 
 ##### Terminal Node
 A vertex with no children
@@ -646,13 +758,13 @@ A vertex with no children
 Vertices connecting a vertex to the root
 
 ##### Descendants
-Verticies beneath a vertex
+Vertices beneath a vertex
 
 ##### Internal Node
-Verticies with children
+Vertices with children
 
 ##### Siblings
-Verticies with the same parent
+Vertices with the same parent
 
 ##### m-ary tree
 For $m > 1$, if every internal vertex of a rooted tree has at most $m$ children. 
@@ -670,7 +782,7 @@ A binary tree where each vertex has either 2 children, or no children
 ![[Pasted image 20220424174425.png]]
 
 ##### Level of Tree
-How many parent verticies separate the current node from the root
+How many parent vertices separate the current node from the root
 
 ![[Pasted image 20220424174739.png |300]]
 
@@ -678,6 +790,21 @@ How many parent verticies separate the current node from the root
 The maximum level of a tree
 ![[Pasted image 20220424174831.png |400]]
 
+``` python
+def height(self, root: Optional[TreeNode]) -> int:
+    if not root:
+        return 0
+    elif not root.left and not root.right:
+        return 1
+    else:
+        l = self.height(root.left)
+        r = self.height(root.right)
+        if r > l:
+            return 1 + r
+        else:
+            return 1 + l
+```
+[]
 
 ##### Balanced Tree
 A binary tree where the height of the left and right subtree of any vertex don't differ by more than 1
@@ -719,9 +846,13 @@ There are at most $m^h$ leaves in an m-ary tree of height $h$
 If an m-ary tree of height $h$ has $l$ leaves, then $h \ge \lceil \log_m l \rceil$ 
 
 ##### Binary Search Tree (BST)
+A tree organized by
+1. Left subtree only contains nodes lesser than itself
+2. Right subtree only contains nodes greater than itself
+3. The left and right subtrees  must maintain rules 1 and 2
 ![[Pasted image 20220424182234.png |400]]
-
-> (Binary Search Trees). Construct a binary search tree for the words: “the quick brown fox jumps over the lazy dog”
+##### Example :: Binary search tree using words:
+> Construct a binary search tree for the words: “the quick brown fox jumps over the lazy dog”
 > ![[Pasted image 20220424182725.png |400]]
 
 
@@ -729,7 +860,8 @@ If an m-ary tree of height $h$ has $l$ leaves, then $h \ge \lceil \log_m l \rcei
 Rooted trees can be used to model problem based on a series of decisions
 ![[Pasted image 20220424182847.png |300]]
 
-> (Decision Trees). A decision tree is used to sort three distinct elements x, y, z
+###### Example :: Decision tree: 
+> A decision tree is used to sort three distinct elements x, y, z
 > **ANS:**
 > ![[Pasted image 20220424182914.png | 500]]
 
@@ -744,15 +876,17 @@ Rooted trees can be used to model problem based on a series of decisions
 
 
 ##### Universal Address System
-A way to order the verticies of an ordered rooted tree using recursion.
+A way to order the vertices of an ordered rooted tree using recursion.
 1. The root $r$ is labeled with 0 and its children are labeled 1, 2, ..., n left to right
 2. If an internal vertex $v \ne r$ has a label $L$, then its $k_v$ children get lebels $L \cdot 1, L \cdot 2, ..., L \cdot k_v$ respectively
 
+###### Example :: Universal Address System
 >$0 < 1 < 1 < 1 \cdot 1 < 1 \cdot 2 < 1 \cdot 3 < 2 < 2 \cdot 1 < \cdot 3 < 3 \cdot 1 < 3 \cdot 2$ 
 > ![[Pasted image 20220424184025.png |400]]
 
 ### Depth First Search (DFS)
-**Defintion:** Traverses from the root to visit the deepest branches within that path
+Traverses from the root to visit the deepest branches within that path
+
 **Data Structure:** Stack
 -  Traverse down a trees path until it ends. Pop off the stack until you find a node you havent traversed yet
 ![[Pasted image 20220131163658.png]]
@@ -764,6 +898,7 @@ A DFS variant, visiting
 
 ![[Pasted image 20220131164832.png]]
 
+###### Example :: Postorder traversal:
 > Apply the preorder traversal algorithm on ordered rooted tree $T$ and list all the vertices of the tree visited based on preorder traversal.
 > ![[Pasted image 20220424184507.png |400]]
 > 1. i, j, m, s, t, u, k
@@ -771,12 +906,13 @@ A DFS variant, visiting
 > 3. x, q, r, y, z
 
 ##### Inorder Traversal Algorithm
-1. Visit left subtrees recursively by inorder
+1. Visit left sub-trees recursively by inorder
 2. Visit root
-3. Visit right subtrees recursively preorder
+3. Visit right sub-trees recursively preorder
 
 ![[Pasted image 20220131162858.png |400]]
 
+###### Example :: Inorder traversal:
 > Apply inorder traversal algorithm on an ordered rooted tree $T$ and list all the verticies of the tree visited by inorder treversal algorithm
 > ![[Pasted image 20220424185108.png |400]]
 > 1. s, m, t, u, j, i, n
@@ -790,6 +926,7 @@ A DFS variant, visiting
 
 ![[Pasted image 20220131164959.png]]
 
+###### Example :: Postorder traversal:
 > Apply the postorder traversal algorithm on ordered rooted tree T and list all the vertices of the tree visited by postorder traversal algorithm.
 > ![[Pasted image 20220424194408.png |400]]
 > 1. s, t, u, m, j, n
@@ -802,13 +939,14 @@ Definition: Starts at the root node and visits each node on the current depth be
 ![[Pasted image 20220131165123.png]]
 
 #### Tree Expression
-Mathmatical expressions can be expressed using trees
+Mathematical expressions can be expressed using trees
 
 ![[Pasted image 20220424194647.png |400]]
 
 ##### Prefix Notation
 Notation where operators precede their operands. When traversing a tree to obtain prefix notation we traverse in preorder
 
+###### Example :: Prefix notation:
 > Find the prefix expression of the tree $T$
 > Note: 1 in level 3 is supposed to be a "/" (division)
 > ![[Pasted image 20220424195124.png]]
@@ -816,8 +954,9 @@ Notation where operators precede their operands. When traversing a tree to obtai
 > $$* \quad + \quad / \quad 36 \quad 9 \quad 4 \quad * \quad 2 \quad 3 \quad / \quad 10 \quad 5$$
 
 ##### Postfix Notation
-Notation where numbers are written before operands and is obtained through [[123 Graphs and Trees#Postorder Traversal Algorithm|postorder traversal]]
+Notation where numbers are written before operands and is obtained through [[123 Linked Lists, Graphs and Trees#Postorder Traversal Algorithm|postorder traversal]]
 
+###### Example :: Postfix notation:
 > What is the postfix expression of tree $T$
 > ![[Pasted image 20220424195124.png]]
 > $$36 \quad 9 \quad / \quad 4 \quad + \quad 2 \quad 3 \quad * \quad 10 \quad 5 \quad / \quad - \quad *$$
@@ -827,6 +966,7 @@ Notation where numbers are written before operands and is obtained through [[123
 Essentially a graph turned into a tree by deleting edges and keeping all the verticies
 ![[Pasted image 20220424200500.png |300]]
 
+###### Example :: Spanning tree:
 > Find the spanning tree of the graph using the DFS algorithm
 > ![[Pasted image 20220424201324.png |400]]
 > **ANS:**

@@ -210,6 +210,8 @@ print(arr)
 # [4, 4, 5, 8, 12, 15, 16, 21, 22]
 ```
 
+
+
 #### Heap Sort 
 A sorting algorithm utilizing the **binary heap** data structure where we find the minimum element and place it in the beginning. This is very similar to the [[402 Sorting Algorithms#Selection Sort|selection sort algorithm]]. 
 

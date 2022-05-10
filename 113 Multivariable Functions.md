@@ -70,27 +70,30 @@ $$df=f_x(x, y)dx + f_y(x, y)dy$$
 
 ###### Example :: Linear Approximation:
 > Use the Linear Approximation to $f(x, y)=\sqrt{\frac{x}{y}}$ at $(81, 16)$ to estimate $\sqrt{\frac{81.1}{15.9}}$ 
-> 1. Use the linear approximation formula of $L(x, y)=f(a, b) + f_x (a, b)(x-a)+f_y(a, b)(y-b)$, first we will solve for $f_x$ 
-> $$f_x(81,16)=\frac{1}{2\sqrt{{y}}\sqrt{x}}=\frac{1}{2 \cdot 9 \cdot 4}=\frac{1}{72}$$
-> Now we solve for $f_y(a, b)$ 
-> $$f_y(81,16)=-\frac{\sqrt{x}}{2y^{3/2}}=-\frac{\sqrt{81}}{2(16)^{3/2}}=-\frac{9}{128}$$
-> Now solve for $f(x, y)$ 
-> $$f(81, 16)=\sqrt{\frac{81}{16}}=2.25$$
-> Now plug into the equation
-> $$L(81.1, 15.9)=2.25 + \frac{1}{72}(81.1-81)-\frac{9}{128}(15.9-16)=2.2584$$
+> 1. Use the [[113 Multivariable Functions#Differentials and Linear Approximation|linear approximation formula]] of $L(x, y)=f(a, b) + f_x (a, b)(x-a)+f_y(a, b)(y-b)$
+> 2. First we will solve for $f_x$ 
+> 	1. $f_x(81,16)=\frac{1}{2\sqrt{{y}}\sqrt{x}}=\frac{1}{2 \cdot 9 \cdot 4}=\frac{1}{72}$
+> 3. Now we solve for $f_y(a, b)$ 
+> 		1. $f_y(81,16)=-\frac{\sqrt{x}}{2y^{3/2}}=-\frac{\sqrt{81}}{2(16)^{3/2}}=-\frac{9}{128}$ 
+> 4. Now solve for $f(x, y)$ 
+> 		1. $f(81, 16)=\sqrt{\frac{81}{16}}=2.25$
+> 5. Now plug into the equation
+> 		1. $$L(81.1, 15.9)=2.25 + \frac{1}{72}(81.1-81)-\frac{9}{128}(15.9-16)=2.2584$$
+
 
 ###### Example :: Approximating change in function:
-> Let $f(x, y)=x^3y^{-4}$. Use the equation $\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y$ to estimate $\Delta f = f(1.04, 0.97) - f(1, 1)$
+> Let $f(x, y)=x^3y^{-4}$. Use the equation $\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y$ to estimate $\Delta f = f(1.04, 0.97) - f(1, 1)$ from the [[113 Multivariable Functions#Differentials and Linear Approximation|linear approximation formula]] 
 > 1. Plug in 
-> $$\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y \approx 3x^2y^{-4} \Delta x -4x^3y^{-5} \Delta y$$
-> $$\approx 3(1)^2(1)^{-4} \Delta x -4(1)^3(1)^{-5} \Delta y$$
-> $$\Delta x = 1.04 - 1 = .04 \quad \Delta y=0.97 - 1= -.03$$$$\approx 3(1)^2(1)^{-4} (.04) -4(1)^3(1)^{-5} (-.03)$$
+> 	1. $\Delta f \approx f_x(a, b) \Delta x + f_y(a, b) \Delta y \approx 3x^2y^{-4} \Delta x -4x^3y^{-5} \Delta y$
+> 	2. $\approx 3(1)^2(1)^{-4} \Delta x -4(1)^3(1)^{-5} \Delta y$
+> 	3. $\Delta x = 1.04 - 1 = .04 \quad \Delta y=0.97 - 1= -.03$
+> 	4. $\approx 3(1)^2(1)^{-4} (.04) -4(1)^3(1)^{-5} (-.03)=0.24$ 
 > ----
 > 
 > A person's Body Mass Index is $𝐼=\frac{𝑊}{𝐻^2}$, where 𝑊 is the body weight (in kilograms) and 𝐻 is the body height (in meters). A child has weight 𝑊=39 kg and height 𝐻=1.5 m. Use the linear approximation to estimate the change in 𝐼 if (𝑊,𝐻) changes to (41,1.53).
-> 1. Take the linear approximation of the formula starting with $f_x(x, y)$:
-> $$I_x=\frac{1}{H^2} \quad I_y=\frac{-2W}{W^3}$$
-> $$z=\frac{1}{1.5^2}(41-39)-\frac{2(39)}{1.5^3}(1.53-1.5)$$
+> 1. Solve for $I_x$ and $I_y$ using the [[113 Multivariable Functions#Differentials and Linear Approximation|linear approximation formula]]
+> 	1. $I_x=\frac{1}{H^2} \quad I_y=\frac{-2W}{W^3}$
+> 	2. $z=\frac{1}{1.5^2}(41-39)-\frac{2(39)}{1.5^3}(1.53-1.5)$
 > 
 
 ##### Theorem 1: Confirming Differentiability
@@ -109,7 +112,7 @@ If $f_x(x, y)$ and $f_y(x, y)$ exist and are continuous on an open disk $D$, the
 > 4. Plug into the equation $df=f_x(x, y)dx + f_y(x, y)dy$
 > 	1. $df=-36 + 72(x+1)-24(y-3)=72x-24y+108$ 
 
-## 14.5 Gradient and Directional Derivatives
+## 14.5 Gradient and [[113 Multivariable Functions#Directional Derivative|directional derivatives]] 
 
 ##### The Gradient
 The gradient of function $f(x,y)$ at point $P=(a,b)$ is the vector
@@ -120,26 +123,26 @@ $$\nabla f_p= \langle f_x(a,b,c),f_y(a,b,c),f_z(a,b,c) \rangle$$
 ###### Example :: Computing the Gradient:
 > Calculate the gradient of $g(x,y)=\frac{9x}{x^2+y^2}$
 > 1. Set up problem using the **Quotient Rule of Derivatives**
-> $$(\frac{f}{g})'=\frac{f' \cdot g - g' \cdot f}{g^2}$$
+> 	1. $(\frac{f}{g})'=\frac{f' \cdot g - g' \cdot f}{g^2}$
 > 2. Solve for the x-component
-> 
-> $$(\frac{f}{g})_x'=\frac{f' \cdot g - g' \cdot f}{g^2}=9\frac{\frac{\partial}{\partial x}(x)(x^2+y^2)-\frac{\partial}{\partial x}(x^2 + y^2)x}{(x^2 + y^2)^2}$$
-> $$(\frac{f}{g})_x'=9\frac{x^2+y^2-2x^2}{(x^2+y^2)^2}=9\frac{(-x^2+y^2)}{(x^2+y^2)^2}$$
+> 	1. $(\frac{f}{g})_x'=\frac{f' \cdot g - g' \cdot f}{g^2}=9\frac{\frac{\partial}{\partial x}(x)(x^2+y^2)-\frac{\partial}{\partial x}(x^2 + y^2)x}{(x^2 + y^2)^2}$
+> 	2. $(\frac{f}{g})_x'=9\frac{x^2+y^2-2x^2}{(x^2+y^2)^2}=9\frac{(-x^2+y^2)}{(x^2+y^2)^2}$
 > 3. Solve for the y-component
-> $$(\frac{f}{g})_y'=\frac{9x}{\frac{\partial}{\partial y}(x^2 + y^2)}=-\frac{18xy}{(x^2 + y^2)^2}$$
+> 	1. $(\frac{f}{g})_y'=\frac{9x}{\frac{\partial}{\partial y}(x^2 + y^2)}=-\frac{18xy}{(x^2 + y^2)^2}$
 > 4. Plug in 
-> $$\nabla f_p= \langle 9\frac{(-x^2+y^2)}{(x^2+y^2)^2},-\frac{18xy}{(x^2 + y^2)^2} \rangle$$
+> 	1. $\nabla f_p= \langle 9\frac{(-x^2+y^2)}{(x^2+y^2)^2},-\frac{18xy}{(x^2 + y^2)^2} \rangle$
 > ---
 > Calculate the gradient $h(a, b, c)=xyz^{-9}$
-> $$\nabla h_p= \langle h_x,h_y,h_z \rangle$$
-> 1. Compute x-component
-> $$h_x=\frac{\partial}{\partial x}xyz^{-9}=yz^{-9}\frac{\partial}{\partial x}(x)=yz^{-9}$$
+> 1. Find gradient through formula
+> 	1. $\nabla h_p= \langle h_x,h_y,h_z \rangle$
+> 2. Compute x-component
+> 	1. $h_x=\frac{\partial}{\partial x}xyz^{-9}=yz^{-9}\frac{\partial}{\partial x}(x)=yz^{-9}$
 > 3. Compute y-component
-> $$h_y=\frac{\partial}{\partial y}xyz^{-9}=xz^{-9}\frac{\partial}{\partial y}(y)=xz^{-9}$$
-> 5. Compute z-component
-> $$h_z=\frac{\partial}{\partial z}xyz^{-9}=-9xyz^{-10}$$
-> 7. Plug in 
-> $$\nabla h_p= \langle yz^{-9},xz^{-9},-9xyz^{-10} \rangle$$
+> 	1. $h_y=\frac{\partial}{\partial y}xyz^{-9}=xz^{-9}\frac{\partial}{\partial y}(y)=xz^{-9}$
+> 4. Compute z-component
+> 	1. $h_z=\frac{\partial}{\partial z}xyz^{-9}=-9xyz^{-10}$
+> 5. Plug in 
+> 	1. $$\nabla h_p= \langle yz^{-9},xz^{-9},-9xyz^{-10} \rangle$$
 
 ##### Theorem 1: Properties of the Gradient
 If $f(x,y,z)$ and $g(x,y,z)$ are differentiable and $c$ is a constant, then
@@ -154,26 +157,26 @@ $$\frac{d}{dt}f(r(t))= \nabla f_{r(t)} \cdot r'(t)$$
 **Chain rule for paths example:**
 $$\frac{d}{dt}f(r(t))= \langle \frac{\partial f}{\partial x} ,\frac{\partial y}{dy} \rangle  \cdot \langle x'(t),y'(t) \rangle = \frac{\partial f}{\partial x} \frac{dx}{dt}+\frac{\partial f}{\partial y} \frac{dy}{dt}$$
 
-##### Directional Derivative
-The directional derivative of $f$ at $P=(a, b)$ in the direction of a unit vector $u= \langle h,k\rangle$ is the limit (assuming it exists)
+#### Directional Derivative
+The [[113 Multivariable Functions#Directional Derivative|directional derivative]] of $f$ at $P=(a, b)$ in the direction of a unit vector $u= \langle h,k\rangle$ is the limit (assuming it exists)
 $$D_uf(P)=U_uf(a,b)=\lim_{t \rightarrow 0}\frac{f(a + th,b + tk)-f(a,b)}{t}$$
 ![[Pasted image 20220222204536.png |300]]
 
-##### Theorem 3: Computing the Directional Derivative
+##### Theorem 3: Computing the [[113 Multivariable Functions#Directional Derivative|directional derivative]]
 $$D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$$
 - where $u= \langle h,k \rangle$ is a unit vector
 - Also expands for more dimensions
 
-###### Example :: Calculating the directional derivative:
-> Calculate the directional derivative of $𝑔(𝑥,𝑦,𝑧)=𝑧^2−𝑥𝑦+3𝑦^2$  in the direction $𝐯=⟨1,−4,2⟩$ at the point $𝑃=(3,1,−7)$. Remember to use a unit vector in directional derivative computation. Find $D_vg(3,1,-7)$
-> 1. Use the directional derivative formula, we must find the partial derivative of each component and then multiply by the unit vector.
-> $$D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$$
+###### Example :: Calculating the [[113 Multivariable Functions#Directional Derivative|directional derivative]]:
+> Calculate the [[113 Multivariable Functions#Directional Derivative|directional derivative]] of $𝑔(𝑥,𝑦,𝑧)=𝑧^2−𝑥𝑦+3𝑦^2$  in the direction $𝐯=⟨1,−4,2⟩$ at the point $𝑃=(3,1,−7)$. Remember to use a unit vector in [[113 Multivariable Functions#Directional Derivative|directional derivative]] computation. Find $D_vg(3,1,-7)$
+> 1. Use the [[113 Multivariable Functions#Directional Derivative|directional derivative]] formula, we must find the partial derivative of each component and then multiply by the unit vector.
+> 	1. $D_uf(P)= \nabla f_p \cdot u=f_x(a,b)h+f_y(a,b)k$
 > 2. Compute the unit vectors of each component
-> $$\langle \frac{1}{\sqrt{21}},\frac{-4}{\sqrt{21}},\frac{2}{\sqrt{21}} \rangle$$
-> 4. Compute the x-component, y-component, and z-component:
-> $$g_x=-y, \quad g_y=6y-x, \quad g_z=2z$$
+> 	1. $\langle \frac{1}{\sqrt{21}},\frac{-4}{\sqrt{21}},\frac{2}{\sqrt{21}} \rangle$
+> 3. Compute the x-component, y-component, and z-component:
+> 	1. $g_x=-y, \quad g_y=6y-x, \quad g_z=2z$
 > 4. Multiply each partial derivative of g(x,y,z) by the proper component of the unit vector
-> $$D_vg= \frac{1}{\sqrt{21}} (-1) + \frac{-4}{\sqrt{21}} (6(1)-(3)) +  \frac{2}{\sqrt{21}} (2(-7)) = \frac{-1-12-28 }{\sqrt{21}}=\frac{-41}{\sqrt{21}}$$
+> 	1. $D_vg= \frac{1}{\sqrt{21}} (-1) + \frac{-4}{\sqrt{21}} (6(1)-(3)) +  \frac{2}{\sqrt{21}} (2(-7)) = \frac{-1-12-28 }{\sqrt{21}}=\frac{-41}{\sqrt{21}}$
 
 ##### Properties of the Gradient
 The rate of change in a given direction varies with the angle of cos between the gradient and direction
@@ -296,13 +299,13 @@ $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 > Find the minimum and maximum values of the function with values
 > $$\text{max: } f(x,y,z)=x^2 + y^2 + z^2 \quad \text{constraint: } g(x,y,z)=x+4y+5z=10 $$
 > 1. Find the values of $\nabla f$ and $\nabla g$ 
-> $$\nabla f = 2x,2y,2z, \quad \nabla g=\langle 1,4,5 \rangle, \quad  (\nabla f = \nabla g) = (\langle 2x, 2y, 2z \rangle = \lambda \langle 1,4,5 \rangle)$$
+> 	1. $\nabla f = 2x,2y,2z, \quad \nabla g=\langle 1,4,5 \rangle, \quad  (\nabla f = \nabla g) = (\langle 2x, 2y, 2z \rangle = \lambda \langle 1,4,5 \rangle)$
 > 2. Solve for values of x, y, z, and $\lambda$ 
-> $$\lambda = 2x = \frac {y}{2} = \frac{2z}{5}, \quad x=\frac{y}{4}=\frac{z}{5}$$
+> 	1. $\lambda = 2x = \frac {y}{2} = \frac{2z}{5}, \quad x=\frac{y}{4}=\frac{z}{5}$
 > 3. Solve for value of x by plugging it into the constraint
-> $$x + 4y + 5z = 10= x + 4(4x) + 5(5x) = 10, \quad x = \frac{10}{42}$$
+> 	1.  $x + 4y + 5z = 10= x + 4(4x) + 5(5x) = 10, \quad x = \frac{10}{42}$
 > 4. Plug in x to find values of y and z
-> $$y=4x=\frac{40}{42}, \quad z = 5x = \frac{50}{42}$$
+> 	1. $y=4x=\frac{40}{42}, \quad z = 5x = \frac{50}{42}$
 > $$\text{Solve for MIN: }x^2+y^2+z^2 = (\frac{10}{42})^2 + (\frac{40}{42})^2 + (\frac{50}{42})^2 = \frac{50}{21}$$
 > Note: We know that $\frac{50}{21}$ is a min because since $f(10,0,0)=100 > \frac{50}{21}$  
 > 5. Max is DNE because we can go into the negatives for basically infinitely large values
@@ -310,28 +313,28 @@ $$f_x(a,b)=\lambda g_x (a,b),\quad f_y(a,b)=\lambda g_y (a,b)$$
 > Find the minimum and maximum values of the function $f(x,y)=x^2 + y^2$ subject on the constraint $2x+5y=2$
 > $$\text{MIN: } x^2 + y^2 \quad \text{CONSTRAINT: } 2x+5y=2$$
 > 1. Find the values of $\nabla f$ and $\nabla g$ 
-> $$\nabla f= \langle 2x, 2y \rangle , \quad \nabla g = \langle 2, 5 \rangle$$
+> 	1. $\nabla f= \langle 2x, 2y \rangle , \quad \nabla g = \langle 2, 5 \rangle$
 > 2. Solve for values of x, y, z, and $\lambda$ 
-> $$\nabla f = \lambda \nabla g, \quad \lambda = x = \frac{2y}{5}$$
+> 	1. $\nabla f = \lambda \nabla g, \quad \lambda = x = \frac{2y}{5}$
 > 3. Solve for value of x by plugging it into the constraint
-> $$(2x + 5y = 2), 2x + 5(\frac{5x}{2})=2, \quad \frac{4x+25x}{2}=2$$
-> $$29x = 4, x = \frac{4}{29}, \quad y = \frac{2 - 2(\frac{4}{29})}{5} = \frac{1\frac{21}{29}}{5}$$
+> 	1. $(2x + 5y = 2), 2x + 5(\frac{5x}{2})=2, \quad \frac{4x+25x}{2}=2$
+> 	2. $29x = 4, x = \frac{4}{29}, \quad y = \frac{2 - 2(\frac{4}{29})}{5} = \frac{1\frac{21}{29}}{5}$
 > 4. Plug in f(x,y)
-> $$f(x,y)=(\frac{4}{29})^2+(\frac{1\frac{21}{29}}{5})^2=\frac{4}{29}$$
+> $$f(x,y)=(\frac{4}{29})^2+(\frac{1\frac{21}{29}}{5})^2=\frac{4}{29}$$ 
 > ----
 > Use Lagrange multipliers to find the maximum area 𝑆 of a rectangle inscribed in the ellipse $\frac{x^2}{9} + \frac{y^2}{64}=1$
 > 1. Use the values of...
 > $$\text{MAX: }f(x,y)=4xy,\quad \text{CONSTRAINT: }g(x,y)=\frac{x^2}{9} + \frac{y^2}{64}=1$$
 > 2. Write out the Lagrange equations
-> $$\nabla f=\langle 4y,4x \rangle, \quad \nabla g = \lambda\langle \frac{8x}{9},\frac{8y}{64} \rangle$$
+> 	1. $\nabla f=\langle 4y,4x \rangle, \quad \nabla g = \lambda\langle \frac{8x}{9},\frac{8y}{64} \rangle$
 > 3. Solve for $\lambda$ in terms of x and y
-> $$y=\lambda \frac{8x}{9}\quad \lambda = \frac{9y}{8x},\quad x=\lambda \frac{y}{8} \quad \lambda = \frac{8x}{y}$$
+> 	1. $y=\lambda \frac{8x}{9}\quad \lambda = \frac{9y}{8x},\quad x=\lambda \frac{y}{8} \quad \lambda = \frac{8x}{y}$
 > 4. Solve for x and y
-> $$\frac{9y}{8x}=\frac{8x}{y}=\quad 9y^2=64x^2, \quad x=\sqrt{\frac{9y^2}{64}}, \quad y = \sqrt{\frac{64x^2}{9}}$$
+> 	1. $\frac{9y}{8x}=\frac{8x}{y}=\quad 9y^2=64x^2, \quad x=\sqrt{\frac{9y^2}{64}}, \quad y = \sqrt{\frac{64x^2}{9}}$
 > 5. Plug x and y into the constraint to solve for x and y values
-> $$\frac{(\sqrt{\frac{9y^2}{64}})^2}{9} + \frac{y^2}{64}=1, \quad y=\pm 4 \sqrt{2}$$
-> $$\frac{x^2}{9} + \frac{(\sqrt{\frac{64x^2}{9}})^2}{64}=1, \quad x= \pm \frac{3\sqrt{2}}{2}$$
+> 	1. $\frac{(\sqrt{\frac{9y^2}{64}})^2}{9} + \frac{y^2}{64}=1, \quad y=\pm 4 \sqrt{2}$
+> 	2. $\frac{x^2}{9} + \frac{(\sqrt{\frac{64x^2}{9}})^2}{64}=1, \quad x= \pm \frac{3\sqrt{2}}{2}$
 > 6. Solve for critical points
-> $$P = (\sqrt{\frac{9(4\sqrt{2})^2}{64}}),\sqrt{\frac{64(\frac{3\sqrt{2}}{2})^2}{9}})=(\frac{3}{\sqrt{2}},4\sqrt{2})$$
+> 	1. $P = (\sqrt{\frac{9(4\sqrt{2})^2}{64}}),\sqrt{\frac{64(\frac{3\sqrt{2}}{2})^2}{9}})=(\frac{3}{\sqrt{2}},4\sqrt{2})$
 > 7. Plug in values
 > $$4xy=\frac{3}{\sqrt{2}} * 4\sqrt{2}=48$$
