@@ -4,7 +4,7 @@
 ##### Algorithm
 A well defined sequence of computational steps that transform the input into an output
 
-##### Comptutaional Problem
+##### Computational Problem
 A problem solved through the use of an algorithm due to it's computational complexity
 
 ##### Data Structures

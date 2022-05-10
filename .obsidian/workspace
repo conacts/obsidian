@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "403 Designing Algorithms.md",
+            "file": "124 Fundamental Theorems of Vector Analysis.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291
+    "width": 291,
+    "collapsed": true
   },
   "right": {
     "id": "ac678028e54ab1b9",
@@ -70,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "403 Designing Algorithms.md",
+                "file": "124 Fundamental Theorems of Vector Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "403 Designing Algorithms.md",
+                "file": "124 Fundamental Theorems of Vector Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +103,15 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
-    "403 Designing Algorithms.md",
-    "402 Sorting Algorithms.md",
-    "401 Intro to Algorithms.md",
-    "400 Computer Science.md",
+    "124 Fundamental Theorems of Vector Analysis.md",
+    "260 Neural Networks.md",
+    "261 Backpropagation.md",
+    "262 Loss Function and Optimizers.md",
+    "263 Hyper Parameters.md",
+    "270 Computer Engineering.md",
+    "271 Number and Binary Representation.md",
     "272 Computer Components.md",
-    "Leetcode.md",
-    "123 Linked Lists, Graphs and Trees.md",
-    "lists/Definitions.md",
-    "Types of machine learning.md",
-    "What is Deep Learning.md"
+    "400 Computer Science.md",
+    "401 Intro to Algorithms.md"
   ]
 }

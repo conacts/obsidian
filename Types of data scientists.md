@@ -5,7 +5,6 @@ A type of statistics acquiring probability expressed through a degree of belief 
 #### Frequent statisticians
 A subset of statisticians using statistical inference based mostly on the frequency of data occurring. 
 
-
 ### Types of Artificial Intelligence
 
 #### Symbolic AI (GOFAI)

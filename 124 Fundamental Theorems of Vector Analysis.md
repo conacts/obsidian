@@ -39,8 +39,7 @@ $$\frac{\partial F_2}{\partial x} - \frac{\partial F_1}{\partial y} = 0$$
 > 		2. $$\iint_D (1 - 2xy) dA = -2 \int^1_{x=-1} \int^{\sqrt{1 - x^2}}_{y=-\sqrt{1 - x^2}} = - \int^1_{x=-1}xy^2 \Big |^{\sqrt{1 - x^2}}_{y = - \sqrt{1 - x^2}}dx = 0$$
 > 		3. $$\iint_D 1 dA = area(D) = \pi$$
 
-
-###### Evaluate the Green's Theorem
+###### Example :: Evaluate the Green's Theorem:
 > Evaluate $I = \oint F \cdot dr$, where $F(x,y) = \langle y + \sin(x^2), x^2 + e^{y^2} \rangle$ and $C$ is a circle of radius 4 centered at the origin oriented counterclockwise, using the easiest method
 > 1. $F_1 = y + \sin x^2$ and $F_2 = x^2 + e^{y^2}$
 > 2. Set up the paramtrization of the circle
@@ -156,7 +155,6 @@ $$\iint_S curl(F) \cdot dS = 0$$
 > 			2. $=0 + 2\pi \int^{\pi/2}_{\phi = 0} 3 \cos \phi \sin \phi d\phi = 2\pi(\frac{3}{2}\sin^2 \phi) \Big |^{\pi/2}_{\phi = 0} = 3\pi$ 
 > 3. Conclusion: Verified Stokes' Theorem
 
-
 ###### Example :: Stokes' Theorem:
 > Consider the vector field $F = (9y, 5z, x)$ and let $C$ be the triangle with verticies $(0,0,0)$, $(3,0,0)$ and $(0,3,3)$, oriented counterclockwise as viewed from above. Apply Stokes' Theorem to evaluate $\oint F \cdot dr$ by finding the flux of $curl(F)$ across an appropriate surface. 
 > 1. Use Stokes' Theorem to find the answer
@@ -199,14 +197,12 @@ $$\iint_S curl(F) \cdot dS = 0$$
 > 4. Integrate
 > 	1. $$\int^5_{r=0} \int^{2\pi}_0 (5, 0, -7) \cdot (0,0,r) = -7\int^5_{r=0} \int^{2\pi}_0r d\theta dr = -175\pi$$
 
-
-
 ## 17.3 Divergence Theorem
-
 ##### The Divergence Theorem
-Let $S$ be a clsed surface that enclosed a region $W$ in $R^3$. Assume that $S$ is piceewise smooth and is oriented by normal vectors pointing to the outside of $W$. If $F$ is a vector field whose components have continuous partial derivatives in an open domain containing $W$, then
+Let $S$ be a closed surface that enclosed a region $W$ in $R^3$. Assume that $S$ is piecewise smooth and is oriented by normal vectors pointing to the outside of $W$. If $F$ is a vector field whose components have continuous partial derivatives in an open domain containing $W$, then
 $$\iint_S F \cdot dS = \iiint_W div(F) dV \quad\quad div(F) = \nabla F$$
 
+##### Example :: Divergence theorem:
 > Use the Divergence Theorem to evaluate the flux $\iint_S F \cdot dS$ $F(x,y,z) = \langle zx, 4yx^3, x^2 z \rangle$. Let $S$ be the surface that bounds the solid region with bondary given by $y = 4-x^2 - z^2,y=0$. 
 > $\iint_S F \cdot dS = ~?$ 
 > 1. Find the divergence

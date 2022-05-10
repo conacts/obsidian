@@ -20,7 +20,6 @@ See Decision Tree Page
 
 
 ##### SVM (Support Vector Machines): 
-**Definition:**
 Classification technique that organizes data through a 3D separator known as a hyperplane
 - Soft Margins in SVMs:
 	- Allowing some data to be misclassified to prevent overfitting the model
@@ -33,8 +32,8 @@ Classification technique that organizes data through a 3D separator known as a h
 
 
 ##### Naive Bayes: 
-**Definition:**
 Calculates the probability of text belonging to a certain category
+
 ![[Pasted image 20220102023242.png | 400]]
 
 **Algorithm:**

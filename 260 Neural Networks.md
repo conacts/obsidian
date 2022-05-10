@@ -1,11 +1,11 @@
 # Neural Networks
-**Definition:** Artificial Neural Networks play a key role in Machine Learning, spawning the subfield deep learning. Deep Learning is the use of deep (having many layers) neural networks to create a function to map a certain task.
+Artificial Neural Networks play a key role in Machine Learning, spawning the subfield deep learning. Deep Learning is the use of deep (having many layers) neural networks to create a function to map a certain task.
 
 ## Learning and training
 The specified way in which you use the gradient of loss to update your parameters (weights & biases) of your model through the use of an optimizer
 
 ### Backpropagation
-**Definiton:** Adjusting [[Definitions#Weights |weights]] and [[Definitions#Biases |biases]] to achieve the smallest loss function in the NN as a whole. The desired tunings of each Target are collected and summed to find the overall desired movement for the network along that dimension. 
+Adjusting [[Definitions#Weights |weights]] and [[Definitions#Biases |biases]] to achieve the smallest loss function in the NN as a whole. The desired tunings of each Target are collected and summed to find the overall desired movement for the network along that dimension. 
 
 There are multiple factors that go into how a neural network improves. These include...
 #### Hyper Parameters:
@@ -19,7 +19,7 @@ There are multiple factors that go into how a neural network improves. These inc
 7. Regularization
 8. Network Architecture
 
-#### [[262 Loss Function and Optimizers | Optimizers:]]
+#### [[262 Loss Function and Optimizers |Optimizers:]]
 1. 1st Order Optimization
 2. 2nd Order Optimization
 
@@ -28,7 +28,7 @@ There are multiple factors that go into how a neural network improves. These inc
 The neural network you build around your dataset.
 
 ##### Basic PyTorch Neural Net 
-```python
+``` python
 class MyNeuralNetwork(nn.Module):
 	def __init__(self, input_layer_size=784, # 28*28=784 (mnist dataset)
 					hidden_layer_size=[512, 256, 256, 128], # hidden
@@ -61,7 +61,7 @@ Tensor shape (or number of dimensions) is important for which data you are proce
 
 ##### 1D Tensor (Vector Data): 
 - Samples
-```python
+``` python
 torch.Size([32])
 # 1d: [batch_size]
 # use for target labels
@@ -71,7 +71,7 @@ torch.Size([32])
 ##### 2D Tensor (Matrix Data):
 - Samples
 - Features
-```python
+``` python
 torch.Size([32, 256])
 # 2d: [batch_size, num_features (Channel * Height * Width)]
 # use for nn.Linear() input
@@ -82,7 +82,7 @@ torch.Size([32, 256])
 - Samples
 - Time-steps
 - Features
-```python
+``` python
 torch.Size([10, 1, 2048])
 # 3d: Conv2d : [batch_size, channels, num_features (Height * Width)]
 # 3d: RNN : [sequence_length, batch_size, num_features (Height * Width)]
@@ -95,7 +95,7 @@ torch.Size([10, 1, 2048])
 - Height
 - Width
 - Channels
-```python
+``` python
 torch.Size([16, 3, 28, 28])
 # 4d: [batch_size, channels, height, width]
 # use for nn.Conv2d()
@@ -108,7 +108,7 @@ torch.Size([16, 3, 28, 28])
 - Width
 - Channels
 
-```
+``` python
 >>> torch.Size([32, 1, 5, 15, 15])
 # 5d:[batch_size, channels, depth, height, width]   
 # use for nn.Conv3d()
