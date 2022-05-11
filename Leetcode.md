@@ -79,8 +79,30 @@ Given an array `nums` of `n` integers, return _an array of all the **uniqu
 -   `a`, `b`, `c`, and `d` are **distinct**.
 -   `nums[a] + nums[b] + nums[c] + nums[d] == target`
 
-[Python Solution]()
+#### 70. Climbing Stairs
+[Problem Link](https://leetcode.com/problems/climbing-stairs/)
+You are climbing a staircase. It takes `n` steps to reach the top. Each time you can either climb `1` or `2` steps. In how many distinct ways can you climb to the top?
 
+[Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/climbing_stairs.py)
+[C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/climbing_stairs.cpp)
+
+###### Dynamic Programming Solution (70)
+``` python
+def climbStairs(self, n: int) -> int:
+    if n <= 2:
+        return n
+    else:
+        a = 1
+        b = 2
+        s = 0
+        n -= 2
+        while n:
+            s = a + b
+            a = b
+            b = s
+            n -= 1
+        return s
+```
 
 #### 94. Binary Tree Inorder Traversal
 [Problem Link](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
@@ -145,7 +167,7 @@ A binary tree's **maximum depth** is the number of nodes along the longest pat
 [Python solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/max_depth_binary_tree.py) 
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/max_depth_binary_tree.cpp)
 
-##### Recursive Solution (104)
+###### Recursive Solution (104)
 ``` python
 def maxDepth(self, root: Optional[TreeNode]) -> int:
     if not root:
@@ -211,6 +233,29 @@ def minDepth(self, root: Optional[TreeNode]) -> int:
     return 1 + min(r, l)
 ```
 
+#### 121. Best Time to Buy and Sell Stock 
+[Problem Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
+You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day. You want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock. Return _the maximum profit you can achieve from this transaction_. If you cannot achieve any profit, return `0`.
+
+[Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/best_time_to_stock.py)
+[C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/best_time_to_stock.cpp)
+
+###### Kadane's Algorithm Solution (121)
+``` python
+def maxProfit(self, prices: List[int]) -> int:
+    # Kadane's Algorithm
+    # Same problem as Max Subarray
+    maxPrice = 0
+    minPrice = prices[0]
+    for i in prices:
+        if i < minPrice:
+            minPrice = i
+        elif i - minPrice > maxPrice:
+            maxPrice = i - minPrice
+    return maxPrice
+```
+
+
 #### 129. Sum Root to Leaf Numbers
 [Problem Link](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
 You are given the `root` of a binary tree containing digits from `0` to `9` only.
@@ -257,6 +302,7 @@ Given the `head` of a linked list, return _the list after sorting it in **as
 
 ##### Intuitive Sort List (148)
 The intuitive sort list explicitly codes out merge sort and sorts the linked list
+
 ``` python 
 class Solution:
     def sortList(self, head):
@@ -290,6 +336,7 @@ class Solution:
 
 ##### Optimal Sort List (148)
 This solution uses python's default sort algorithm, **tim sort**. The array is transformed from linked list into an array $O(n)$, sorted $O(n log n)$ and then transformed back into a linked list $O(n)$
+
 ``` python
 class Solution:
     def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
@@ -396,6 +443,7 @@ A **leaf** is a node with no children. A **left leaf** is a leaf that is the
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/sum_of_left_leaves.py) 
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/sum_of_left_leaves.cpp)
 
+###### Depth-First Search Solution (404)
 ``` python
 def sumOfLeftLeaves(self, root: Optional[TreeNode]) -> int:
     return self.dfs(root, False)
@@ -420,7 +468,7 @@ The **Fibonacci numbers**, commonly denoted `F(n)` form a sequence, called th
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/fibonacci.py)
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/fibonacci.cpp)
 
-###### Optimal Solution, Storing Answer (509)
+###### Dynamic Programming Solution (509)
 ``` python
 def fib(self, n: int) -> int:
     if n < 2:

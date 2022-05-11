@@ -9,21 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Leetcode.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
-          }
-        }
-      },
-      {
-        "id": "17eb999993bc5d10",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "271 Number and Binary Representation.md",
-            "mode": "source",
+            "file": "Files.md",
+            "mode": "preview",
             "backlinks": false,
             "source": false
           }
@@ -67,8 +54,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291,
-    "collapsed": true
+    "width": 291
   },
   "right": {
     "id": "ac678028e54ab1b9",
@@ -84,7 +70,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Leetcode.md",
+                "file": "Files.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,7 +87,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Leetcode.md",
+                "file": "Files.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -116,13 +102,13 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
+    "Files.md",
     "Leetcode.md",
     "271 Number and Binary Representation.md",
     "113 Multivariable Functions.md",
     "gnome-shell-screenshot-en1qj4.png",
     "115 Line and Surface Integrals.md",
     "116 Propositional Logic.md",
-    "Files.md",
     "Late HTB.md",
     "124 Fundamental Theorems of Vector Analysis.md",
     "260 Neural Networks.md"
