@@ -1,8 +1,8 @@
 ## Digital and Analog
+##### Radix
+A number system that represents a range starting at 0
 
-**Radix:** A number system that represents a range starting at 0
-
-##### Analog System: 
+#### Analog System: 
 A device that utilizes the decimal system to compute. Used in older technology like clocks.
 
 **Decimal System:** A number system ranging with numbers from 0-9 (radix 10)
@@ -12,10 +12,8 @@ A device that utilizes the decimal system to compute. Used in older technology l
 #### Digital Computer
 A device utilizing the binary system to compute, computing through 0's and 1's. This is the type all computers use today due to speed and integrity it provides.
 
-**Binary System:** A number system ranging with numbers from 0-1 (radix 2)
-**Decimal to Binary:** 11011010 -> (128)(64)(32)(16)(8)(2)(1) -> 218
-
-**Switches:** A compontent that can turn on and off the power supply recieved by the computer, making the binary system very lucrative (0V - 5V)
+##### Binary System:
+A number system ranging with numbers from 0-1 (radix 2)
 
 ##### Difference Between Analog Computers and Digital Computers
 | Analog Computer        | Digital Computer       |
@@ -28,7 +26,7 @@ A device utilizing the binary system to compute, computing through 0's and 1's. 
 
 ### Number Representation
 
-##### Bases:
+##### Number Bases
 | Name        | Radix | Digits                                         |
 | ----------- | ----- | ---------------------------------------------- |
 | Binary      | 2     | 0, 1                                           |
@@ -36,9 +34,11 @@ A device utilizing the binary system to compute, computing through 0's and 1's. 
 | Decimal     | 10    | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9                   |
 | Hexadecimal | 16    | 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F |
 
-##### Convert decimal to binary:
-2 ways to tackle this problem, counting down and counting up. Both use a similar concept to tackle $2^n$, but one division and other addition.
-1. Counting Down: $857_{10}$ to binary
+##### Binary
+Base 2, the most basic form of the number system.
+
+###### Convert decimal to binary
+1. Find $857_{10}$ in binary
 ```
 857/2 = 428 ~ Remainder 1
 428/2 = 214 ~ Remainder 0
@@ -54,15 +54,14 @@ A device utilizing the binary system to compute, computing through 0's and 1's. 
 Answer: 1101011001
 (counting up)
 ```
-2. Counting Up: $857_{10}$ to binary
+2. Find $857_{10}$ in binary
 ```
 1 x 2 x 4 x 8 x 16 x 32 x 64 x 128 x 256 x 512 
 1 x 0 x 0 x 1 x 1  x  0 x  1 x   0 x   1 x   1
 Answer: 1101011001
 ```
 
-##### Convert decimal to base 2:
-Converting usually for numbers with decimals through multiplication and whole numbers through division.
+###### Convert decimal to binary
 1. Convert $46.6875_{10}$ to $N_2$
 ```
 1st half: 46
@@ -84,14 +83,32 @@ ANS: 1011
 BASE 2 ANS: 101110.1011
 ```
 
-**Octal vs. Hexadecimal:** Octal only uses 3 bits with a radix of (0-7) while hex uses 4 digits and has (0-F) possible combinations.
+##### Octal 
+Base 8
 
-#### Sign bit schemas
-1. Sign and magnitude
-	1. Sign bit is considered separately from magnitude bit
-	2. Negative N has same bits for magnitude as N and inverted sign
-	3. Range: -(2N-1-1) to (2N-1 -1) two zeros
-1's Complement and 2's complement
+###### Convert decimal to octal
+1. Find $127$ in octal
+```
+127/8 = 15 ~ Remainder 7
+15/8  =  1 ~ Remainder 7
+1/8   =  0 ~ Remainder 1
+
+Answer: 177
+```
+
+##### Hexadecimal
+Base 16
+1. Find $189$ in hexadecimal
+```
+189/16 = 11 ~ Remainder 13
+11/16  = 11 ~ Remainder 11
+
+HEX: 0 1 2 3 4 5 6 7 8 9  A  B  C  D  E  F
+DEC: 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+```
+
+#### Sign bit form
+A form of binary that enables you to use negative numbers
 
 ![[Pasted image 20220326001453.png | 400]]
 
@@ -150,12 +167,11 @@ Another way of representing negative numbers in binary
 
 ##### Binary Multiplication
 You multiply it and shift over one space everytime
-![[F3B6C1DF-AA60-4DB0-97C8-216900BD06A7_1_201_a.jpeg]]
+![[F3B6C1DF-AA60-4DB0-97C8-216900BD06A7_1_201_a.jpeg |500]]
 ##### Binary Division
 Essentially binary long division
 ![[Pasted image 20220330112327.png | 500]]
 
-![[Pasted image 20220326012358.png]]
 **2's Complement Overflow**
 You know you have overflow when
 1. If the sum of two positive number yield a negative result, the sum has overflowed
@@ -164,7 +180,6 @@ You know you have overflow when
 4. Otherwise, the sum has not overflowed
 
 ##### Number Representation Quiz
-
 Is there overflow adding 1001 and 1110 in 2's complement system? (Y/N) #flashcard 
 Yes
 1001 +1110 = (-7) + (-2) = (-9) > 7 = overflow
@@ -202,7 +217,7 @@ It is an easy way to calculate while only using one zero, while 1's complement u
 
 ### Minterm and Maxterm
 
-#### Cannonical Form
+#### Canonical Form
 ##### Sum of Minterms (SoP)
 **Sum of Products**
 Adding (OR Gating) all the conditions where the function **IS 1** 
@@ -225,8 +240,7 @@ Ex. $2^2=4$ minterms
 | X'  | Y'  | X'Y' |
 
 ![[Pasted image 20220326172910.png | 300]]
-**Example:**
-$$\sum$$
+
 
 ![[Pasted image 20220326172512.png]]
 
@@ -262,6 +276,8 @@ The use of boolean algebra rules to systematically reduce your equation to a muc
 ![[Pasted image 20220326180954.png]]
 
 #### K-Maps
+A method for finding the function of a truth table
+
 (+) Good at predicting timing hazards
 (+) Simple to create
 (-) Only for small problems

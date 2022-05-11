@@ -30,8 +30,44 @@ Nmap done: 1 IP address (1 host up) scanned in 8.63 seconds
 Because only port 80 (HTTP) is open, we will run a gobuster to find any hidden URLs
 
 ```
-gobuster dir -u 10.10.11.156 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt
+gobuster dir -u 10.10.11.156 -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt
 ```
 
+```
+[cs@bash] htb $ gobuster dir -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt -u 10.10.11.156
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://10.10.11.156
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/05/10 16:04:22 Starting gobuster in directory enumeration mode
+===============================================================
+/assets               (Status: 301) [Size: 194] [--> http://10.10.11.156/assets/]
+
+===============================================================
+2022/05/10 16:09:59 Finished
+===============================================================
+
+```
+
+We notice only `/assets` was found. When we try and visit `/assets` we get 403 Forbidden meaning we cannot access the page. We must find another entrance. 
 #### 3. Visit contacts page
 ![[Pasted image 20220510012154.png]]
+Because this page doesn't post to the page we cannot use cross-site scripting. However it may be vulnerable for SQL Injection. However after some testing I notice that the form does nothing.
+
+#### 4. Finding link images.late.htb
+I notice the link `images.late.htb` and click on it. I am unable to access it so I add `images.late.htb` into `/etc/hosts`
+
+``` bash
+sudo echo "10.10.11.156 images.late.htb" >> /etc/hosts
+```
+
+I am now able to access the website
+![[gnome-shell-screenshot-en1qj4.png]]
