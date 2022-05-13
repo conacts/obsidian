@@ -3,7 +3,7 @@ Categories:
 [[402 Sorting Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
-
+[[Leetcode#9 Palindrome Number]]
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. 
@@ -23,6 +23,8 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
     return
 ```
 
+**Runtime:** 74 ms : 74.03%
+**Memory Usage:** 15.2 MB : 49.53%
 
 #### 9. Palindrome Number
 Given an integer `x`, return `true` if `x` is palindrome integer. An integer is a **palindrome** when it reads the same backward as forward
@@ -37,7 +39,26 @@ class Solution:
         return False
 ```
 
+**Runtime:** 76 ms : 64.64%
+**Memory Usage:** 14 MB : 16.59%
+
 ###### Floor and Mod Solution (9)
+``` python
+class Solution:
+    def isPalindrome(self, x: int) -> bool:		
+        if x < 0:
+            return False
+
+        original = x
+        new = 0
+        while x > 0:
+            new = new * 10 + x % 10
+            x = x // 10
+        return new == original
+```
+
+**Runtime:** 66 ms : 80.18%
+**Memory Usage:** 13.9 MB : 16.59%
 
 #### 15. Three Sum
 [Problem Link](https://leetcode.com/problems/3sum/) 
@@ -69,14 +90,42 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
     return returnlist
 ```
 
+**Runtime:** 816 ms : 79.84%
+**Memory Usage:** 17.3 MB : 91.68%
 
-#### 18. Four Sum (FINISH)
-[Problem Link](https://leetcode.com/problems/4sum/)
-Given an array `nums` of `n` integers, return _an array of all the **unique** quadruplets_ `[nums[a], nums[b], nums[c], nums[d]]` such that:
+#### 16. Three Sum Closest 
+[Problem Link](https://leetcode.com/problems/3sum-closest/)
+Given an integer array `nums` of length `n` and an integer `target`, find three integers in `nums` such that the sum is closest to `target`.
 
--   `0 <= a, b, c, d < n`
--   `a`, `b`, `c`, and `d` are **distinct**.
--   `nums[a] + nums[b] + nums[c] + nums[d] == target`
+Return _the sum of the three integers_. You may assume that each input would have exactly one solution.
+
+###### Two Pointer Solution (16)
+``` python
+class Solution:
+    def threeSumClosest(self, nums: List[int], target: int) -> int:
+        
+        nums.sort()
+        closest = sum(nums[:3])
+        for i in range(len(nums)):
+            if i > 0 and nums[i] == nums[i-1]:
+                continue
+            l = i + 1
+            r = len(nums)-1
+            while l < r:
+                ans = nums[i] + nums[l] + nums[r]
+                if ans > target:
+                    r -= 1
+                elif ans < target:
+                    l += 1
+                elif ans == target:
+                    return ans
+                if abs(target - ans) < abs(closest - target):
+                    closest = ans
+        return closest
+```
+
+**Runtime:** 100 ms : 99.64%
+**Memory Usage:** 14 MB : 32.05%
 
 #### 70. Climbing Stairs
 [Problem Link](https://leetcode.com/problems/climbing-stairs/)
@@ -87,21 +136,25 @@ You are climbing a staircase. It takes `n` steps to reach the top. Each time y
 
 ###### Dynamic Programming Solution (70)
 ``` python
-def climbStairs(self, n: int) -> int:
-    if n <= 2:
-        return n
-    else:
-        a = 1
-        b = 2
-        s = 0
-        n -= 2
-        while n:
-            s = a + b
-            a = b
-            b = s
-            n -= 1
-        return s
+class Solution:
+	def climbStairs(self, n: int) -> int:
+	    if n <= 2:
+	        return n
+	    else:
+	        a = 1
+	        b = 2
+	        s = 0
+	        n -= 2
+	        while n:
+	            s = a + b
+	            a = b
+	            b = s
+	            n -= 1
+	        return s
 ```
+
+**Runtime:** 24 ms : 98.24%
+**Memory Usage:** 13.9 MB : 58.51%
 
 #### 94. Binary Tree Inorder Traversal
 [Problem Link](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
@@ -111,16 +164,21 @@ Given the `root` of a binary tree, return _the inorder traversal of its nodes
 
 ###### Depth-First Search Solution (94)
 ``` python
-def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
-    if not root:
-        return []
-    if not root.right and not root.left:
-        return [root.val]
-    else:
-        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
+class Solution:
+	def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+	    if not root:
+	        return []
+	    if not root.right and not root.left:
+	        return [root.val]
+	    else:
+	        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
 ```
 
+**Runtime:** 32 ms : 84.59%
+**Memory Usage:** 14 MB : 13.42%
+
 #### 100. Same Tree
+[Problem Link](https://leetcode.com/problems/same-tree/) 
 Given the roots of two binary trees `p` and `q`, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
 
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/same_tree.py)
@@ -128,14 +186,18 @@ Given the roots of two binary trees `p` and `q`, write a function to check if
 
 ###### Depth-First Search Solution (100)
 ``` python
-def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-    if not p or not q:
-        return p == q
-    elif p.val != q.val:
-        return False
-    else:
-        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+class Solution:
+	def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
+	    if not p or not q:
+	        return p == q
+	    elif p.val != q.val:
+	        return False
+	    else:
+	        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 ```
+
+**Runtime:** 28 ms : 94.82%
+**Memory Usage:** 14 MB : 30.18%
 
 #### 101. Symmetric Tree
 [Problem Link](https://leetcode.com/problems/symmetric-tree/)
@@ -146,16 +208,19 @@ Given the `root` of a binary tree, _check whether it is a mirror of itself_ 
 
 ###### Depth-First Search Solution (101)
 ``` python
-def isSymmetric(self, root: Optional[TreeNode]) -> bool:
-    return self.f(root.left, root.right)
-
-def f(self, l, r):
-    if not l or not r:
-        return l == r
-    else:
-        return l.val == r.val and self.f(l.right, r.left) and self.f(l.left, r.right)
+class Solution:
+	def isSymmetric(self, root: Optional[TreeNode]) -> bool:
+	    return self.f(root.left, root.right)
+	
+	def f(self, l, r):
+	    if not l or not r:
+	        return l == r
+	    else:
+	        return l.val == r.val and self.f(l.right, r.left) and self.f(l.left, r.right)
 ```
 
+**Runtime:** 32 ms : 94.13%
+**Memory Usage:** 14 MB : 61.32%
 
 #### 104. Maximum Depth of Binary Tree 
 [Problem Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
@@ -182,7 +247,11 @@ def maxDepth(self, root: Optional[TreeNode]) -> int:
             return 1 + l
 ```
 
+**Runtime:** 32 ms : 84.59%
+**Memory Usage:** 14 MB : 13.42%
+
 #### 110. Balanced Binary Tree
+[Problem Link](https://leetcode.com/problems/balanced-binary-tree/) 
 Given a binary tree, determine if it is height-balanced. For this problem, a height-balanced binary tree is defined as "a binary tree in which the left and right subtrees of _every_ node differ in height by no more than 1."
 <center> Tree, Depth-First Search, Binary Tree</center> 
 
@@ -191,23 +260,26 @@ Given a binary tree, determine if it is height-balanced. For this problem, a hei
 
 ###### Depth-First Search Solution (110)
 ``` python
-def isBalanced(self, root: Optional[TreeNode]) -> bool:
-    return self.f(root) != -1
-
-def f(self, root):
-    if not root:
-        return 0
-    
-    l = self.f(root.left)
-    r = self.f(root.right)
-    
-    if l == -1 or r == -1:
-        return -1
-    if abs(l - r) > 1:
-        return -1
-    return 1 + max(l, r)
+class Solution:
+	def isBalanced(self, root: Optional[TreeNode]) -> bool:
+	    return self.f(root) != -1
+	
+	def f(self, root):
+	    if not root:
+	        return 0
+	    
+	    l = self.f(root.left)
+	    r = self.f(root.right)
+	    
+	    if l == -1 or r == -1:
+	        return -1
+	    if abs(l - r) > 1:
+	        return -1
+	    return 1 + max(l, r)
 ```
 
+**Runtime:** 48 ms : 95.15%
+**Memory Usage:** 18 MB : 98.11%
 
 #### 111. Minimum Depth of Binary Tree
 [Problem Link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
@@ -220,17 +292,21 @@ The minimum depth is the number of nodes along the shortest path from the root n
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/min_depth_of_binary_tree.py)
 
 ``` python
-def minDepth(self, root: Optional[TreeNode]) -> int:
-    if not root:
-        return 0
-    r = self.minDepth(root.right)
-    l = self.minDepth(root.left)
-    
-    if not root.right or not root.left:
-        return 1 + max(r, l)
-    
-    return 1 + min(r, l)
+class Solution:
+	def minDepth(self, root: Optional[TreeNode]) -> int:
+	    if not root:
+	        return 0
+	    r = self.minDepth(root.right)
+	    l = self.minDepth(root.left)
+	    
+	    if not root.right or not root.left:
+	        return 1 + max(r, l)
+	    
+	    return 1 + min(r, l)
 ```
+
+**Runtime:** 648 ms : 65.06%
+**Memory Usage:** 53.1 MB : 58.77%
 
 #### 117. Populating Next Right Pointers in Each Node 2
 [Problem Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) 
@@ -238,16 +314,21 @@ Given a binary tree, populate each next pointer to point to its next right node.
 
 ###### Breadth-First Search Solution (117)
 This solution implements the [[404 Data Structures#Breadth-First Search Binary Search Tree|breadth-first search]] algorithm with the slight modification of the `prev` attribute. When you traverse the level, you assign `prev` to the previous node traversed on that level.
+
+**Runtime:** 88 ms : 20.30%
+**Memory Usage:** 15.4 MB : 11.63%
+
 ``` python
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
         if root == None: 
             return root
-        q = deque([root])
+        q = []
+        q.append(root)
         while q:
-            prev = None # modification
+            prev = None
             for _ in range(len(q)):
-                cur = q.popleft()
+                cur = q.pop(0)
                 if prev != None:
                     prev.next = cur
                 prev = cur
@@ -257,6 +338,9 @@ class Solution:
                     q.append(cur.right)
         return root
 ```
+
+**Runtime:** 64 ms : 54.32%
+**Memory Usage:** 15.4 MB : 11.63%
 
 #### 121. Best Time to Buy and Sell Stock 
 [Problem Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
@@ -307,7 +391,6 @@ def sumNumbers(self, root) -> int:
     return self.sumNumbers(root.left) + self.sumNumbers(root.right)
 ```
 
-
 #### Single Number (136)                           
 Given a **non-empty** array of integers `nums`, every element appears _twice_ except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
 
@@ -320,7 +403,6 @@ def singleNumber(self, nums: List[int]) -> int:
         solution ^= num
     return solution
 ```
-
 
 #### 141. Linked List Cycle
 [Problem Link](https://leetcode.com/problems/linked-list-cycle/) 
