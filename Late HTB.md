@@ -71,3 +71,4 @@ sudo echo "10.10.11.156 images.late.htb" >> /etc/hosts
 
 I am now able to access the website
 ![[gnome-shell-screenshot-en1qj4.png]]
+Turning in an image using flask format of `{{ 10 * 10 }}` we get `100` returned in a file `results.txt`. This means we have code execution using flask, however we cannot use just regular python, we must use [Flask functions](https://flask.palletsprojects.com/en/2.1.x/api/#flask.get_flashed_messages). 

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Files.md",
-            "mode": "preview",
+            "file": "Leetcode.md",
+            "mode": "source",
             "backlinks": false,
             "source": false
           }
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 291
+    "width": 291,
+    "collapsed": true
   },
   "right": {
     "id": "ac678028e54ab1b9",
@@ -70,7 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Files.md",
+                "file": "Leetcode.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,7 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Files.md",
+                "file": "Leetcode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -102,15 +103,15 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
-    "Files.md",
     "Leetcode.md",
-    "271 Number and Binary Representation.md",
-    "113 Multivariable Functions.md",
-    "gnome-shell-screenshot-en1qj4.png",
-    "115 Line and Surface Integrals.md",
-    "116 Propositional Logic.md",
+    "404 Data Structures.md",
+    "Contest Algoithms.md",
+    "400 Computer Science.md",
+    "401 Intro to Algorithms.md",
+    "402 Sorting Algorithms.md",
+    "403 Designing Algorithms.md",
     "Late HTB.md",
-    "124 Fundamental Theorems of Vector Analysis.md",
-    "260 Neural Networks.md"
+    "119 Sets.md",
+    "120 Sequences (Discrete Math).md"
   ]
 }

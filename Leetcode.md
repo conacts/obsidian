@@ -1,5 +1,4 @@
 Categories:
-
 [[402 Sorting Algorithms|Sort]]
 [[402 Sorting Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
@@ -233,6 +232,32 @@ def minDepth(self, root: Optional[TreeNode]) -> int:
     return 1 + min(r, l)
 ```
 
+#### 117. Populating Next Right Pointers in Each Node 2
+[Problem Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) 
+Given a binary tree, populate each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to `NULL`. Initially, all next pointers are set to `NULL`.
+
+###### Breadth-First Search Solution (117)
+This solution implements the [[404 Data Structures#Breadth-First Search Binary Search Tree|breadth-first search]] algorithm with the slight modification of the `prev` attribute. When you traverse the level, you assign `prev` to the previous node traversed on that level.
+``` python
+class Solution:
+    def connect(self, root: 'Node') -> 'Node':
+        if root == None: 
+            return root
+        q = deque([root])
+        while q:
+            prev = None # modification
+            for _ in range(len(q)):
+                cur = q.popleft()
+                if prev != None:
+                    prev.next = cur
+                prev = cur
+                if cur.left != None:
+                    q.append(cur.left)
+                if cur.right != None:
+                    q.append(cur.right)
+        return root
+```
+
 #### 121. Best Time to Buy and Sell Stock 
 [Problem Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day. You want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock. Return _the maximum profit you can achieve from this transaction_. If you cannot achieve any profit, return `0`.
@@ -295,6 +320,37 @@ def singleNumber(self, nums: List[int]) -> int:
         solution ^= num
     return solution
 ```
+
+
+#### 141. Linked List Cycle
+[Problem Link](https://leetcode.com/problems/linked-list-cycle/) 
+Given `head`, the head of a linked list, determine if the linked list has a cycle in it.
+
+There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the `next` pointer. Internally, `pos` is used to denote the index of the node that tail's `next` pointer is connected to. **Note that `pos` is not passed as a parameter**.
+
+Return `true` _if there is a cycle in the linked list_. Otherwise, return `false`.
+
+##### Tortoise and the Hare Solution (141)
+Here we use the [[Contest Algoithms#Tortoise and the Hare Floyd's Algorithm|tortoise and the hare algorithm]] to find the cycle in the linked list. This algorithm was specifically developed for this purpose.
+``` python
+class Solution:
+    def hasCycle(self, head: Optional[ListNode]) -> bool:
+	    # a try statement incase head.next does not exist
+        try:
+            slow = head
+            fast = head.next
+            while slow != fast:
+	            # if either pointer has reached the end of the linked list
+                if slow == None or fast == None:
+                    return False
+                slow = slow.next
+                fast = fast.next.next
+            return True
+        except:
+            return False
+```
+
+##### Tortoise and the Hare Solution (C++) (141)
 
 #### 148. Sort List
 [Problem Link](https://leetcode.com/problems/sort-list/)
