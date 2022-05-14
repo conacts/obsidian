@@ -26,7 +26,39 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 **Runtime:** 74 ms : 74.03%
 **Memory Usage:** 15.2 MB : 49.53%
 
+#### 7. Reverse Integer
+[Problem Link](https://leetcode.com/problems/reverse-integer/)
+Given a signed 32-bit integer `x`, return `x` _with its digits reversed_. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-231, 231 - 1]`, then return `0`.
+
+**Assume the environment does not allow you to store 64-bit integers (signed or unsigned).**
+
+
+
+``` python
+class Solution:
+    def reverse(self, x: int) -> int:
+        if x < 0: 
+            x = str(x)
+            x = x[1:]
+            x = -int(x[::-1])
+            if x < -2147483647:
+                return 0
+            else:
+                return x
+        else:
+            x = str(x)
+            x = int(x[::-1])
+            if x > 2147483647:
+                return 0
+            else:
+                return x
+```
+
+**Runtime:** 56 ms : 24.73%
+**Memory Usage:** 14 MB : 16.33%
+
 #### 9. Palindrome Number
+[Problem Link](https://leetcode.com/problems/palindrome-number/)
 Given an integer `x`, return `true` if `x` is palindrome integer. An integer is a **palindrome** when it reads the same backward as forward
 
 ###### Cast to String Solution (9)
@@ -391,7 +423,8 @@ def sumNumbers(self, root) -> int:
     return self.sumNumbers(root.left) + self.sumNumbers(root.right)
 ```
 
-#### Single Number (136)                           
+#### Single Number (136)
+[Problem Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) 
 Given a **non-empty** array of integers `nums`, every element appears _twice_ except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
 
 ###### XOR Solution (136)
@@ -432,7 +465,6 @@ class Solution:
             return False
 ```
 
-##### Tortoise and the Hare Solution (C++) (141)
 
 #### 148. Sort List
 [Problem Link](https://leetcode.com/problems/sort-list/)
@@ -449,7 +481,8 @@ class Solution:
         left = self.sortList(head)
         right = self.sortList(mid)
         return self.merge(left, right)
-    
+
+	# Merge sort (as specified in problem)
     def getMid(self, head):
         slow, fast = head, head
         while fast.next and fast.next.next:
@@ -674,6 +707,7 @@ def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode
 ```
 
 #### 1038. Binary Search Tree to Greater Sum Tree
+[Problem Link](https://leetcode.com/problems/convert-bst-to-greater-tree/)
 Given the `root` of a Binary Search Tree (BST), convert it to a Greater Tree such that every key of the original BST is changed to the original key plus the sum of all keys greater than the original key in BST.
 
 As a reminder, a _binary search tree_ is a tree that satisfies these constraints:
