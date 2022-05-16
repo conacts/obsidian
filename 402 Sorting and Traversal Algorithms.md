@@ -1,3 +1,4 @@
+### Array Sorting Algorithms
 #### Selection Sort
 A sorting algorithm that sorts an array by repeatedly finding the minimum element and putting it at the beginning of the array
 
@@ -161,7 +162,7 @@ print(arr)
 ```
 
 #### Merge Sort
-A divide and conquer algorithm, similar to [[402 Sorting Algorithms#Quick Sort|quick sort]], which divides the input array into two halevs recursively until it merges the sorted halves.
+A divide and conquer algorithm, similar to [[402 Sorting and Traversal Algorithms#Quick Sort|quick sort]], which divides the input array into two halevs recursively until it merges the sorted halves.
 
 **Input:** Unsorted array
 **Output:** Sorted array
@@ -213,7 +214,7 @@ print(arr)
 
 
 #### Heap Sort 
-A sorting algorithm utilizing the **binary heap** data structure where we find the minimum element and place it in the beginning. This is very similar to the [[402 Sorting Algorithms#Selection Sort|selection sort algorithm]]. 
+A sorting algorithm utilizing the **binary heap** data structure where we find the minimum element and place it in the beginning. This is very similar to the [[402 Sorting and Traversal Algorithms#Selection Sort|selection sort algorithm]]. 
 
 **Steps:**
 1. Translate array into **binary heap**
@@ -251,3 +252,53 @@ An attempt to create an $O(n)$ sorting algorithm that sorts integers by the leas
 **Space Complexity:** $O(k + n)$ 
 
 ![[radix_sort.gif]]
+
+
+### Tree Traversal Algorithms
+There are multiple ways to read the elements of a tree, each having their own benefits
+
+#### Breadth-First Search
+
+#### Depth-First Search
+##### Preorder Traversal (Binary Tree)
+A DFS tree algorithm which visits nodes in the order
+1. Root
+2. Left
+3. Right
+Also know that it traverses down the entirity of the left nodes until it cannot traverse any further down that path to where it traverses backwards and finds an open path to the right.
+![[Preorder-traversal.gif|400]]
+
+###### Preorder Traversal Recursive Solution
+``` python
+def preorder(root):
+	if root:
+		[root] + preorder(root.left) + preorder(root.right)
+```
+**Time Complexity:** $O(n)$
+**Space Complexity:** $O(H)$
+- $H$ is height of the tree
+
+###### Preorder Traversal Stack Solution
+``` python
+def preorder(root):
+	preorder_list = []
+	if root:
+		stack = [root]
+	while len(stack))> 0:
+		node = stack.pop()
+		preorder_list.append(node.val)
+	if node.right:
+		stack.append(node.right)
+	if node.left:
+		stack.append(node.left)
+	
+	return preorder_list
+```
+
+**Time Complexity:** $O(n)$
+**Space Complexity:** $O(H)$
+- $H$ is height of the tree
+
+##### Inorder Traversal (Binary Tree)
+
+##### Postorder Traversal (Binary Tree)

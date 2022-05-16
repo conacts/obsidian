@@ -1,6 +1,6 @@
 Categories:
-[[402 Sorting Algorithms|Sort]]
-[[402 Sorting Algorithms#Merge Sort|Merge Sort]]
+[[402 Sorting and Traversal Algorithms|Sort]]
+[[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
 [[Leetcode#9 Palindrome Number]]

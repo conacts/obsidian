@@ -15,7 +15,7 @@ A recursive style of solving problems where they break the problem into several 
 3. **Combine** the subproblems into the original problem
 
 
-###### Example :: [[402 Sorting Algorithms#Merge Sort|Merge sort's]] divide and conquer
+###### Example :: [[402 Sorting and Traversal Algorithms#Merge Sort|Merge sort's]] divide and conquer
 > 1. **Divide** the $n$-element sequence to be sorted into two subsequences of $\frac{n}{2}$ elements each
 > 2. **Conquer**, sort the two subsequences recursively using merge sort
 > 3. **Combine** the two sorted subsequences to produce the sorted answer

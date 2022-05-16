@@ -354,11 +354,7 @@ A linked list variation where the tail points to the head of the linked list
 ![[Pasted image 20220512230929.png|400]]
 
 
-### Heap
 
-#### Min Heap
-
-#### Max Heap
 ### Tree
 A linked list variation where each node can have more than one child, but is not a graph
 
@@ -420,20 +416,38 @@ def current_level(root, level):
 ```
 
 #### Binary Search Tree
+A binary search tree is a [[404 Data Structures#Binary Tree|binary tree]] where you organize each node based on 
 
-###### Breadth-First Search Binary Search Tree
+###### Binary Search Tree Implementation
 ``` python
+class Node:
+    def __init__(self, val):
+        self.left = None
+        self.right = None
+        self.data = val
 
+def bst_insert(root, node):
+    if root is None:
+        root = node
+    else:
+        if root.data > node.data:
+            if root.left is None:
+                root.left = node
+            else:
+                binary_insert(root.left, node)
+        else:
+            if root.right is None:
+                root.right = node
+            else:
+                binary_insert(root.right, node)
 ```
+
+##### [[402 Sorting and Traversal Algorithms#Tree Traversal Algorithms|Binary Search Tree Algorithms]] 
 
 ### Array
 A collection of similar items stored in a sequence of memory locations.
 ![[Pasted image 20220512185024.png]]
 
 
-## Dynamic Array
+#### Dynamic Array
 An array without a fixed size in memory. Dynamic arrays are stored as pointers that point to the location of the array rather than set a specified amount of memory upon initialization.
-
-## Hashmap
-
-## Matrix
