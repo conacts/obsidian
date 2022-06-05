@@ -370,8 +370,6 @@ A linked list variation where each node can have more than one child, but is not
 
 ###### Height
 
-
-
 #### Binary Tree 
 A tree variation where each node has at most two children
 

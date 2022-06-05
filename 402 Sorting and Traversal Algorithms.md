@@ -265,14 +265,20 @@ A DFS tree algorithm which visits nodes in the order
 1. Root
 2. Left
 3. Right
-Also know that it traverses down the entirity of the left nodes until it cannot traverse any further down that path to where it traverses backwards and finds an open path to the right.
+Also know that it traverses down the entirety of the left nodes until it cannot traverse any further down that path to where it traverses backwards and finds an open path to the right.
 ![[Preorder-traversal.gif|400]]
 
 ###### Preorder Traversal Recursive Solution
 ``` python
 def preorder(root):
-	if root:
-		[root] + preorder(root.left) + preorder(root.right)
+	if not root:
+		return None
+	elif not root.right and not root.left:
+		return [root.val]
+	else:
+		r = preorder(root.right)
+		l = preorder(root.left)
+		return [root.val] + l + r
 ```
 **Time Complexity:** $O(n)$
 **Space Complexity:** $O(H)$
@@ -300,5 +306,56 @@ def preorder(root):
 - $H$ is height of the tree
 
 ##### Inorder Traversal (Binary Tree)
+A DFS traversal algorithm following the order
+1. Left
+2. Root
+3. Right
+![[Inorder-traversal.gif]]
+
+###### Inorder Traversal Recursive Solution
+``` python
+def inorder(root):
+	if root:
+		l = inorder(root.left)
+		r = inorder(root.right)
+		return l + [root.val] + r
+```
+
+###### Inorder Traversal Stack Solution
+```
+def inorder(root):
+	cur = root
+	stack = []
+	inorder_list = []
+	run = True
+	while run:
+		if cur:
+			stack.append(cur)
+			cur = cur.left
+		elif stack:
+			cur = stack.pop()
+			inorder_list.append(cur.val)
+			cur = cur.right
+		else:
+			run = False
+	return inorder_list
+```
 
 ##### Postorder Traversal (Binary Tree)
+A DFS algorithm following the order
+1. Left
+2. Right
+3. Root
+
+###### Postorder Traversal Recursive Solution
+``` python
+def postorder(root):
+	if not root:
+		return None
+	elif not root.right and not root.left:
+		return [root.val]
+	else:
+		r = postorder(root.right)
+		l = postorder(root.left)
+		return l + r + [root.val]
+```

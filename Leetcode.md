@@ -3,7 +3,6 @@ Categories:
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
-[[Leetcode#9 Palindrome Number]]
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. 
@@ -305,6 +304,14 @@ def maxDepth(self, root: Optional[TreeNode]) -> int:
 
 **Runtime:** 32 ms : 84.59%
 **Memory Usage:** 14 MB : 13.42%
+
+#### 105. Construct Binary Tree from Preorder and Inorder Traversal
+Given two integer arrays `preorder` and `inorder` where `preorder` is the preorder traversal of a binary tree and `inorder` is the inorder traversal of the same tree, construct and return _the binary tree_.
+
+[Python Solution]([https://github.com/ConComp12/leetcode/blob/main/leetcode/tree/preorder_inorder.py](https://github.com/ConComp12/leetcode/blob/main/leetcode/tree/preorder_inorder.py))
+
+###### Recursive Solution (105)
+
 
 #### 110. Balanced Binary Tree
 [Problem Link](https://leetcode.com/problems/balanced-binary-tree/) 
