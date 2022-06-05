@@ -1,0 +1,109 @@
+{
+  "main": {
+    "id": "4418cacf04855aac",
+    "type": "split",
+    "children": [
+      {
+        "id": "bbc4051989a56253",
+        "type": "leaf",
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ae8418be3bff86a8",
+    "type": "split",
+    "children": [
+      {
+        "id": "3cc1e301d9a4b998",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "45b8079494006bc0",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "7bd8e37d6a1ea846",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9c6df290be099332",
+    "type": "split",
+    "children": [
+      {
+        "id": "943a07b9e17f1c30",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3f661060f15766e3",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "9599f823eea10f76",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "bbc4051989a56253",
+  "lastOpenFiles": [
+    "401 Intro to Algorithms.md",
+    "1000 late HTB.md",
+    "What is Deep Learning.md",
+    "Convolutional Neural Nets.md",
+    "123 Graphs and Trees.md",
+    "122 Counting and Probability.md",
+    "121 Number Theory and Cryptography.md",
+    "120 Sequences (Discrete Math).md",
+    "119 Sets.md",
+    "118 Relations and Functions.md"
+  ]
+}
