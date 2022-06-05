@@ -25,7 +25,7 @@ A file format that can store a multitude of files into a single file format. Sto
 ```
 
 #### .tar.gz / .gz
-Gzip `.gz` file compression. When combined with [[Files#tar|.tar]] we get the format `.tar.gz` which utilizes the format of both consolidation of multiple files into one and the compression algorithm of gzip.
+Gzip `.gz` file compression. When combined with [[File Types#tar|.tar]] we get the format `.tar.gz` which utilizes the format of both consolidation of multiple files into one and the compression algorithm of gzip.
 
 ###### .tar.gz / .gz Magic Bytes
 ``` hex

@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "402 Sorting and Traversal Algorithms.md",
-            "mode": "source",
+            "file": "What is Deep Learning.md",
+            "mode": "preview",
             "backlinks": false,
             "source": false
           }
@@ -20,98 +20,82 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a5734c9bb81e0690",
-    "type": "split",
+    "id": "d5909589a0063b12",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "b22aac23c5aed514",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6e841ebf9888d2e2",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            }
-          },
-          {
-            "id": "6a8f31c56d0d52de",
-            "type": "leaf",
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
+        "id": "c6c57f3b134bef16",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "bf1e768a684da276",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
           }
-        ]
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 291,
-    "collapsed": true
+    "currentTab": 0
   },
   "right": {
-    "id": "ac678028e54ab1b9",
-    "type": "split",
+    "id": "e370dc61b67eae4e",
+    "type": "mobile-drawer",
     "children": [
       {
-        "id": "9470d10f3fbff75b",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "6edd13d7922ac177",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "file": "402 Sorting and Traversal Algorithms.md",
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
-          },
-          {
-            "id": "9b99f56893706de1",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "file": "402 Sorting and Traversal Algorithms.md",
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              }
-            }
+        "id": "7a65121f6d76ef99",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "What is Deep Learning.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
           }
-        ]
+        }
+      },
+      {
+        "id": "f6911bb6e8a6c2e9",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "What is Deep Learning.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
       }
     ],
-    "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "currentTab": 0
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
-    "402 Sorting and Traversal Algorithms.md",
-    "404 Data Structures.md",
-    "403 Designing Algorithms.md",
-    "401 Intro to Algorithms.md",
-    "Leetcode.md",
-    "Excalidraw/Drawing 2022-05-13 16.31.07.excalidraw.md",
-    "Contest Algoithms.md",
-    "400 Computer Science.md",
-    "Late HTB.md",
-    "119 Sets.md"
+    "What is Deep Learning.md",
+    "Convolutional Neural Nets.md",
+    "123 Graphs and Trees.md",
+    "122 Counting and Probability.md",
+    "121 Number Theory and Cryptography.md",
+    "120 Sequences (Discrete Math).md",
+    "119 Sets.md",
+    "118 Relations and Functions.md",
+    "117 Proofs.md",
+    "112 Vector Functions.md"
   ]
 }
