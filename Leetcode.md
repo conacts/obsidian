@@ -3,6 +3,11 @@ Categories:
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
+| Number | Problem                               | Solution                                          | Time |
+| ------ | ------------------------------------- | ------------------------------------------------- | ---- |
+| 1      | [[Leetcode#1 Two Sum\|Two Sum]]       | [[Leetcode#Hashmap Solution 1\|Hashmap]]          | :30  |
+| 15     | [[Leetcode#15 Three Sum\|Three Sum]] | [[Leetcode#Two Pointer Solution 15\|Two Pointer]] | 2:28     |
+
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
 Given an array of integers `nums` and an integer `target`, return indices of the two numbers such that they add up to `target`. 
@@ -54,31 +59,27 @@ Given a signed 32-bit integer `x`, return `x` _with its digits reversed_. If 
 
 **Assume the environment does not allow you to store 64-bit integers (signed or unsigned).**
 
-###### Reverse String Implementation (7)
+###### Reverse String Solution (7)
 ``` python
 class Solution:
     def reverse(self, x: int) -> int:
-        if x < 0: 
-            x = str(x)
-            x = x[1:]
-            x = -int(x[::-1])
-            # minimum size of 32-bit int
-            if x < -2147483647:
-                return 0
-            else:
-                return x
-        else:
-            x = str(x)
-            x = int(x[::-1])
-		    # maximum size of 32-bit int
-            if x > 2147483647:
-                return 0
-            else:
-                return x
+        negative = False
+        if x < 0:
+            negative = True
+            x = -x
+            
+        x = str(x)[::-1]
+        x = int(x)
+        if negative:
+            x = -x
+            
+        if x > 2**31 - 1 or x < -2**31:
+            return 0
+        return x
 ```
 
-**Runtime:** 56 ms : 24.73%
-**Memory Usage:** 14 MB : 16.33%
+**Runtime:** 37 ms : 78.35%
+**Memory Usage:** 13.8 MB : 62.79%
 
 #### 9. Palindrome Number
 [Problem Link](https://leetcode.com/problems/palindrome-number/)
@@ -88,13 +89,13 @@ Given an integer `x`, return `true` if `x` is palindrome integer. An intege
 ``` python
 class Solution:
     def isPalindrome(self, x: int) -> bool:
-        s = str(x)
-        if s[0:] == s[::-1]:
+        if x < 0:
+            return False
+        elif str(x) == str(x)[::-1]:
             return True
-        return False
 ```
 
-**Runtime:** 76 ms : 64.64%
+**Runtime:** 90 ms : 47.22%
 **Memory Usage:** 14 MB : 16.59%
 
 ###### Floor and Mod Solution (9)
@@ -122,6 +123,7 @@ Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/sorting/threeSum.py)
 
 ###### Two Pointer Solution (15)
+Time: 2:28
 ``` python
 def threeSum(self, nums: List[int]) -> List[List[int]]:
     returnlist = []

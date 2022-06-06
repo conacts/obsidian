@@ -7,8 +7,13 @@
         "id": "bbc4051989a56253",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Leetcode.md",
+            "mode": "preview",
+            "backlinks": false,
+            "source": false
+          }
         }
       }
     ],
@@ -49,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9c6df290be099332",
@@ -65,6 +71,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Leetcode.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -81,6 +88,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Leetcode.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -95,6 +103,7 @@
   },
   "active": "bbc4051989a56253",
   "lastOpenFiles": [
+    "Leetcode.md",
     "401 Intro to Algorithms.md",
     "1000 late HTB.md",
     "What is Deep Learning.md",
@@ -103,7 +112,6 @@
     "122 Counting and Probability.md",
     "121 Number Theory and Cryptography.md",
     "120 Sequences (Discrete Math).md",
-    "119 Sets.md",
-    "118 Relations and Functions.md"
+    "119 Sets.md"
   ]
 }
