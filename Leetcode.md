@@ -3,10 +3,11 @@ Categories:
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
-| Number | Problem                               | Solution                                          | Time |
-| ------ | ------------------------------------- | ------------------------------------------------- | ---- |
-| 1      | [[Leetcode#1 Two Sum\|Two Sum]]       | [[Leetcode#Hashmap Solution 1\|Hashmap]]          | :30  |
-| 15     | [[Leetcode#15 Three Sum\|Three Sum]] | [[Leetcode#Two Pointer Solution 15\|Two Pointer]] | 2:28     |
+| Number | Problem                                                 | Solution                                          | Time |
+| ------ | ------------------------------------------------------- | ------------------------------------------------- | ---- |
+| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                         | [[Leetcode#Hashmap Solution 1\|Hashmap]]          | :30  |
+| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                    | [[Leetcode#Two Pointer Solution 15\|Two Pointer]] | 2:28 |
+| 217    | [[Leetcode#217 Contains Duplicate\|Contains Duplicate]] | [[Leetcode#Hashmap Solution (217)\|Hashmap]]                     | :26     |
 
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
@@ -183,6 +184,28 @@ class Solution:
 
 **Runtime:** 100 ms : 99.64%
 **Memory Usage:** 14 MB : 32.05%
+
+#### 49. Group Anagrams
+Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.
+
+An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+###### Hashmap / Ascii Solution (49)
+``` python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        res = defaultdict(list)
+        
+        for s in strs:
+            count = [0] * 26
+            
+            for c in s:
+                count[ord(c) - ord('a')] += 1
+            
+            res[tuple(count)].append(s)
+        
+        return res.values()
+```
 
 #### 70. Climbing Stairs
 [Problem Link](https://leetcode.com/problems/climbing-stairs/)
@@ -577,18 +600,35 @@ Your solution must use only constant extra space.
 
 ###### Two Pointer Solution (167)
 ``` python
-def twoSum(self, numbers: List[int], target: int) -> List[int]:
-    l = 0
-    r = len(numbers) - 1
-    while l != r:
-        t = numbers[r] + numbers[l]
-        if t == target:
-            return [l+1, r+1]
-        elif t > target:
-            r -= 1
-        elif t < target: 
-            l += 1
-    return
+class Solution:
+	def twoSum(self, numbers: List[int], target: int) -> List[int]:
+	    l = 0
+	    r = len(numbers) - 1
+	    while l != r:
+	        t = numbers[r] + numbers[l]
+	        if t == target:
+	            return [l+1, r+1]
+	        elif t > target:
+	            r -= 1
+	        elif t < target: 
+	            l += 1
+	    return
+```
+
+
+#### 217. Contains Duplicate
+Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.
+
+###### Hashmap Solution (217)
+``` python
+class Solution:
+    def containsDuplicate(self, nums: List[int]) -> bool:
+        d = {}
+        for i in range(len(nums)):
+            if nums[i] in d:
+                return True
+            d[nums[i]] = i
+        return False
 ```
 
 #### 226. Invert Binary Tree
@@ -607,6 +647,35 @@ def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         root.left = r
         root.right = l
         return root
+```
+
+#### 242. Valid Anagram
+Given two strings `s` and `t`, return `true` _if_ `t` _is an anagram of_ `s`_, and_ `false` _otherwise_.
+
+An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
+
+###### Hashmap Solution (242)
+``` python
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        if len(s) != len(t):
+            return False
+        d = {}
+        for i in s:
+            if i not in d:
+                d[i] = 1
+            else:
+                d[i] += 1
+                
+        for j in t:
+            if j not in d:
+                return False
+            if j in d:
+                if d[j] < 1:
+                    return False
+                else:
+                    d[j] -= 1
+        return True
 ```
 
 #### 268. Missing Number
