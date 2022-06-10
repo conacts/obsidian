@@ -194,18 +194,23 @@ An **Anagram** is a word or phrase formed by rearranging the letters of a diff
 ``` python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        res = defaultdict(list)
+        res = {}
         
         for s in strs:
-            count = [0] * 26
+            count = [0] * 26 # because only lowercase letters used
             
             for c in s:
                 count[ord(c) - ord('a')] += 1
             
+            if tuple(count) not in res:
+                res[tuple(count)] = []
             res[tuple(count)].append(s)
         
         return res.values()
 ```
+
+**Runtime:** 155 ms : 42.00%
+**Memory Usage:** 19.9 MB : 21.01%
 
 #### 70. Climbing Stairs
 [Problem Link](https://leetcode.com/problems/climbing-stairs/)
