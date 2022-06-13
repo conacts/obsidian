@@ -3,11 +3,20 @@ Categories:
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
-| Number | Problem                                                 | Solution                                          | Time |
-| ------ | ------------------------------------------------------- | ------------------------------------------------- | ---- |
-| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                         | [[Leetcode#Hashmap Solution 1\|Hashmap]]          | :30  |
-| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                    | [[Leetcode#Two Pointer Solution 15\|Two Pointer]] | 2:28 |
-| 217    | [[Leetcode#217 Contains Duplicate\|Contains Duplicate]] | [[Leetcode#Hashmap Solution (217)\|Hashmap]]                     | :26     |
+| Number | Problem                                                             | Solution                                                | Time |
+| ------ | ------------------------------------------------------------------- | ------------------------------------------------------- | ---- |
+| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                                     | [[Leetcode#Hashmap Solution 1\|Hashmap]]                | 0:30 |
+| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]       | 1:30 |
+| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]       | 1:45 |
+| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                      | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]] | 1:00 |
+| 94     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                      | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]] | 1:00 |
+| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]] | [[Leetcode#Depth-First Search Solution 94\|DFS]]        | 0:37 |
+| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                               | [[Leetcode#Depth-First Search Solution 100\|DFS]]       | 0:30 |
+| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]      | [[Leetcode#Recursive Solution 104\|DFS]]                | 0:35 |
+| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]         | [[Leetcode#Hashmap Solution 219\|Hashmap]]              |      |
+| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]             | [[Leetcode#Depth-First Search Solution 226\|DFS]]       | 0:26 |
+| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                       | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]   | 1:00 |
+| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]         | [[Leetcode#Depth-First Search Solution 700\|DFS]]       | 0:31 |
 
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
@@ -17,17 +26,23 @@ Given an array of integers `nums` and an integer `target`, return indices of
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/sorting/twoSum.cpp) 
 
 ###### Hashmap Solution (1)
+1. Create dictionary
+2. Iterate through the numbers
+3. See if the number you are looking for (target = 3 + ?)
+	1. If it is, return the list
+	2. Else, add that number to the dictionary
 ``` python
 def twoSum(self, nums: List[int], target: int) -> List[int]:
-    d = {}
-    for i in range(len(nums)):
-        look = target - nums[i]
-        if look in d:
+    d = {} # 1
+    for i in range(len(nums)): # 2
+        look = target - nums[i] # 3
+        if look in d: # 3.1
             return [i, d[look]]
-        d[nums[i]] = i
+        d[nums[i]] = i # 3.2
     return
 ```
 
+**Time:** 0:30
 **Runtime:** 74 ms : 74.03%
 **Memory Usage:** 15.2 MB : 49.53%
 
@@ -117,6 +132,13 @@ class Solution:
 **Runtime:** 66 ms : 80.18%
 **Memory Usage:** 13.9 MB : 16.59%
 
+#### 11. Container With Most Water
+You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `ith` line are `(i, 0)` and `(i, height[i])`.
+
+Find two lines that together with the x-axis form a container, such that the container contains the most water.
+
+Return _the maximum amount of water a container can store_.
+
 #### 15. Three Sum
 [Problem Link](https://leetcode.com/problems/3sum/) 
 Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k]]` such that `i != j`, `i != k`, and `j != k`, and `nums[i] + nums[j] + nums[k] == 0`.
@@ -124,17 +146,22 @@ Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/sorting/threeSum.py)
 
 ###### Two Pointer Solution (15)
-Time: 2:28
+1. Create a list 
+2. Sort list `nums`
+3. Iterate through list `nums`
+4. Create left and right pointers
+5. Using two pointers, increment `l` and decrement `r` until you find a proper answer
+6. If match found, increment `l` to avoid duplicate lists in `returnlist`
 ``` python
 def threeSum(self, nums: List[int]) -> List[List[int]]:
-    returnlist = []
-    nums.sort()
-    for i in range(len(nums)):
+    returnlist = [] # 1
+    nums.sort() # 2
+    for i in range(len(nums)): # 3
         if i > 0 and nums[i] == nums[i-1]:
             continue
-        l = i + 1
-        r = len(nums)-1
-        while l < r:
+        l = i + 1 # 4
+        r = len(nums)-1 # 4
+        while l < r: # 5
             ans = nums[i] + nums[l] + nums[r]
             if ans > 0:
                 r -= 1
@@ -143,11 +170,12 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
             else:
                 returnlist.append([nums[i], nums[l], nums[r]])
                 l += 1
-                while nums[l] == nums[l - 1] and l < r:
+                while nums[l] == nums[l - 1] and l < r: # 6
                     l += 1
     return returnlist
 ```
 
+**Time:** 2:28
 **Runtime:** 816 ms : 79.84%
 **Memory Usage:** 17.3 MB : 91.68%
 
@@ -158,30 +186,39 @@ Given an integer array `nums` of length `n` and an integer `target`, find t
 Return _the sum of the three integers_. You may assume that each input would have exactly one solution.
 
 ###### Two Pointer Solution (16)
+**Note:** Same as [[Leetcode#15 Three Sum|Three Sum]] but stores the closest answer
+
+1. Set the closest as the sum of the first the numbers in the array instead of setting it to infinity.
+2. Sort array `nums`
+3. Iterate through array `nums`
+	1. Skip the number `i` if it is equivalent to the previous number `i`
+4. Use two pointers within the iteration
+5. If the sum of `nums[i] + nums[l] + nums[r]` is closer than `closest`, assign closest equal to `nums[i] + nums[l] + nums[r]` 
 ``` python
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
-        
-        nums.sort()
-        closest = sum(nums[:3])
-        for i in range(len(nums)):
-            if i > 0 and nums[i] == nums[i-1]:
+        closest = sum(nums[:3]) # 1
+        nums.sort() # 2
+        for i in range(len(nums)): # 3
+            if i > 0 and nums[i] == nums[i-1]: # 3.1
                 continue
-            l = i + 1
-            r = len(nums)-1
-            while l < r:
-                ans = nums[i] + nums[l] + nums[r]
-                if ans > target:
-                    r -= 1
-                elif ans < target:
+            l = i + 1 # 4
+            r = len(nums)-1 # 4 
+            while l < r: # 4
+                s = nums[i] + nums[l] + nums[r] # 5
+                if abs(s - target) < abs(closest - target):
+                    closest = s
+                
+                if s < target:
                     l += 1
-                elif ans == target:
-                    return ans
-                if abs(target - ans) < abs(closest - target):
-                    closest = ans
+                elif s > target:
+                    r -= 1
+                else:
+                    return s
         return closest
 ```
 
+**Time:** 1:45
 **Runtime:** 100 ms : 99.64%
 **Memory Usage:** 14 MB : 32.05%
 
@@ -191,24 +228,30 @@ Given an array of strings `strs`, group **the anagrams** together. You can re
 An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
 ###### Hashmap / Ascii Solution (49)
+1. Create dictionary
+2. Create alphabet list
+3. Add characters to alphabet list
+4. Add word to dictionary using key "alphabet list"
+5. Return values
 ``` python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
-        res = {}
+        res = {} # 1
         
-        for s in strs:
-            count = [0] * 26 # because only lowercase letters used
+        for s in strs: # 2
+            count = [0] * 26 # 26 because only lowercase letters used
             
-            for c in s:
+            for c in s: # 3
                 count[ord(c) - ord('a')] += 1
             
-            if tuple(count) not in res:
+            if tuple(count) not in res: # 4
                 res[tuple(count)] = []
-            res[tuple(count)].append(s)
+            res[tuple(count)].append(s) 
         
-        return res.values()
+        return res.values() # 5
 ```
 
+**Time:** 1:00
 **Runtime:** 155 ms : 42.00%
 **Memory Usage:** 19.9 MB : 21.01%
 
@@ -248,6 +291,12 @@ Given the `root` of a binary tree, return _the inorder traversal of its nodes
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/binaryTreeInorderTraversal.py)
 
 ###### Depth-First Search Solution (94)
+1. Check if there is a root
+2. Check if the root has children, if it doesn't return `root.val`
+3. Else, return recursive items in this order
+	1. Traverse(root.left)
+	2. root.val
+	3. Traverse(root.right)
 ``` python
 class Solution:
 	def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
@@ -270,6 +319,10 @@ Given the roots of two binary trees `p` and `q`, write a function to check if
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/same_tree.cpp)
 
 ###### Depth-First Search Solution (100)
+1. See if the nodes are present
+2. See if the nodes values are not equal to disqualify
+3. Else, return a recursive function down the tree
+	1. SameTree(p.left, q.left) and SameTree(p.right, q.right)
 ``` python
 class Solution:
 	def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
@@ -281,6 +334,7 @@ class Solution:
 	        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 ```
 
+**Time:** 0:33
 **Runtime:** 28 ms : 94.82%
 **Memory Usage:** 14 MB : 30.18%
 
@@ -317,19 +371,23 @@ A binary tree's **maximum depth** is the number of nodes along the longest pat
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/max_depth_binary_tree.cpp)
 
 ###### Recursive Solution (104)
+1. If not root, depth of zero
+2. If root with no children, depth of 1
+3. Else, return 1 + the longest subtree fonud through recursion
 ``` python
-def maxDepth(self, root: Optional[TreeNode]) -> int:
-    if not root:
-        return 0
-    elif not root.left and not root.right:
-        return 1
-    else:
-        l = self.maxDepth(root.left)
-        r = self.maxDepth(root.right)
-        if r > l:
-            return 1 + r
+class Solution:
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        elif not root.right and not root.left:
+            return 1
         else:
-            return 1 + l
+            l = self.maxDepth(root.left)
+            r = self.maxDepth(root.right)
+            if r > l:
+                return 1 + r
+            else:
+                return 1 + l
 ```
 
 **Runtime:** 32 ms : 84.59%
@@ -408,9 +466,6 @@ Given a binary tree, populate each next pointer to point to its next right node.
 ###### Breadth-First Search Solution (117)
 This solution implements the [[404 Data Structures#Breadth-First Search Binary Search Tree|breadth-first search]] algorithm with the slight modification of the `prev` attribute. When you traverse the level, you assign `prev` to the previous node traversed on that level.
 
-**Runtime:** 88 ms : 20.30%
-**Memory Usage:** 15.4 MB : 11.63%
-
 ``` python
 class Solution:
     def connect(self, root: 'Node') -> 'Node':
@@ -457,6 +512,31 @@ def maxProfit(self, prices: List[int]) -> int:
     return maxPrice
 ```
 
+#### 125. Valid Palindrome
+A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
+
+Given a string `s`, return `true` _if it is a **palindrome**, or_ `false` _otherwise_.
+
+###### Two Pointer / Regex (125)
+1. Remove all characters that aren't letters or numbers
+2. Create two pointers
+3. Iterate through the new string until the two pointers meet
+	1. Set the character at the pointers locations to lowercase and compare to possibly return `False`
+4. Increment pointers
+5. If it completes, return `True`
+``` python
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        s = re.sub('[^A-Za-z0-9]+', '', s)
+        l = 0
+        r = len(s)-1
+        while l < r:
+            if s[l].lower() != s[r].lower():
+                return False
+            l += 1
+            r -= 1
+        return True
+```
 
 #### 129. Sum Root to Leaf Numbers
 [Problem Link](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
@@ -604,34 +684,71 @@ Your solution must use only constant extra space.
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/sorting/twoSum2.cpp)
 
 ###### Two Pointer Solution (167)
+1. Create left and right pointers
+2. Iterate through list using the two pointers (since list is sorted)
+3. If the numbers equal the target, return the pointer locations
 ``` python
 class Solution:
-	def twoSum(self, numbers: List[int], target: int) -> List[int]:
-	    l = 0
-	    r = len(numbers) - 1
-	    while l != r:
-	        t = numbers[r] + numbers[l]
-	        if t == target:
-	            return [l+1, r+1]
-	        elif t > target:
-	            r -= 1
-	        elif t < target: 
-	            l += 1
-	    return
+    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+        l = 0 # 1
+        r = len(numbers)-1 # 1
+        while l < r: # 2
+            s = numbers[l] + numbers[r]
+            if s < target:
+                l += 1
+            elif s > target:
+                r -= 1
+            else: # 3
+                return [l + 1, r + 1]
 ```
 
+**Time:** 0:40
+**Runtime:** 119 ms : 99.51%
+**Memory Usage:** 14.7 MB : 99.74%
 
 #### 217. Contains Duplicate
+[Problem Link](https://leetcode.com/problems/contains-duplicate/)
 Given an integer array `nums`, return `true` if any value appears **at least twice** in the array, and return `false` if every element is distinct.
 
 ###### Hashmap Solution (217)
+1. Create dictionary
+2. Iterate through list `nums` and add to dictionary
+	1. If item already in dictionary, return `True`
+	2. Else, return `False`
 ``` python
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         d = {}
+        for i in nums:
+            if i in d:
+                return True
+            d[i] = 0
+        return False
+```
+
+**Time:** 0:16
+**Runtime:** 684 ms : 29.35%
+**Memory Usage:** 26 MB : 71.73%
+
+#### 219. Contains Duplicate 2
+Given an integer array `nums` and an integer `k`, return `true` if there are two **distinct indices** `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
+
+**Note:** Basically means the number between two duplicate numbers cannot be greater than `k`
+
+###### Hashmap Solution (219)
+1. Create dictionary
+2. Iterate through list `nums`
+3. If num `i` is a duplicate and closer than k, return `True`
+4. Add num to dictionary
+5. If you never find a proper case, return `False`
+``` python
+class Solution:
+    def containsNearbyDuplicate(self, nums: List[int], k: int) -> bool:
+        d = {}
         for i in range(len(nums)):
             if nums[i] in d:
-                return True
+                if abs(d[nums[i]] - i) <= k:
+                    return True
             d[nums[i]] = i
         return False
 ```
@@ -644,44 +761,59 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/invert_binary_tree.cpp)
 
 ###### Depth-First Search Solution (226)
+1. If there is a `root`, then you are able to invert it
+2. Recursively find right subtree and left subtree
+3. Swap right and left subtrees
+4. Return modified root
 ``` python
 def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
-    if root:
-        r = self.invertTree(root.right)
-        l = self.invertTree(root.left)
-        root.left = r
-        root.right = l
-        return root
+    if root: # 1
+        r = self.invertTree(root.right) # 2
+        l = self.invertTree(root.left) # 2
+        root.left = r # 3
+        root.right = l # 3
+        return root # 4
 ```
+
+**Time:** 0:26
+**Runtime:** 48 ms : 37.92%
+**Memory Usage:** 13.9 MB : 11.08%
 
 #### 242. Valid Anagram
 Given two strings `s` and `t`, return `true` _if_ `t` _is an anagram of_ `s`_, and_ `false` _otherwise_.
 
 An **Anagram** is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-###### Hashmap Solution (242)
+###### Hashmap Comparison Solution (242)
+1. If the length of the two words are not the same, they cannot be anagrams
+2. Create dictionaries to map the characters in `s` and `t`
+3. Iterate through `s` and map the characters to the dictionary
+4. Iterate through `t` and map the characters to the dictionary
+5. Set the dictionaries equal to each other and return the answer
 ``` python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
-        if len(s) != len(t):
+        if len(s) != len(t): # 1
             return False
-        d = {}
-        for i in s:
+        d = {} # 2
+        d2 = {} # 2
+        for i in s: # 3
             if i not in d:
                 d[i] = 1
             else:
                 d[i] += 1
                 
-        for j in t:
-            if j not in d:
-                return False
-            if j in d:
-                if d[j] < 1:
-                    return False
-                else:
-                    d[j] -= 1
-        return True
+        for i in t: # 4
+            if i not in d2:
+                d2[i] = 1
+            else:
+                d2[i] += 1
+        return d2 == d # 5
 ```
+
+**Time:** 1:14
+**Runtime:** 69 ms : 51.33%
+**Memory Usage:** 14.5 MB : 65.83%
 
 #### 268. Missing Number
 [Problem Link](https://leetcode.com/problems/missing-number/)
@@ -711,6 +843,36 @@ def missingNumber(self, nums: List[int]) -> int:
     n = len(nums)
     return n * (n + 1) // 2 - sum(nums)
 ```
+
+#### 347. Top K Frequent Elements
+Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.
+
+###### Naive Hashmap Solution (347)
+``` python
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        d = {}
+        for i in nums:
+            if i not in d:
+                d[i] = 1
+            else:
+                d[i] += 1
+        
+        l = [[] for j in range(len(nums)+1)]
+        for key, value in d.items():
+            l[value].append(key)
+            
+        returnlist = []
+        kcount = 0
+        for i in reversed(range(len(l))):
+            for j in l[i]:
+                if kcount < k:
+                    returnlist.append(j)
+                    kcount += 1
+        return returnlist
+```
+
+###### Heap Hashmap Solution (347)
 
 #### 404. Sum of Left Leaves
 [Problem Link](https://leetcode.com/problems/sum-of-left-leaves/)
@@ -780,17 +942,24 @@ Find the node in the BST that the node's value equals `val` and return the sub
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/search_binary_tree.py)
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/search_binary_tree.cpp)
 
-
 ###### Depth-First Search Solution (700)
+1. If not root, return `None`
+2. If root equals target value, return root
+3. Recursively search both left and right subtrees
 ``` python
-def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
-    if not root:
-        return None
-    elif root.val == val:
-        return root
-    else:
-        return self.searchBST(root.right, val) or self.searchBST(root.left, val)
+class Solution:
+    def searchBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
+        if not root:
+            return None
+        elif root.val == val:
+            return root
+        else:
+            return self.searchBST(root.right, val) or self.searchBST(root.left, val)
 ```
+
+**Time:** 0:45
+**Runtime:** 102 ms : 21.51%
+**Memory Usage:** 16.6 MB : 17.89%
 
 #### 701. Insert into a Binary Search Tree
 [Problem Link](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
