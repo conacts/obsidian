@@ -3,20 +3,20 @@ Categories:
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
-| Number | Problem                                                             | Solution                                                | Time |
-| ------ | ------------------------------------------------------------------- | ------------------------------------------------------- | ---- |
-| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                                     | [[Leetcode#Hashmap Solution 1\|Hashmap]]                | 0:30 |
-| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]       | 1:30 |
-| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]       | 1:45 |
-| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                      | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]] | 1:00 |
-| 94     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                      | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]] | 1:00 |
-| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]] | [[Leetcode#Depth-First Search Solution 94\|DFS]]        | 0:37 |
-| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                               | [[Leetcode#Depth-First Search Solution 100\|DFS]]       | 0:30 |
-| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]      | [[Leetcode#Recursive Solution 104\|DFS]]                | 0:35 |
-| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]         | [[Leetcode#Hashmap Solution 219\|Hashmap]]              |      |
-| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]             | [[Leetcode#Depth-First Search Solution 226\|DFS]]       | 0:26 |
-| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                       | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]   | 1:00 |
-| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]         | [[Leetcode#Depth-First Search Solution 700\|DFS]]       | 0:31 |
+| Number | Problem                                                              | Solution                                                 | Time | Anki |
+| ------ | -------------------------------------------------------------------- | -------------------------------------------------------- | ---- | ---- |
+| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                                      | [[Leetcode#Hashmap Solution 1\|Hashmap]]                 | 0:30 | Y    |
+| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                 | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]        | 1:30 | Y     |
+| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                 | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]        | 1:45 | Y      |
+| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                       | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]]  | 1:00 |  Y    |
+| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]]  | [[Leetcode#Depth-First Search Solution 94\|DFS]]         | 0:37 | Y     |
+| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                                | [[Leetcode#Depth-First Search Solution 100\|DFS]]        | 0:30 |  Y    |
+| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]       | [[Leetcode#Recursive Solution 104\|DFS]]                 | 0:35 | Y     |
+| 121    | [[Leetcode#121 Best Time to Buy and Sell Stock\|Best Time To Stock]] | [[Leetcode#Sliding Window Solution 121\|Sliding Window]] |      |  Y    |
+| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]          | [[Leetcode#Hashmap Solution 219\|Hashmap]]               |      |  Y    |
+| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]              | [[Leetcode#Depth-First Search Solution 226\|DFS]]        | 0:26 |  Y    |
+| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                        | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]    | 1:00 | Y     |
+| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]          | [[Leetcode#Depth-First Search Solution 700\|DFS]]        | 0:31 | Y     |
 
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
@@ -42,7 +42,6 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
     return
 ```
 
-**Time:** 0:30
 **Runtime:** 74 ms : 74.03%
 **Memory Usage:** 15.2 MB : 49.53%
 
@@ -67,6 +66,33 @@ You may assume the two numbers do not contain any leading zero, except the numbe
             cur = cur.next
             carry = carry // 10
         return dummy.next
+```
+
+#### 3. Longest Substring Without Repeating Characters
+[Problem Link](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+Given a string `s`, find the length of the **longest substring** without repeating characters.
+
+###### Sliding Window Solution (3)
+1. Create a set `charset`, left pointer `l` and result `res`
+2. Iterate through the string `s`
+3. Use a while loop to incrementally delete the left pointer to reach the right pointer
+4. Add the element at the right pointer `s[r]` to the `charset`
+5. Check if the current or previous subset is the largest
+6. Return result `res`
+``` python
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        charset = set() # 1
+        l = 0 # 1
+        res = 0 # 1
+        
+        for r in range(len(s)): # 2
+            while s[r] in charset: # 3
+                charset.remove(s[l])
+                l += 1
+            charset.add(s[r]) # 4
+            res = max(res, r - l + 1) # 5
+        return res
 ```
 
 #### 7. Reverse Integer
@@ -133,11 +159,31 @@ class Solution:
 **Memory Usage:** 13.9 MB : 16.59%
 
 #### 11. Container With Most Water
+[Problem Link](https://leetcode.com/problems/container-with-most-water/) 
 You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `ith` line are `(i, 0)` and `(i, height[i])`.
 
 Find two lines that together with the x-axis form a container, such that the container contains the most water.
 
 Return _the maximum amount of water a container can store_.
+
+``` python
+class Solution:
+    def maxArea(self, height: List[int]) -> int:
+        l = 0
+        r = len(height)-1
+        res = 0
+        while l < r:
+            area = min(height[l], height[r])* (r - l)
+			res = max(res, area)
+            if height[l] < height[r]:
+                l += 1
+            else:
+                r -= 1
+        return res
+```
+
+**Runtime:** 936 ms : 65.25%
+**Memory Usage:** 27.4 MB : 54.60%
 
 #### 15. Three Sum
 [Problem Link](https://leetcode.com/problems/3sum/) 
@@ -175,7 +221,6 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
     return returnlist
 ```
 
-**Time:** 2:28
 **Runtime:** 816 ms : 79.84%
 **Memory Usage:** 17.3 MB : 91.68%
 
@@ -218,9 +263,80 @@ class Solution:
         return closest
 ```
 
-**Time:** 1:45
 **Runtime:** 100 ms : 99.64%
 **Memory Usage:** 14 MB : 32.05%
+
+#### 21. Merge Two Sorted Lists
+You are given the heads of two sorted linked lists `list1` and `list2`.
+
+Merge the two lists in a one **sorted** list. The list should be made by splicing together the nodes of the first two lists.
+
+Return _the head of the merged linked list_.
+
+###### Merging Solution (21)
+``` python
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        cur = dummy = ListNode()
+        while list1 and list2:               
+            if list1.val < list2.val:
+                cur.next = list1
+                tmp = list1
+                list1 = list1.next
+                cur = tmp
+            else:
+                cur.next = list2
+                tmp = list2
+                list2 = list2.next
+                cur = tmp
+                
+        if list1 or list2:
+            if list1:
+                cur.next = list1
+            else:
+                cur.next = list2
+            
+        return dummy.next
+```
+
+
+
+###### Naive Solution (21)
+``` python
+class Solution:
+    def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:
+        if not list1 and not list2:
+            return 
+        elif not list2:
+            cur = ListNode(list1.val)
+            list1 = list1.next
+        elif not list1:
+            cur = ListNode(list2.val)
+            list2 = list2.next
+        elif list1.val < list2.val:
+            cur = ListNode(list1.val)
+            list1 = list1.next
+        else:
+            cur = ListNode(list2.val)
+            list2 = list2.next
+        head = cur
+        while list1 or list2:
+            if not list2:
+                cur.next = ListNode(list1.val)
+                list1 = list1.next
+            elif not list1:
+                cur.next = ListNode(list2.val)
+                list2 = list2.next
+            else:
+                if list1.val < list2.val:
+                    cur.next = ListNode(list1.val)
+                    list1 = list1.next
+                else:
+                    cur.next = ListNode(list2.val)
+                    list2 = list2.next
+            cur = cur.next
+        return head
+```
 
 #### 49. Group Anagrams
 Given an array of strings `strs`, group **the anagrams** together. You can return the answer in **any order**.
@@ -283,6 +399,41 @@ class Solution:
 
 **Runtime:** 24 ms : 98.24%
 **Memory Usage:** 13.9 MB : 58.51%
+
+#### 74. Search a 2D Matrix
+[Problem Link](https://leetcode.com/problems/search-a-2d-matrix/)
+Write an efficient algorithm that searches for a value `target` in an `m x n` integer matrix `matrix`. This matrix has the following properties:
+
+-   Integers in each row are sorted from left to right.
+-   The first integer of each row is greater than the last integer of the previous row.
+
+``` python
+class Solution:
+	def searchMatrix(matrix, target: int) -> bool:
+	    lm = 0
+	    rm = len(matrix)-1
+	    while lm <= rm:
+	        mm = (rm + lm) // 2
+	        if matrix[mm][0] <= target and matrix[mm][len(matrix[mm])-1] >= target:
+	            la = 0
+	            ra = len(matrix[mm])-1
+	            while la <= ra:
+	                ma = (la + ra) // 2
+	                if matrix[mm][ma] < target:
+	                    la = ma + 1
+	                elif matrix[mm][ma] > target:
+	                    ra = ma - 1
+	                else:
+	                    return True
+	            return False
+	        elif matrix[mm][0] > target:
+	            rm = mm - 1
+	        else: 
+	            lm = mm + 1
+```
+
+**Runtime:** 44 ms : 89.24%
+**Memory Usage:** 14.4 MB : 13.32%
 
 #### 94. Binary Tree Inorder Traversal
 [Problem Link](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
@@ -499,18 +650,47 @@ You are given an array `prices` where `prices[i]` is the price of a given st
 
 ###### Kadane's Algorithm Solution (121)
 ``` python
-def maxProfit(self, prices: List[int]) -> int:
-    # Kadane's Algorithm
-    # Same problem as Max Subarray
-    maxPrice = 0
-    minPrice = prices[0]
-    for i in prices:
-        if i < minPrice:
-            minPrice = i
-        elif i - minPrice > maxPrice:
-            maxPrice = i - minPrice
-    return maxPrice
+class Solution:
+	def maxProfit(self, prices: List[int]) -> int:
+	    # Kadane's Algorithm
+	    # Same problem as Max Subarray
+	    maxPrice = 0
+	    minPrice = prices[0]
+	    for i in prices:
+	        if i < minPrice:
+	            minPrice = i
+	        elif i - minPrice > maxPrice:
+	            maxPrice = i - minPrice
+	    return maxPrice
 ```
+
+**Runtime:** 952 ms : 99.30%
+**Memory Usage:** 25.1 MB : 37.63%
+
+###### Sliding Window Solution (121)
+1. Initialize max `m`, left and right pointers `l` and `r`
+2. Iterate through prices while r hasn't reached the end
+3. If `prices[l] < prices[r]` then see if it is the new largest profit
+4. If `prices[l] > prices[r]` then `l = r` since you have checked every index between the two already
+5. Increment `r`
+``` python
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        l = 0 # 1
+        r = 1 # 1
+        m = 0 # 1
+        while r < len(prices): # 2
+            if prices[l] < prices[r]: # 3
+                profit = prices[r] - prices[l]
+                m = max(profit, m)
+            else: # 4
+                l = r
+            r += 1 # 5
+        return m
+```
+
+**Runtime:** 1083 ms : 91.49%
+**Memory Usage:** 25.1 MB : 37.63%
 
 #### 125. Valid Palindrome
 A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
@@ -702,9 +882,24 @@ class Solution:
                 return [l + 1, r + 1]
 ```
 
-**Time:** 0:40
 **Runtime:** 119 ms : 99.51%
 **Memory Usage:** 14.7 MB : 99.74%
+
+#### 206. Reverse Linked List
+Given the `head` of a singly linked list, reverse the list, and return _the reversed list_.
+
+###### Iterative Solution (206)
+``` python
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None
+        while head:
+            n = head.next
+            head.next = prev
+            prev = head
+            head = n
+        return prev
+```
 
 #### 217. Contains Duplicate
 [Problem Link](https://leetcode.com/problems/contains-duplicate/)
@@ -787,33 +982,26 @@ An **Anagram** is a word or phrase formed by rearranging the letters of a diff
 ###### Hashmap Comparison Solution (242)
 1. If the length of the two words are not the same, they cannot be anagrams
 2. Create dictionaries to map the characters in `s` and `t`
-3. Iterate through `s` and map the characters to the dictionary
-4. Iterate through `t` and map the characters to the dictionary
-5. Set the dictionaries equal to each other and return the answer
+3. Iterate through `s` and `t`, then map the characters to the dictionary
+4. Set the dictionaries equal to each other and return the answer
 ``` python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         if len(s) != len(t): # 1
             return False
-        d = {} # 2
+        d1 = {} # 2
         d2 = {} # 2
-        for i in s: # 3
-            if i not in d:
-                d[i] = 1
+        for i in range(len(s)): # 3
+            if s[i] not in d1:
+                d1[s[i]] = 1
             else:
-                d[i] += 1
-                
-        for i in t: # 4
-            if i not in d2:
-                d2[i] = 1
+                d1[s[i]] += 1
+            if t[i] not in d2:
+                d2[t[i]] = 1
             else:
-                d2[i] += 1
-        return d2 == d # 5
+                d2[t[i]] += 1
+        return d1 == d2 # 4
 ```
-
-**Time:** 1:14
-**Runtime:** 69 ms : 51.33%
-**Memory Usage:** 14.5 MB : 65.83%
 
 #### 268. Missing Number
 [Problem Link](https://leetcode.com/problems/missing-number/)
@@ -872,7 +1060,42 @@ class Solution:
         return returnlist
 ```
 
-###### Heap Hashmap Solution (347)
+
+#### 376. Wiggle Subsequence
+[Problem Link](https://leetcode.com/problems/wiggle-subsequence/) 
+A **wiggle sequence** is a sequence where the differences between successive numbers strictly alternate between positive and negative. The first difference (if one exists) may be either positive or negative. A sequence with one element and a sequence with two non-equal elements are trivially wiggle sequences.
+
+-   For example, `[1, 7, 4, 9, 2, 5]` is a **wiggle sequence** because the differences `(6, -3, 5, -7, 3)` alternate between positive and negative.
+-   In contrast, `[1, 4, 7, 2, 5]` and `[1, 7, 4, 5, 5]` are not wiggle sequences. The first is not because its first two differences are positive, and the second is not because its last difference is zero.
+
+A **subsequence** is obtained by deleting some elements (possibly zero) from the original sequence, leaving the remaining elements in their original order.
+
+Given an integer array `nums`, return _the length of the longest **wiggle subsequence** of_ `nums`.
+
+###### Dynamic Programming Solution (376)
+1. If non items in the list, there is no wiggle subsequence
+2. Initialize `up` to keep track of wiggle and `longest` to keep track of the subsequence 
+3. Iterate through the list nums starting from the first index (to check the previous index without errors)
+4. Compare the current number to the previous to check for "wiggle" using `wiggle` 
+5. Return `longest`
+``` python
+class Solution:
+    def wiggleMaxLength(self, nums: List[int]) -> int:
+        if not nums: # 1
+            return 0
+        
+        wiggle = None # 2
+        longest = 1 # 2
+        for i in range(1, len(nums)): # 3 
+            if nums[i] > nums[i-1] and wiggle != True: # 4
+                longest += 1
+                up = True
+            elif nums[i] < nums[i-1] and wiggle != False: # 4
+                longest += 1
+                up = False
+            
+        return longest
+```
 
 #### 404. Sum of Left Leaves
 [Problem Link](https://leetcode.com/problems/sum-of-left-leaves/)
@@ -957,7 +1180,6 @@ class Solution:
             return self.searchBST(root.right, val) or self.searchBST(root.left, val)
 ```
 
-**Time:** 0:45
 **Runtime:** 102 ms : 21.51%
 **Memory Usage:** 16.6 MB : 17.89%
 
@@ -981,6 +1203,39 @@ def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode
         root.left = self.insertIntoBST(root.left, val)
     return root
 ```
+
+#### 704. Binary Search
+[Problem Link](https://leetcode.com/problems/binary-search/)
+Given an array of integers `nums` which is sorted in ascending order, and an integer `target`, write a function to search `target` in `nums`. If `target` exists, then return its index. Otherwise, return `-1`.
+
+You must write an algorithm with `O(log n)` runtime complexity.
+
+###### Binary Search Solution (704)
+1. Create left and right pointers
+2. Use a while loop to ensure the two pointers don't cross over each other. `<=` because it is valid for binary search to shrink an odd array to one element, like `[3]`
+3. Find the middle of the array
+4. Shrink the array using the midpoint
+5. If the value of midpoint `m` equals the target, return the index `m`
+6. If values not found, return `-1` 
+``` python
+class Solution:
+    def search(self, nums: List[int], target: int) -> int:
+        l = 0 # 1
+        r = len(nums)-1
+        
+        while l <= r: # 2
+            m = (r + l) // 2 # 3
+            if nums[m] < target: # 4
+                l = m + 1
+            elif nums[m] > target: # 4
+                r = m - 1
+            else: # 5
+                return m
+        return -1 # 6
+```
+
+**Runtime:** 329 ms : 57.62%
+**Memory Usage:** 15.6 MB : 22.07%
 
 #### 1038. Binary Search Tree to Greater Sum Tree
 [Problem Link](https://leetcode.com/problems/convert-bst-to-greater-tree/)
@@ -1012,4 +1267,40 @@ def toGst(self, root):
     root.val = self.sum
     self.toGst(root.left)
     # no need to return since we are modifying the tree
+```
+
+#### 1465. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts
+You are given a rectangular cake of size `h x w` and two arrays of integers `horizontalCuts` and `verticalCuts` where:
+
+-   `horizontalCuts[i]` is the distance from the top of the rectangular cake to the `ith` horizontal cut and similarly, and
+-   `verticalCuts[j]` is the distance from the left of the rectangular cake to the `jth` vertical cut.
+
+Return _the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays_ `horizontalCuts` _and_ `verticalCuts`. Since the answer can be a large number, return this **modulo** `109 + 7`.
+
+1. Add edges of the cake to both cut arrays
+2. Sort the cut arrays
+3. Create `h` and `v` to store maximum height and width of each slice of cake
+4. Iterate through both sorted cut array to compare the current max vs the next adjacent cut
+5. Return the answer modulo $10^9 + 7$ as stated in the problem
+``` python
+    def maxArea(self, h: int, w: int, horizontalCuts: List[int], verticalCuts: List[int]) -> int:        
+
+        horizontalCuts.append(0) # 1
+        horizontalCuts.append(h) # 1
+        verticalCuts.append(0) # 1
+        verticalCuts.append(w) # 1
+        
+        horizontalCuts.sort() # 2
+        verticalCuts.sort() # 2
+        
+        h = 0 # 3
+        v = 0 # 3
+        
+        for i in range(1, len(horizontalCuts)): # 5
+            h = max(h, horizontalCuts[i] - horizontalCuts[i-1])
+            
+        for j in range(1, len(verticalCuts)): # 5
+            v = max(v, verticalCuts[j] - verticalCuts[j-1])
+        
+        return v * h % (10**9 + 7)
 ```
