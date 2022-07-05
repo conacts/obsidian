@@ -1,4 +1,4 @@
-DECK: obsidian-leetcode
+TARGET DECK: obsidian-leetcode
 
 Categories:
 [[402 Sorting and Traversal Algorithms|Sort]]
@@ -46,7 +46,16 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 ```
 
 ###### Anki (1)
+
+
 https://leetcode.com/problems/two-sum/ #flashcard 
+1. Create dictionary
+2. Iterate through the numbers
+3. See if the number you are looking for (target = 3 + ?)
+	1. If it is, return the list
+	2. Else, add that number to the dictionary
+<!--ID: 1657023743845-->
+
 
 
 #### 2. Add Two Numbers
