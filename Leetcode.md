@@ -1,3 +1,5 @@
+DECK: obsidian-leetcode
+
 Categories:
 [[402 Sorting and Traversal Algorithms|Sort]]
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
@@ -6,17 +8,18 @@ Categories:
 | Number | Problem                                                              | Solution                                                 | Time | Anki |
 | ------ | -------------------------------------------------------------------- | -------------------------------------------------------- | ---- | ---- |
 | 1      | [[Leetcode#1 Two Sum\|Two Sum]]                                      | [[Leetcode#Hashmap Solution 1\|Hashmap]]                 | 0:30 | Y    |
-| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                 | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]        | 1:30 | Y     |
-| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                 | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]        | 1:45 | Y      |
-| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                       | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]]  | 1:00 |  Y    |
-| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]]  | [[Leetcode#Depth-First Search Solution 94\|DFS]]         | 0:37 | Y     |
-| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                                | [[Leetcode#Depth-First Search Solution 100\|DFS]]        | 0:30 |  Y    |
-| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]       | [[Leetcode#Recursive Solution 104\|DFS]]                 | 0:35 | Y     |
-| 121    | [[Leetcode#121 Best Time to Buy and Sell Stock\|Best Time To Stock]] | [[Leetcode#Sliding Window Solution 121\|Sliding Window]] |      |  Y    |
-| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]          | [[Leetcode#Hashmap Solution 219\|Hashmap]]               |      |  Y    |
-| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]              | [[Leetcode#Depth-First Search Solution 226\|DFS]]        | 0:26 |  Y    |
-| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                        | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]    | 1:00 | Y     |
-| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]          | [[Leetcode#Depth-First Search Solution 700\|DFS]]        | 0:31 | Y     |
+| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                 | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]        | 1:30 | Y    |
+| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                 | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]        | 1:45 | Y    |
+| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                       | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]]  | 1:00 | Y    |
+| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]]  | [[Leetcode#Depth-First Search Solution 94\|DFS]]         | 0:37 | Y    |
+| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                                | [[Leetcode#Depth-First Search Solution 100\|DFS]]        | 0:30 | Y    |
+| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]       | [[Leetcode#Recursive Solution 104\|DFS]]                 | 0:35 | Y    |
+| 121    | [[Leetcode#121 Best Time to Buy and Sell Stock\|Best Time To Stock]] | [[Leetcode#Sliding Window Solution 121\|Sliding Window]] |      | Y    |
+| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]          | [[Leetcode#Hashmap Solution 219\|Hashmap]]               |      | Y    |
+| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]              | [[Leetcode#Depth-First Search Solution 226\|DFS]]        | 0:26 | Y    |
+| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                        | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]    | 1:00 | Y    |
+| 347    | [[Leetcode#347 Top K Frequent Elements\|Top K Frequent Elements]]    | [[Leetcode#Naive Hashmap Solution 347\|Hashmap]]         |  | Y    |
+| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]          | [[Leetcode#Depth-First Search Solution 700\|DFS]]        | 0:31 | Y    |
 
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
@@ -42,8 +45,9 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
     return
 ```
 
-**Runtime:** 74 ms : 74.03%
-**Memory Usage:** 15.2 MB : 49.53%
+###### Anki (1)
+https://leetcode.com/problems/two-sum/ #flashcard 
+
 
 #### 2. Add Two Numbers
 [Problem Link](https://leetcode.com/problems/add-two-numbers/)
@@ -263,8 +267,46 @@ class Solution:
         return closest
 ```
 
-**Runtime:** 100 ms : 99.64%
-**Memory Usage:** 14 MB : 32.05%
+
+#### 20. Valid Parentheses
+[Problem Link](https://leetcode.com/problems/valid-parentheses/)
+Given a string `s` containing just the characters `'('`, `')'`, `'{'`, `'}'`, `'['` and `']'`, determine if the input string is valid.
+
+An input string is valid if:
+1.  Open brackets must be closed by the same type of brackets.
+2.  Open brackets must be closed in the correct order.
+
+###### Stack Solution (20)
+1. See if the string is length of an odd number, making it impossible to make every bracket valid
+2. Initialize stack
+3. Initialize dictionary with proper mapping of opposite 
+4. Iterate through string and see if it is an opening or closing bracket
+	1. If it closing, check if it matches the last item on the stack
+	2. If it is opening, add it to the stack
+5. If the stack has remaining elements after reaching the end of the string `s`, return False
+6. If it has passed all test cases, return `True`
+``` python
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if len(s) % 2 == 1:
+            return False
+
+        stack = []
+        d = {'[':']', '(':')', '{':'}'}
+        for c in s:
+            if c not in d.keys():
+                if stack:
+                    test = d[stack.pop()]
+                    if test != c:
+                        return False
+                else:
+                    return False
+            else:
+                stack.append(c)
+        if stack:
+            return False
+        return True
+```
 
 #### 21. Merge Two Sorted Lists
 You are given the heads of two sorted linked lists `list1` and `list2`.
@@ -689,10 +731,8 @@ class Solution:
         return m
 ```
 
-**Runtime:** 1083 ms : 91.49%
-**Memory Usage:** 25.1 MB : 37.63%
-
 #### 125. Valid Palindrome
+[Problem Link](https://leetcode.com/problems/valid-palindrome/) 
 A phrase is a **palindrome** if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward. Alphanumeric characters include letters and numbers.
 
 Given a string `s`, return `true` _if it is a **palindrome**, or_ `false` _otherwise_.
@@ -882,10 +922,9 @@ class Solution:
                 return [l + 1, r + 1]
 ```
 
-**Runtime:** 119 ms : 99.51%
-**Memory Usage:** 14.7 MB : 99.74%
 
 #### 206. Reverse Linked List
+[Problem Link](https://leetcode.com/problems/reverse-linked-list/)
 Given the `head` of a singly linked list, reverse the list, and return _the reversed list_.
 
 ###### Iterative Solution (206)
@@ -926,6 +965,7 @@ class Solution:
 **Memory Usage:** 26 MB : 71.73%
 
 #### 219. Contains Duplicate 2
+[Problem Link](https://leetcode.com/problems/contains-duplicate-ii/) 
 Given an integer array `nums` and an integer `k`, return `true` if there are two **distinct indices** `i` and `j` in the array such that `nums[i] == nums[j]` and `abs(i - j) <= k`.
 
 **Note:** Basically means the number between two duplicate numbers cannot be greater than `k`
@@ -960,6 +1000,7 @@ Given the `root` of a binary tree, invert the tree, and return _its root_.
 2. Recursively find right subtree and left subtree
 3. Swap right and left subtrees
 4. Return modified root
+
 ``` python
 def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
     if root: # 1
@@ -970,9 +1011,36 @@ def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         return root # 4
 ```
 
-**Time:** 0:26
-**Runtime:** 48 ms : 37.92%
-**Memory Usage:** 13.9 MB : 11.08%
+#### 238. Product of Array Except Self
+[Problem Link](https://leetcode.com/problems/product-of-array-except-self/)
+Given an integer array `nums`, return _an array_ `answer` _such that_ `answer[i]` _is equal to the product of all the elements of_ `nums` _except_ `nums[i]`.
+
+The product of any prefix or suffix of `nums` is **guaranteed** to fit in a **32-bit** integer.
+
+You must write an algorithm that runs in `O(n)` time and without using the division operation.
+
+###### Prefix and Postfix Solution (238)
+1. Initialize a list full of 1's to store prefix values, then final answer
+2. PREFIX: Iterate through `nums`, increment prefix by the current `nums[i]` and store it in the return list `out`
+3. POSTFIX: Iterate through `nums`, increment postfix and multiply each item in the prefix array by the upcoming index in the newly generated postfix numbers
+4. Return answer list
+
+``` python
+class Solution:
+    def productExceptSelf(self, nums: List[int]) -> List[int]:
+        out = [1] * len(nums) # 1
+        prefix = 1
+        for i in range(len(nums)): # 2
+            out[i] = prefix
+            prefix *= nums[i]
+            
+        postfix = 1
+        for i in reversed(range(len(nums))): # 3
+            out[i] *= postfix
+            postfix *= nums[i]
+            
+        return out
+```
 
 #### 242. Valid Anagram
 Given two strings `s` and `t`, return `true` _if_ `t` _is an anagram of_ `s`_, and_ `false` _otherwise_.
@@ -984,6 +1052,7 @@ An **Anagram** is a word or phrase formed by rearranging the letters of a diff
 2. Create dictionaries to map the characters in `s` and `t`
 3. Iterate through `s` and `t`, then map the characters to the dictionary
 4. Set the dictionaries equal to each other and return the answer
+
 ``` python
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
@@ -1036,24 +1105,27 @@ def missingNumber(self, nums: List[int]) -> int:
 Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.
 
 ###### Naive Hashmap Solution (347)
+1. Populate a dictionary with the frequency of all items in list `nums`
+2. Create a list ordering items by frequency in which they appear
+3. Reverse the ordered list and iterate through each sub-list to append until you reach the desired `k` amount tracked with `kcount`
 ``` python
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
-        d = {}
+        d = {} # 1
         for i in nums:
             if i not in d:
                 d[i] = 1
             else:
                 d[i] += 1
         
-        l = [[] for j in range(len(nums)+1)]
+        key_list = [[] for j in range(len(nums)+1)] # 2
         for key, value in d.items():
-            l[value].append(key)
+            key_list[value].append(key)
             
         returnlist = []
         kcount = 0
-        for i in reversed(range(len(l))):
-            for j in l[i]:
+        for i in reversed(range(len(key_list))): # 3
+            for j in key_list[i]:
                 if kcount < k:
                     returnlist.append(j)
                     kcount += 1

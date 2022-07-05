@@ -1,10 +1,9 @@
 [
   "table-editor-obsidian",
-  "obsidian-to-anki-plugin",
   "obsidian-outliner",
   "better-word-count",
   "cycle-through-panes",
   "cm-editor-syntax-highlight-obsidian",
   "obsidian-admonition",
-  "obsidian-excalidraw-plugin"
+  "obsidian-to-anki-plugin"
 ]

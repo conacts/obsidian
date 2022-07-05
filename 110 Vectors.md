@@ -5,7 +5,7 @@ TARGET DECK: Calculus
 A vector determined by two points, the tail (start) P and head (end) Q. These two points form the vectors components, based on which planes it traverses giving it dimensions
 $$v=\overrightarrow{PQ}$$
 
-#### Compontents of a Vector:
+#### Components of a Vector:
 - The components of a vector can be broken down based on the dimensions in which it travels. 
 
 ##### Finding the components with two points
