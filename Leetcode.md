@@ -113,6 +113,7 @@ https://leetcode.com/problems/longest-substring-without-repeating-characters/ #f
 5. Check if the current or previous subset is the largest
 6. Return
 
+
 #### 7. Reverse Integer
 [Problem Link](https://leetcode.com/problems/reverse-integer/)
 Given a signed 32-bit integer `x`, return `x` _with its digits reversed_. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0`.
@@ -180,6 +181,7 @@ https://leetcode.com/problems/palindrome-number/ #flashcard
 	2. Then `x = x // 10` to decrement the input
 3. Compare the original to the flipped version, if they are equivalent return `True`, `original == flipped`
 
+
 #### 11. Container With Most Water
 [Problem Link](https://leetcode.com/problems/container-with-most-water/) 
 You are given an integer array `height` of length `n`. There are `n` vertical lines drawn such that the two endpoints of the `ith` line are `(i, 0)` and `(i, height[i])`.
@@ -219,6 +221,8 @@ https://leetcode.com/problems/container-with-most-water/ #flashcard
 	2. save the maximum area
 	3. move the pointer based on which pointer is shorter
 3. Return
+<!--ID: 1657047827430-->
+
 
 #### 15. Three Sum
 [Problem Link](https://leetcode.com/problems/3sum/) 
@@ -266,6 +270,8 @@ https://leetcode.com/problems/3sum/ #flashcard
 	2. While `l < r`, increment `l` and decrement `r` until you find a proper answer
 		1. If match found, increment `l` to avoid duplicate lists in `returnlist`
 4. Return
+<!--ID: 1657047827457-->
+
 
 #### 16. Three Sum Closest 
 [Problem Link](https://leetcode.com/problems/3sum-closest/)
@@ -316,6 +322,8 @@ https://leetcode.com/problems/3sum-closest/ #flashcard
 	2. Use two pointers within the iteration
 	3. If the sum of `nums[i] + nums[l] + nums[r]` is closer than `closest`, assign closest equal to `nums[i] + nums[l] + nums[r]` 
 4. Return
+<!--ID: 1657047827463-->
+
 
 #### 20. Valid Parentheses
 [Problem Link](https://leetcode.com/problems/valid-parentheses/)
@@ -367,6 +375,8 @@ https://leetcode.com/problems/valid-parentheses/ #flashcard
 	2. If it is opening, add it to the stack
 5. If the stack has remaining elements after reaching the end of the string `s`, return False
 6. If it has passed all test cases, return `True`
+<!--ID: 1657047827467-->
+
 
 
 #### 21. Merge Two Sorted Lists
@@ -475,6 +485,8 @@ https://leetcode.com/problems/group-anagrams/ #flashcard
 3. Add characters to alphabet list
 4. Add word to dictionary using key "alphabet list"
 5. Return
+<!--ID: 1657047827470-->
+
 
 
 #### 70. Climbing Stairs
@@ -546,6 +558,8 @@ https://leetcode.com/problems/search-a-2d-matrix/ #flashcard
 2. Use binary search to locate the array which would contain the desired element
 3. Use binary search on this array to check if the target element is present
 4. Return true/false based on if target element is found
+<!--ID: 1657047827473-->
+
 
 #### 94. Binary Tree Inorder Traversal
 [Problem Link](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
@@ -579,6 +593,8 @@ https://leetcode.com/problems/binary-tree-inorder-traversal/ #flashcard
 	1. Traverse(root.left)
 	2. root.val
 	3. Traverse(root.right)
+<!--ID: 1657047827476-->
+
 
 #### 100. Same Tree
 [Problem Link](https://leetcode.com/problems/same-tree/) 
@@ -609,6 +625,8 @@ https://leetcode.com/problems/same-tree/ #flashcard
 2. See if the nodes values are not equal to disqualify
 3. Else, return a recursive function down the tree
 	1. SameTree(p.left, q.left) and SameTree(p.right, q.right)
+<!--ID: 1657047827479-->
+
 
 #### 101. Symmetric Tree
 [Problem Link](https://leetcode.com/problems/symmetric-tree/)
@@ -638,6 +656,8 @@ https://leetcode.com/problems/symmetric-tree/ #flashcard
 1. Create a new function to accept left and right branches of a root
 	1. Check if both branches are present, otherwise return false
 	2. Otherwise check if the two branches are the same and return the recursive versions of the proper branches
+<!--ID: 1657047827482-->
+
 
 
 #### 104. Maximum Depth of Binary Tree 
@@ -674,6 +694,8 @@ https://leetcode.com/problems/maximum-depth-of-binary-tree/ #flashcard
 1. If not root, depth of zero
 2. If root with no children, depth of 1
 3. Else, return 1 + the longest subtree fonud through recursion
+<!--ID: 1657047827484-->
+
 
 #### 110. Balanced Binary Tree
 [Problem Link](https://leetcode.com/problems/balanced-binary-tree/) 
@@ -715,6 +737,8 @@ https://leetcode.com/problems/balanced-binary-tree/ #flashcard
 	2. Create recursive left and right subtrees
 	3. Check if either tree is equal to -1 (indicating there is imbalance)
 	4. If not, return 1 + the max of left and right subtrees
+<!--ID: 1657047827488-->
+
 
 #### 111. Minimum Depth of Binary Tree
 [Problem Link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
@@ -751,6 +775,8 @@ https://leetcode.com/problems/minimum-depth-of-binary-tree/ #flashcard
 2. Create variables to store both recursive right and left subtrees
 3. If the tree is missing one branch, use the longest branch to find the minimum depth still
 4. Else, return 1 + minimum of right and left subtrees
+<!--ID: 1657047827492-->
+
 
 #### 117. Populating Next Right Pointers in Each Node 2
 [Problem Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) 
@@ -832,6 +858,8 @@ https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ #flashcard
 3. If `prices[l] < prices[r]` then see if it is the new largest profit
 4. If `prices[l] > prices[r]` then `l = r` since you have checked every index between the two already
 5. Increment `r`
+<!--ID: 1657047827495-->
+
 
 #### 125. Valid Palindrome
 [Problem Link](https://leetcode.com/problems/valid-palindrome/) 
@@ -868,6 +896,8 @@ https://leetcode.com/problems/valid-palindrome/ #flashcard
 	1. Set the character at the pointers locations to lowercase and compare to possibly return `False`
 4. Increment pointers
 5. If it completes, return `True`
+<!--ID: 1657047827499-->
+
 
 #### 129. Sum Root to Leaf Numbers
 [Problem Link](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
@@ -1038,6 +1068,8 @@ https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ #flashcard
 1. Create left and right pointers
 2. Iterate through list using the two pointers (since list is sorted)
 3. If the numbers equal the target, return the pointer locations
+<!--ID: 1657047827503-->
+
 
 #### 206. Reverse Linked List
 [Problem Link](https://leetcode.com/problems/reverse-linked-list/)
@@ -1070,6 +1102,8 @@ https://leetcode.com/problems/reverse-linked-list/ #flashcard
 	2. Set the next head to pointer prev
 	3. increment prev=head and head=head.next (tmp)
 3. Return pointer prev
+<!--ID: 1657047827508-->
+
 
 #### 217. Contains Duplicate
 [Problem Link](https://leetcode.com/problems/contains-duplicate/)
@@ -1091,9 +1125,14 @@ class Solution:
         return False
 ```
 
-**Time:** 0:16
-**Runtime:** 684 ms : 29.35%
-**Memory Usage:** 26 MB : 71.73%
+###### Anki (217)
+https://leetcode.com/problems/contains-duplicate/ #flashcard 
+1. Create dictionary
+2. Iterate through list `nums` and add to dictionary
+	1. If item already in dictionary, return `True`
+	2. Else, return `False`
+
+
 
 #### 219. Contains Duplicate 2
 [Problem Link](https://leetcode.com/problems/contains-duplicate-ii/) 
@@ -1119,6 +1158,15 @@ class Solution:
         return False
 ```
 
+###### Anki (219)
+https://leetcode.com/problems/contains-duplicate-ii/ #flashcard 
+1. Create dictionary
+2. Iterate through list `nums`
+3. If num `i` is a duplicate and closer than k, return `True`
+4. Add num to dictionary
+5. If you never find a proper case, return `False`
+
+
 #### 226. Invert Binary Tree
 [Problem Link](https://leetcode.com/problems/invert-binary-tree/)
 Given the `root` of a binary tree, invert the tree, and return _its root_.
@@ -1141,6 +1189,14 @@ def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
         root.right = l # 3
         return root # 4
 ```
+
+###### Anki (226)
+https://leetcode.com/problems/invert-binary-tree/ #flashcard 
+1. If there is a `root`, then you are able to invert it
+2. Recursively find right subtree and left subtree
+3. Swap right and left subtrees
+4. Return modified root
+
 
 #### 238. Product of Array Except Self
 [Problem Link](https://leetcode.com/problems/product-of-array-except-self/)
@@ -1179,6 +1235,8 @@ https://leetcode.com/problems/product-of-array-except-self/ #flashcard
 2. PREFIX: Iterate through `nums`, increment prefix by the current `nums[i]` and store it in the return list `out`
 3. POSTFIX: Iterate through `nums`, increment postfix and multiply each item in the prefix array by the upcoming index in the newly generated postfix numbers
 4. Return answer list
+<!--ID: 1657047827514-->
+
 
 #### 242. Valid Anagram
 Given two strings `s` and `t`, return `true` _if_ `t` _is an anagram of_ `s`_, and_ `false` _otherwise_.
@@ -1209,6 +1267,13 @@ class Solution:
                 d2[t[i]] += 1
         return d1 == d2 # 4
 ```
+
+###### Anki (242)
+https://leetcode.com/problems/valid-anagram/ #flashcard 
+1. If the length of the two words are not the same, they cannot be anagrams
+2. Create dictionaries to map the characters in `s` and `t`
+3. Iterate through `s` and `t`, then map the characters to the dictionary
+4. Set the dictionaries equal to each other and return the answer
 
 #### 268. Missing Number
 [Problem Link](https://leetcode.com/problems/missing-number/)
@@ -1244,6 +1309,8 @@ Using [[272 Computer Components#XOR Gate|XOR]] we can find the missing bit
 	1. solution = XOR of solution and index + 1
 	2. solution = XOR of solution and nums[i]
 3. Return
+<!--ID: 1657047827518-->
+
 
 #### 347. Top K Frequent Elements
 Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.
@@ -1312,6 +1379,14 @@ class Solution:
             
         return longest
 ```
+
+###### Anki (376)
+https://leetcode.com/problems/wiggle-subsequence/ #flashcard 
+1. If non items in the list, there is no wiggle subsequence
+2. Initialize `up` to keep track of wiggle and `longest` to keep track of the subsequence 
+3. Iterate through the list nums starting from the first index (to check the previous index without errors)
+4. Compare the current number to the previous to check for "wiggle" using `wiggle` 
+5. Return `longest`
 
 #### 404. Sum of Left Leaves
 [Problem Link](https://leetcode.com/problems/sum-of-left-leaves/)
@@ -1396,8 +1471,12 @@ class Solution:
             return self.searchBST(root.right, val) or self.searchBST(root.left, val)
 ```
 
-**Runtime:** 102 ms : 21.51%
-**Memory Usage:** 16.6 MB : 17.89%
+###### Anki (700)
+https://leetcode.com/problems/search-in-a-binary-search-tree/ #flashcard 
+1. If not root, return `None`
+2. If root equals target value, return root
+3. Recursively search both left and right subtrees
+
 
 #### 701. Insert into a Binary Search Tree
 [Problem Link](https://leetcode.com/problems/insert-into-a-binary-search-tree/)
@@ -1450,8 +1529,15 @@ class Solution:
         return -1 # 6
 ```
 
-**Runtime:** 329 ms : 57.62%
-**Memory Usage:** 15.6 MB : 22.07%
+###### Anki (704)
+https://leetcode.com/problems/binary-search/ #flashcard 
+1. Create left and right pointers
+2. Use a while loop to ensure the two pointers don't cross over each other. `<=` because it is valid for binary search to shrink an odd array to one element, like `[3]`
+3. Find the middle of the array
+4. Shrink the array using the midpoint
+5. If the value of midpoint `m` equals the target, return the index `m`
+6. If values not found, return `-1` 
+
 
 #### 1038. Binary Search Tree to Greater Sum Tree
 [Problem Link](https://leetcode.com/problems/convert-bst-to-greater-tree/)
@@ -1520,3 +1606,11 @@ Return _the maximum area of a piece of cake after you cut at each horizontal an
         
         return v * h % (10**9 + 7)
 ```
+
+###### Anki (1465)
+https://leetcode.com/problems/maximum-area-of-a-piece-of-cake-after-horizontal-and-vertical-cuts/ #flashcard 
+1. Add edges of the cake to both cut arrays
+2. Sort the cut arrays
+3. Create `h` and `v` to store maximum height and width of each slice of cake
+4. Iterate through both sorted cut array to compare the current max vs the next adjacent cut
+5. Return the answer modulo $10^9 + 7$ as stated in the problem
