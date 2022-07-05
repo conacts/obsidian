@@ -4,7 +4,7 @@
     "type": "split",
     "children": [
       {
-        "id": "210223b316f69b02",
+        "id": "7e9a6cc5470b3f5a",
         "type": "leaf",
         "state": {
           "type": "markdown",
@@ -54,7 +54,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "9c6df290be099332",
@@ -100,17 +101,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "210223b316f69b02",
+  "active": "7e9a6cc5470b3f5a",
   "lastOpenFiles": [
     "Leetcode.md",
     "110 Vectors.md",
-    "Untitled.md",
-    "115 Line and Surface Integrals.md",
-    "116 Propositional Logic.md",
-    "401 Intro to Algorithms.md",
-    "1000 late HTB.md",
-    "What is Deep Learning.md",
-    "Convolutional Neural Nets.md",
-    "123 Graphs and Trees.md"
+    "112 Vector Functions.md",
+    "262 Loss Function and Optimizers.md",
+    "261 Backpropagation.md",
+    "260 Neural Networks.md",
+    "124 Fundamental Theorems of Vector Analysis.md",
+    "263 Hyper Parameters.md",
+    "272 Computer Components.md",
+    "400 Computer Science.md"
   ]
 }

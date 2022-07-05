@@ -46,8 +46,6 @@ def twoSum(self, nums: List[int], target: int) -> List[int]:
 ```
 
 ###### Anki (1)
-
-
 https://leetcode.com/problems/two-sum/ #flashcard 
 1. Create dictionary
 2. Iterate through the numbers
@@ -55,8 +53,6 @@ https://leetcode.com/problems/two-sum/ #flashcard
 	1. If it is, return the list
 	2. Else, add that number to the dictionary
 <!--ID: 1657023743845-->
-
-
 
 #### 2. Add Two Numbers
 [Problem Link](https://leetcode.com/problems/add-two-numbers/)
@@ -108,6 +104,15 @@ class Solution:
         return res
 ```
 
+###### Anki (3)
+https://leetcode.com/problems/longest-substring-without-repeating-characters/ #flashcard 
+1. Create a set `charset`, left pointer `l` and result `res`
+2. Iterate through the string `s`
+3. Use a while loop to incrementally delete the left pointer to reach the right pointer
+4. Add the element at the right pointer `s[r]` to the `charset`
+5. Check if the current or previous subset is the largest
+6. Return result `res`
+
 #### 7. Reverse Integer
 [Problem Link](https://leetcode.com/problems/reverse-integer/)
 Given a signed 32-bit integer `x`, return `x` _with its digits reversed_. If reversing `x` causes the value to go outside the signed 32-bit integer range `[-2^31, 2^31 - 1]`, then return `0`.
@@ -133,9 +138,6 @@ class Solution:
         return x
 ```
 
-**Runtime:** 37 ms : 78.35%
-**Memory Usage:** 13.8 MB : 62.79%
-
 #### 9. Palindrome Number
 [Problem Link](https://leetcode.com/problems/palindrome-number/)
 Given an integer `x`, return `true` if `x` is palindrome integer. An integer is a **palindrome** when it reads the same backward as forward
@@ -150,10 +152,12 @@ class Solution:
             return True
 ```
 
-**Runtime:** 90 ms : 47.22%
-**Memory Usage:** 14 MB : 16.59%
-
 ###### Floor and Mod Solution (9)
+1. Check if int `x` is less than 0 as negative number cannot be palindromes
+2. Create a loop while `x > 0`
+	1. Multiply the return value by 10 and add `mod 10` of the number to be flipped
+	2. Then `x = x // 10` to decrement the input
+3. Compare the original to the flipped version, if they are equivalent return `True`, `original == flipped`
 ``` python
 class Solution:
     def isPalindrome(self, x: int) -> bool:		
@@ -168,8 +172,13 @@ class Solution:
         return new == original
 ```
 
-**Runtime:** 66 ms : 80.18%
-**Memory Usage:** 13.9 MB : 16.59%
+###### Anki (9)
+https://leetcode.com/problems/palindrome-number/ #flashcard 
+1. Check if int `x` is less than 0 as negative number cannot be palindromes
+2. Create a loop while `x > 0`
+	1. Multiply the return value by 10 and add `mod 10` of the number to be flipped
+	2. Then `x = x // 10` to decrement the input
+3. Compare the original to the flipped version, if they are equivalent return `True`, `original == flipped`
 
 #### 11. Container With Most Water
 [Problem Link](https://leetcode.com/problems/container-with-most-water/) 
@@ -195,8 +204,8 @@ class Solution:
         return res
 ```
 
-**Runtime:** 936 ms : 65.25%
-**Memory Usage:** 27.4 MB : 54.60%
+###### Anki (11)
+
 
 #### 15. Three Sum
 [Problem Link](https://leetcode.com/problems/3sum/) 
@@ -234,8 +243,7 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
     return returnlist
 ```
 
-**Runtime:** 816 ms : 79.84%
-**Memory Usage:** 17.3 MB : 91.68%
+###### Anki (15)
 
 #### 16. Three Sum Closest 
 [Problem Link](https://leetcode.com/problems/3sum-closest/)
@@ -276,6 +284,7 @@ class Solution:
         return closest
 ```
 
+###### Anki (16)
 
 #### 20. Valid Parentheses
 [Problem Link](https://leetcode.com/problems/valid-parentheses/)
@@ -316,6 +325,11 @@ class Solution:
             return False
         return True
 ```
+
+###### Anki (20)
+
+
+
 
 #### 21. Merge Two Sorted Lists
 You are given the heads of two sorted linked lists `list1` and `list2`.
