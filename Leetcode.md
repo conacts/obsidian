@@ -111,7 +111,7 @@ https://leetcode.com/problems/longest-substring-without-repeating-characters/ #f
 3. Use a while loop to incrementally delete the left pointer to reach the right pointer
 4. Add the element at the right pointer `s[r]` to the `charset`
 5. Check if the current or previous subset is the largest
-6. Return result `res`
+6. Return
 
 #### 7. Reverse Integer
 [Problem Link](https://leetcode.com/problems/reverse-integer/)
@@ -188,24 +188,37 @@ Find two lines that together with the x-axis form a container, such that the con
 
 Return _the maximum amount of water a container can store_.
 
+###### Two Pointer Solution (11)
+1. Initialize out, left pointer at 0, and right pointer at the end of input array
+2. Iterate through list while `l < r`
+	1. calculate the area of the current contained area
+	2. save the maximum area
+	3. move the pointer based on which pointer is shorter
+3. Return
 ``` python
 class Solution:
     def maxArea(self, height: List[int]) -> int:
         l = 0
         r = len(height)-1
-        res = 0
+        out = 0
         while l < r:
             area = min(height[l], height[r])* (r - l)
-			res = max(res, area)
+			out = max(out, area)
             if height[l] < height[r]:
                 l += 1
             else:
                 r -= 1
-        return res
+        return out
 ```
 
 ###### Anki (11)
-
+https://leetcode.com/problems/container-with-most-water/ #flashcard 
+1. Initialize out, left pointer at 0, and right pointer at the end of input array
+2. Iterate through list while `l < r`
+	1. calculate the area of the current contained area
+	2. save the maximum area
+	3. move the pointer based on which pointer is shorter
+3. Return
 
 #### 15. Three Sum
 [Problem Link](https://leetcode.com/problems/3sum/) 
@@ -217,9 +230,10 @@ Given an integer array nums, return all the triplets `[nums[i], nums[j], nums[k
 1. Create a list 
 2. Sort list `nums`
 3. Iterate through list `nums`
-4. Create left and right pointers
-5. Using two pointers, increment `l` and decrement `r` until you find a proper answer
-6. If match found, increment `l` to avoid duplicate lists in `returnlist`
+	1. Create left and right pointers
+	2. While `l < r`, increment `l` and decrement `r` until you find a proper answer
+		1. If match found, increment `l` to avoid duplicate lists in `returnlist`
+4. Return
 ``` python
 def threeSum(self, nums: List[int]) -> List[List[int]]:
     returnlist = [] # 1
@@ -244,6 +258,14 @@ def threeSum(self, nums: List[int]) -> List[List[int]]:
 ```
 
 ###### Anki (15)
+https://leetcode.com/problems/3sum/ #flashcard 
+1. Create a list 
+2. Sort list `nums`
+3. Iterate through list `nums`
+	1. Create left and right pointers
+	2. While `l < r`, increment `l` and decrement `r` until you find a proper answer
+		1. If match found, increment `l` to avoid duplicate lists in `returnlist`
+4. Return
 
 #### 16. Three Sum Closest 
 [Problem Link](https://leetcode.com/problems/3sum-closest/)
@@ -258,8 +280,9 @@ Return _the sum of the three integers_. You may assume that each input would ha
 2. Sort array `nums`
 3. Iterate through array `nums`
 	1. Skip the number `i` if it is equivalent to the previous number `i`
-4. Use two pointers within the iteration
-5. If the sum of `nums[i] + nums[l] + nums[r]` is closer than `closest`, assign closest equal to `nums[i] + nums[l] + nums[r]` 
+	2. Use two pointers within the iteration
+	3. If the sum of `nums[i] + nums[l] + nums[r]` is closer than `closest`, assign closest equal to `nums[i] + nums[l] + nums[r]` 
+4. Return
 ``` python
 class Solution:
     def threeSumClosest(self, nums: List[int], target: int) -> int:
@@ -285,6 +308,14 @@ class Solution:
 ```
 
 ###### Anki (16)
+https://leetcode.com/problems/3sum-closest/ #flashcard 
+1. Set the closest as the sum of the first the numbers in the array instead of setting it to infinity.
+2. Sort array `nums`
+3. Iterate through array `nums`
+	1. Skip the number `i` if it is equivalent to the previous number `i`
+	2. Use two pointers within the iteration
+	3. If the sum of `nums[i] + nums[l] + nums[r]` is closer than `closest`, assign closest equal to `nums[i] + nums[l] + nums[r]` 
+4. Return
 
 #### 20. Valid Parentheses
 [Problem Link](https://leetcode.com/problems/valid-parentheses/)
@@ -327,8 +358,15 @@ class Solution:
 ```
 
 ###### Anki (20)
-
-
+https://leetcode.com/problems/valid-parentheses/ #flashcard 
+1. See if the string is length of an odd number, making it impossible to make every bracket valid
+2. Initialize stack
+3. Initialize dictionary with proper mapping of opposite 
+4. Iterate through string and see if it is an opening or closing bracket
+	1. If it closing, check if it matches the last item on the stack
+	2. If it is opening, add it to the stack
+5. If the stack has remaining elements after reaching the end of the string `s`, return False
+6. If it has passed all test cases, return `True`
 
 
 #### 21. Merge Two Sorted Lists
@@ -363,8 +401,6 @@ class Solution:
             
         return dummy.next
 ```
-
-
 
 ###### Naive Solution (21)
 ``` python
@@ -413,7 +449,7 @@ An **Anagram** is a word or phrase formed by rearranging the letters of a diff
 2. Create alphabet list
 3. Add characters to alphabet list
 4. Add word to dictionary using key "alphabet list"
-5. Return values
+5. Return 
 ``` python
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
@@ -432,9 +468,14 @@ class Solution:
         return res.values() # 5
 ```
 
-**Time:** 1:00
-**Runtime:** 155 ms : 42.00%
-**Memory Usage:** 19.9 MB : 21.01%
+###### Anki (49)
+https://leetcode.com/problems/group-anagrams/ #flashcard 
+1. Create dictionary
+2. Create alphabet list
+3. Add characters to alphabet list
+4. Add word to dictionary using key "alphabet list"
+5. Return
+
 
 #### 70. Climbing Stairs
 [Problem Link](https://leetcode.com/problems/climbing-stairs/)
@@ -462,9 +503,6 @@ class Solution:
 	        return s
 ```
 
-**Runtime:** 24 ms : 98.24%
-**Memory Usage:** 13.9 MB : 58.51%
-
 #### 74. Search a 2D Matrix
 [Problem Link](https://leetcode.com/problems/search-a-2d-matrix/)
 Write an efficient algorithm that searches for a value `target` in an `m x n` integer matrix `matrix`. This matrix has the following properties:
@@ -472,6 +510,11 @@ Write an efficient algorithm that searches for a value `target` in an `m x n`
 -   Integers in each row are sorted from left to right.
 -   The first integer of each row is greater than the last integer of the previous row.
 
+###### Binary Search Solution (74)
+1. Create left (0) and right matrix pointers (len(matrix)-1)
+2. Use binary search to locate the array which would contain the desired element
+3. Use binary search on this array to check if the target element is present
+4. Return true/false based on if target element is found
 ``` python
 class Solution:
 	def searchMatrix(matrix, target: int) -> bool:
@@ -497,8 +540,12 @@ class Solution:
 	            lm = mm + 1
 ```
 
-**Runtime:** 44 ms : 89.24%
-**Memory Usage:** 14.4 MB : 13.32%
+###### Anki (74)
+https://leetcode.com/problems/search-a-2d-matrix/ #flashcard 
+1. Create left (0) and right matrix pointers (len(matrix)-1)
+2. Use binary search to locate the array which would contain the desired element
+3. Use binary search on this array to check if the target element is present
+4. Return true/false based on if target element is found
 
 #### 94. Binary Tree Inorder Traversal
 [Problem Link](https://leetcode.com/problems/binary-tree-inorder-traversal/) 
@@ -524,8 +571,14 @@ class Solution:
 	        return self.inorderTraversal(root.left) + [root.val] + self.inorderTraversal(root.right)
 ```
 
-**Runtime:** 32 ms : 84.59%
-**Memory Usage:** 14 MB : 13.42%
+###### Anki (94)
+https://leetcode.com/problems/binary-tree-inorder-traversal/ #flashcard 
+1. Check if there is a root
+2. Check if the root has children, if it doesn't return `root.val`
+3. Else, return recursive items in this order
+	1. Traverse(root.left)
+	2. root.val
+	3. Traverse(root.right)
 
 #### 100. Same Tree
 [Problem Link](https://leetcode.com/problems/same-tree/) 
@@ -550,9 +603,12 @@ class Solution:
 	        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
 ```
 
-**Time:** 0:33
-**Runtime:** 28 ms : 94.82%
-**Memory Usage:** 14 MB : 30.18%
+###### Anki (100)
+https://leetcode.com/problems/same-tree/ #flashcard 
+1. See if the nodes are present
+2. See if the nodes values are not equal to disqualify
+3. Else, return a recursive function down the tree
+	1. SameTree(p.left, q.left) and SameTree(p.right, q.right)
 
 #### 101. Symmetric Tree
 [Problem Link](https://leetcode.com/problems/symmetric-tree/)
@@ -562,6 +618,9 @@ Given the `root` of a binary tree, _check whether it is a mirror of itself_ 
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/symmetric_tree.cpp)
 
 ###### Depth-First Search Solution (101)
+1. Create a new function to accept left and right branches of a root
+	1. Check if both branches are present, otherwise return false
+	2. Otherwise check if the two branches are the same and return the recursive versions of the proper branches
 ``` python
 class Solution:
 	def isSymmetric(self, root: Optional[TreeNode]) -> bool:
@@ -574,8 +633,12 @@ class Solution:
 	        return l.val == r.val and self.f(l.right, r.left) and self.f(l.left, r.right)
 ```
 
-**Runtime:** 32 ms : 94.13%
-**Memory Usage:** 14 MB : 61.32%
+###### Anki (101)
+https://leetcode.com/problems/symmetric-tree/ #flashcard 
+1. Create a new function to accept left and right branches of a root
+	1. Check if both branches are present, otherwise return false
+	2. Otherwise check if the two branches are the same and return the recursive versions of the proper branches
+
 
 #### 104. Maximum Depth of Binary Tree 
 [Problem Link](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
@@ -606,16 +669,11 @@ class Solution:
                 return 1 + l
 ```
 
-**Runtime:** 32 ms : 84.59%
-**Memory Usage:** 14 MB : 13.42%
-
-#### 105. Construct Binary Tree from Preorder and Inorder Traversal
-Given two integer arrays `preorder` and `inorder` where `preorder` is the preorder traversal of a binary tree and `inorder` is the inorder traversal of the same tree, construct and return _the binary tree_.
-
-[Python Solution]([https://github.com/ConComp12/leetcode/blob/main/leetcode/tree/preorder_inorder.py](https://github.com/ConComp12/leetcode/blob/main/leetcode/tree/preorder_inorder.py))
-
-###### Recursive Solution (105)
-
+###### Anki (104)
+https://leetcode.com/problems/maximum-depth-of-binary-tree/ #flashcard 
+1. If not root, depth of zero
+2. If root with no children, depth of 1
+3. Else, return 1 + the longest subtree fonud through recursion
 
 #### 110. Balanced Binary Tree
 [Problem Link](https://leetcode.com/problems/balanced-binary-tree/) 
@@ -626,6 +684,11 @@ Given a binary tree, determine if it is height-balanced. For this problem, a hei
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/balanced_binary_tree.cpp)
 
 ###### Depth-First Search Solution (110)
+1. Create a function to set equal to -1 to return a bool value
+	1. If there is no root, return 0
+	2. Create recursive left and right subtrees
+	3. Check if either tree is equal to -1 (indicating there is imbalance)
+	4. If not, return 1 + the max of left and right subtrees
 ``` python
 class Solution:
 	def isBalanced(self, root: Optional[TreeNode]) -> bool:
@@ -645,8 +708,13 @@ class Solution:
 	    return 1 + max(l, r)
 ```
 
-**Runtime:** 48 ms : 95.15%
-**Memory Usage:** 18 MB : 98.11%
+###### Anki (110)
+https://leetcode.com/problems/balanced-binary-tree/ #flashcard 
+1. Create a function to set equal to -1 to return a bool value
+	1. If there is no root, return 0
+	2. Create recursive left and right subtrees
+	3. Check if either tree is equal to -1 (indicating there is imbalance)
+	4. If not, return 1 + the max of left and right subtrees
 
 #### 111. Minimum Depth of Binary Tree
 [Problem Link](https://leetcode.com/problems/minimum-depth-of-binary-tree/)
@@ -658,6 +726,11 @@ The minimum depth is the number of nodes along the shortest path from the root n
 
 [Python Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/min_depth_of_binary_tree.py)
 
+###### Depth First Search (111)
+1. If root is not present, return 0
+2. Create variables to store both recursive right and left subtrees
+3. If the tree is missing one branch, use the longest branch to find the minimum depth still
+4. Else, return 1 + minimum of right and left subtrees
 ``` python
 class Solution:
 	def minDepth(self, root: Optional[TreeNode]) -> int:
@@ -672,8 +745,12 @@ class Solution:
 	    return 1 + min(r, l)
 ```
 
-**Runtime:** 648 ms : 65.06%
-**Memory Usage:** 53.1 MB : 58.77%
+###### Anki (111)
+https://leetcode.com/problems/minimum-depth-of-binary-tree/ #flashcard 
+1. If root is not present, return 0
+2. Create variables to store both recursive right and left subtrees
+3. If the tree is missing one branch, use the longest branch to find the minimum depth still
+4. Else, return 1 + minimum of right and left subtrees
 
 #### 117. Populating Next Right Pointers in Each Node 2
 [Problem Link](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/) 
@@ -703,9 +780,6 @@ class Solution:
         return root
 ```
 
-**Runtime:** 64 ms : 54.32%
-**Memory Usage:** 15.4 MB : 11.63%
-
 #### 121. Best Time to Buy and Sell Stock 
 [Problem Link](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 You are given an array `prices` where `prices[i]` is the price of a given stock on the `ith` day. You want to maximize your profit by choosing a **single day** to buy one stock and choosing a **different day in the future** to sell that stock. Return _the maximum profit you can achieve from this transaction_. If you cannot achieve any profit, return `0`.
@@ -729,9 +803,6 @@ class Solution:
 	    return maxPrice
 ```
 
-**Runtime:** 952 ms : 99.30%
-**Memory Usage:** 25.1 MB : 37.63%
-
 ###### Sliding Window Solution (121)
 1. Initialize max `m`, left and right pointers `l` and `r`
 2. Iterate through prices while r hasn't reached the end
@@ -753,6 +824,14 @@ class Solution:
             r += 1 # 5
         return m
 ```
+
+###### Anki (121)
+https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ #flashcard 
+1. Initialize max `m`, left and right pointers `l` and `r`
+2. Iterate through prices while r hasn't reached the end
+3. If `prices[l] < prices[r]` then see if it is the new largest profit
+4. If `prices[l] > prices[r]` then `l = r` since you have checked every index between the two already
+5. Increment `r`
 
 #### 125. Valid Palindrome
 [Problem Link](https://leetcode.com/problems/valid-palindrome/) 
@@ -780,6 +859,15 @@ class Solution:
             r -= 1
         return True
 ```
+
+###### Anki (125)
+https://leetcode.com/problems/valid-palindrome/ #flashcard 
+1. Remove all characters that aren't letters or numbers
+2. Create two pointers
+3. Iterate through the new string until the two pointers meet
+	1. Set the character at the pointers locations to lowercase and compare to possibly return `False`
+4. Increment pointers
+5. If it completes, return `True`
 
 #### 129. Sum Root to Leaf Numbers
 [Problem Link](https://leetcode.com/problems/sum-root-to-leaf-numbers/)
@@ -945,23 +1033,43 @@ class Solution:
                 return [l + 1, r + 1]
 ```
 
+###### Anki (167)
+https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/ #flashcard 
+1. Create left and right pointers
+2. Iterate through list using the two pointers (since list is sorted)
+3. If the numbers equal the target, return the pointer locations
 
 #### 206. Reverse Linked List
 [Problem Link](https://leetcode.com/problems/reverse-linked-list/)
 Given the `head` of a singly linked list, reverse the list, and return _the reversed list_.
 
 ###### Iterative Solution (206)
+1. Create pointer prev
+2. While loop until head no longer exists
+	1. Store the next head
+	2. Set the next head to pointer prev
+	3. increment prev=head and head=head.next (tmp)
+3. Return pointer prev
 ``` python
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
         prev = None
         while head:
-            n = head.next
+            tmp = head.next
             head.next = prev
             prev = head
-            head = n
+            head = tmp
         return prev
 ```
+
+###### Anki (206)
+https://leetcode.com/problems/reverse-linked-list/ #flashcard 
+1. Create pointer prev
+2. While loop until head no longer exists
+	1. Store the next head
+	2. Set the next head to pointer prev
+	3. increment prev=head and head=head.next (tmp)
+3. Return pointer prev
 
 #### 217. Contains Duplicate
 [Problem Link](https://leetcode.com/problems/contains-duplicate/)
@@ -1065,6 +1173,13 @@ class Solution:
         return out
 ```
 
+###### Anki (238)
+https://leetcode.com/problems/product-of-array-except-self/ #flashcard 
+1. Initialize a list full of 1's to store prefix values, then final answer
+2. PREFIX: Iterate through `nums`, increment prefix by the current `nums[i]` and store it in the return list `out`
+3. POSTFIX: Iterate through `nums`, increment postfix and multiply each item in the prefix array by the upcoming index in the newly generated postfix numbers
+4. Return answer list
+
 #### 242. Valid Anagram
 Given two strings `s` and `t`, return `true` _if_ `t` _is an anagram of_ `s`_, and_ `false` _otherwise_.
 
@@ -1107,6 +1222,11 @@ Given an array `nums` containing `n` distinct numbers in the range `[0, n]`
 
 ###### Bit Manipulation Solution (268)
 Using [[272 Computer Components#XOR Gate|XOR]] we can find the missing bit
+1. Set a variable to store solution
+2. iterate through array `nums`
+	1. solution = XOR of solution and index + 1
+	2. solution = XOR of solution and nums[i]
+3. Return
 ``` python
 def missingNumber(self, nums: List[int]) -> int:
     solution = 0
@@ -1116,13 +1236,14 @@ def missingNumber(self, nums: List[int]) -> int:
     return solution
 ```
 
-###### Math Solution (268)
-Math to find the missing number in a range of numbers
-``` python
-def missingNumber(self, nums: List[int]) -> int:
-    n = len(nums)
-    return n * (n + 1) // 2 - sum(nums)
-```
+###### Anki (268)
+https://leetcode.com/problems/missing-number/ #flashcard 
+Using [[272 Computer Components#XOR Gate|XOR]] we can find the missing bit
+1. Set a variable to store solution
+2. iterate through array `nums`
+	1. solution = XOR of solution and index + 1
+	2. solution = XOR of solution and nums[i]
+3. Return
 
 #### 347. Top K Frequent Elements
 Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.
