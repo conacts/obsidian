@@ -478,6 +478,21 @@ class Solution:
         return res.values() # 5
 ```
 
+###### Sort String Solution (49)
+``` python
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        d = {}
+        for s in strs:
+            key = list(s)
+            key.sort()
+            # print(key)
+            if tuple(key) not in d:
+                d[tuple(key)] = []
+            d[tuple(key)].append(s)
+        return d.values()
+```
+
 ###### Anki (49)
 https://leetcode.com/problems/group-anagrams/ #flashcard 
 1. Create dictionary
@@ -930,6 +945,10 @@ def sumNumbers(self, root) -> int:
 Given a **non-empty** array of integers `nums`, every element appears _twice_ except for one. Find that single one. You must implement a solution with a linear runtime complexity and use only constant extra space.
 
 ###### XOR Solution (136)
+1. Create value to store result
+2. Iterate through `num` in `nums`
+	1. XOR result with `num`
+3. Return 
 ``` python
 def singleNumber(self, nums: List[int]) -> int:
     solution = 0
@@ -938,6 +957,13 @@ def singleNumber(self, nums: List[int]) -> int:
         solution ^= num
     return solution
 ```
+
+###### Anki (136)
+https://leetcode.com/problems/single-number/ #flashcard 
+1. Create value to store result
+2. Iterate through `num` in `nums`
+	1. XOR result with `num`
+3. Return 
 
 #### 141. Linked List Cycle
 [Problem Link](https://leetcode.com/problems/linked-list-cycle/) 
@@ -1029,6 +1055,59 @@ class Solution:
             
         return head
 ```
+
+#### 155. Min Stack
+[Problem Link](https://leetcode.com/problems/min-stack/) 
+Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.
+
+Implement the `MinStack` class:
+
+-   `MinStack()` initializes the stack object.
+-   `void push(int val)` pushes the element `val` onto the stack.
+-   `void pop()` removes the element on the top of the stack.
+-   `int top()` gets the top element of the stack.
+-   `int getMin()` retrieves the minimum element in the stack.
+
+You must implement a solution with `O(1)` time complexity for each function.
+
+###### Two Stack Solution (155)
+1. Create `self.stack` and `self.minStack` in `__init__`
+2. PUSH: Append `val` to normal stack, compare top of `minStack` to new value `val`
+3. POP: Pop from both stacks
+4. TOP: return top of `self.stack`
+5. GETMIN: return top of `self.minStack`
+``` python
+class MinStack:
+
+    def __init__(self):
+        self.stack = []
+        self.minStack = []
+
+    def push(self, val: int) -> None:
+        self.stack.append(val)
+        if not self.minStack or val < self.minStack[-1]:
+            self.minStack.append(val)
+        else:
+            self.minStack.append(self.minStack[-1])
+
+    def pop(self) -> None:
+        self.minStack.pop()
+        self.stack.pop()
+
+    def top(self) -> int:
+        return self.stack[-1]
+
+    def getMin(self) -> int:
+        return self.minStack[-1]
+```
+
+###### Anki (155)
+https://leetcode.com/problems/min-stack/ #flashcard 
+1. Create `self.stack` and `self.minStack` in `__init__`
+2. PUSH: Append `val` to normal stack, compare top of `minStack` to new value `val`
+3. POP: Pop from both stacks
+4. TOP: return top of `self.stack`
+5. GETMIN: return top of `self.minStack`
 
 
 #### 167. Two Sum 2
@@ -1313,6 +1392,7 @@ Using [[272 Computer Components#XOR Gate|XOR]] we can find the missing bit
 
 
 #### 347. Top K Frequent Elements
+[Problem Link](https://leetcode.com/problems/top-k-frequent-elements/)
 Given an integer array `nums` and an integer `k`, return _the_ `k` _most frequent elements_. You may return the answer in **any order**.
 
 ###### Naive Hashmap Solution (347)
@@ -1342,6 +1422,12 @@ class Solution:
                     kcount += 1
         return returnlist
 ```
+
+###### Anki (347)
+https://leetcode.com/problems/top-k-frequent-elements/ #flashcard 
+1. Populate a dictionary with the frequency of all items in list `nums`
+2. Create a list ordering items by frequency in which they appear
+3. Reverse the ordered list and iterate through each sub-list to append until you reach the desired `k` amount tracked with `kcount`
 
 
 #### 376. Wiggle Subsequence
@@ -1388,6 +1474,7 @@ https://leetcode.com/problems/wiggle-subsequence/ #flashcard
 4. Compare the current number to the previous to check for "wiggle" using `wiggle` 
 5. Return `longest`
 
+
 #### 404. Sum of Left Leaves
 [Problem Link](https://leetcode.com/problems/sum-of-left-leaves/)
 Given the `root` of a binary tree, return _the sum of all left leaves._
@@ -1423,14 +1510,23 @@ The **Fibonacci numbers**, commonly denoted `F(n)` form a sequence, called th
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/dynamic/fibonacci.cpp)
 
 ###### Dynamic Programming Solution (509)
+1. Set base case of `n < 2` returns `n`
+2. Create 3 variables to store the previous fibonacci values
+	1. `a, b, s`
+3. Iterate `while n > 1`
+	1. Sum `a=fib(n-1) + b=fib2(n)`
+	2. `a=b`
+	3. `b=s`
+	4. Decrement `n`
+4. Return
 ``` python
 def fib(self, n: int) -> int:
-    if n < 2:
+    if n <= 1:
         return n
     a = 0
     b = 1
     s = 0
-    while n > 1:
+    while n >= 2:
         s = a + b
         a = b
         b = s
@@ -1446,6 +1542,19 @@ def fib(self, n: int) -> int:
     else:
         return self.fib(n-1) + self.fib(n-2)
 ```
+
+###### Anki (509)
+https://leetcode.com/problems/fibonacci-number/ #flashcard 
+1. Set base case of `n < 2` returns `n`
+2. Create 3 variables to store the previous fibonacci values
+	1. `a, b, s`
+3. Iterate `while n > 1`
+	1. Sum `a=fib(n-1) + b=fib2(n)`
+	2. `a=b`
+	3. `b=s`
+	4. Decrement `n`
+4. Return
+
 
 #### 700. Search in a Binary Search Tree
 [Problem Link](https://leetcode.com/problems/search-in-a-binary-search-tree/) 
@@ -1488,6 +1597,10 @@ You are given the `root` node of a binary search tree (BST) and a `value` to
 [C++ Solution](https://github.com/conacts/leetcode/blob/main/leetcode/tree/insert_in_bst.cpp)
 
 ###### Depth-First Search Solution (701)
+1. Set base case of creating tree node if no node is present
+2. Traverse binary tree properly using `node.val` less than or greater than "insert value"
+	1. Manipulate the roots proper subtree
+3. Return changed root
 ``` python
 def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode]:
     if not root:
@@ -1498,6 +1611,13 @@ def insertIntoBST(self, root: Optional[TreeNode], val: int) -> Optional[TreeNode
         root.left = self.insertIntoBST(root.left, val)
     return root
 ```
+
+###### Anki (701)
+https://leetcode.com/problems/insert-into-a-binary-search-tree/ #flashcard 
+1. Set base case of creating tree node if no node is present
+2. Traverse binary tree properly using `node.val` less than or greater than "insert value"
+	1. Manipulate the roots proper subtree
+3. Return changed root
 
 #### 704. Binary Search
 [Problem Link](https://leetcode.com/problems/binary-search/)
