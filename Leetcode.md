@@ -5,21 +5,46 @@ Categories:
 [[402 Sorting and Traversal Algorithms#Merge Sort|Merge Sort]]
 [[403 Designing Algorithms#Divide and Conquer Algorithm|Divide and Conquer]]
 
-| Number | Problem                                                              | Solution                                                 | Time | Anki |
-| ------ | -------------------------------------------------------------------- | -------------------------------------------------------- | ---- | ---- |
-| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                                      | [[Leetcode#Hashmap Solution 1\|Hashmap]]                 | 0:30 | Y    |
-| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                 | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]        | 1:30 | Y    |
-| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                 | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]        | 1:45 | Y    |
-| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                       | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]]  | 1:00 | Y    |
-| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]]  | [[Leetcode#Depth-First Search Solution 94\|DFS]]         | 0:37 | Y    |
-| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                                | [[Leetcode#Depth-First Search Solution 100\|DFS]]        | 0:30 | Y    |
-| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]       | [[Leetcode#Recursive Solution 104\|DFS]]                 | 0:35 | Y    |
-| 121    | [[Leetcode#121 Best Time to Buy and Sell Stock\|Best Time To Stock]] | [[Leetcode#Sliding Window Solution 121\|Sliding Window]] |      | Y    |
-| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]          | [[Leetcode#Hashmap Solution 219\|Hashmap]]               |      | Y    |
-| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]              | [[Leetcode#Depth-First Search Solution 226\|DFS]]        | 0:26 | Y    |
-| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                        | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]    | 1:00 | Y    |
-| 347    | [[Leetcode#347 Top K Frequent Elements\|Top K Frequent Elements]]    | [[Leetcode#Naive Hashmap Solution 347\|Hashmap]]         |  | Y    |
-| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]          | [[Leetcode#Depth-First Search Solution 700\|DFS]]        | 0:31 | Y    |
+###### Directory
+| Number | Problem                                                                                                       | Solution                                                           | Time | Anki |
+| ------ | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | ---- | ---- |
+| 1      | [[Leetcode#1 Two Sum\|Two Sum]]                                                                               | [[Leetcode#Hashmap Solution 1\|Hashmap]]                           |      | Y    |
+| 2      | [[Leetcode#2 Add Two Numbers\|Add Two Numbers]]                                                               | [[Leetcode#Carry Solution 2\| Carry Solution]]                     |      |      |
+| 3      | [[Leetcode#3 Longest Substring Without Repeating Characters\|Longest Substring Without Repeating Characters]] | [[Leetcode#Sliding Window Solution 3\|Sliding Window]]             |      |      |
+| 7      | [[Leetcode#7 Reverse Integer\|Reverse Integer]]                                                               | [[Leetcode#Reverse String Solution 7\|Reverse String]]             |      |      |
+| 9      | [[Leetcode#9 Palindrome Number\|Palindrome Number]]                                                           | [[Leetcode#Floor and Mod Solution 9\|Floor Mod Solution]]          |      |      |
+| 11     | [[Leetcode#11 Container With Most Water\|Container With Most Water]]                                          | [[Leetcode#Two Pointer Solution 11\|Two Pointer Solution]]         |      |      |
+| 15     | [[Leetcode#15 Three Sum\|Three Sum]]                                                                          | [[Leetcode#Two Pointer Solution 15\|Two Pointer]]                  |      | Y    |
+| 16     | [[Leetcode#16 Three Sum Closest\|Three Sum Closest]]                                                          | [[Leetcode#Two Pointer Solution 16\|Two Pointer]]                  |      | Y    |
+| 49     | [[Leetcode#49 Group Anagrams\|Group Anagrams]]                                                                | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap / Ascii]]            |      | Y    |
+| 70     | [[Leetcode#70 Climbing Stairs\|Climbing Stairs]]                                                              | [[Leetcode#Hashmap Ascii Solution 49\|Hashmap Ascii]]              |      |      |
+| 74     | [[Leetcode#74 Search a 2D Matrix\|Search A 2D Matrix]]                                                        | [[Leetcode#Binary Search Solution 74\|Binary Search]]              |      |      |
+| 94     | [[Leetcode#94 Binary Tree Inorder Traversal\|BT Inorder Traversal]]                                           | [[Leetcode#Depth-First Search Solution 94\|DFS]]                   |      | Y    |
+| 100    | [[Leetcode#100 Same Tree\|Same Tree]]                                                                         | [[Leetcode#Depth-First Search Solution 100\|DFS]]                  |      | Y    |
+| 104    | [[Leetcode#104 Maximum Depth of Binary Tree\|Max Depth of BT]]                                                | [[Leetcode#Recursive Solution 104\|DFS]]                           |      | Y    |
+| 110    | [[Leetcode#110 Balanced Binary Tree\|Balanced Binary Tree]]                                                   | [[Leetcode#Depth-First Search Solution 110\|DFS]]                  |      |      |
+| 121    | [[Leetcode#121 Best Time to Buy and Sell Stock\|Best Time To Stock]]                                          | [[Leetcode#Sliding Window Solution 121\|Sliding Window]]           |      | Y    |
+| 125    | [[Leetcode#125 Valid Palindrome\|Valid Palindrome]]                                                           | [[Leetcode#Two Pointer Regex 125\|Two Pointer / Regex]]            |      |      |
+| 129    | [[Leetcode#129 Sum Root to Leaf Numbers\|Sum Root to Leaf Numbers]]                                           | [[Leetcode#Recursive Solution 129\|Recursion]]                     |      |      |
+| 136    | [[Leetcode#Single Number 136\|Single Number]]                                                                 | [[Leetcode#XOR Solution 136\|XOR Solution]]                        |      |      |
+| 141    | [[Leetcode#141 Linked List Cycle\|Linked List Cycle]]                                                         | [[Leetcode#Tortoise and the Hare Solution 141\|Tortoise & Hare]]   |      |      |
+| 155    | [[Leetcode#155 Min Stack\|Min Stack]]                                                                         | [[Leetcode#Two Stack Solution 155\|Two Stack]]                     |      |      |
+| 167    | [[Leetcode#167 Two Sum 2\|Two Sum 2]]                                                                         | [[Leetcode#Two Pointer Solution 167\|Two Pointer]]                 |      |      |
+| 206    | [[Leetcode#206 Reverse Linked List\|Reverse Linked List]]                                                     | [[Leetcode#Iterative Solution 206\|Iterative Solution]]            |      |      |
+| 217    | [[Leetcode#217 Contains Duplicate\|Contains Duplicate]]                                                       | [[Leetcode#Hashmap Solution 217\|Hashmap]]                         |      |      |
+| 219    | [[Leetcode#219 Contains Duplicate 2\|Contains Duplicate 2]]                                                   | [[Leetcode#Hashmap Solution 219\|Hashmap]]                         |      | Y    |
+| 226    | [[Leetcode#226 Invert Binary Tree\|Invert Binary Tree]]                                                       | [[Leetcode#Depth-First Search Solution 226\|DFS]]                  |      | Y    |
+| 242    | [[Leetcode#242 Valid Anagram\|Valid Anagram]]                                                                 | [[Leetcode#Hashmap Comparison Solution 242\|Hashmap]]              |      | Y    |
+| 268    | [[Leetcode#268 Missing Number\|Missing Number]]                                                               | [[Leetcode#Bit Manipulation Solution 268\|Bit Manipulation]]       |      |      |
+| 347    | [[Leetcode#347 Top K Frequent Elements\|Top K Frequent Elements]]                                             | [[Leetcode#Naive Hashmap Solution 347\|Hashmap]]                   |      | Y    |
+| 376    | [[Leetcode#376 Wiggle Subsequence\|Wiggle Subsequence]]                                                       | [[Leetcode#Dynamic Programming Solution 376\|Dynamic Programming]] |      |      |
+| 404    | [[Leetcode#404 Sum of Left Leaves\|Sum of Left Leaves]]                                                       | [[Leetcode#Depth-First Search Solution 404\|DFS]]                  |      |      |
+| 509    | [[Leetcode#509 Fibonacci Number\|Fibonacci Number]]                                                           | [[Leetcode#Dynamic Programming Solution 509\|Dynamic Programming]] |      |      |
+| 700    | [[Leetcode#700 Search in a Binary Search Tree\|Search BST]]                                                   | [[Leetcode#Depth-First Search Solution 700\|DFS]]                  |      | Y    |
+| 701    | [[Leetcode#701 Insert into a Binary Search Tree\|Insert Into BST]]                                            | [[Leetcode#Depth-First Search Solution 701\|DFS]]                  |      |      |
+| 704    | [[Leetcode#704 Binary Search\|Binary Search]]                                                                 | [[Leetcode#Binary Search Solution 704\|Binary Search]]             |      |      |
+| 1038   | [[Leetcode#1038 Binary Search Tree to Greater Sum Tree\|BST to GST]]                                          | [[Leetcode#Right-Root-Left Depth-First Search Solution 1038\|DFS]] |      |      |
+| 1465   | [[Leetcode#1465 Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts\|Cutting Cake]]            |  [[Leetcode#Dynamic Solution 1465\|Dynamic]]                                                                  |      |      |
 
 #### 1. Two Sum
 [Problem Link](https://leetcode.com/problems/two-sum/) 
@@ -565,6 +590,28 @@ class Solution:
 	            rm = mm - 1
 	        else: 
 	            lm = mm + 1
+```
+
+###### Merge Matrix Into List (74)
+``` python
+class Solution:
+    def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        out = []
+        for row in matrix:
+            out += row
+        
+        # binary search
+        l = 0
+        r = len(out)-1
+        while l <= r:
+            m = (l + r) // 2
+            if out[m] < target:
+                l = m + 1
+            elif out[m] > target:
+                r = m - 1
+            else:
+                return True
+        return False
 ```
 
 ###### Anki (74)
@@ -1699,6 +1746,7 @@ You are given a rectangular cake of size `h x w` and two arrays of integers `
 
 Return _the maximum area of a piece of cake after you cut at each horizontal and vertical position provided in the arrays_ `horizontalCuts` _and_ `verticalCuts`. Since the answer can be a large number, return this **modulo** `109 + 7`.
 
+###### Dynamic Solution (1465)
 1. Add edges of the cake to both cut arrays
 2. Sort the cut arrays
 3. Create `h` and `v` to store maximum height and width of each slice of cake
